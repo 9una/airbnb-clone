@@ -1,0 +1,166 @@
+header {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#notice-bar {
+  background-color: #222;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: -1.5px;
+}
+
+nav {
+  padding: 0 var(--padding-place);
+  display: flex;
+  justify-content: space-between;
+}
+nav > div:first-child,
+nav > div:last-child {
+  width: 20%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+nav > div:first-child {
+  justify-content: flex-start;
+}
+nav > div:nth-child(2) {
+  width: 60%;
+}
+nav > div:last-child {
+  justify-content: flex-end;
+}
+
+.nav__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nav__form-tab {
+  margin-bottom: 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.nav__form-tab button,
+.nav__form-tab a {
+  font-size: 16px;
+  color: black;
+  margin: 0 5px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+.nav__form-tab button.active {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+  line-height: 40px;
+}
+.nav__form-formBox {
+  width: 850px;
+}
+.nav__form-formBox form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: white;
+  border-radius: 60px;
+}
+.nav__form-formBox form > div {
+  padding: 0 24px;
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  border-radius: 60px;
+  position: relative;
+}
+.nav__form-formBox form > div:hover {
+  background: #e9e9e9;
+}
+.nav__form-formBox form > div::after {
+  content: "";
+  width: 1px;
+  height: 25px;
+  background: #cfcfcf;
+  position: absolute;
+  right: 0;
+}
+.nav__form-formBox form > div.formBox__guest::after,
+.nav__form-formBox form > div:hover::after {
+  display: none;
+}
+.nav__form-formBox form > div label {
+  margin-bottom: 5px;
+}
+.nav__form-formBox form > div button {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+.formBox__place {
+  width: 35%;
+  padding-left: 34px !important;
+}
+.formBox__place input {
+  background: none;
+  border: none;
+}
+.formBox__checkIn,
+.formBox__checkOut {
+  width: 20%;
+}
+.formBox__guest {
+  width: 25%;
+}
+.formBox__searchBtn {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-pink);
+  color: white;
+}
+
+.nav__right {
+  color: white;
+}
+.nav__right a,
+.nav__right button {
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+}
+.nav__right .right-bundle {
+  padding: 0 13px;
+}
+.nav__right .right-bundle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.nav__right a {
+}
+.nav__right-global {
+}
+.nav__right-myBtn {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 0 6px 0 10px;
+  margin-left: 10px;
+}
+.nav__right-myBtn .fa-bars {
+  margin-right: 8px;
+}
+.nav__right-myBtn .fa-user-circle {
+  font-size: 30px;
+}

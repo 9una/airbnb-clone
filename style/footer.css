@@ -36,4 +36,40 @@ footer {
 .fnb__bottom-left ul,
 .fnb__bottom-right {
   display: flex;
+  font-weight: 300;
+  align-items: center;
+  font-size: 15px;
+}
+.fnb__bottom-left li a {
+  letter-spacing: -0.6px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.fnb__bottom-left li::before {
+  content: " · ";
+  font-weight: 500;
+  margin: 0 5px 0 10px;
+}
+
+.fnb__bottom-global {
+  display: flex;
+  align-items: center;
+}
+.fnb__bottom-global button {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.fnb__bottom-global span {
+  margin-left: 7px;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 14px;
+}
+.fnb__bottom-sns {
+  margin-left: 12px;
+}
+.fnb__bottom-sns a {
+  margin: 0 10px;
+  font-size: 20px;
 }

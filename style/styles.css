@@ -2,6 +2,8 @@
 @import "variable.css";
 @import "header.css";
 @import "main.css";
+@import "footer.css";
+
 html {
   margin: 0;
   padding: 0;
@@ -9,6 +11,6 @@ html {
 body {
   width: 100%;
   height: 100%;
-
-  background: #91a562;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif;
 }

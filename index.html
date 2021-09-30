@@ -54,11 +54,41 @@
                   </div>
                   <div class="calendar-type__normal">
                     <div class="calendar-box">
-                      <div class="calendar-box__now">현재</div>
-                      <div class="calendar-box__next">다음 달</div>
+                      <div class="calendar-header">
+                        <div class="calendar-btn">
+                          <button class="calendar-btn__prev"><i class="fas fa-chevron-left"></i></button>
+                          <button class="calendar-btn__next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="year-month"></div>
+                        <div class="next-year-month"></div>
+                      </div>
+                      <div class="calendar-main">
+                        <div class="thisMonth">
+                          <div class="days">
+                              <div class="day">일</div>
+                              <div class="day">월</div>
+                              <div class="day">화</div>
+                              <div class="day">수</div>
+                              <div class="day">목</div>
+                              <div class="day">금</div>
+                              <div class="day">토</div>
+                          </div>
+                          <div class="dates"></div>
+                        </div>
+                        <div class="nextMonth">
+                            <div class="days">
+                                <div class="day">일</div>
+                                <div class="day">월</div>
+                                <div class="day">화</div>
+                                <div class="day">수</div>
+                                <div class="day">목</div>
+                                <div class="day">금</div>
+                                <div class="day">토</div>
+                            </div>
+                            <div class="nextMonthDates"></div>
+                        </div>
+                      </div>
                     </div>
-                    <button class="calendar-prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="calendar-next"><i class="fas fa-chevron-right"></i></button>
                   </div>
                   <div class="calendar-type__flexible" style="display:none;">
                     <span>숙박 기간을 선택하세요.</span>

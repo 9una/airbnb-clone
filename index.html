@@ -8,7 +8,7 @@
     <title>Airbnb web clone coding : )</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div id="notice-bar">
         <a href="#;">에어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.</a>
       </div>
@@ -27,13 +27,13 @@
             <a href="">온라인 체험</a>
           </div>
           <div class="nav__form-formBox">
-            <form>
+            <form class="active">
               <div class="formBox__place">
-                <div class="formBox-tab">
+                <div class="formBox-tab active">
                   <label for="formbox-place">위치</label>
                   <input id="formbox-place" type="text" placeholder="어디로 여행가세요?" />
                 </div>
-                <div class="nav__form-formBox-modal modal-place" style="display:none;">
+                <div class="nav__form-formBox-modal modal-place">
                   <span>언제 어디로든 떠나는 여행</span>
                   <button type="button">유연한 검색 <i class="fas fa-chevron-right fa-lg"></i></button>
                 </div>
@@ -47,7 +47,7 @@
                   <label for="formbox-checkout">체크아웃</label>
                   <button type="button" id="formbox-checkout">날짜 입력</button>
                 </div>
-                <div class="nav__form-formBox-modal modal-checkInOut" style="display:none;">
+                <div class="nav__form-formBox-modal modal-checkInOut">
                   <div class="calendar-type">
                     <button type="button" class="active">달력</button>
                     <button type="button">유연한 일정</button>
@@ -167,8 +167,9 @@
                   </ul>
                 </div>
               </div>
-              <button type="button" type="submit" class="formBox__searchBtn">
+              <button type="button" class="searchBtn">
                 <i class="fas fa-search"></i>
+                <span>검색</span>
               </button>
             </form>
           </div>
@@ -198,6 +199,7 @@
         </div>
       </nav>
     </header>
+    <div class="modalActiveBg"></div>
     <!-- header-end -->
     <main>
       <div id="main-screen">
@@ -507,7 +509,9 @@
     <!-- footer-end -->
 
     <script src="js/index.js"></script>
+    <script src="js/fixed-header.js"></script>
     <script src="js/calendar.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/guest-count.js"></script>
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
   </body>

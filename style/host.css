@@ -155,7 +155,8 @@
   font-size: 64px;
   line-height: 68px;
   letter-spacing: -1px;
-  margin-top: 160px;
+  padding-top: 160px;
+  margin-top: 0;
   margin-bottom: 80px;
   padding-left: var(--host-padding-place);
 }

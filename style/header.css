@@ -5,7 +5,6 @@ header {
   position: absolute;
   top: 0;
 }
-
 #notice-bar {
   background-color: #222;
   width: 100%;
@@ -28,6 +27,7 @@ nav {
   padding: 0 var(--padding-place);
   display: flex;
   justify-content: space-between;
+  transition: all 0.2s;
 }
 nav > div:first-child,
 nav > div:last-child {
@@ -93,7 +93,6 @@ nav > div:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: white;
   border-radius: 60px;
   position: relative;
 }
@@ -109,7 +108,8 @@ nav > div:last-child {
   right: 0;
 }
 .nav__form-formBox form .formBox__guest .formBox-tab::after,
-.nav__form-formBox form .formBox-tab:hover::after {
+.nav__form-formBox form .formBox-tab:hover::after,
+.nav__form-formBox form .formBox-tab.active::after {
   display: none;
 }
 .nav__form-formBox form .formBox-tab label {
@@ -122,7 +122,18 @@ nav > div:last-child {
   color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
 }
+.nav__form-formBox form.active {
+  background: #f7f7f7;
+}
+.formBox-tab.active {
+  background: white !important;
+  width: 76% !important;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.15);
+}
+.formBox-tab.active::after {
+}
 .nav__form-formBox-modal {
+  display: none;
   position: absolute;
   top: 80px;
   left: 0;
@@ -131,9 +142,12 @@ nav > div:last-child {
   border-radius: 32px;
   box-sizing: border-box;
   background: white;
-  display: flex;
+
   flex-direction: column;
   box-shadow: 0px 6px 20px rgb(0 0 0 / 20%) !important;
+}
+.nav__form-formBox-modal.active {
+  display: flex;
 }
 .modal-place {
   width: 500px;
@@ -422,7 +436,7 @@ nav > div:last-child {
 .formBox__guest {
   width: 26%;
 }
-.formBox__searchBtn {
+.searchBtn {
   position: absolute;
   right: 10px;
   top: 9px;
@@ -434,6 +448,18 @@ nav > div:last-child {
   align-items: center;
   background: var(--main-pink);
   color: white;
+}
+.searchBtn.active {
+  width: 90px;
+  border-radius: 30px;
+}
+.searchBtn span {
+  display: none;
+}
+.searchBtn.active span {
+  display: block;
+  font-weight: bold;
+  margin: 0 5px 0 7px;
 }
 .logo {
   color: white;
@@ -478,10 +504,15 @@ nav > div:last-child {
   color: #717171;
 }
 .nav__right-myBtn-modal {
+  display: none;
   background: white;
   position: absolute;
   top: 130px;
   border-radius: 13px;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.11);
+}
+.nav__right-myBtn-modal.active {
+  display: block;
 }
 .nav__right-myBtn-modal ul {
   border-bottom: 1px solid #e9e9e9;
@@ -506,42 +537,65 @@ nav > div:last-child {
   font-weight: bold;
 }
 
-/**/
-nav.fixed {
+/* header - fixed */
+header.fixed {
+}
+header.fixed #notice-bar {
+  display: none;
+}
+header.fixed nav {
   background: white;
   position: fixed;
+  left: 0;
   top: 0;
   box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px !important;
 }
-nav.fixed .logo {
+header.fixed nav .logo {
   color: #ff385c;
 }
-nav.fixed .nav__form-tab {
+header.fixed nav .nav__form-tab {
   display: none;
 }
-nav.fixed .nav__form-formBox form {
+header.fixed nav .nav__form-formBox form {
   width: 300px;
   height: 48px;
   border: 1px solid #ddd;
   box-shadow: 0px 2px 4px rgb(0 0 0 / 18%) !important;
 }
-nav.fixed .nav__form-formBox form div {
+header.fixed nav .nav__form-formBox form div {
   display: none;
 }
-nav.fixed .formBox__searchBtn {
+header.fixed nav .searchBtn {
   width: 34px;
   height: 34px;
   top: 7px;
   right: 8px;
   font-size: 15px;
 }
-nav.fixed .nav__right > a,
-nav.fixed .nav__right button {
+header.fixed nav .nav__right > a,
+header.fixed nav .nav__right button {
   color: #222;
 }
-nav.fixed .nav__right .right-bundle:hover {
+header.fixed nav .nav__right .right-bundle:hover {
   background: #f7f7f7;
 }
-nav.fixed .nav__right-myBtn {
+header.fixed nav .nav__right-myBtn {
   border: 1px solid #ddd;
+}
+header.fixed .nav__right-myBtn-modal {
+  top: 70px;
+}
+
+#modalActiveBg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(0 0 0 / 30%);
+  z-index: 3;
+}
+#modalActiveBg.active {
+  display: block;
 }

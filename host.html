@@ -8,43 +8,43 @@
     <title>집을 에어비앤비 숙소로 등록해보세요.</title>
 </head>
 <body>
-    <header>
+    <header class="host-header">
         <a class="logo" href="index.html">
-          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;height:36px;width:36px;fill:#fff" aria-label="에어비앤비 홈페이지" role="img" focusable="false">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="display:block;height:36px;width:36px;" aria-labell="에어비앤비 홈페이지" role="img" focusable="false">
             <path d="M16 1c2.008 0 3.463.963 4.751 3.269l.533 1.025c1.954 3.83 6.114 12.54 7.1 14.836l.145.353c.667 1.591.91 2.472.96 3.396l.01.415.001.228c0 4.062-2.877 6.478-6.357 6.478-2.224 0-4.556-1.258-6.709-3.386l-.257-.26-.172-.179h-.011l-.176.185c-2.044 2.1-4.267 3.42-6.414 3.615l-.28.019-.267.006C5.377 31 2.5 28.584 2.5 24.522l.005-.469c.026-.928.23-1.768.83-3.244l.216-.524c.966-2.298 6.083-12.989 7.707-16.034C12.537 1.963 13.992 1 16 1zm0 2c-1.239 0-2.053.539-2.987 2.21l-.523 1.008c-1.926 3.776-6.06 12.43-7.031 14.692l-.345.836c-.427 1.071-.573 1.655-.605 2.24l-.009.33v.206C4.5 27.395 6.411 29 8.857 29c1.773 0 3.87-1.236 5.831-3.354-2.295-2.938-3.855-6.45-3.855-8.91 0-2.913 1.933-5.386 5.178-5.42 3.223.034 5.156 2.507 5.156 5.42 0 2.456-1.555 5.96-3.855 8.907C19.277 27.766 21.37 29 23.142 29c2.447 0 4.358-1.605 4.358-4.478l-.004-.411c-.019-.672-.17-1.296-.714-2.62l-.248-.6c-1.065-2.478-5.993-12.768-7.538-15.664C18.053 3.539 17.24 3 16 3zm.01 10.316c-2.01.021-3.177 1.514-3.177 3.42 0 1.797 1.18 4.58 2.955 7.044l.21.287.174-.234c1.73-2.385 2.898-5.066 2.989-6.875l.006-.221c0-1.906-1.167-3.4-3.156-3.421h-.001z"></path>
           </svg>
         </a>
         <a class="start-btn" href="">호스팅 시작하기</a>
     </header>
     <!-- header-end -->
-    <main>
+    <main class="host__main">
         <div id="host__main-screen">
             <div class="main-screen__left">
-              <h1>에어비앤비의 핵심을 이루는 호스팅</h1>
+              <h1>에어비앤비의<br>핵심을 이루는<br>호스팅</h1>
               <button>호스팅 시작하기</button>
-              <a href=""><i class="fas fa-chevron-down"></i></a>
+              <a href="#content__start-hosting"><i class="fas fa-chevron-down"></i></a>
             </div>
             <div class="main-screen__right">
               <video class="main-screen__video">
                 <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4" type="video/mp4">
               </video>
               <div class="main-screen__video-text">
-                <button><i class="fas fa-play-circle"></i></button>
-                <button><i class="fas fa-pause-circle"></i></button>
-                <ul>
-                  <li>
+                <button class="btn-play"><i class="fas fa-play-circle"></i></button>
+                <button class="btn-pause"><i class="fas fa-pause-circle"></i></button>
+                <ul class="video__host-list">
+                  <li class="video__host-item visible">
                     <img src="https://a0.muscache.com/im/pictures/cac9415a-acfb-4c92-a6d0-770e948741b1.jpg?im_w=480" alt="Chelsea" />
                     <span>필라델피아의 호스트</span>
                   </li>
-                  <li>
+                  <li class="video__host-item">
                     <img src="https://a0.muscache.com/im/pictures/9849ff03-6166-41c5-bbf7-80c908b4820c.jpg?im_w=480" alt="Sonaya" />
                     <span>뭄바이의 호스트</span>
                   </li>
-                  <li>
+                  <li class="video__host-item">
                     <img src="https://a0.muscache.com/im/pictures/adf2bfef-5ddc-41d6-86b5-a49d274f4f54.jpg?im_w=480" alt="MOHAMED" />
                     <span>요하네스버그의 호스트</span>
                   </li>
-                  <li>
+                  <li class="video__host-item">
                     <img src="https://a0.muscache.com/im/pictures/b78b2eb7-2d63-4c8d-9246-6b08c457c9cc.jpg?im_w=480" alt="Maria" />
                     <span>멕시코시티의 호스트</span>
                   </li>
@@ -53,8 +53,8 @@
               
             </div>
         </div>
-        <div class="host__content content__start-hosting">
-            <h1 class="host__content-title">언제 어디서든 호스팅하실 수 있습니다</h1>
+        <div id="content__start-hosting" class="host__content">
+            <h1 class="host__content-title">언제 어디서든<br>호스팅하실 수 있습니다</h1>
             <div class="start-hosting__host">
               <ul class="start-hosting__host-list">
                 <li class="start-hosting__host-item">
@@ -67,7 +67,7 @@
                     <span>밀라노의 호스트</span>
                   </div>
                 </li>
-                <li class="start-hosting__host-item">
+                <li class="start-hosting__host-item active">
                   <img src="https://a0.muscache.com/im/pictures/86dfe10f-cc9e-46bf-b69f-b60a71523f81.jpg?im_w=480" alt="호스트 Darrel의 사진"/>
                   <div class="start-hosting__host-text">
                     <p>집을 숙소로 호스팅하면서 자영업자가<br>
@@ -116,18 +116,18 @@
                   </div>
                 </li>
               </ul>
-              <button><i class="fas fa-chevron-left"></i></button>
-              <button><i class="fas fa-chevron-right"></i></button>
+              <button class="host-list__prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="host-list__next"><i class="fas fa-chevron-right"></i></button>
             </div>
             <div class="start-hosting__form">
               <form>
-                  <labe for=""></labe>
+                  <label for="">어떤 종류의 숙소인가요?</label>
                   <select id="" name="">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="">공간 전체</option>
+                    <option value="">개인실</option>
+                    <option value="">다인실</option>
                   </select>
-                  <labe for=""></labe>
+                  <label for="">숙박 인원은 몇 명인가요?</label>
                   <select id="" name="">
                     <option value="">게스트 1명</option>
                     <option value="">게스트 2명</option>
@@ -145,7 +145,7 @@
                     <option value="">게스트 14명</option>
                     <option value="">게스트 15명</option>
                   </select>
-                  <labe for=""></labe>
+                  <label for="">숙소 위치는 어디인가요?</label>
                   <select id="" name="">
                     <option value="">Goyang-si</option>
                     <option value="">Ilsan-dong</option>
@@ -156,9 +156,10 @@
               <button>에어비앤비가 예상 수입을 산정하는 방법</button>
               <button>수입 올리기</button>
             </div>
+            <div class="bg-black"></div>
         </div>
         <div class="host__content content__hosting-info">
-            <h1 class="host__content-title">성공적인 호스팅에 유용한 자료</h1>
+            <h1 class="host__content-title">성공적인 호스팅에<br>유용한 자료</h1>
             <div class="hosting-info__content">
               <ul class="hosting-info__content-list">
                 <li class="hosting-info__content-item">

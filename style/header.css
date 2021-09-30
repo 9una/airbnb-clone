@@ -321,7 +321,7 @@ nav > div:last-child {
 }
 .nav__right {
 }
-.nav__right a,
+.nav__right > a,
 .nav__right button {
   height: 40px;
   border-radius: 40px;
@@ -335,7 +335,7 @@ nav > div:last-child {
 .nav__right .right-bundle:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-.nav__right a {
+.nav__right > a {
   margin-right: -5px;
   font-weight: bold;
   font-size: 14px;
@@ -357,6 +357,34 @@ nav > div:last-child {
 .nav__right-myBtn .fa-user-circle {
   font-size: 29px;
   color: #717171;
+}
+.nav__right-myBtn-modal {
+  background: white;
+  position: absolute;
+  top: 130px;
+  border-radius: 13px;
+}
+.nav__right-myBtn-modal ul {
+  border-bottom: 1px solid #e9e9e9;
+  width: 240px;
+  padding: 10px 0;
+}
+
+.nav__right-myBtn-modal ul:last-child {
+  border-bottom: 0;
+}
+.nav__right-myBtn-modal li a {
+  width: 100%;
+  color: black;
+  box-sizing: border-box;
+  padding: 13px 20px;
+  font-size: 14px;
+}
+.nav__right-myBtn-modal li a:hover {
+  background: #efefef;
+}
+.nav__right-myBtn-modal li a b {
+  font-weight: bold;
 }
 
 /**/
@@ -388,7 +416,7 @@ nav.fixed .formBox__searchBtn {
   right: 8px;
   font-size: 15px;
 }
-nav.fixed .nav__right a,
+nav.fixed .nav__right > a,
 nav.fixed .nav__right button {
   color: #222;
 }

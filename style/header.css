@@ -560,7 +560,7 @@ header.fixed nav .nav__form-formBox form {
   width: 300px;
   height: 48px;
   border: 1px solid #ddd;
-  box-shadow: 0px 2px 4px rgb(0 0 0 / 18%) !important;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08) !important;
 }
 header.fixed nav .nav__form-formBox form div {
   display: none;

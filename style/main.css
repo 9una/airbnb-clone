@@ -156,7 +156,9 @@ main {
   padding-bottom: 55px;
   margin-bottom: 40px;
 }
-
+.enjoyTrip__item {
+  width: 33.3%;
+}
 .enjoyTrip__item-text span {
   font-weight: bold;
   font-size: 18px;

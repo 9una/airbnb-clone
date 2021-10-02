@@ -18,4 +18,15 @@ mypageBtn.addEventListener("click", () => {
 });
 //마이페이지 모달
 
+const lngCurBtn = document.querySelector(".nav__right-global");
+const lngCurModal = document.querySelector(".lng-cur__modal");
+const lngCurClose = lngCurModal.querySelector(".btn-close");
 
+lngCurBtn.addEventListener("click", () => {
+    lngCurModal.classList.add('active');
+    modalActiveBg.classList.add('active');
+})
+lngCurClose.addEventListener("click", () => {
+    lngCurModal.classList.remove('active');
+    modalActiveBg.classList.remove('active');
+})

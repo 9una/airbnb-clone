@@ -1,7 +1,11 @@
-.lng-cur__modal {
-  position: absolute;
+.lng-cur__modal,
+.language__modal,
+.currency__modal {
+  position: fixed;
   width: 100%;
   height: 100vh;
+  top: 120vh;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,13 +13,35 @@
   padding: 40px;
   z-index: 999;
   border-radius: 10px;
+  transition: all 0.3s;
+}
+.lng-cur__modal.active,
+.language__modal.active,
+.currency__modal.active {
+  top: 0;
 }
 .lng-cur__container {
+  position: relative;
   width: 1032px;
   height: 100%;
   background: white;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-close {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.1s;
+}
+.btn-close:hover {
+  background: #f7f7f7;
+}
+.btn-close:active {
+  font-size: 17px;
 }
 .lng-cur__contents {
   width: 100%;
@@ -27,6 +53,73 @@
   padding: 0 24px;
 }
 .lng-cur__type {
+  margin-bottom: 8px;
+}
+.lng-cur__type button {
+  color: #717171;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+}
+.lng-cur__type button.active {
+  color: #222;
+}
+.lng-cur__type button.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  background: #222;
+}
+.lng-cur__type button:hover {
+  background: #f7f7f7;
 }
 .lng-cur__contents-box {
+  border-top: 1px solid #ebebeb;
+}
+.lng-cur__contents-box > div {
+  display: none;
+}
+.lng-cur__contents-box > div.active {
+  display: block;
+}
+.lng-cur__contents-title {
+  color: #484848;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+.lng-cur__language-recommend,
+.lng-cur__currency-check {
+  margin-top: 24px;
+}
+.lng-cur__contents-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.lng-cur__contents-list li {
+  width: 19%;
+  margin-right: 1%;
+  margin-bottom: 16px;
+}
+.lng-cur__contents-list li a {
+  display: flex;
+  flex-direction: column;
+  padding: 13px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.lng-cur__contents-list li.active a {
+  border: 1px solid black;
+}
+.lng-cur__contents-list li a:hover {
+  background: #f7f7f7;
+}
+.lng-cur__contents-list li a span {
+  margin-top: 5px;
+  color: #717171;
 }

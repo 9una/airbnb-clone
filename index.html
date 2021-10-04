@@ -362,22 +362,57 @@
         </div>
       </div>
     </div>
-    <div class="join-login__modal">
+    <div class="join-login__modal active">
       <div class="join-login__container">
         <button class="btn-close" type="button"><i class="fas fa-times"></i></button>
         <h4>로그인 또는 회원가입</h4>
         <div class="join-login__contents">
-          <h2 class="lng-cur__contents-title">추천 언어 및 지역</h2>
+          <h2 class="join-login__contents-title">추천 언어 및 지역</h2>
           <div class="phone-login">
-
+            <div class="phone-form">
+              <form>
+                <label for="">국가/지역</label>
+                <select id="">
+                  <option>한국 (+82)</option>
+                  <option>미국 (+1)</option>
+                  <option>프랑스 (+33)</option>
+                  <option>영국 (+44)</option>
+                  <option>덴마크 (+45)</option>
+                </select>
+              </form>
+              <form>
+                <label for="">전화번호</label>
+                <span>+82</span>
+                <input id="" type="text" required placeholder="" />
+              </form>
+            </div>
+            <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</p>
+            <a href="#;">개인정보 처리방침</a>
+            <button class="phone-login__next" type="submit">계속</button>
           </div>
           <div class="sns-login">
-            
+            <span>또는</span>
+            <a class="sns-btn" href="#;" target="_blank">
+              <i class="fab fa-facebook"></i>
+              <span>페이스북으로 로그인하기</span>
+            </a>
+            <a class="sns-btn" href="#;" target="_blank">
+              <i class="fab fa-google"></i>
+              <span>구글로 로그인하기</span>
+            </a>
+            <a class="sns-btn" href="#;" target="_blank">
+              <i class="fab fa-apple"></i>
+              <span>Apple 계정으로 계속하기</span>
+            </a>
+            <a class="sns-btn" href="#;" target="_blank">
+              <i class="far fa-envelope"></i>
+              <span>이메일로 로그인하기</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div id="modalActiveBg"></div>
+    <div id="modalActiveBg" class="active"></div>
     <!-- header-end -->
     <main>
       <div id="main-screen">

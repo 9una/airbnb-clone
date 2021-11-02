@@ -1,3 +1,19 @@
+/* modal active bg : black 30% */
+#modalActiveBg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+#modalActiveBg.active {
+  display: block;
+}
+
+/* modal start */
 .lng-cur__modal,
 .language__modal,
 .currency__modal,
@@ -22,23 +38,17 @@
 .join-login__modal.active {
   top: 0;
 }
-.lng-cur__container {
-  position: relative;
-  width: 100%;
-  max-width: 1032px;
-  height: 100%;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-}
+
+.lng-cur__container,
 .join-login__container {
   position: relative;
   width: 100%;
-  max-width: 568px;
   background: white;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
+
 .btn-close {
   position: absolute;
   left: 14px;
@@ -54,7 +64,13 @@
 .btn-close:active {
   font-size: 17px;
 }
-.lng-cur__contents {
+
+/* lng-cur__modal */
+.lng-cur__modal .lng-cur__container {
+  max-width: 1032px;
+  height: 100%;
+}
+.lng-cur__modal .lng-cur__container .lng-cur__contents {
   width: 100%;
   height: 85vh;
   max-height: 875px;
@@ -63,10 +79,10 @@
   box-sizing: border-box;
   padding: 0 24px;
 }
-.lng-cur__type {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type {
   margin-bottom: 8px;
 }
-.lng-cur__type button {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button {
   color: #717171;
   padding: 10px;
   border-radius: 8px;
@@ -74,10 +90,13 @@
   font-weight: bold;
   position: relative;
 }
-.lng-cur__type button.active {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button:hover {
+  background: #f7f7f7;
+}
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve {
   color: #222;
 }
-.lng-cur__type button.active::after {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -86,26 +105,16 @@
   left: 0;
   background: #222;
 }
-.lng-cur__type button:hover {
-  background: #f7f7f7;
-}
-.lng-cur__contents-box {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box {
   border-top: 1px solid #ebebeb;
 }
-.lng-cur__contents-box > div {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box > div {
   display: none;
 }
-.lng-cur__contents-box > div.active {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box > div.acitve {
   display: block;
 }
-.lng-cur__contents-title,
-.join-login__contents-title {
-  color: #484848;
-  font-size: 22px;
-  margin-bottom: 24px;
-}
-.lng-cur__language-recommend,
-.lng-cur__currency-check {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box .lng-cur__language > div {
   margin-top: 24px;
 }
 .lng-cur__contents-list {
@@ -125,13 +134,24 @@
   border-radius: 8px;
   font-size: 14px;
 }
-.lng-cur__contents-list li.active a {
-  border: 1px solid black;
-}
 .lng-cur__contents-list li a:hover {
   background: #f7f7f7;
 }
 .lng-cur__contents-list li a span {
   margin-top: 5px;
   color: #717171;
+}
+.lng-cur__contents-list li.active a {
+  border: 1px solid black;
+}
+
+.join-login__modal .join-login__container {
+  max-width: 568px;
+}
+
+.lng-cur__contents-title,
+.join-login__contents-title {
+  color: #484848;
+  font-size: 22px;
+  margin-bottom: 24px;
 }

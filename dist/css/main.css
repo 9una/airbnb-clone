@@ -1,10 +1,9 @@
 main {
   padding-top: 58px;
 }
-#main-screen {
+main #main-screen {
   text-align: center;
-  background: url(https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=2560)
-    no-repeat center bottom;
+  background: url(https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=2560) no-repeat center bottom;
   background-size: cover;
   height: 54vh;
   display: flex;
@@ -14,13 +13,13 @@ main {
   padding-top: 186px;
   padding-bottom: 40px;
 }
-#main-screen span {
+main #main-screen span {
   display: block;
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 600;
 }
-#main-screen button {
+main #main-screen button {
   background: white;
   padding: 23px 55px;
   letter-spacing: -0.5px;
@@ -28,20 +27,21 @@ main {
   color: #8c12c4;
   border-radius: 50px;
   font-size: 18px;
-  box-shadow: 0px 6px 16px rgb(0 0 0 / 12%) !important;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12) !important;
 }
-
-.content {
-  padding: 0 var(--padding-place);
+main section {
+  padding: 0 80px;
   margin: 24px 0;
 }
-.content h2 {
+main section h2 {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 16px;
   line-height: 52px;
 }
-.nearTrip__list {
+
+/* nearTrip */
+.content__nearTrip .nearTrip__list {
   padding: 8px;
   width: 100%;
   height: 144px;
@@ -49,98 +49,79 @@ main {
   flex-wrap: wrap;
   align-content: space-between;
 }
-.nearTrip__item {
+.content__nearTrip .nearTrip__list .nearTrip__item {
   width: 25%;
 }
-.nearTrip__item a {
+.content__nearTrip .nearTrip__list .nearTrip__item a {
   display: flex;
 }
-.nearTrip__item-img {
+.content__nearTrip .nearTrip__list .nearTrip__item a .nearTrip__item-img {
   width: 64px;
   height: 64px;
   object-fit: cover;
   border-radius: 8px;
   margin-right: 14px;
 }
-.nearTrip__item-text {
+.content__nearTrip .nearTrip__list .nearTrip__item a .nearTrip__item-text {
   height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.nearTrip__item-text span {
+.content__nearTrip .nearTrip__list .nearTrip__item a .nearTrip__item-text span {
   margin-bottom: 5px;
   font-weight: bold;
 }
+
+/* liveTrip */
 .content__liveTrip {
   margin: 40px 0;
 }
-.content__liveTrip-box {
+.content__liveTrip .content__liveTrip-box {
   margin: 8px 0;
 }
-.liveTrip__list,
-.enjoyTrip__list {
-  display: flex;
-}
-.liveTrip__item,
-.enjoyTrip__item {
-  margin: 0 5px;
-}
-.liveTrip__item a,
-.enjoyTrip__item a {
-  display: flex;
-  flex-direction: column;
-  margin: 4px 6px 4px 0;
-}
-.liveTrip__item-img,
-.enjoyTrip__item-img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 7px;
-}
-.liveTrip__item-text {
+.content__liveTrip .content__liveTrip-box .liveTrip__item-text {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
+/* startHosting */
 .content__startHosting {
   height: 480px;
   padding-bottom: 24px;
 }
-
-.content__startHosting-box {
+.content__startHosting .content__startHosting-box {
   display: block;
   width: 100%;
   height: 100%;
-  background: url(https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=1440)
-    no-repeat center;
+  background: url(https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=1440) no-repeat center;
   background-size: cover;
   background-color: #201c1b;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
-  padding: 0 var(--padding-place);
+  padding: 0 80px;
   box-sizing: border-box;
   border-radius: 16px;
 }
-.content__startHosting-box h1 {
+.content__startHosting .content__startHosting-box h1 {
   font-size: 48px;
   line-height: 52px;
   margin-bottom: 12px;
   font-weight: bold;
   letter-spacing: -0.6px;
 }
-.content__startHosting-box p {
+.content__startHosting .content__startHosting-box p {
   width: 340px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   margin-bottom: 40px;
 }
-.content__startHosting-box span {
+.content__startHosting .content__startHosting-box span {
   background: white;
   color: black;
   font-weight: bold;
@@ -151,22 +132,41 @@ main {
   border-radius: 8px;
 }
 
+/* enjoyTrip */
 .content__enjoyTrip {
   padding-top: 32px;
   padding-bottom: 55px;
   margin-bottom: 40px;
 }
-.enjoyTrip__item {
+.content__enjoyTrip .enjoyTrip__item {
   width: 33.3%;
 }
-.enjoyTrip__item-text span {
+.content__enjoyTrip .enjoyTrip__item .enjoyTrip__item-text span {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 5px;
   display: block;
 }
-.enjoyTrip__item-text p {
+.content__enjoyTrip .enjoyTrip__item .enjoyTrip__item-text p {
   font-size: 14px;
   line-height: 18px;
+}
+
+/* list-thema - liveTrip & enjoyTrip class */
+.list-thema > div ul {
+  display: flex;
+}
+.list-thema > div ul li {
+  margin: 0 5px;
+}
+.list-thema > div ul li a {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 6px 4px 0;
+}
+.list-thema > div ul li a img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 7px;
 }

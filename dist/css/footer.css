@@ -1,0 +1,90 @@
+@charset "UTF-8";
+footer {
+  padding: 0 80px;
+  background: #f7f7f7;
+}
+footer .fnb__top {
+  padding: 48px 0;
+  border-bottom: 1px solid #ddd;
+}
+footer .fnb__top .fnb__top-list {
+  display: flex;
+  width: 100%;
+}
+footer .fnb__top .fnb__top-list .fnb__top-item {
+  width: 25%;
+  padding: 0 12px;
+}
+footer .fnb__top .fnb__top-list .fnb__top-item ul {
+  display: flex;
+  flex-direction: column;
+}
+footer .fnb__top .fnb__top-list .fnb__top-item ul span {
+  font-size: 12px;
+  font-weight: 600;
+}
+footer .fnb__top .fnb__top-list .fnb__top-item ul li {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 22px;
+}
+footer .fnb__top .fnb__top-list .fnb__top-item ul li a:hover {
+  text-decoration: underline;
+}
+footer .fnb__bottom {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .fnb__bottom .fnb__bottom-left ul,
+footer .fnb__bottom .fnb__bottom-right {
+  display: flex;
+  font-weight: 300;
+  align-items: center;
+  font-size: 15px;
+}
+footer .fnb__bottom .fnb__bottom-left ul li,
+footer .fnb__bottom .fnb__bottom-right li {
+  display: flex;
+  align-items: center;
+}
+footer .fnb__bottom .fnb__bottom-left ul li::before,
+footer .fnb__bottom .fnb__bottom-right li::before {
+  content: " · ";
+  font-weight: 500;
+  margin: 0 5px 0 10px;
+}
+footer .fnb__bottom .fnb__bottom-left ul li a,
+footer .fnb__bottom .fnb__bottom-right li a {
+  letter-spacing: -0.6px;
+  font-weight: 500;
+  font-size: 14px;
+}
+footer .fnb__bottom .fnb__bottom-left ul li a:hover,
+footer .fnb__bottom .fnb__bottom-right li a:hover {
+  text-decoration: underline;
+}
+footer .fnb__bottom .fnb__bottom-right .fnb__bottom-global {
+  display: flex;
+  align-items: center;
+}
+footer .fnb__bottom .fnb__bottom-right .fnb__bottom-global button {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+footer .fnb__bottom .fnb__bottom-right .fnb__bottom-global button span {
+  margin-left: 7px;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 14px;
+}
+footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns {
+  display: flex;
+  margin-left: 12px;
+}
+footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns a {
+  margin: 0 10px;
+  font-size: 20px;
+}

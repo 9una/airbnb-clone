@@ -1,16 +1,14 @@
-@import "reset.css";
-@import "variable.css";
-@import "header.css";
-@import "main.css";
-@import "main-modal.css";
-@import "host.css";
-@import "footer.css";
+@import "_variables";
+@import "header";
+@import "main";
+@import "main-modal";
+@import "host";
+@import "footer";
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&display=swap");
 
-html {
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 body {
   width: 100%;

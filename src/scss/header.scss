@@ -77,33 +77,63 @@
   .nav__form-search {
     display: flex;
     position: relative;
+    width: 850px;
+    background: white;
+    border-radius: 100px;
     .form-search__form {
+      width: 100%;
       display: none;
-      background: white;
+      grid-template-columns: 1.5fr 2fr 1.5fr;
+      gap: 1px;
       align-items: center;
-      border-radius: 15px;
       &.active {
-        display: flex;
+        display: grid;
       }
       & > div {
-        position: relative;
-        cursor: pointer;
-        position: relative;
         background: white;
-        margin-right: 10px;
-        span {
-          padding: 10px;
+        border-radius: 100px;
+        display: flex;
+        &:not(:last-child)::after {
+          content: "";
+          width: 1px;
+          height: 40px;
+          background: #ccc;
+          display: block;
+          position: absolute;
+          right: -1px;
+          top: 14px;
+        }
+        label {
+          width: 100%;
+          border-radius: 100px;
+          background: white;
+          padding: 14px 25px;
+          display: flex;
+          flex-direction: column;
+          font-size: 13px;
+          line-height: 16px;
+          input,
+          button {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            background: none;
+            text-align: left;
+          }
         }
         .tab-modal {
           display: none;
           position: absolute;
-          bottom: -40px;
+          width: 100%;
+          height: 120px;
+          left: 0;
+          top: 75px;
           padding: 10px;
-          background: cornflowerblue;
         }
         &.active {
           label {
-            background: blue;
+            background: #e9e9e9;
+            border: 1px solid #777;
           }
           .tab-modal {
             display: block;
@@ -112,8 +142,29 @@
       }
     }
     & > button {
-      padding: 10px 20px;
-      background: white;
+      position: absolute;
+      top: 11px;
+      right: 11px;
+      background: #ccc;
+      border-radius: 50px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: center;
+      transition: all 0.2s;
+      span {
+        display: none;
+      }
+      &.active {
+        padding: 0 15px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 5px;
+          display: block;
+        }
+      }
     }
   }
 }

@@ -47,6 +47,7 @@ function fnbModalCurClose(){
 // header - searchForm 모달
 const searchTab = document.querySelectorAll('.form-search__form.active > div');
 const modalTab = document.querySelectorAll('.boxbundle > div');
+const searchBtn = document.querySelector('.nav__form-search > button');
 
 for (let i = 0; i < searchTab.length; i++) {
     
@@ -56,6 +57,7 @@ for (let i = 0; i < searchTab.length; i++) {
             searchTab[j++].className = "modal-tab";
         }
         searchTab[i].className = 'modal-tab active';
+        searchBtn.classList.add('active');
     }
         
 }

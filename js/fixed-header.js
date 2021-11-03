@@ -1,4 +1,4 @@
-
+/*
 const header = document.getElementById("header");
 const formSearchBox = header.querySelector(".nav__form-formBox");
 const navFormBtn = formSearchBox.querySelector("form > div");
@@ -16,3 +16,5 @@ function scrollFunc(){
     }
 }
 document.addEventListener('scroll', scrollFunc);
+
+*/

@@ -189,7 +189,7 @@
             }
             img {
               height: 32px;
-              object-fit: contain;
+              width: auto;
             }
             span {
               margin-top: 24px;
@@ -208,7 +208,7 @@
         bottom: 30px;
         width: 32px;
         height: 32px;
-        background: rgba(255, 255, 255, 0.2);
+        background: #ebebeb;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -279,11 +279,14 @@
       top: 0;
       text-align: center;
       h1 {
+        padding-top: 38vh;
         color: white;
       }
       button {
-        background: black;
-        color: white;
+        background: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        font-weight: bold;
       }
     }
   }

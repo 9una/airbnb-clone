@@ -1,62 +1,64 @@
-const modalActiveBg = document.getElementById("modalActiveBg");
-
-const mypageBtn = document.querySelector(".nav__right-myBtn");
+//마이페이지 모달
 const mypageModal = document.querySelector(".nav__right-myBtn-modal");
 
-function seachBtnClick(){
-    header.classList.remove("searchBtn");
-    modalActiveBg.classList.add("active");
-    if(header.className !== "scroll"){
-        console.log("not scroll");
-        modalActiveBg.classList.remove("active");
-        formBtn.classList.remove("active");
-    }
+function mypageModalToggle(){
+    console.log("hi");
+    mypageModal.classList.toggle('active');
 }
 
-mypageBtn.addEventListener("click", () => {
-    mypageModal.classList.toggle('active');
-});
-//마이페이지 모달
+// header-언어&통화 모달
+const modalActiveBg = document.getElementById("modalActiveBg"),
+    lngCurBtn = document.querySelector(".nav__right-global"),
+    lngCurModal = document.querySelector(".lng-cur__modal");
 
-
-const lngCurBtn = document.querySelector(".nav__right-global");
-const lngCurModal = document.querySelector(".lng-cur__modal");
-const lngCurClose = lngCurModal.querySelector(".btn-close");
-
-lngCurBtn.addEventListener("click", () => {
+function gnbModalLngCur(){
     lngCurModal.classList.add('active');
     modalActiveBg.classList.add('active');
-})
-lngCurClose.addEventListener("click", () => {
+}
+function gnbModalClose(){
     lngCurModal.classList.remove('active');
     modalActiveBg.classList.remove('active');
-})
-// header-언어&통화 모달
+}
 
+// footer-언어&통화 모달
+const footerLngBtn = document.querySelector(".fnb__bottom-language"),
+    footerCurBtn = document.querySelector(".fnb__bottom-currency"),
+    fnbLngModal = document.querySelector(".fnb__modal-lng"),
+    fnbCurModal = document.querySelector(".fnb__modal-cur");
 
-const footerLngModal = document.querySelector(".language__modal");
-const footerLngBtn = document.querySelector(".fnb__bottom-language");
-
-const footerCurModal = document.querySelector(".currency__modal");
-const footerCurBtn = document.querySelector(".fnb__bottom-currency");
-
-const lngClose = footerLngModal.querySelector(".btn-close");
-const curClose = footerCurModal.querySelector(".btn-close");
-
-footerLngBtn.addEventListener("click", () => {
-    footerLngModal.classList.add('active');
+function fnbModalLng(){
+    fnbLngModal.classList.add('active');
     modalActiveBg.classList.add('active');
-})
-lngClose.addEventListener("click", () => {
-    footerLngModal.classList.remove('active');
+}
+function fnbModalLngClose(){
+    fnbLngModal.classList.remove('active');
     modalActiveBg.classList.remove('active');
-})
-footerCurBtn.addEventListener("click", () => {
-    footerCurModal.classList.add('active');
+}
+
+function fnbModalCur(){
+    fnbCurModal.classList.add('active');
     modalActiveBg.classList.add('active');
-})
-curClose.addEventListener("click", () => {
-    footerCurModal.classList.remove('active');
+}
+function fnbModalCurClose(){
+    fnbCurModal.classList.remove('active');
     modalActiveBg.classList.remove('active');
-})
-// footer-언어, 통화 모달
+}
+
+// header - searchForm 모달
+const searchTab = document.querySelectorAll('.form-search__form.active > div');
+const modalTab = document.querySelectorAll('.boxbundle > div');
+
+for (let i = 0; i < searchTab.length; i++) {
+    
+    searchTab[i].onclick = function(){
+        let j = 0;
+        while(j < searchTab.length){
+            searchTab[j++].className = "modal-tab";
+        }
+        searchTab[i].className = 'modal-tab active';
+    }
+        
+}
+
+
+//https://kyounghwan01.github.io/blog/JS/JSbasic/addEventListener/ 참고

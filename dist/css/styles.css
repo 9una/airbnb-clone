@@ -74,119 +74,45 @@
   border-bottom: 2px solid white;
   line-height: 38px;
 }
-.nav__form .nav__form-formBox {
+.nav__form .nav__form-search {
   display: flex;
-  justify-content: center;
-  width: 850px;
-}
-.nav__form .nav__form-formBox form {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  background: white;
-  border-radius: 60px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px, rgba(0, 0, 0, 0.1) 0px 3px 8px !important;
-}
-.nav__form .nav__form-formBox form.active {
-  background: #f7f7f7;
-}
-.nav__form .nav__form-formBox form > div {
-  display: flex;
-  align-content: center;
-}
-.nav__form .nav__form-formBox form > div .formBox-tab {
-  padding: 0 24px;
-  width: 100%;
-  height: 66px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 60px;
   position: relative;
 }
-.nav__form .nav__form-formBox form > div .formBox-tab.active {
-  background: white !important;
-  width: 76% !important;
-  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.15);
-}
-.nav__form .nav__form-formBox form > div .formBox-tab label {
-  margin-bottom: 4px;
-  font-size: 13px;
-  font-weight: 600;
-}
-.nav__form .nav__form-formBox form > div .formBox-tab button {
-  text-align: left;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
-}
-.nav__form .nav__form-formBox form > div .formBox-tab:hover {
-  background: #e9e9e9;
-}
-.nav__form .nav__form-formBox form > div .formBox-tab::after {
-  content: "";
-  width: 1px;
-  height: 25px;
-  background: #cfcfcf;
-  position: absolute;
-  right: 0;
-}
-.nav__form .nav__form-formBox form > div .nav__form-formBox-modal {
+.nav__form .nav__form-search .form-search__form {
   display: none;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 850px;
-  padding: 30px 30px;
-  border-radius: 32px;
-  box-sizing: border-box;
   background: white;
-  flex-direction: column;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2) !important;
-}
-.nav__form .nav__form-formBox form > div .nav__form-formBox-modal.active {
-  display: flex;
-}
-.nav__form .nav__form-formBox form .formBox__place {
-  width: 32%;
-}
-.nav__form .nav__form-formBox form .formBox__place .formBox-tab {
-  padding-left: 34px !important;
-}
-.nav__form .nav__form-formBox form .formBox__place input {
-  background: none;
-  border: none;
-}
-.nav__form .nav__form-formBox form .formBox__checkInOut {
-  width: 42%;
-}
-.nav__form .nav__form-formBox form .formBox__guest {
-  width: 26%;
-}
-.nav__form .nav__form-formBox form .searchBtn {
-  position: absolute;
-  right: 10px;
-  top: 9px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background: #ff385c;
-  color: white;
+  border-radius: 15px;
 }
-.nav__form .nav__form-formBox form .searchBtn span {
+.nav__form .nav__form-search .form-search__form.active {
+  display: flex;
+}
+.nav__form .nav__form-search .form-search__form > div {
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  background: white;
+  margin-right: 10px;
+}
+.nav__form .nav__form-search .form-search__form > div span {
+  padding: 10px;
+}
+.nav__form .nav__form-search .form-search__form > div .tab-modal {
   display: none;
+  position: absolute;
+  bottom: -40px;
+  padding: 10px;
+  background: cornflowerblue;
 }
-.nav__form .nav__form-formBox form .searchBtn.active {
-  width: 90px;
-  border-radius: 30px;
+.nav__form .nav__form-search .form-search__form > div.active label {
+  background: blue;
 }
-.nav__form .nav__form-formBox form .searchBtn.active span {
+.nav__form .nav__form-search .form-search__form > div.active .tab-modal {
   display: block;
-  font-weight: bold;
-  margin: 0 5px 0 7px;
+}
+.nav__form .nav__form-search > button {
+  padding: 10px 20px;
+  background: white;
 }
 
 .nav__right > a,
@@ -778,8 +704,8 @@ main section h2 {
 
 /* modal start */
 .lng-cur__modal,
-.language__modal,
-.currency__modal,
+.fnb__modal-lng,
+.fnb__modal-cur,
 .join-login__modal {
   position: fixed;
   width: 100%;
@@ -796,8 +722,8 @@ main section h2 {
   transition: all 0.3s;
 }
 .lng-cur__modal.active,
-.language__modal.active,
-.currency__modal.active,
+.fnb__modal-lng.active,
+.fnb__modal-cur.active,
 .join-login__modal.active {
   top: 0;
 }
@@ -810,6 +736,7 @@ main section h2 {
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .btn-close {
@@ -829,23 +756,31 @@ main section h2 {
 }
 
 /* lng-cur__modal */
-.lng-cur__modal .lng-cur__container {
+.lng-cur__modal .lng-cur__container,
+.fnb__modal-lng .lng-cur__container,
+.fnb__modal-cur .lng-cur__container {
   max-width: 1032px;
   height: 100%;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents {
+.lng-cur__modal .lng-cur__container .lng-cur__contents,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents {
   width: 100%;
-  height: 85vh;
+  height: calc(100% - 64px);
   max-height: 875px;
   overflow: auto;
   margin-top: 64px;
   box-sizing: border-box;
   padding: 0 24px;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__type,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__type {
   margin-bottom: 8px;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__type button,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__type button {
   color: #717171;
   padding: 10px;
   border-radius: 8px;
@@ -853,13 +788,19 @@ main section h2 {
   font-weight: bold;
   position: relative;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button:hover {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button:hover,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__type button:hover,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__type button:hover {
   background: #f7f7f7;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve {
   color: #222;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve::after {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve::after,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve::after,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__type button.acitve::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -868,16 +809,24 @@ main section h2 {
   left: 0;
   background: #222;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__contents-box,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__contents-box {
   border-top: 1px solid #ebebeb;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box > div {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box > div,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__contents-box > div,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__contents-box > div {
   display: none;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box > div.acitve {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box > .active,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__contents-box > .active,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__contents-box > .active {
   display: block;
 }
-.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box .lng-cur__language > div {
+.lng-cur__modal .lng-cur__container .lng-cur__contents .lng-cur__contents-box .lng-cur__language > div,
+.fnb__modal-lng .lng-cur__container .lng-cur__contents .lng-cur__contents-box .lng-cur__language > div,
+.fnb__modal-cur .lng-cur__container .lng-cur__contents .lng-cur__contents-box .lng-cur__language > div {
   margin-top: 24px;
 }
 .lng-cur__contents-list {
@@ -1125,7 +1074,7 @@ main section h2 {
 }
 #host__main #content__start-hosting .start-hosting__host .start-hosting__host-list .start-hosting__host-item .start-hosting__host-text img {
   height: 32px;
-  object-fit: contain;
+  width: auto;
 }
 #host__main #content__start-hosting .start-hosting__host .start-hosting__host-list .start-hosting__host-item .start-hosting__host-text span {
   margin-top: 24px;
@@ -1139,7 +1088,7 @@ main section h2 {
   bottom: 30px;
   width: 32px;
   height: 32px;
-  background: rgba(255, 255, 255, 0.2);
+  background: #ebebeb;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1209,11 +1158,14 @@ main section h2 {
   text-align: center;
 }
 #host__main #content__super-host .super-host__text h1 {
+  padding-top: 38vh;
   color: white;
 }
 #host__main #content__super-host .super-host__text button {
-  background: black;
-  color: white;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 #host__main #content__hosting-info .hosting-info__content {
   padding: 0 48px;

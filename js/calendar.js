@@ -1,4 +1,4 @@
-let date = new Date();
+/*let date = new Date();
 
 const renderCalendar = () => {
     const viewYear = date.getFullYear(),
@@ -116,3 +116,6 @@ const goToday = () => {
     date = new Date();
     renderCalendar();
 };
+
+
+*/

@@ -34,9 +34,12 @@
                   위치
                   <input type="text" placeholder="어디로 여행가세요?">
                 </label>
-                <div class="tab-modal where" style="background:yellow;"></div>
+                <div class="tab-modal where">
+                  <p>언제 어디로든 떠나는 여행</p>
+                  <a href="#;">유연한 검색<i class="fas fa-chevron-right"></i></a>
+                </div>
               </div>
-              <div>
+              <div id="checkInOut">
                 <label>
                   체크인
                   <button type="button">날짜 입력</button>
@@ -45,19 +48,49 @@
                   체크아웃
                   <button type="button">날짜 입력</button>
                 </label>
-                <div class="tab-modal when" style="background:cornflowerblue;"></div>
+                <div class="tab-modal when">
+                  <div class="calendar-tab">
+                    <button type="button" class="tab__calendar active">달력</button>
+                    <button type="button" class="tab__schedule">유연한 일정</button>
+                  </div>
+                </div>
               </div>
               <div>
                 <label>
                   인원
                   <button type="button">게스트 추가</button>
                 </label>
-                <div class="tab-modal guest" style="background:chartreuse;"></div>
+                <div class="tab-modal guest">
+                  <div class="guest-tab">
+                    <p><b>성인</b><br>만 13세 이상</p>
+                    <div class="tab__count">
+                      <button type="button"><i class="fas fa-minus"></i></button>
+                      <span>99</span>
+                      <button type="button"><i class="fas fa-plus"></i></button>
+                    </div>
+                  </div>
+                  <div class="guest-tab">
+                    <p><b>어린이</b><br>만 2~12세</p>
+                    <div class="tab__count">
+                      <button type="button"><i class="fas fa-minus"></i></button>
+                      <span>0</span>
+                      <button type="button"><i class="fas fa-plus"></i></button>
+                    </div>
+                  </div>
+                  <div class="guest-tab">
+                    <p><b>유아</b><br>만 2세 미만</p>
+                    <div class="tab__count">
+                      <button type="button"><i class="fas fa-minus"></i></button>
+                      <span>0</span>
+                      <button type="button"><i class="fas fa-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </form>
             <form id="experience" class="form-search__form">
               <div>
-                <label>
+                <label">
                   <input type="text" placeholder="">
                 </label>
                 <div class="tab-modal"></div>
@@ -384,13 +417,13 @@
         </div>
         <div class="fnb__bottom-right">
           <div class="fnb__bottom-global">
-            <button type="button" class="fnb__bottom-language" onclick="fnbModalLng();">
+            <button type="button" class="fnb__bottom-language" onclick="gnbModalLngCur();">
               <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="height: 16px; width: 16px; fill: currentcolor;">
                 <path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path>
               </svg>
               <span>한국어 (KR)</span>
             </button>
-            <button type="button" class="fnb__bottom-currency" onclick="fnbModalCur();">
+            <button type="button" class="fnb__bottom-currency" onclick="gnbModalLngCur();">
               <i class="fas fa-won-sign"></i>
               <span>KRW</span>
             </button>
@@ -404,24 +437,24 @@
       </div>
     </footer>
     <!-- footer-end -->
-    <div class="lng-cur__modal">
-      <div class="lng-cur__container">
+    <div class="modal lng-cur__modal">
+      <div class="modal__container container__lng-cur">
         <button class="btn-close" type="button" onclick="gnbModalClose();"><i class="fas fa-times"></i></button>
         <div class="lng-cur__contents">
           <div class="lng-cur__type">
-            <button class="btn-language active" type="button">언어와 지역</button>
-            <button class="btn-currency" type="button">통화</button>
+            <button class="type-btn active" onclick="tabLngCur();" type="button">언어와 지역</button>
+            <button class="type-btn" onclick="tabLngCur();" type="button">통화</button>
           </div>
-          <div class="lng-cur__contents-box">
-            <div class="lng-cur__language active">
-              <div class="lng-cur__language-recommend">
+          <div class="lng-cur__cont-box">
+            <div class="cont-box active">
+              <div class="lng__recommend">
                 <h2 class="lng-cur__contents-title">추천 언어 및 지역</h2>
                 <ul class="lng-cur__contents-list">
                   <li><a href="#;">English<span>Untied States</span></a></li>
                   <li><a href="#;">English<span>Untied Kingdom</span></a></li>
                 </ul>
               </div>
-              <div class="lng-cur__language-check">
+              <div class="lng__language-check">
                 <h2 class="lng-cur__contents-title">언어와 지역을 선택하세요</h2>
                 <ul class="lng-cur__contents-list">
                   <li class="active"><a href="#;">한국어<span>대한민국</span></a></li>
@@ -516,8 +549,8 @@
                 </ul>
               </div>
             </div>
-            <div class="lng-cur__currency">
-              <div class="lng-cur__currency-check">
+            <div class="cont-box">
+              <div class="cur__currency-check">
                 <h2 class="lng-cur__contents-title">통화를 선택하세요.</h2>
                 <ul class="lng-cur__contents-list">
                   <li class="active"><a href="#;">한국 원<span>KRW - ₩</span></a></li>
@@ -567,8 +600,8 @@
         </div>
       </div>
     </div>
-    <div class="join-login__modal">
-      <div class="join-login__container">
+    <div class="modal join-login__modal">
+      <div class="modal__container container__join-login">
         <button class="btn-close" type="button"><i class="fas fa-times"></i></button>
         <h4>로그인 또는 회원가입</h4>
         <div class="join-login__contents">
@@ -617,175 +650,8 @@
         </div>
       </div>
     </div>
-    <div class="fnb__modal-lng">
-      <div class="lng-cur__container">
-        <button class="btn-close" type="button" onclick="fnbModalLngClose();"><i class="fas fa-times"></i></button>
-        <div class="lng-cur__contents">
-          <div class="lng-cur__contents-box">
-            <div class="lng-cur__language active">
-              <div class="lng-cur__language-recommend">
-                <h2 class="lng-cur__contents-title">추천 언어 및 지역</h2>
-                <ul class="lng-cur__contents-list">
-                  <li><a href="#;">English<span>Untied States</span></a></li>
-                  <li><a href="#;">English<span>Untied Kingdom</span></a></li>
-                </ul>
-              </div>
-              <div class="lng-cur__language-check">
-                <h2 class="lng-cur__contents-title">언어와 지역을 선택하세요</h2>
-                <ul class="lng-cur__contents-list">
-                  <li class="active"><a href="#;">한국어<span>대한민국</span></a></li>
-                  <li><a href="#;">Azərbaycan dili<span>Azərbaycan</span></a></li>
-                  <li><a href="#;">Bahasa Indonesia<span>Indonesia</span></a></li>
-                  <li><a href="#;">Bosanski<span>Bosna i Hercegovina</span></a></li>
-                  <li><a href="#;">Català<span>Espanya</span></a></li>
-                  <li><a href="#;">Čeština<span>Česká republika</span></a></li>
-                  <li><a href="#;">Crnogorski<span>Crna Gora</span></a></li>
-                  <li><a href="#;">Dansk<span>Danmark</span></a></li>
-                  <li><a href="#;">Deutsch<span>Deutschland</span></a></li>
-                  <li><a href="#;">Deutsch<span>Österreich</span></a></li>
-                  <li><a href="#;">Deutsch<span>Schweiz</span></a></li>
-                  <li><a href="#;">Eesti<span>Eesti</span></a></li>
-                  <li><a href="#;">English<span>Australia</span></a></li>
-                  <li><a href="#;">English<span>Canada</span></a></li>
-                  <li><a href="#;">English<span>Guyana</span></a></li>
-                  <li><a href="#;">English<span>India</span></a></li>
-                  <li><a href="#;">English<span>Ireland</span></a></li>
-                  <li><a href="#;">English<span>New Zealand</span></a></li>
-                  <li><a href="#;">English<span>Singapore</span></a></li>
-                  <li><a href="#;">English<span>United Arab Emirates</span></a></li>
-                  <li><a href="#;">Español<span>Argentina</span></a></li>
-                  <li><a href="#;">Español<span>Belice</span></a></li>
-                  <li><a href="#;">Español<span>Bolivia</span></a></li>
-                  <li><a href="#;">Español<span>Chile</span></a></li>
-                  <li><a href="#;">Español<span>Colombia</span></a></li>
-                  <li><a href="#;">Español<span>Costa Rica</span></a></li>
-                  <li><a href="#;">Español<span>Ecuador</span></a></li>
-                  <li><a href="#;">Español<span>El Salvador</span></a></li>
-                  <li><a href="#;">Español<span>España</span></a></li>
-                  <li><a href="#;">Español<span>Estados Unidos</span></a></li>
-                  <li><a href="#;">Español<span>Guatemala</span></a></li>
-                  <li><a href="#;">Español<span>Honduras</span></a></li>
-                  <li><a href="#;">Español<span>Latinoamérica</span></a></li>
-                  <li><a href="#;">Español<span>México</span></a></li>
-                  <li><a href="#;">Español<span>Nicaragua</span></a></li>
-                  <li><a href="#;">Español<span>Panamá</span></a></li>
-                  <li><a href="#;">Español<span>Paraguay</span></a></li>
-                  <li><a href="#;">Español<span>Perú</span></a></li>
-                  <li><a href="#;">Español<span>Venezuela</span></a></li>
-                  <li><a href="#;">Français<span>Belgique</span></a></li>
-                  <li><a href="#;">Français<span>Canada</span></a></li>
-                  <li><a href="#;">Français<span>France</span></a></li>
-                  <li><a href="#;">Français<span>Suisse</span></a></li>
-                  <li><a href="#;">Gaeilge<span>Éire</span></a></li>
-                  <li><a href="#;">Hrvatski<span>Hrvatska</span></a></li>
-                  <li><a href="#;">isiXhosa<span>eMzantsi Afrika</span></a></li>
-                  <li><a href="#;">isiZulu<span>iNingizimu Afrika</span></a></li>
-                  <li><a href="#;">Íslenska<span>Ísland</span></a></li>
-                  <li><a href="#;">Italiano<span>Italia</span></a></li>
-                  <li><a href="#;">Italiano<span>Svizzera</span></a></li>
-                  <li><a href="#;">Kisahili<span>Āfrika</span></a></li>
-                  <li><a href="#;">Latviešu<span>Latvija</span></a></li>
-                  <li><a href="#;">Lietuvių<span>Lietuva</span></a></li>
-                  <li><a href="#;">Magyar<span>Magyarország</span></a></li>
-                  <li><a href="#;">Malti<span>Malta</span></a></li>
-                  <li><a href="#;">Melayu<span>Malaysia</span></a></li>
-                  <li><a href="#;">Nederlands<span>België</span></a></li>
-                  <li><a href="#;">Nederlands<span>Nederland</span></a></li>
-                  <li><a href="#;">Norsk<span>Norge</span></a></li>
-                  <li><a href="#;">Polski<span>Polska</span></a></li>
-                  <li><a href="#;">Português<span>Brasil</span></a></li>
-                  <li><a href="#;">Português<span>Portugal</span></a></li>
-                  <li><a href="#;">Română<span>România</span></a></li>
-                  <li><a href="#;">Shqip<span>Shqipëri</span></a></li>
-                  <li><a href="#;">Slovenčina<span>Slovensko</span></a></li>
-                  <li><a href="#;">Slovenščina<span>Slovenjia</span></a></li>
-                  <li><a href="#;">Srpski<span>Srbija</span></a></li>
-                  <li><a href="#;">Suomi<span>Suomi</span></a></li>
-                  <li><a href="#;">Svenska<span>Sverige</span></a></li>
-                  <li><a href="#;">Tagalog<span>Pilipinas</span></a></li>
-                  <li><a href="#;">Tiếng Việt<span>Việt Nam</span></a></li>
-                  <li><a href="#;">Türkçe<span>Türkiye</span></a></li>
-                  <li><a href="#;">Ελληνικά<span>Ελλάδα</span></a></li>
-                  <li><a href="#;">Български<span>България</span></a></li>
-                  <li><a href="#;">Македонски<span>Северна Македонија</span></a></li>
-                  <li><a href="#;">Русский<span>Россия</span></a></li>
-                  <li><a href="#;">Українська<span>Україна</span></a></li>
-                  <li><a href="#;">ქართული<span>საქართველო</span></a></li>
-                  <li><a href="#;">Հայերեն<span>Հայաստան</span></a></li>
-                  <li><a href="#;">עברית<span>ישראל</span></a></li>
-                  <li><a href="#;">العربية<span>العالم</span></a></li>
-                  <li><a href="#;">हिन्दी<span>भारत</span></a></li>
-                  <li><a href="#;">ไทย<span>ประเทศไทย</span></a></li>
-                  <li><a href="#;">日本語<span>日本</span></a></li>
-                  <li><a href="#;">简体中文<span>美国</span></a></li>
-                  <li><a href="#;">繁體中文<span>美國</span></a></li>
-                  <li><a href="#;">简体中文<span>中国</span></a></li>
-                  <li><a href="#;">繁體中文<span>香港</span></a></li>
-                  <li><a href="#;">繁體中文<span>台灣</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="fnb__modal-cur">
-      <div class="lng-cur__container">
-        <button class="btn-close" type="button" onclick="fnbModalCurClose();"><i class="fas fa-times"></i></button>
-        <div class="lng-cur__contents">
-          <div class="lng-cur__contents-box">
-            <div class="lng-cur__currency active">
-              <div class="lng-cur__currency-check">
-                <h2 class="lng-cur__contents-title">통화를 선택하세요.</h2>
-                <ul class="lng-cur__contents-list">
-                  <li class="active"><a href="#;">한국 원<span>KRW - ₩</span></a></li>
-                  <li><a href="#;">남아프리카공화국 란드<span>ZAR - R</span></a></li>
-                  <li><a href="#;">노르웨이 크로네<span>NOK - kr</span></a></li>
-                  <li><a href="#;">뉴질랜드 달러<span>NZD - $</span></a></li>
-                  <li><a href="#;">덴마크 크로네<span>DKK - kr</span></a></li>
-                  <li><a href="#;">러시아 루블<span>RUB - ₽</span></a></li>
-                  <li><a href="#;">루마니아 레우<span>RON - lei</span></a></li>
-                  <li><a href="#;">말레이시아 링깃<span>MYR - RM</span></a></li>
-                  <li><a href="#;">멕시코 페소<span>MXN - $</span></a></li>
-                  <li><a href="#;">모로코 디르함<span>MAD</span></a></li>
-                  <li><a href="#;">미국 달러<span>USD - $</span></a></li>
-                  <li><a href="#;">불가리아 레프<span>BGN - лв.</span></a></li>
-                  <li><a href="#;">브라질 레알<span>BRL - R$</span></a></li>
-                  <li><a href="#;">사우스아라비아 리얄<span>SAR - SR</span></a></li>
-                  <li><a href="#;">스웨덴 크로나<span>SEK - kr</span></a></li>
-                  <li><a href="#;">스위스 프랑<span>CHF</span></a></li>
-                  <li><a href="#;">신 타이완 달러<span>TWD - $</span></a></li>
-                  <li><a href="#;">싱가포르 달러<span>SGD - $</span></a></li>
-                  <li><a href="#;">아랍에미리트 디르함<span>AED - ﺩ.ﺇ</span></a></li>
-                  <li><a href="#;">영국 파운드<span>GBP - £</span></a></li>
-                  <li><a href="#;">우루과이 페소<span>UYU - $U</span></a></li>
-                  <li><a href="#;">유로<span>EUR - €</span></a></li>
-                  <li><a href="#;">이스라엘 신 셰켈<span>ILS - ₪</span></a></li>
-                  <li><a href="#;">인도 루피<span>INR - ₹</span></a></li>
-                  <li><a href="#;">일본 엔<span>JPY - ¥</span></a></li>
-                  <li><a href="#;">중국 위안<span>CNY - ￥</span></a></li>
-                  <li><a href="#;">체코 코루나<span>CZK - Kč</span></a></li>
-                  <li><a href="#;">칠레 페소<span>CLP - $</span></a></li>
-                  <li><a href="#;">캐나다 달러<span>CAD - $</span></a></li>
-                  <li><a href="#;">코스타리카 콜론<span>CRC - ₡</span></a></li>
-                  <li><a href="#;">콜롬비아 페소<span>COP - $</span></a></li>
-                  <li><a href="#;">크로아티아 쿠나<span>HRK - kn</span></a></li>
-                  <li><a href="#;">태국 바트<span>THB - ฿</span></a></li>
-                  <li><a href="#;">터키 리라<span>TRY - ₺</span></a></li>
-                  <li><a href="#;">페루 솔<span>PEN - S/</span></a></li>
-                  <li><a href="#;">폴란드 즐로티<span>PLN - zł</span></a></li>
-                  <li><a href="#;">필리핀 페소<span>PHP - ₱</span></a></li>
-                  <li><a href="#;">헝가리 포린트<span>HUF - Ft</span></a></li>
-                  <li><a href="#;">호주 달러<span>AUD - $</span></a></li>
-                  <li><a href="#;">홍콩 달러<span>HKD - $</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="modalActiveBg"></div>
+    <div id="modalBg"></div>
+    
 
     <script src="js/index.js"></script>
     <script src="js/fixed-header.js"></script>

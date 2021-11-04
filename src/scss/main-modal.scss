@@ -1,12 +1,12 @@
-/* modal active bg : black 30% */
-#modalActiveBg {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+/* modal start */
+#modalBg {
   width: 100%;
   height: 100vh;
-  background: rgb(0 0 0 / 30%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
   z-index: 3;
   &.active {
     display: block;
@@ -14,116 +14,97 @@
 }
 
 /* modal start */
-
-.lng-cur__modal,
-.fnb__modal-lng,
-.fnb__modal-cur,
-.join-login__modal {
+.modal {
   position: fixed;
   width: 100%;
   height: 100vh;
   top: 120vh;
   left: 0;
   display: flex;
+  opacity: 0;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   padding: 40px;
   z-index: 999;
-  border-radius: 10px;
   transition: all 0.3s;
   &.active {
     top: 0;
+    opacity: 1;
+  }
+  .modal__container {
+    position: relative;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    overflow: hidden;
+    .btn-close {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transition: all 0.1s;
+      &:hover {
+        background: #f7f7f7;
+      }
+      &:active {
+        font-size: 17px;
+      }
+    }
   }
 }
-
-.lng-cur__container,
-.join-login__container {
-  position: relative;
-  width: 100%;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.btn-close {
-  position: absolute;
-  left: 14px;
-  top: 14px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  transition: all 0.1s;
-  &:hover {
-    background: #f7f7f7;
-  }
-  &:active {
-    font-size: 17px;
-  }
-}
-
 /* lng-cur__modal */
-.lng-cur__modal,
-.fnb__modal-lng,
-.fnb__modal-cur {
-  .lng-cur__container {
-    max-width: 1032px;
-    height: 100%;
-    .lng-cur__contents {
-      width: 100%;
-      height: calc(100% - 64px);
-      max-height: 875px;
-      overflow: auto;
-      margin-top: 64px;
-      box-sizing: border-box;
-      padding: 0 24px;
-      .lng-cur__type {
-        margin-bottom: 8px;
-        button {
-          color: #717171;
-          padding: 10px;
-          border-radius: 8px;
-          font-size: 14px;
-          font-weight: bold;
-          position: relative;
-          &:hover {
-            background: #f7f7f7;
-          }
-          &.acitve {
-            color: #222;
-            &::after {
-              content: "";
-              width: 100%;
-              height: 2px;
-              position: absolute;
-              bottom: -8px;
-              left: 0;
-              background: #222;
-            }
+.container__lng-cur {
+  max-width: 1032px;
+  height: 100%;
+  .lng-cur__contents {
+    width: 100%;
+    height: calc(100% - 64px);
+    max-height: 875px;
+    overflow: auto;
+    margin-top: 64px;
+    box-sizing: border-box;
+    padding: 0 24px;
+    .lng-cur__type {
+      margin-bottom: 8px;
+      button {
+        color: #717171;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        position: relative;
+        &:hover {
+          background: #f7f7f7;
+        }
+        &.active {
+          color: #222;
+          &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            background: #222;
           }
         }
       }
-      .lng-cur__contents-box {
-        border-top: 1px solid #ebebeb;
-        & > div {
-          display: none;
-        }
-        & > .active {
+    }
+    .lng-cur__cont-box {
+      border-top: 1px solid #ebebeb;
+      .cont-box {
+        display: none;
+        &.active {
           display: block;
         }
-        .lng-cur__language {
+        &:first-child {
           & > div {
             margin-top: 24px;
-          }
-          .lng-cur__language-recommend {
-          }
-          .lng-cur__language-check {
-          }
-        }
-        .lng-cur__currency {
-          .lng-cur__currency-check {
           }
         }
       }

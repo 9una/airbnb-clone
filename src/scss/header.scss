@@ -80,6 +80,10 @@
     width: 850px;
     background: white;
     border-radius: 100px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    &.active {
+      background: #f7f7f7;
+    }
     .form-search__form {
       width: 100%;
       display: none;
@@ -90,23 +94,22 @@
         display: grid;
       }
       & > div {
-        background: white;
         border-radius: 100px;
         display: flex;
-        &:not(:last-child)::after {
-          content: "";
-          width: 1px;
-          height: 40px;
-          background: #ccc;
-          display: block;
-          position: absolute;
-          right: -1px;
-          top: 14px;
+        &#checkInOut {
+        }
+        &.active {
+          label {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+          }
+          .tab-modal {
+            display: flex;
+          }
         }
         label {
           width: 100%;
           border-radius: 100px;
-          background: white;
           padding: 14px 25px;
           display: flex;
           flex-direction: column;
@@ -119,25 +122,10 @@
             padding: 0;
             background: none;
             text-align: left;
+            color: #777;
           }
         }
         .tab-modal {
-          display: none;
-          position: absolute;
-          width: 100%;
-          height: 120px;
-          left: 0;
-          top: 75px;
-          padding: 10px;
-        }
-        &.active {
-          label {
-            background: #e9e9e9;
-            border: 1px solid #777;
-          }
-          .tab-modal {
-            display: block;
-          }
         }
       }
     }
@@ -145,7 +133,8 @@
       position: absolute;
       top: 11px;
       right: 11px;
-      background: #ccc;
+      background: $pink;
+      color: white;
       border-radius: 50px;
       width: 40px;
       height: 40px;
@@ -579,4 +568,110 @@
 .nav__form-formBox form .formBox-tab:hover::after,
 .nav__form-formBox form .formBox-tab.active::after {
   display: none;
+}
+
+/* header tap-modal */
+.tab-modal {
+  display: none;
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  top: 75px;
+  padding: 35px 30px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  &.where {
+    flex-direction: column;
+    p {
+      font-size: 0.75rem;
+      margin-bottom: 20px;
+    }
+    a {
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+      padding: 20px 25px;
+      border-radius: 30px;
+      color: purple;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+  &.when {
+    width: 100%;
+    flex-direction: column;
+    .calendar-tab {
+      width: 158px;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 30px;
+      background: #e9e9e9;
+      border-radius: 25px;
+      padding: 5px;
+      button {
+        border-radius: inherit;
+        font-weight: bold;
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        &.active {
+          background: white;
+        }
+      }
+      .tab__calendar {
+      }
+      .tab__schedule {
+      }
+    }
+  }
+  &.guest {
+    flex-direction: column;
+    left: auto;
+    right: 0;
+    .guest-tab {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 15px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e1e1e1;
+      }
+      p {
+        width: 230px;
+        color: #777;
+        font-size: 0.85rem;
+        b {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          font-weight: bold;
+          color: black;
+        }
+      }
+      .tab__count {
+        display: flex;
+        align-items: center;
+        button {
+          width: 33px;
+          height: 33px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #999;
+          border: 1px solid #cfcfcf;
+          font-size: 0.8rem;
+          &:hover {
+            border-color: black;
+            color: black;
+          }
+        }
+        span {
+          width: 35px;
+          text-align: center;
+        }
+      }
+    }
+  }
 }

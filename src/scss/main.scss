@@ -38,37 +38,42 @@ main {
       margin-bottom: 16px;
       line-height: 52px;
     }
+    & > div {
+      padding-bottom: 25px;
+    }
   }
 }
 
 /* nearTrip */
 .content__nearTrip {
-  .nearTrip__list {
-    padding: 8px;
-    width: 100%;
-    height: 144px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-content: space-between;
-    gap: 10px;
-    .nearTrip__item {
-      a {
-        display: flex;
-        .nearTrip__item-img {
-          width: 64px;
-          height: 64px;
-          object-fit: cover;
-          border-radius: 8px;
-          margin-right: 14px;
-        }
-        .nearTrip__item-text {
-          height: 64px;
+  .content__nearTrip-box {
+    .nearTrip__list {
+      padding: 8px;
+      width: 100%;
+      height: 144px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-content: space-between;
+      gap: 15px;
+      .nearTrip__item {
+        a {
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          span {
-            margin-bottom: 5px;
-            font-weight: bold;
+          .nearTrip__item-img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 14px;
+          }
+          .nearTrip__item-text {
+            height: 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            span {
+              margin-bottom: 5px;
+              font-weight: bold;
+            }
           }
         }
       }
@@ -92,7 +97,6 @@ main {
 /* startHosting */
 .content__startHosting {
   height: 480px;
-  padding-bottom: 24px;
   .content__startHosting-box {
     display: block;
     width: 100%;
@@ -138,10 +142,8 @@ main {
 /* enjoyTrip */
 .content__enjoyTrip {
   padding-top: 32px;
-  padding-bottom: 55px;
   margin-bottom: 40px;
   .enjoyTrip__item {
-    width: 33.3%;
     .enjoyTrip__item-text {
       span {
         font-weight: bold;
@@ -162,9 +164,15 @@ main {
 .list-thema {
   & > div {
     ul {
-      display: flex;
+      display: grid;
+      gap: 15px;
+      &.liveTrip__list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      &.enjoyTrip__list {
+        grid-template-columns: repeat(3, 1fr);
+      }
       li {
-        margin: 0 5px;
         a {
           display: flex;
           flex-direction: column;
@@ -177,5 +185,21 @@ main {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: $small) {
+  body {
+    background: coral;
+  }
+}
+@media screen and (min-width: $small) and (max-width: $medium) {
+  body {
+    background: cornflowerblue;
+  }
+}
+@media screen and (min-width: $medium) and (max-width: $large) {
+  body {
+    background: lightgreen;
   }
 }

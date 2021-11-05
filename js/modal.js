@@ -4,7 +4,6 @@ const modalBg = document.getElementById('modalBg');
 const mypageModal = document.querySelector(".nav__right-myBtn-modal");
 
 function mypageModalToggle(){
-    console.log("hi");
     mypageModal.classList.toggle('active');
 }
 
@@ -35,20 +34,5 @@ function tabLngCur(){
 2 - 두번쨰 버튼을 누르면 1번의 active 없어짐
 */
 
-// header - searchForm 모달
-const searchForm = document.querySelector('.nav__form-search');
-const searchTab = document.querySelectorAll('.form-search__form.active > div');
-const searchBtn = document.querySelector('.nav__form-search > button');
-
-for (let i = 0; i < searchTab.length; i++) {
-    searchTab[i].onclick = function(){
-        searchForm.classList.add('active');
-        let j = 0;
-        while(j < searchTab.length){
-            searchTab[j++].className = "modal-tab";
-        }
-        searchTab[i].className = 'modal-tab active';
-        searchBtn.classList.add('active');
-    }
-}
-//https://kyounghwan01.github.io/blog/JS/JSbasic/addEventListener/ 참고
+// searchForm - 체크인-체크아웃
+// searchForm - 게스트 카운트

@@ -13,7 +13,7 @@
       <div id="notice-bar">
         <a href="#;">에어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.</a>
       </div>
-      <nav ><!--class="fixed"-->
+      <nav>
         <div class="nav__left logo">
           <a href="index.html">
             <svg width="102" height="32" fill="currentcolor" style="display: block;">
@@ -64,25 +64,25 @@
                   <div class="guest-tab">
                     <p><b>성인</b><br>만 13세 이상</p>
                     <div class="tab__count">
-                      <button type="button"><i class="fas fa-minus"></i></button>
-                      <span>99</span>
-                      <button type="button"><i class="fas fa-plus"></i></button>
+                      <button type="button" class="minus-btn inactive">-</button>
+                      <input class="count-result" type="number" value="0"/>
+                      <button type="button" class="plus-btn">+</button>
                     </div>
                   </div>
                   <div class="guest-tab">
                     <p><b>어린이</b><br>만 2~12세</p>
                     <div class="tab__count">
-                      <button type="button"><i class="fas fa-minus"></i></button>
-                      <span>0</span>
-                      <button type="button"><i class="fas fa-plus"></i></button>
+                      <button type="button" class="minus-btn inactive">-</button>
+                      <input class="count-result" type="number" value="0"/>
+                      <button type="button" class="plus-btn">+</button>
                     </div>
                   </div>
                   <div class="guest-tab">
                     <p><b>유아</b><br>만 2세 미만</p>
                     <div class="tab__count">
-                      <button type="button"><i class="fas fa-minus"></i></button>
-                      <span>0</span>
-                      <button type="button"><i class="fas fa-plus"></i></button>
+                      <button type="button" class="minus-btn inactive">-</button>
+                      <input class="count-result" type="number" value="0"/>
+                      <button type="button" class="plus-btn">+</button>
                     </div>
                   </div>
                 </div>
@@ -655,9 +655,9 @@
 
     <script src="js/index.js"></script>
     <script src="js/fixed-header.js"></script>
-    <script src="js/calendar.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/guest-count.js"></script>
+    <script src="js/calendar.js"></script>
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
   </body>
 </html>

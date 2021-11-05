@@ -1,20 +1,48 @@
-/*
-const header = document.getElementById("header");
-const formSearchBox = header.querySelector(".nav__form-formBox");
-const navFormBtn = formSearchBox.querySelector("form > div");
-const navFormBtnSib = navFormBtn.nextSibling;
+// 스크롤시 헤더 고정
+const header = document.getElementById("header"),
+    nav = document.querySelector('nav');
+
+let searchText = document.createElement("span");
+searchText.innerHTML = "검색 시작하기";
+
 
 function scrollFunc(){
+    console.log(scrollY);
     if(scrollY >= 70){
-        header.classList.add("fixed", "searchBtn");
-        if(navFormBtn.className !== "active"){
-            navFormBtn.classList.remove('active');
-            navFormBtn.parentElement.classList.remove("active");
+        header.classList.add("fixed");
+        nav.classList.add("active");
+        searchForm.append(searchText);
+        if(searchBtn.className = 'active'){
+            searchBtn.classList.remove('active');
         }
+        searchForm.addEventListener('click', function(){
+            nav.classList.remove("active");
+           
+        });
+    }else if(scrollY >= 100){
+        headerHost.classList.add("fixed");
     }else{
-        header.classList.remove("fixed", "searchBtn");
+        header.classList.remove("fixed");
     }
 }
 document.addEventListener('scroll', scrollFunc);
 
-*/
+
+// header - searchForm 모달
+const formTab = document.querySelector('.nav__form-tab');
+const searchForm = document.querySelector('.nav__form-search');
+const searchTab = document.querySelectorAll('.form-search__form.active > div');
+const searchBtn = document.querySelector('.nav__form-search > button');
+
+for (let i = 0; i < searchTab.length; i++) {
+    searchTab[i].onclick = function(){
+        searchForm.classList.add('active');
+        let j = 0;
+        while(j < searchTab.length){
+            searchTab[j++].className = "modal-tab";
+        }
+        searchTab[i].className = 'modal-tab active';
+        searchBtn.classList.add('active');
+    }
+}
+//https://kyounghwan01.github.io/blog/JS/JSbasic/addEventListener/ 참고

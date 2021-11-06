@@ -16,11 +16,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    background: url(../../img/logo_white_2.png) no-repeat center;
+    background-size: auto 32px;
     svg {
       fill: white;
     }
     &:hover {
-      background: rgba(247, 247, 247, 0.2);
+      background-color: rgba(247, 247, 247, 0.2);
     }
   }
   .header__right {
@@ -56,13 +58,6 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
     }
-    .start-btn {
-      padding: 16px 24px;
-      border-radius: 8px;
-      background: #ff385c;
-      color: white;
-      font-weight: bold;
-    }
   }
   &.fixed {
     position: fixed;
@@ -76,6 +71,8 @@
       position: relative;
       top: -3px;
       left: 34px;
+      background: url(../../img/logo_black_2.png) no-repeat center;
+      background-size: auto 32px;
       svg {
         fill: black;
       }
@@ -193,13 +190,13 @@
   #content__start-hosting {
     position: relative;
     .start-hosting__host {
-      box-sizing: border-box;
-      padding: 0 0 0 48px;
+      margin-left: 48px;
       overflow: hidden;
-      width: 100%;
+      width: calc(100% - 48px);
       position: relative;
       .start-hosting__host-list {
         display: flex;
+        position: relative;
         width: 196%;
         .start-hosting__host-item {
           margin-left: 13px;
@@ -302,7 +299,7 @@
     height: 100vh;
     position: relative;
     img {
-      border-radius: 8px;
+      border-radius: 10px;
       width: 100%;
       object-fit: cover;
       height: 100%;
@@ -326,7 +323,7 @@
   /* super-host - e */
   #content__hosting-info {
     .hosting-info__content {
-      padding: 0 48px;
+      padding: $hostPadding48;
       margin-bottom: 220px;
       .hosting-info__content-list {
         display: grid;
@@ -386,4 +383,70 @@
     }
   }
   /* end-screen - e */
+}
+
+/* start-btn */
+.start-btn {
+  padding: 16px 24px;
+  border-radius: 8px;
+  background: #ff385c;
+  color: white;
+  font-weight: bold;
+}
+
+@media (min-width: $medium) and (max-width: $large) {
+  .logo {
+    background-position: center;
+  }
+  #host__main {
+    #content__start-hosting {
+      .start-hosting__host {
+        margin-left: 40px;
+        width: calc(100% - 40px);
+        .start-hosting__host-list {
+          width: 360%;
+          left: -60%;
+          .start-hosting__host-item {
+            margin-left: 0;
+            margin-right: 3.7%;
+            img {
+            }
+          }
+        }
+        button {
+          &.host-list__prev {
+            right: calc(40% + 60px);
+          }
+          &.host-list__next {
+            right: 40%;
+          }
+        }
+      }
+    }
+    #content__super-host {
+      padding: 0 50px;
+      img {
+        height: auto;
+      }
+      .super-host__text {
+        h1 {
+          font-size: 3.5rem;
+          padding-top: 30vh;
+        }
+      }
+    }
+    #host__end-screen {
+      .end-screen__right {
+        p {
+          width: 72%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $small) and (max-width: $medium) {
+}
+
+@media (max-width: $small) {
 }

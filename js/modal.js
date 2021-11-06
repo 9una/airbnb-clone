@@ -9,7 +9,8 @@ function mypageModalToggle(){
 
 // 언어&통화 모달
 const lngCurBtn = document.querySelector(".nav__right-global"),
-    lngCurModal = document.querySelector(".lng-cur__modal");
+    lngCurModal = document.querySelector(".lng-cur__modal"),
+    loginModal = document.querySelector(".join-login__modal");
 
 function gnbModalLngCur(){
     lngCurModal.classList.add('active');
@@ -17,6 +18,14 @@ function gnbModalLngCur(){
 }
 function gnbModalClose(){
     lngCurModal.classList.remove('active');
+    modalBg.classList.remove('active');
+}
+function gnbModalLogin(){
+    loginModal.classList.add('active');
+    modalBg.classList.add('active');
+}
+function loginModalClose(){
+    loginModal.classList.remove('active');
     modalBg.classList.remove('active');
 }
 

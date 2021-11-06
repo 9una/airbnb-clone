@@ -50,7 +50,6 @@ main {
     .nearTrip__list {
       padding: 8px;
       width: 100%;
-      height: 144px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-content: space-between;
@@ -188,18 +187,75 @@ main {
   }
 }
 
-@media screen and (max-width: $small) {
-  body {
-    background: coral;
+@media (max-width: $large) {
+  main {
+    section {
+      padding: $padding40;
+      &.content__nearTrip {
+        .content__nearTrip-box {
+          .nearTrip__list {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-auto-flow: column; //정렬변경
+            padding: 0;
+            .nearTrip__item {
+              a {
+                .nearTrip__item-img {
+                  width: 70px;
+                  height: 70px;
+                }
+              }
+              &:nth-last-child(n + 1):nth-last-child(-n + 2) {
+                display: none;
+              } //뒤에서부터 리스트 선택
+            }
+          }
+        }
+      }
+      &.content__liveTrip {
+        .content__liveTrip-box {
+          .liveTrip__list {
+            grid-template-columns: repeat(3, 1fr);
+            .liveTrip__item {
+              &:nth-last-child(1) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      &.content__startHosting {
+        height: 360px;
+        .content__startHosting-box {
+          padding: 0 40px;
+          h1 {
+            font-size: 1.9rem;
+            margin: 0;
+          }
+          p {
+            width: 280px;
+            font-size: 1rem;
+            line-height: 1.3rem;
+            margin-bottom: 20px;
+          }
+          span {
+            padding: 12px 0 9px;
+            width: 135px;
+          }
+        }
+      }
+    }
   }
 }
-@media screen and (min-width: $small) and (max-width: $medium) {
+
+@media (max-width: $medium) {
   body {
     background: cornflowerblue;
   }
 }
-@media screen and (min-width: $medium) and (max-width: $large) {
+
+@media (max-width: $small) {
   body {
-    background: lightgreen;
+    background: coral;
   }
 }

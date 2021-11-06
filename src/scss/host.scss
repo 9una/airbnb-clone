@@ -30,6 +30,7 @@
     position: relative;
     right: 48px;
     .super-btn {
+      background: white;
       padding: 0 20px 0 10px;
       border: 1px solid #cfcfcf;
       border-radius: 30px;
@@ -554,4 +555,165 @@
 }
 
 @media (max-width: $small) {
+  #host-header {
+    top: 0;
+    .logo {
+      display: none;
+    }
+    .header__right {
+      display: block;
+      .super-btn {
+        margin-right: 20px;
+        padding: 6px 10px;
+        transform: none;
+        left: initial;
+        right: 0;
+        height: auto;
+        display: block;
+        font-size: 0.9rem;
+        &::before {
+          display: none;
+        }
+      }
+      .start-btn {
+        display: none;
+      }
+    }
+    &.fixed {
+      display: none;
+    }
+  }
+  #host__main {
+    .host__content-title {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      text-align: left;
+      margin: $padding25;
+      margin-bottom: 30px;
+    }
+    #host__main-screen {
+      & > div {
+        width: 100%;
+        &:first-child {
+          padding: $padding25;
+          height: 50%;
+          bottom: 0;
+          justify-content: space-between;
+          h1 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            line-height: 2.9rem;
+          }
+          a {
+            top: 9rem;
+          }
+        }
+        &:last-child {
+          .main-screen__video-text {
+            bottom: calc(50% + 40px);
+            left: 50px;
+          }
+        }
+      }
+    }
+    #content__start-hosting {
+      .start-hosting__host {
+        margin-left: 25px;
+        width: calc(100% - 25px);
+      }
+      .start-hosting__form {
+        padding: $padding25;
+        font-size: 1.5rem;
+        align-items: flex-start;
+        text-align: left;
+        margin-top: 140px;
+        form {
+          align-items: flex-start;
+          label {
+            font-weight: 100;
+          }
+          select {
+            font-size: 1.5rem;
+          }
+        }
+        h1 {
+          font-size: 1.6rem;
+          margin: 10px 0 30px;
+        }
+      }
+    }
+    #content__super-host {
+      padding: $padding25;
+      margin: 80px 0;
+      height: 70vh;
+      img {
+        height: 100%;
+      }
+      .super-host__text {
+        h1 {
+          font-size: 1.8rem;
+          text-align: center;
+          margin: 15vh 0;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+    #content__hosting-info {
+      height: 100vh;
+      .hosting-info__content {
+        padding: $padding25;
+        .hosting-info__content-list {
+          grid-template-columns: 1fr;
+          .hosting-info__content-item {
+            &:first-child {
+              padding-bottom: 20px;
+              border-bottom: 1px solid #ccc;
+            }
+            a {
+              display: flex;
+              align-items: center;
+              img {
+                width: 60px;
+                height: 60px;
+                margin: 0;
+              }
+              p {
+                display: flex;
+                align-items: center;
+                font-size: 0.9rem;
+                margin-left: 15px;
+                i {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #host__end-screen {
+      & > div {
+        &:first-child {
+          .end-screen__video-text {
+            left: 25px;
+            bottom: calc(50% - 30px);
+          }
+        }
+        &:last-child {
+          padding: 25px;
+          p {
+            font-size: 1rem;
+            width: 65%;
+            margin-bottom: 19vh;
+          }
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

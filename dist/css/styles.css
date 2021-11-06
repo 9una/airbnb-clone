@@ -1045,11 +1045,6 @@ main section > div {
     height: 110vh;
   }
 }
-@media (max-width: 726px) {
-  body {
-    background: coral;
-  }
-}
 /* modal start */
 #modalBg {
   width: 100%;
@@ -1242,6 +1237,7 @@ main section > div {
   right: 48px;
 }
 #host-header .header__right .super-btn {
+  background: white;
   padding: 0 20px 0 10px;
   border: 1px solid #cfcfcf;
   border-radius: 30px;
@@ -1723,6 +1719,152 @@ main section > div {
   }
   #host__main #host__end-screen > div:last-child button {
     margin: 0;
+  }
+}
+@media (max-width: 726px) {
+  #host-header {
+    top: 0;
+  }
+  #host-header .logo {
+    display: none;
+  }
+  #host-header .header__right {
+    display: block;
+  }
+  #host-header .header__right .super-btn {
+    margin-right: 20px;
+    padding: 6px 10px;
+    transform: none;
+    left: initial;
+    right: 0;
+    height: auto;
+    display: block;
+    font-size: 0.9rem;
+  }
+  #host-header .header__right .super-btn::before {
+    display: none;
+  }
+  #host-header .header__right .start-btn {
+    display: none;
+  }
+  #host-header.fixed {
+    display: none;
+  }
+
+  #host__main .host__content-title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: left;
+    margin: 0 25px;
+    margin-bottom: 30px;
+  }
+  #host__main #host__main-screen > div {
+    width: 100%;
+  }
+  #host__main #host__main-screen > div:first-child {
+    padding: 0 25px;
+    height: 50%;
+    bottom: 0;
+    justify-content: space-between;
+  }
+  #host__main #host__main-screen > div:first-child h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+  }
+  #host__main #host__main-screen > div:first-child a {
+    top: 9rem;
+  }
+  #host__main #host__main-screen > div:last-child .main-screen__video-text {
+    bottom: calc(50% + 40px);
+    left: 50px;
+  }
+  #host__main #content__start-hosting .start-hosting__host {
+    margin-left: 25px;
+    width: calc(100% - 25px);
+  }
+  #host__main #content__start-hosting .start-hosting__form {
+    padding: 0 25px;
+    font-size: 1.5rem;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 140px;
+  }
+  #host__main #content__start-hosting .start-hosting__form form {
+    align-items: flex-start;
+  }
+  #host__main #content__start-hosting .start-hosting__form form label {
+    font-weight: 100;
+  }
+  #host__main #content__start-hosting .start-hosting__form form select {
+    font-size: 1.5rem;
+  }
+  #host__main #content__start-hosting .start-hosting__form h1 {
+    font-size: 1.6rem;
+    margin: 10px 0 30px;
+  }
+  #host__main #content__super-host {
+    padding: 0 25px;
+    margin: 80px 0;
+    height: 70vh;
+  }
+  #host__main #content__super-host img {
+    height: 100%;
+  }
+  #host__main #content__super-host .super-host__text h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 15vh 0;
+  }
+  #host__main #content__super-host .super-host__text button {
+    width: 100%;
+  }
+  #host__main #content__hosting-info {
+    height: 100vh;
+  }
+  #host__main #content__hosting-info .hosting-info__content {
+    padding: 0 25px;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list {
+    grid-template-columns: 1fr;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item:first-child {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item a {
+    display: flex;
+    align-items: center;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item a img {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item a p {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-left: 15px;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item a p i {
+    display: none;
+  }
+  #host__main #host__end-screen > div:first-child .end-screen__video-text {
+    left: 25px;
+    bottom: calc(50% - 30px);
+  }
+  #host__main #host__end-screen > div:last-child {
+    padding: 25px;
+  }
+  #host__main #host__end-screen > div:last-child p {
+    font-size: 1rem;
+    width: 65%;
+    margin-bottom: 19vh;
+  }
+  #host__main #host__end-screen > div:last-child button {
+    display: none;
   }
 }
 footer {

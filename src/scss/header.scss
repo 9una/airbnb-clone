@@ -808,6 +808,47 @@ header {
 }
 
 @media (max-width: $medium) {
+  #header {
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      & > div {
+        &:first-child,
+        &:last-child {
+          width: 100%;
+        }
+        &:nth-child(2) {
+          width: 100%;
+          order: 3;
+          grid-column: span 2;
+        }
+      }
+      .nav__form {
+        .nav__form-search {
+          width: 100%;
+        }
+      }
+    }
+    &.fixed {
+      nav {
+        &.active {
+          .nav__form {
+            .nav__form-search {
+              position: absolute;
+              top: 16px;
+              left: 95px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav__form {
+    .nav__form-tab {
+      align-items: baseline;
+      height: 60px;
+    }
+  }
 }
 
 @media (max-width: $small) {

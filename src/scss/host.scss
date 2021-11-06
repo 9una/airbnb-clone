@@ -257,7 +257,7 @@
       align-items: center;
       margin-top: 160px;
       box-sizing: border-box;
-      padding: 0 0 0 48px;
+      padding: 0 48px;
       text-align: center;
       font-size: 40px;
       form {
@@ -394,9 +394,11 @@
   font-weight: bold;
 }
 
-@media (min-width: $medium) and (max-width: $large) {
-  .logo {
-    background-position: center;
+@media (max-width: $large) {
+  #host__header {
+    .logo {
+      background-position: center;
+    }
   }
   #host__main {
     #content__start-hosting {
@@ -427,10 +429,11 @@
       padding: 0 50px;
       img {
         height: auto;
+        box-shadow: 0 5px 50px rgba(0, 0, 0, 0.3);
       }
       .super-host__text {
         h1 {
-          font-size: 3.5rem;
+          font-size: 3rem;
           padding-top: 30vh;
         }
       }
@@ -445,7 +448,109 @@
   }
 }
 
-@media (min-width: $small) and (max-width: $medium) {
+@media (max-width: $medium) {
+  #host-header {
+    .header__right {
+      right: 34px;
+      .super-btn {
+        position: fixed;
+        height: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  #host__main {
+    #host__main-screen {
+      position: relative;
+      & > div {
+        width: 100%;
+        &:first-child {
+          position: absolute;
+          background: white;
+          border-radius: 10px 10px 0 0;
+          bottom: -13%;
+          z-index: 3;
+          align-items: flex-start;
+          padding: 40px;
+          h1 {
+            color: black;
+            text-align: left;
+            margin: 0;
+          }
+          button {
+            display: none;
+          }
+          a {
+            color: #ccc;
+            left: 50%;
+            top: 15px;
+            transform: translateX(50%);
+          }
+        }
+        &:last-child {
+          .main-screen__video-text {
+            bottom: calc(14% + 150px);
+          }
+        }
+      }
+    }
+    #content__start-hosting {
+      .start-hosting__host {
+        .start-hosting__host-list {
+          .start-hosting__host-item {
+            margin-right: 0.6%;
+          }
+        }
+      }
+    }
+    #content__super-host {
+      height: 50vh;
+      margin: 90px 0;
+      .super-host__text {
+        h1 {
+          padding-top: 10.5vh;
+          font-size: 2.3rem;
+          line-height: 3rem;
+          margin-bottom: 60px;
+        }
+      }
+    }
+    #host__end-screen {
+      position: relative;
+      & > div {
+        width: 100%;
+        &:first-child {
+          .end-screen__video-text {
+            bottom: calc(50% - 40px);
+            left: 50px;
+          }
+        }
+        &:last-child {
+          position: absolute;
+          background: black;
+          border-radius: 10px 10px 0 0;
+          z-index: 3;
+          align-items: flex-start;
+          padding: 40px;
+          bottom: 0;
+          h1 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+          }
+          p {
+            text-align: left;
+            width: 55%;
+          }
+          button {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: $small) {

@@ -9,8 +9,8 @@ function mypageModalToggle(){
 
 // 언어&통화 모달
 const lngCurBtn = document.querySelector(".nav__right-global"),
-    lngCurModal = document.querySelector(".lng-cur__modal"),
-    loginModal = document.querySelector(".join-login__modal");
+    lngCurModal = document.querySelector(".modal_lng_cur"),
+    loginModal = document.querySelector(".modal_login");
 
 function gnbModalLngCur(){
     lngCurModal.classList.add('active');

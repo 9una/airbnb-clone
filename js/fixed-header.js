@@ -7,7 +7,6 @@ searchText.innerHTML = "검색 시작하기";
 
 
 function scrollFunc(){
-    console.log(scrollY);
     if(scrollY >= 70){
         header.classList.add("fixed");
         nav.classList.add("active");

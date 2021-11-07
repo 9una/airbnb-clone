@@ -437,25 +437,30 @@
       </div>
     </footer>
     <!-- footer-end -->
-    <div class="modal lng-cur__modal">
-      <div class="modal__container container__lng-cur">
-        <button class="btn-close" type="button" onclick="gnbModalClose();"><i class="fas fa-times"></i></button>
-        <div class="lng-cur__contents">
-          <div class="lng-cur__type">
+
+    <div class="modal modal_lng_cur">
+      <div class="modal__wrapper">
+        <div class="modal__top">
+          <button class="btn-close" type="button" onclick="gnbModalClose();"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__container">
+          <div class="tab">
             <button class="type-btn active" onclick="tabLngCur();" type="button">언어와 지역</button>
             <button class="type-btn" onclick="tabLngCur();" type="button">통화</button>
           </div>
-          <div class="lng-cur__cont-box">
-            <div class="cont-box active">
-              <div class="lng__recommend">
-                <h2 class="lng-cur__contents-title">추천 언어 및 지역</h2>
+          <div class="content invisible">
+            <div class="content_cont">
+              <h2 class="cont-title">추천 언어 및 지역</h2>
+              <div class="cont">
                 <ul class="lng-cur__contents-list">
                   <li><a href="#;">English<span>Untied States</span></a></li>
                   <li><a href="#;">English<span>Untied Kingdom</span></a></li>
                 </ul>
               </div>
-              <div class="lng__language-check">
-                <h2 class="lng-cur__contents-title">언어와 지역을 선택하세요</h2>
+            </div>
+            <div class="content_cont">
+              <h2 class="cont-title">언어와 지역을 선택하세요</h2>
+              <div class="cont">
                 <ul class="lng-cur__contents-list">
                   <li class="active"><a href="#;">한국어<span>대한민국</span></a></li>
                   <li><a href="#;">Azərbaycan dili<span>Azərbaycan</span></a></li>
@@ -549,9 +554,11 @@
                 </ul>
               </div>
             </div>
-            <div class="cont-box">
-              <div class="cur__currency-check">
-                <h2 class="lng-cur__contents-title">통화를 선택하세요.</h2>
+          </div>
+          <div class="content">
+            <div class="content_cont">
+              <h2 class="cont-title">통화를 선택하세요.</h2>
+              <div class="cont">
                 <ul class="lng-cur__contents-list">
                   <li class="active"><a href="#;">한국 원<span>KRW - ₩</span></a></li>
                   <li><a href="#;">남아프리카공화국 란드<span>ZAR - R</span></a></li>
@@ -600,52 +607,62 @@
         </div>
       </div>
     </div>
-    <div class="modal join-login__modal">
-      <div class="modal__container container__join-login">
-        <button class="btn-close" type="button" onclick="loginModalClose();"><i class="fas fa-times"></i></button>
-        <h4>로그인 또는 회원가입</h4>
-        <div class="join-login__contents">
-          <h2 class="join-login__contents-title">추천 언어 및 지역</h2>
-          <div class="phone-login">
-            <div class="phone-form">
-              <form>
-                <label for="">국가/지역</label>
-                <select id="">
-                  <option>한국 (+82)</option>
-                  <option>미국 (+1)</option>
-                  <option>프랑스 (+33)</option>
-                  <option>영국 (+44)</option>
-                  <option>덴마크 (+45)</option>
-                </select>
-              </form>
-              <form>
-                <label for="">전화번호</label>
-                <span>+82</span>
-                <input id="" type="text" required placeholder="" />
-              </form>
+
+    <div class="modal modal_login">
+      <div class="modal__wrapper">
+        <div class="modal__top">
+          <button class="btn-close" type="button" onclick="loginModalClose();"><i class="fas fa-times"></i></button>
+          <h4 class="modal-title">로그인 또는 회원가입</h4>
+        </div>
+        <div class="modal__container">
+          <div class="content">
+            <div class="content_cont">
+              <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
+              <div class="cont">
+                <div class="phone-login">
+                  <div class="phone-form">
+                    <form>
+                      <label for="national">
+                        <span>국가/지역</span>
+                        <select id="national">
+                          <option>한국 (+82)</option>
+                          <option>미국 (+1)</option>
+                          <option>프랑스 (+33)</option>
+                          <option>영국 (+44)</option>
+                          <option>덴마크 (+45)</option>
+                        </select>
+                      </label>
+                      <label for="phoneNum">
+                        <span>전화번호</span>
+                        <b>+82</b>
+                        <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
+                      </label>
+                    </form>
+                  </div>
+                  <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
+                  <button class="phone-login__btn" type="submit">계속</button>
+                </div>
+                <div class="sns-login">
+                  <span>또는</span>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>페이스북으로 로그인하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-google"></i>
+                    <span>구글로 로그인하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple 계정으로 계속하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="far fa-envelope"></i>
+                    <span>이메일로 로그인하기</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</p>
-            <a href="#;">개인정보 처리방침</a>
-            <button class="phone-login__next" type="submit">계속</button>
-          </div>
-          <div class="sns-login">
-            <span>또는</span>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="fab fa-facebook"></i>
-              <span>페이스북으로 로그인하기</span>
-            </a>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="fab fa-google"></i>
-              <span>구글로 로그인하기</span>
-            </a>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="fab fa-apple"></i>
-              <span>Apple 계정으로 계속하기</span>
-            </a>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="far fa-envelope"></i>
-              <span>이메일로 로그인하기</span>
-            </a>
           </div>
         </div>
       </div>

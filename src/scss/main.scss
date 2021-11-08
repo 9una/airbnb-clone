@@ -310,7 +310,6 @@ main {
     }
   }
   main {
-    padding-bottom: 30px;
     section {
       padding: 0 25px;
       h2 {
@@ -318,6 +317,8 @@ main {
         font-size: 1.4rem;
         line-height: 1.8rem;
         width: 88%;
+        letter-spacing: -0.5px;
+        word-break: keep-all;
       }
     }
     #main-screen {
@@ -336,8 +337,12 @@ main {
       }
     }
     .content__nearTrip {
-      padding: 0 0 0 25px;
+      padding: 0;
+      h2 {
+        padding-left: 25px;
+      }
       .content__nearTrip-box {
+        padding-left: 25px;
         width: 100%;
         overflow: auto;
         .nearTrip__list {
@@ -380,15 +385,24 @@ main {
       }
     }
     .list-thema {
-      padding: 0 0 0 25px;
+      padding: 0;
+      h2 {
+        padding-left: 25px;
+      }
       ul {
         padding-right: 25px !important;
       }
-      .liveTrip__list {
-        width: 310% !important;
+      .content__liveTrip-box {
+        padding-left: 25px;
+        .liveTrip__list {
+          width: 310% !important;
+        }
       }
-      .enjoyTrip__list {
-        width: 240% !important;
+      .content__enjoyTrip-box {
+        padding-left: 25px;
+        .enjoyTrip__list {
+          width: 240% !important;
+        }
       }
     }
   }

@@ -1143,9 +1143,6 @@ main section > div {
     text-align: center;
   }
 
-  main {
-    padding-bottom: 30px;
-  }
   main section {
     padding: 0 25px;
   }
@@ -1154,6 +1151,8 @@ main section > div {
     font-size: 1.4rem;
     line-height: 1.8rem;
     width: 88%;
+    letter-spacing: -0.5px;
+    word-break: keep-all;
   }
   main #main-screen {
     height: calc(100vh - 58px);
@@ -1171,9 +1170,13 @@ main section > div {
     padding: 15px 30px;
   }
   main .content__nearTrip {
-    padding: 0 0 0 25px;
+    padding: 0;
+  }
+  main .content__nearTrip h2 {
+    padding-left: 25px;
   }
   main .content__nearTrip .content__nearTrip-box {
+    padding-left: 25px;
     width: 100%;
     overflow: auto;
   }
@@ -1212,15 +1215,24 @@ main section > div {
     word-break: keep-all;
   }
   main .list-thema {
-    padding: 0 0 0 25px;
+    padding: 0;
+  }
+  main .list-thema h2 {
+    padding-left: 25px;
   }
   main .list-thema ul {
     padding-right: 25px !important;
   }
-  main .list-thema .liveTrip__list {
+  main .list-thema .content__liveTrip-box {
+    padding-left: 25px;
+  }
+  main .list-thema .content__liveTrip-box .liveTrip__list {
     width: 310% !important;
   }
-  main .list-thema .enjoyTrip__list {
+  main .list-thema .content__enjoyTrip-box {
+    padding-left: 25px;
+  }
+  main .list-thema .content__enjoyTrip-box .enjoyTrip__list {
     width: 240% !important;
   }
 

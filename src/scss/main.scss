@@ -1,5 +1,6 @@
 main {
   padding-top: 58px;
+  word-break: keep-all !important;
   #main-screen {
     text-align: center;
     background: url(https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=2560)
@@ -205,9 +206,6 @@ main {
             border-radius: 10px;
             margin-bottom: 7px;
           }
-          p {
-            word-break: keep-all;
-          }
         }
       }
     }
@@ -224,11 +222,14 @@ main {
       padding: $padding40;
       &.content__nearTrip {
         .content__nearTrip-box {
+          width: 100%;
+          overflow: auto;
           .nearTrip__list {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-auto-flow: column; //정렬변경
             padding: 0;
+            width: 130%;
             .nearTrip__item {
               a {
                 .nearTrip__item-img {
@@ -236,9 +237,6 @@ main {
                   height: 70px;
                 }
               }
-              &:nth-last-child(n + 1):nth-last-child(-n + 2) {
-                display: none;
-              } //뒤에서부터 리스트 선택
             }
           }
         }
@@ -304,7 +302,7 @@ main {
         font-size: 0.8rem;
         line-height: 1rem;
         padding: 0 30px !important;
-        word-break: keep-all;
+
         text-align: center;
       }
     }
@@ -318,7 +316,6 @@ main {
         line-height: 1.8rem;
         width: 88%;
         letter-spacing: -0.5px;
-        word-break: keep-all;
       }
     }
     #main-screen {
@@ -380,7 +377,6 @@ main {
         p {
           width: 100% !important;
           text-align: center;
-          word-break: keep-all;
         }
       }
     }

@@ -319,6 +319,7 @@ main {
     }
     #main-screen {
       height: calc(100vh - 58px);
+      max-height: 130vw;
       padding-top: 14vh;
       span {
         width: 188px;
@@ -342,7 +343,7 @@ main {
         width: 100%;
         overflow: auto;
         .nearTrip__list {
-          width: 280%;
+          width: 280% !important;
           padding-right: 25px !important;
           .nearTrip__item:nth-last-child(n + 1):nth-last-child(-n + 2) {
             display: flex !important;

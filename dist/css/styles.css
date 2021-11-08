@@ -1153,6 +1153,7 @@ main section > div {
   }
   main #main-screen {
     height: calc(100vh - 58px);
+    max-height: 130vw;
     padding-top: 14vh;
   }
   main #main-screen span {
@@ -1178,7 +1179,7 @@ main section > div {
     overflow: auto;
   }
   main .content__nearTrip .content__nearTrip-box .nearTrip__list {
-    width: 280%;
+    width: 280% !important;
     padding-right: 25px !important;
   }
   main .content__nearTrip .content__nearTrip-box .nearTrip__list .nearTrip__item:nth-last-child(n+1):nth-last-child(-n+2) {

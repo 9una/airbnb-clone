@@ -1,5 +1,3 @@
-const modalBg = document.getElementById('modalBg');
-
 //마이페이지 모달
 const mypageModal = document.querySelector(".nav__right-myBtn-modal");
 
@@ -8,34 +6,47 @@ function mypageModalToggle(){
 }
 
 // 언어&통화 모달
-const lngCurBtn = document.querySelector(".nav__right-global"),
-    lngCurModal = document.querySelector(".modal_lng_cur"),
-    loginModal = document.querySelector(".modal_login");
+const modalBg = document.getElementById('modalBg'),
+    lngCurModal = document.getElementById("modal_lng_cur"),
+    loginModal = document.getElementById("modal_login");
 
-function gnbModalLngCur(){
+function modalLng(){
     lngCurModal.classList.add('active');
     modalBg.classList.add('active');
 }
-function gnbModalClose(){
+function modalLngClose(){
     lngCurModal.classList.remove('active');
     modalBg.classList.remove('active');
 }
-function gnbModalLogin(){
+function modalLogin(){
     loginModal.classList.add('active');
     modalBg.classList.add('active');
 }
-function loginModalClose(){
+function modalLoginClose(){
     loginModal.classList.remove('active');
     modalBg.classList.remove('active');
 }
 
 // 언어&통화 모달 탭전환
-const typeLngCurBtn = document.querySelectorAll('.lng-cur__type button'),
-    typeLngCur = document.querySelectorAll('.lng-cur__cont-box > div');
+const typeLngCurBtn = document.querySelectorAll('#modal_lng_cur .tab button');
+const typeLngCurCont = document.querySelectorAll('#modal_lng_cur .content');
 
-function tabLngCur(){
-    console.log('탭!');
+for (let i = 0; i < typeLngCurBtn.length; i++) {
+    typeLngCurBtn[i].onclick = function(){
+        let j = 0;
+        while(j < typeLngCurBtn.length){
+            typeLngCurBtn[j++].className = "type-btn";
+        }
+        typeLngCurBtn[i].className = 'type-btn active';
+
+        let k = 0;
+        while(k < typeLngCurBtn.length){
+            typeLngCurCont[k++].className = 'content invisible';
+        }
+        typeLngCurCont[i].className = 'content';
+    }
 }
+
 
 /*
 1 - 첫번째 버튼은 active 상태 유지

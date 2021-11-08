@@ -86,6 +86,11 @@ header {
     transition: all 0.3s;
     & > span {
       display: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      position: absolute;
+      line-height: 45px;
+      padding: 0 20px;
     }
     &.active {
       background: #f7f7f7;
@@ -166,16 +171,21 @@ header {
       width: 40px;
       height: 40px;
       text-align: center;
-      vertical-align: center;
       transition: all 0.2s;
-      span {
+      &:after {
         display: none;
+        margin-left: 5px;
+        content: "검색";
+        font-weight: bold;
       }
       &.active {
         padding: 0 15px;
         width: auto;
         display: flex;
         align-items: center;
+        &:after {
+          display: block;
+        }
         span {
           margin-left: 5px;
           display: block;
@@ -617,11 +627,9 @@ header {
         background: white;
         & > span {
           display: block;
-          font-weight: bold;
-          font-size: 0.9rem;
-          position: absolute;
-          line-height: 45px;
-          padding: 0 20px;
+          &:after {
+            content: "검색 시작하기";
+          }
         }
         form {
           height: 45px;
@@ -635,6 +643,9 @@ header {
           top: 6px;
           right: 7px;
           font-size: 0.85rem;
+          &:after {
+            display: none;
+          }
         }
       }
     }
@@ -852,4 +863,78 @@ header {
 }
 
 @media (max-width: $small) {
+  #header {
+    nav {
+      padding: 0 25px;
+      .logo,
+      .nav__right {
+        display: none;
+      }
+      .nav__form {
+        margin-top: 20px;
+        .nav__form-tab {
+          display: none;
+        }
+        .nav__form-search {
+          align-items: center;
+          justify-content: center;
+          form {
+            display: none;
+          }
+          & > button {
+            position: relative;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: content-box;
+            padding: 5px 0;
+            font-size: 100%;
+            transition: none;
+            i {
+              color: $pink;
+            }
+            &:after {
+              display: block;
+              font-weight: bold;
+              font-size: 0.9rem;
+              content: "어디로 여행가세요?";
+              color: black;
+            }
+          }
+          & > span {
+            display: block;
+            position: relative;
+            padding: 0;
+          }
+        }
+      }
+    }
+    &.fixed {
+      nav {
+        &.active {
+          padding: 0 20px 20px;
+          height: auto;
+          .nav__form {
+            .nav__form-search {
+              position: relative;
+              top: 0;
+              left: 0;
+              height: 52px;
+              button {
+                top: 0;
+                right: 0;
+                &:after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

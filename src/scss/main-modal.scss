@@ -121,7 +121,7 @@
   }
 }
 /* modal - language & currency */
-.modal_lng_cur .modal__wrapper {
+#modal_lng_cur .modal__wrapper {
   max-width: 1032px;
   .cont {
     ul {
@@ -157,7 +157,7 @@
 }
 
 /* modal - join & login */
-.modal_login .modal__wrapper {
+#modal_login .modal__wrapper {
   max-width: 568px;
   .modal__top {
     border-bottom: 1px solid #e9e9e9;
@@ -293,19 +293,19 @@
 /* modal - 공동 */
 
 @media (max-width: $large) {
-  .modal_lng_cur .modal__wrapper .cont ul {
+  #modal_lng_cur .modal__wrapper .cont ul {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: $medium) {
-  .modal_lng_cur .modal__wrapper .cont ul {
+  #modal_lng_cur .modal__wrapper .cont ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: $small) {
-  .modal_lng_cur .modal__wrapper .cont ul {
+  #modal_lng_cur .modal__wrapper .cont ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }

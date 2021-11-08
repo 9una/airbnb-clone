@@ -1,5 +1,5 @@
 /* host__header */
-#host-header {
+#host__header {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -450,7 +450,7 @@
 }
 
 @media (max-width: $medium) {
-  #host-header {
+  #host__header {
     .header__right {
       right: 34px;
       .super-btn {
@@ -555,7 +555,7 @@
 }
 
 @media (max-width: $small) {
-  #host-header {
+  #host__header {
     top: 0;
     .logo {
       display: none;

@@ -1,4 +1,4 @@
-main {
+#main {
   padding-top: 58px;
   word-break: keep-all !important;
   #main-screen {
@@ -213,7 +213,7 @@ main {
 }
 
 @media (max-width: $large) {
-  main {
+  #main {
     ::-webkit-scrollbar {
       width: 0;
       height: 0;
@@ -282,7 +282,7 @@ main {
 }
 
 @media (max-width: $medium) {
-  main {
+  #main {
     section {
       h2 {
         font-size: 1.6rem;
@@ -306,7 +306,7 @@ main {
       }
     }
   }
-  main {
+  #main {
     section {
       padding: 0 25px;
       h2 {

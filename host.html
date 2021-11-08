@@ -9,19 +9,19 @@
     <title>집을 에어비앤비 숙소로 등록해보세요.</title>
 </head>
 <body>
-    <header id="host-header">
+    <header id="host__header">
         <a class="logo" href="index.html"></a>
         <div class="header__right">
-          <a class="super-btn" href="">슈퍼호스트에게 물어보기</a>
-          <button class="start-btn" onclick="gnbModalLogin();">호스팅 시작하기</button>
+          <a class="super-btn" href="superhost.html">슈퍼호스트에게 물어보기</a>
+          <button class="start-btn" onclick="modalLng();">호스팅 시작하기</button>
         </div>
     </header>
     <!-- header-end -->
     <main id="host__main">
-        <div id="host__main-screen">
+        <section id="host__main-screen">
             <div class="main-screen__left">
               <h1>에어비앤비의<br>핵심을 이루는<br>호스팅</h1>
-              <button type="button" onclick="gnbModalLogin();">호스팅 시작하기</button>
+              <button type="button" onclick="modalLng();">호스팅 시작하기</button>
               <a href="#content__start-hosting"><i class="fas fa-chevron-down"></i></a>
             </div>
             <div class="main-screen__right">
@@ -54,8 +54,8 @@
               </div>
               
             </div>
-        </div>
-        <div id="content__start-hosting" class="host__content">
+        </section>
+        <section id="content__start-hosting" class="host__content">
             <h1 class="host__content-title">언제 어디서든<br>호스팅하실 수 있습니다</h1>
             <div class="start-hosting__host">
               <ul class="start-hosting__host-list">
@@ -157,15 +157,15 @@
               <h1>월 최대 ￦1,564,175의 수입을 올리세요.*</h1>
               <button>에어비앤비가 예상 수입을 산정하는 방법</button>
             </div>
-        </div>
-        <div id="content__super-host" class="host__content">
+        </section>
+        <section id="content__super-host" class="host__content">
           <img class="super-host__img" src="https://a0.muscache.com/im/pictures/905f44db-ec4f-4497-9e45-b510a8958f7b.jpg?im_w=1680" />
           <div class="super-host__text">
             <h1 class="host__content-title">호스팅에 관해 궁금하신 점이 있나요?<br>슈퍼호스트에게 물어보세요.</h1>
             <button>자세히 알아보기</button>
           </div>
-        </div>
-        <div id="content__hosting-info" class="host__content">
+        </section>
+        <section id="content__hosting-info" class="host__content">
             <h1 class="host__content-title">성공적인 호스팅에<br>유용한 자료</h1>
             <div class="hosting-info__content">
               <ul class="hosting-info__content-list">
@@ -189,8 +189,8 @@
                 </li>
               </ul>
             </div>
-        </div>
-        <div id="host__end-screen">
+        </section>
+        <section id="host__end-screen">
           <div class="end-screen__left">
             <video class="end-screen__video" autoplay>
               <source src="https://a0.muscache.com/v/9a/7a/9a7ad4a1-cfab-5f7d-96e6-fda8abceabe7/9a7ad4a1cfab5f7d96e6fda8abceabe7_4000k_1.mp4" type="video/mp4">
@@ -203,9 +203,9 @@
           <div class="end-screen__right">
             <h1>에어비앤비에서<br>호스팅을 시작해보세요</h1>
             <p>에어비앤비 호스트가 되어보세요. 에어비앤비가 모든 단계에서 도와드립니다.</p>
-            <button type="button" class="start-btn" onclick="gnbModalLogin();">시작하기</button>
+            <button type="button" class="start-btn" onclick="modalLng();">시작하기</button>
           </div>
-        </div>
+        </section>
     </main>
     <!-- main-end -->
     <footer>
@@ -274,13 +274,13 @@
         </div>
         <div class="fnb__bottom-right">
           <div class="fnb__bottom-global">
-            <button type="button" class="fnb__bottom-language" onclick="gnbModalLngCur();">
+            <button type="button" class="fnb__bottom-language" onclick="modalLng();">
               <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="height: 16px; width: 16px; fill: currentcolor;">
                 <path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path>
               </svg>
               <span>한국어 (KR)</span>
             </button>
-            <button type="button" class="fnb__bottom-currency" onclick="gnbModalLngCur();">
+            <button type="button" class="fnb__bottom-currency" onclick="modalLng();">
               <i class="fas fa-won-sign"></i>
               <span>KRW</span>
             </button>

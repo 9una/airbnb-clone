@@ -1193,6 +1193,7 @@ main section > div {
   }
   main .content__startHosting {
     height: 78vh !important;
+    max-height: 110vw;
     margin-bottom: 50px;
   }
   main .content__startHosting .content__startHosting-box {
@@ -1206,8 +1207,9 @@ main section > div {
     padding-top: 25px;
   }
   main .content__startHosting .content__startHosting-box p {
-    width: 100%;
+    width: 100% !important;
     text-align: center;
+    word-break: keep-all;
   }
   main .list-thema {
     padding: 0 0 0 25px;

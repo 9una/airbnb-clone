@@ -360,6 +360,7 @@ main {
     }
     .content__startHosting {
       height: 78vh !important;
+      max-height: 110vw;
       margin-bottom: 50px;
       .content__startHosting-box {
         background: url(https://a0.muscache.com/im/pictures/791aba62-2de8-4722-99b5-45838715eb34.jpg?im_q=medq&im_w=720)
@@ -372,8 +373,9 @@ main {
           padding-top: 25px;
         }
         p {
-          width: 100%;
+          width: 100% !important;
           text-align: center;
+          word-break: keep-all;
         }
       }
     }

@@ -45,10 +45,12 @@ footer {
       li {
         display: flex;
         align-items: center;
+        margin-right: 10px;
+        margin-bottom: 5px;
         &::before {
           content: " · ";
           font-weight: 500;
-          margin: 0 5px 0 10px;
+          margin-right: 5px;
         }
         a {
           letter-spacing: -0.6px;
@@ -143,4 +145,31 @@ footer {
 }
 
 @media (max-width: $small) {
+  footer {
+    padding: 0 25px;
+    .fnb__top {
+      .fnb__top-item ul {
+        display: flex !important;
+      }
+    }
+    .fnb__bottom {
+      .fnb__bottom-left {
+        ul {
+          display: flex !important;
+          flex-wrap: wrap;
+          span {
+            text-align: left;
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+      .fnb__bottom-right {
+        width: 100%;
+        .fnb__bottom-sns {
+          display: none;
+        }
+      }
+    }
+  }
 }

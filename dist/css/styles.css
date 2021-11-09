@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;900&display=swap");
 header {
   width: 100%;
@@ -2268,6 +2269,397 @@ header nav > div:last-child {
     margin-bottom: 15px;
     width: 30px;
     height: 30px;
+  }
+}
+#super-host__header {
+  position: fixed;
+  padding: 0 50px;
+  height: 115px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#super-host__header .logo {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  background: url(../../img/logo_black_2.png) no-repeat center;
+  background-size: auto 32px;
+}
+#super-host__header .start-btn {
+  background: white;
+  color: black;
+  padding: 0 20px 0 10px;
+  height: 48px;
+  border: 1px solid #cfcfcf;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+}
+#super-host__header .start-btn::before {
+  content: "";
+  background-image: url(https://a0.muscache.com/im/pictures/c131fb36-f46a-464f-ad2f-087ebf88078d.jpg);
+  background-size: 30px 30px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-right: 10px;
+}
+
+#super-host__main {
+  word-break: keep-all;
+}
+#super-host__main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid black;
+  padding: 64px 120px;
+}
+#super-host__main .sentence-large {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 115%;
+}
+#super-host__main .sentence-large .host-name {
+  font-family: "Poiret One", cursive;
+  color: black;
+  display: inline;
+  margin-left: 10px;
+}
+#super-host__main .sentence-large .host-name::after {
+  display: inline-block;
+  margin-left: 10px;
+  content: "";
+  background: url(https://a0.muscache.com/im/pictures/user/64023f87-7231-4e04-b93a-0946556ba0c7.jpg?aki_policy=profile_x_medium) no-repeat center;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+#super-host__main h2 {
+  font-size: 3rem;
+  line-height: 115%;
+  margin-top: 20px;
+}
+#super-host__main h4 {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 120%;
+}
+#super-host__main #super__main-screen {
+  color: #60012b;
+  padding-bottom: 40px;
+  justify-content: space-between;
+}
+#super-host__main #super__main-screen h4 {
+  margin: 120px 0 48px;
+}
+#super-host__main #super__main-screen .start-btn {
+  background-color: #60012b;
+  max-width: 280px;
+  font-size: 1.1rem;
+  padding: 20px 0;
+}
+#super-host__main #super__ask-host {
+  flex-direction: row;
+  padding: 0;
+}
+#super-host__main #super__ask-host .ask-content {
+  padding: 64px 0;
+  width: 50%;
+}
+#super-host__main #super__ask-host .ask-content.left {
+  padding-left: 120px;
+  padding-right: 120px;
+  background-color: #60012b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#super-host__main #super__ask-host .ask-content.left p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+#super-host__main #super__ask-host .ask-content.right {
+  position: relative;
+}
+#super-host__main #super__ask-host .ask-content.right .ask-video__text {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+#super-host__main #super__mentoring {
+  padding: 120px;
+}
+#super-host__main #super__mentoring .mentoring__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 130px;
+  margin: 120px 0;
+}
+#super-host__main #super__mentoring .mentoring__list li {
+  display: flex;
+  flex-direction: column;
+}
+#super-host__main #super__mentoring .mentoring__list li span {
+  display: block;
+  width: 80%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.65rem;
+  line-height: 120%;
+}
+#super-host__main #super__mentoring .mentoring__list li p {
+  font-size: 1.1rem;
+  line-height: 130%;
+}
+#super-host__main #super__step {
+  height: auto;
+  padding: 0;
+}
+#super-host__main #super__step .step-content {
+  width: 100%;
+  height: 100vh;
+  padding: 64px 120px;
+}
+#super-host__main #super__step .step-content .text-box {
+  padding: 50px;
+  width: 48%;
+  border-radius: 15px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+#super-host__main #super__step .step-content .text-box span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#super-host__main #super__step .step-content .text-box h4 {
+  margin: 10px 0 30px;
+}
+#super-host__main #super__step .step-content .text-box .comment {
+  border-top: 1px solid #cfcfcf;
+  padding-top: 35px;
+}
+#super-host__main #super__step .step-content .text-box .comment div {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 5px;
+  grid-column-gap: 15px;
+}
+#super-host__main #super__step .step-content .text-box .comment div:not(:last-child) {
+  margin-bottom: 20px;
+}
+#super-host__main #super__step .step-content .text-box .comment div img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: cornflowerblue;
+  grid-row: span 2;
+}
+#super-host__main #super__step .step-content .text-box .comment div span {
+  font-size: 0.8rem;
+}
+#super-host__main #super__step .step-content .text-box .comment div span b {
+  font-size: 1.1rem;
+}
+#super-host__main #super__step .step-content .text-box .comment div p {
+  line-height: 120%;
+}
+#super-host__main #super__step .step-content.step1 {
+  background: #e9e9e9;
+}
+#super-host__main #super__step .step-content.step2 {
+  background: #cfcfcf;
+}
+#super-host__main #super__step .step-content.step3 {
+  background: #b9b9b9;
+}
+#super-host__main #super__end-screen {
+  padding: 120px;
+  height: auto;
+}
+#super-host__main #super__end-screen .host-user {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+#super-host__main #super__end-screen .host-user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 25px;
+}
+#super-host__main #super__end-screen .host-user div {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  color: #60012b;
+  line-height: 120%;
+}
+#super-host__main #super__end-screen .host-user div b {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 160%;
+}
+#super-host__main #super__end-screen .sentence-large {
+  width: 60%;
+  margin-bottom: 60px;
+  color: #60012b;
+}
+#super-host__main #super__end-screen .start-btn {
+  background-color: #60012b;
+  max-width: 280px;
+  font-size: 1.1rem;
+  padding: 20px 0;
+}
+#super-host__main #super__end-video {
+  padding: 120px 0 120px 120px;
+  height: auto;
+  background: black;
+}
+#super-host__main #super__end-video .sentence-large {
+  color: white;
+  margin-bottom: 40px;
+}
+#super-host__main #super__end-video span {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+#super-host__main #super__end-video .hosting-btn {
+  display: flex;
+  margin-bottom: 60px;
+}
+#super-host__main #super__end-video .hosting-btn button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+#super-host__main #super__end-video .hosting-btn button:first-child {
+  background: white;
+  color: black;
+  margin-right: 20px;
+}
+#super-host__main #super__end-video .hosting-btn button:last-child {
+  border: 1px solid white;
+  color: white;
+}
+#super-host__main #super__end-video .hosting-btn button:last-child:hover {
+  background: #666;
+}
+#super-host__main #super__end-video .hosting-video {
+  padding-right: 60px;
+}
+#super-host__main #super__end-video .hosting-video .video__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+#super-host__main #super__end-video .hosting-video .video__list li {
+  background: cornflowerblue;
+  position: relative;
+}
+#super-host__main #super__end-video .hosting-video .video__list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#super-host__main #super__end-video .hosting-video .video__list li .list-text {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px;
+}
+#super-host__main #super__end-video .hosting-video .video__list li .list-text p {
+  width: 60%;
+  font-size: 1.6rem;
+  line-height: 120%;
+  font-weight: bold;
+  color: white;
+}
+#super-host__main #super__end-video .hosting-video .video__list li .list-text span {
+  width: 25px;
+  height: 25px;
+  display: block;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+  margin: 0;
+}
+#super-host__main #super__end-video .hosting-video .video__list li .list-text span::after {
+  content: "▶";
+  color: black;
+  line-height: 25px;
+}
+
+#modal_video {
+  display: none;
+}
+
+@media (max-width: 1110px) {
+  #super-host__main .sentence-large {
+    font-size: 3.9rem;
+  }
+  #super-host__main section {
+    padding: 64px 80px;
+  }
+  #super-host__main #super__main-screen .start-btn {
+    position: absolute;
+    bottom: 25px;
+  }
+  #super-host__main #super__ask-host .ask-content.left {
+    padding: 64px 50px 20px 80px;
+  }
+  #super-host__main #super__mentoring {
+    height: auto;
+    padding: 80px;
+  }
+  #super-host__main #super__mentoring .mentoring__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    margin: 0 0 20vh;
+  }
+  #super-host__main #super__step .step-content {
+    padding: 120px 80px;
+  }
+  #super-host__main #super__step .step-content .text-box {
+    max-width: 620px;
+    width: 100%;
+  }
+  #super-host__main #super__end-screen {
+    padding: 120px 80px;
+  }
+  #super-host__main #super__end-screen .sentence-large {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  #super-host__main #super__end-video {
+    padding: 120px 80px;
+  }
+  #super-host__main #super__end-video .hosting-video {
+    width: 164%;
+    position: relative;
+    left: calc(-41% + 10px);
   }
 }
 footer {

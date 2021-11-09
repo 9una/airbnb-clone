@@ -1,5 +1,5 @@
 //100vh 스크롤시 헤더 고정
-const header = document.getElementById("host-header");
+const header = document.getElementById("host__header");
 
 const winMedSmall = window.matchMedia("(max-width: 726px)"); //media screen max-width:726
 

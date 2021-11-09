@@ -2529,22 +2529,25 @@ header nav > div:last-child {
   padding: 20px 0;
 }
 #super-host__main #super__end-video {
-  padding: 120px 0 120px 120px;
+  padding: 120px 0;
   height: auto;
   background: black;
 }
 #super-host__main #super__end-video .sentence-large {
   color: white;
   margin-bottom: 40px;
+  padding: 0 120px;
 }
 #super-host__main #super__end-video span {
   color: white;
   margin-bottom: 40px;
   font-size: 1.1rem;
+  padding: 0 120px;
 }
 #super-host__main #super__end-video .hosting-btn {
   display: flex;
   margin-bottom: 60px;
+  padding: 0 120px;
 }
 #super-host__main #super__end-video .hosting-btn button {
   padding: 15px 20px;
@@ -2564,7 +2567,7 @@ header nav > div:last-child {
   background: #666;
 }
 #super-host__main #super__end-video .hosting-video {
-  padding-right: 60px;
+  padding: 0 60px 0 120px;
 }
 #super-host__main #super__end-video .hosting-video .video__list {
   display: grid;
@@ -2587,6 +2590,7 @@ header nav > div:last-child {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  width: 100%;
   padding: 30px;
 }
 #super-host__main #super__end-video .hosting-video .video__list li .list-text p {
@@ -2604,6 +2608,7 @@ header nav > div:last-child {
   background: white;
   border-radius: 50%;
   margin: 0;
+  padding: 0;
 }
 #super-host__main #super__end-video .hosting-video .video__list li .list-text span::after {
   content: "▶";
@@ -2653,13 +2658,34 @@ header nav > div:last-child {
     width: 100%;
     margin-bottom: 40px;
   }
-  #super-host__main #super__end-video {
-    padding: 120px 80px;
+  #super-host__main #super__end-video .sentence-large,
+#super-host__main #super__end-video span,
+#super-host__main #super__end-video .hosting-btn {
+    padding: 0 80px;
   }
   #super-host__main #super__end-video .hosting-video {
+    padding: 0 80px;
+    width: 100%;
+    overflow: auto;
+  }
+  #super-host__main #super__end-video .hosting-video::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  #super-host__main #super__end-video .hosting-video .video__list {
     width: 164%;
     position: relative;
-    left: calc(-41% + 10px);
+    left: -41%;
+  }
+  #super-host__main #super__end-video .hosting-video .video__list li .list-text p {
+    font-size: 1.1rem;
+    width: 65%;
+  }
+}
+@media (max-width: 726px) {
+  #super-host__main section {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 footer {

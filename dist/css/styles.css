@@ -878,45 +878,24 @@ header nav > div:last-child {
   }
 }
 #main {
+  background: black;
   padding-top: 58px;
   word-break: keep-all !important;
 }
-#main #main-screen {
-  text-align: center;
-  background: url(https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=2560) no-repeat center bottom;
-  background-size: cover;
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 186px;
-  padding-bottom: 40px;
-}
-#main #main-screen span {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: 600;
-}
-#main #main-screen span:after {
-  content: "어디든 상관없이 떠나고 싶을 때 에어비앤비가 도와드립니다!";
-}
-#main #main-screen button {
-  background: white;
-  padding: 23px 55px;
-  letter-spacing: -0.5px;
-  font-weight: bold;
-  color: #8c12c4;
-  border-radius: 50px;
-  font-size: 18px;
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12) !important;
-}
 #main section {
+  width: 100%;
   padding: 0 80px;
-  margin: 24px 0;
 }
-#main section h2 {
+#main section .wrapper {
+  position: relative;
+}
+#main section .wrapper .section-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#main section .wrapper h2 {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 16px;
@@ -926,215 +905,77 @@ header nav > div:last-child {
   padding-bottom: 25px;
 }
 
-/* nearTrip */
-.content__nearTrip .content__nearTrip-box .nearTrip__list {
-  padding: 8px;
+/* main-screen */
+.content__main {
+  margin-top: 25vh;
+}
+.content__main .wrapper {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-content: space-between;
-  gap: 15px;
+  height: 100vh;
 }
-.content__nearTrip .content__nearTrip-box .nearTrip__list .nearTrip__item a {
-  display: flex;
-}
-.content__nearTrip .content__nearTrip-box .nearTrip__list .nearTrip__item a .nearTrip__item-img {
-  width: 64px;
-  height: 64px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 14px;
-}
-.content__nearTrip .content__nearTrip-box .nearTrip__list .nearTrip__item a .nearTrip__item-text {
-  height: 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.content__nearTrip .content__nearTrip-box .nearTrip__list .nearTrip__item a .nearTrip__item-text span {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-/* liveTrip */
-.content__liveTrip {
-  margin: 40px 0;
-  position: relative;
-}
-.content__liveTrip .content__liveTrip-box {
-  margin: 8px 0;
-}
-.content__liveTrip .content__liveTrip-box .liveTrip__item-text {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.content__liveTrip button {
-  display: none;
+.content__main .wrapper .main-title {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-}
-.content__liveTrip button.liveTrip__prev {
-  left: 20px;
-}
-.content__liveTrip button.liveTrip__next {
-  right: 20px;
-}
-
-/* startHosting */
-.content__startHosting {
-  height: 480px;
-}
-.content__startHosting .content__startHosting-box {
-  display: block;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: url(https://a0.muscache.com/im/pictures/2595054e-d1d9-4fde-8046-58d51fcb3164.jpg?im_w=1440) no-repeat center;
-  background-size: cover;
-  background-color: #201c1b;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  color: white;
-  padding: 0 80px;
-  box-sizing: border-box;
-  border-radius: 16px;
 }
-.content__startHosting .content__startHosting-box h1 {
-  font-size: 48px;
-  line-height: 52px;
-  margin-bottom: 12px;
+.content__main .wrapper .main-title img {
+  width: 300px;
+}
+.content__main .wrapper .main-title button {
+  padding: 20px 30px;
+  border: 1px solid black;
+  border-radius: 50px;
+  font-size: 1.2rem;
   font-weight: bold;
-  letter-spacing: -0.6px;
 }
-.content__startHosting .content__startHosting-box p {
-  width: 340px;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  margin-bottom: 40px;
+.content__main .wrapper .main-title button i {
+  margin-right: 8px;
+  font-size: 1rem;
 }
-.content__startHosting .content__startHosting-box span {
+.content__main .wrapper .main-sub-title {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.content__main .wrapper .main-sub-title h4 {
+  font-size: 1.7rem;
+  font-weight: normal;
+  margin: 0;
+}
+.content__main .wrapper .main-sub-title button {
   background: white;
   color: black;
+  padding: 18px 25px 15px;
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 15px;
-  padding: 14px 0;
-  width: 163px;
-  text-align: center;
   border-radius: 8px;
 }
 
-/* enjoyTrip */
-.content__enjoyTrip {
-  padding-top: 32px;
-  margin-bottom: 40px;
+/* search */
+.content__search {
+  background: white;
 }
-.content__enjoyTrip .enjoyTrip__item .enjoyTrip__item-text span {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 5px;
-  display: block;
-}
-.content__enjoyTrip .enjoyTrip__item .enjoyTrip__item-text p {
-  font-size: 14px;
-  line-height: 18px;
-}
-
-/* list-thema - liveTrip & enjoyTrip class */
-.list-thema > div ul {
-  display: grid;
-  gap: 15px;
-}
-.list-thema > div ul.liveTrip__list {
-  grid-template-columns: repeat(4, 1fr);
-}
-.list-thema > div ul.enjoyTrip__list {
-  grid-template-columns: repeat(3, 1fr);
-}
-.list-thema > div ul li a {
-  display: flex;
-  flex-direction: column;
-  margin: 4px 6px 4px 0;
-}
-.list-thema > div ul li a img {
+.content__search .wrapper {
   width: 100%;
+  height: 100vh;
   border-radius: 10px;
-  margin-bottom: 7px;
 }
 
+/* nearTrip */
+/* experience */
+/* superhost */
 @media (max-width: 1110px) {
   #main ::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-  #main section {
-    padding: 0 40px;
-  }
-  #main section.content__nearTrip .content__nearTrip-box {
-    width: 100%;
-    overflow: auto;
-  }
-  #main section.content__nearTrip .content__nearTrip-box .nearTrip__list {
-    grid-template-rows: repeat(2, 1fr);
-    grid-auto-flow: column;
-    padding: 0;
-    width: 135%;
-  }
-  #main section.content__nearTrip .content__nearTrip-box .nearTrip__list .nearTrip__item a .nearTrip__item-img {
-    width: 70px;
-    height: 70px;
-  }
-  #main section.content__liveTrip .content__liveTrip-box .liveTrip__list {
-    width: 135%;
-  }
-  #main section.content__liveTrip button {
-    display: flex;
-  }
-  #main section.content__startHosting {
-    height: 360px;
-  }
-  #main section.content__startHosting .content__startHosting-box {
-    padding: 0 40px;
-  }
-  #main section.content__startHosting .content__startHosting-box h1 {
-    font-size: 1.9rem;
-    margin: 0;
-  }
-  #main section.content__startHosting .content__startHosting-box p {
-    width: 280px;
-    font-size: 1rem;
-    line-height: 1.3rem;
-    margin-bottom: 20px;
-  }
-  #main section.content__startHosting .content__startHosting-box span {
-    padding: 12px 0 9px;
-    width: 135px;
-  }
-  #main section.list-thema > div {
-    overflow: auto;
-  }
 }
-@media (max-width: 932px) {
-  #main section h2 {
-    font-size: 1.6rem;
-  }
-  #main #main-screen {
-    height: 90vw;
-  }
-}
-@media (max-width: 726px) {
+@media (max-width: 1110px) and (max-width: 726px) {
   header #notice-bar a {
     font-size: 0.8rem;
     line-height: 1rem;
@@ -1142,96 +983,21 @@ header nav > div:last-child {
     text-align: center;
   }
 
-  #main section {
-    padding: 0 25px;
-  }
-  #main section h2 {
-    margin: 30px 0 10px;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    width: 88%;
-    letter-spacing: -0.5px;
-  }
-  #main #main-screen {
+  #main .content__main {
     height: calc(100vh - 58px);
     max-height: 130vw;
     padding-top: 14vh;
   }
-  #main #main-screen span {
+  #main .content__main span {
     width: 188px;
     white-space: pre-line !important;
     line-height: 1.3rem;
   }
-  #main #main-screen span:after {
+  #main .content__main span:after {
     content: "에어비앤비가 여행지를 찾아드릴게요!";
   }
-  #main #main-screen button {
+  #main .content__main button {
     padding: 15px 30px;
-  }
-  #main .content__nearTrip {
-    padding: 0;
-  }
-  #main .content__nearTrip h2 {
-    padding-left: 25px;
-  }
-  #main .content__nearTrip .content__nearTrip-box {
-    padding-left: 25px;
-    width: 100%;
-    overflow: auto;
-  }
-  #main .content__nearTrip .content__nearTrip-box .nearTrip__list {
-    width: 280% !important;
-    padding-right: 25px !important;
-  }
-  #main .content__nearTrip .content__nearTrip-box .nearTrip__list .nearTrip__item:nth-last-child(n+1):nth-last-child(-n+2) {
-    display: flex !important;
-  }
-  #main .content__liveTrip .content__liveTrip-box {
-    width: 100%;
-    overflow: auto;
-  }
-  #main .content__liveTrip > button {
-    display: none !important;
-  }
-  #main .content__startHosting {
-    height: 78vh !important;
-    max-height: 110vw;
-    margin-bottom: 50px;
-  }
-  #main .content__startHosting .content__startHosting-box {
-    background: url(https://a0.muscache.com/im/pictures/791aba62-2de8-4722-99b5-45838715eb34.jpg?im_q=medq&im_w=720) no-repeat center bottom;
-    background-size: contain;
-    background-color: #201c1b;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  #main .content__startHosting .content__startHosting-box h1 {
-    padding-top: 25px;
-  }
-  #main .content__startHosting .content__startHosting-box p {
-    width: 100% !important;
-    text-align: center;
-  }
-  #main .list-thema {
-    padding: 0;
-  }
-  #main .list-thema h2 {
-    padding-left: 25px;
-  }
-  #main .list-thema ul {
-    padding-right: 25px !important;
-  }
-  #main .list-thema .content__liveTrip-box {
-    padding-left: 25px;
-  }
-  #main .list-thema .content__liveTrip-box .liveTrip__list {
-    width: 310% !important;
-  }
-  #main .list-thema .content__enjoyTrip-box {
-    padding-left: 25px;
-  }
-  #main .list-thema .content__enjoyTrip-box .enjoyTrip__list {
-    width: 240% !important;
   }
 }
 /* modal Bg */

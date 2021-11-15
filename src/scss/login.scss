@@ -1,0 +1,165 @@
+/* modal - join & login */
+#login-main {
+  .login-content {
+    max-width: 568px;
+    width: 100%;
+    margin: 120px auto 50px;
+    border: 1px solid #cfcfcf;
+    border-radius: 12px;
+    .modal__wrapper {
+      .modal-title {
+        border-bottom: 1px solid #e9e9e9;
+        text-align: center;
+        margin: 0;
+        padding: 20px 0;
+      }
+      .modal__container {
+        padding: 30px;
+        .content {
+          .content_cont {
+            .cont-title {
+              font-size: 22px !important;
+              margin: 0 0 10px 0 !important;
+            }
+            .phone-login {
+              .phone-form {
+                form {
+                  border: 1px solid #ccc;
+                  border-radius: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  label {
+                    display: grid;
+                    padding: 10px 15px;
+                    color: #555;
+                    position: relative;
+                    &:first-child {
+                      border-bottom: 1px solid #ccc;
+                      grid-template-columns: 1fr;
+                      padding-bottom: 2rem;
+                    }
+                    &:last-child {
+                      grid-template-columns: auto 1fr;
+                      span {
+                        grid-column: span 2;
+                      }
+                      b {
+                        font-weight: 300;
+                      }
+                    }
+                    span {
+                      font-size: 0.75rem;
+                      line-height: 1.2rem;
+                    }
+                    select,
+                    input {
+                      border: none;
+                      background: none;
+                    }
+                    select {
+                      outline: none;
+                      position: absolute;
+                      width: 100%;
+                      padding: 0 12px;
+                      bottom: 15px;
+                      appearance: 30px;
+                      option {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+              & > p {
+                margin: 20px 0;
+                font-size: 0.75rem;
+                color: #555;
+                line-height: 1rem;
+                a {
+                  display: inline;
+                  margin: 0 5px;
+                  color: #333;
+                  font-weight: bold;
+                  text-decoration: underline;
+                }
+              }
+              .phone-login__btn {
+                width: 100%;
+                padding: 15px 10px;
+                background: $pink;
+                border-radius: 10px;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+            }
+            .sns-login {
+              & > span {
+                font-size: 0.75rem;
+                color: #444;
+                text-align: center;
+                margin: 15px 0 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &::before,
+                &::after {
+                  content: "";
+                  width: 45%;
+                  height: 1px;
+                  background: #ebebeb;
+                  display: block;
+                }
+              }
+              .sns-btn {
+                width: 100%;
+                border: 2px solid #b4b4b4;
+                border-radius: 10px;
+                padding: 12px 10px;
+                display: flex;
+                align-items: center;
+                &:not(:last-child) {
+                  margin-bottom: 15px;
+                }
+                &:hover {
+                  border-color: black;
+                }
+                i {
+                  width: 30px;
+                  font-size: 1.25rem;
+                  display: flex;
+                  justify-content: center;
+                  margin-right: 5px;
+                }
+                span {
+                  display: block;
+                  text-align: center;
+                  width: 100%;
+                  font-size: 0.9rem;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $large) {
+}
+@media (max-width: $medium) {
+}
+@media (max-width: $small) {
+  header.login {
+    display: none;
+  }
+  #login-main {
+    padding-top: 0;
+    .login-content {
+      margin-top: 0;
+      border: none;
+    }
+  }
+}

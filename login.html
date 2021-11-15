@@ -6,134 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/styles.css" />
-    <title>Airbnb web clone coding : )</title>
+    <title>Login / Join Us</title>
   </head>
   <body>
-    <header id="header">
-      <div id="notice-bar">
-        <a href="#;">에어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.</a>
-      </div>
-      <nav>
+    <header id="header" class="login fixed">
+      <nav class="active">
         <div class="nav__left logo"><a href="index.html"></a></div>
-        <div class="nav__form">
-          <div class="nav__form-tab">
-            <button type="button" class="active">숙소</button>
-            <button type="button">체험</button>
-            <a href="">온라인 체험</a>
-          </div>
-          <div class="nav__form-search">
-            <form id="rooms" class="form-search__form active">
-              <div>
-                <label>
-                  위치
-                  <input type="text" placeholder="어디로 여행가세요?">
-                </label>
-                <div class="tab-modal where">
-                  <p>언제 어디로든 떠나는 여행</p>
-                  <a href="#;">유연한 검색<i class="fas fa-chevron-right"></i></a>
-                </div>
-              </div>
-              <div id="checkInOut">
-                <label>
-                  체크인
-                  <button type="button">날짜 입력</button>
-                </label>
-                <label>
-                  체크아웃
-                  <button type="button">날짜 입력</button>
-                </label>
-                <div class="tab-modal when">
-                  <div class="calendar-tab">
-                    <button type="button" class="tab__calendar active">달력</button>
-                    <button type="button" class="tab__schedule">유연한 일정</button>
-                  </div>
-                  <div class="calendar-cont">
-                    <div class="calendar__header">
-                      <button type="button" class="btn go-prev" onclick="prevMonth()"><</button>
-                      <button type="button" class="go-next" onclick="nextMonth()">></button>
-                      <div class="year-month"></div>
-                      <div class="next-year-month"></div>
-                    </div>
-                    <div class="calendar__body">
-                      <div class="this-month">
-                        <div class="days">
-                          <span class="day">일</span>
-                          <span class="day">월</span>
-                          <span class="day">화</span>
-                          <span class="day">수</span>
-                          <span class="day">목</span>
-                          <span class="day">금</span>
-                          <span class="day">토</span>
-                        </div>
-                        <div class="dates"></div>
-                      </div>
-                      <div class="next-month">
-                        <div class="days">
-                          <span class="day">일</span>
-                          <span class="day">월</span>
-                          <span class="day">화</span>
-                          <span class="day">수</span>
-                          <span class="day">목</span>
-                          <span class="day">금</span>
-                          <span class="day">토</span>
-                        </div>
-                        <div class="next-month-dates"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <label>
-                  인원
-                  <button type="button">게스트 추가</button>
-                </label>
-                <div class="tab-modal guest">
-                  <div class="guest-tab">
-                    <p><b>성인</b><br>만 13세 이상</p>
-                    <div class="tab__count">
-                      <button type="button" class="minus-btn inactive">-</button>
-                      <input class="count-result" type="number" value="0"/>
-                      <button type="button" class="plus-btn">+</button>
-                    </div>
-                  </div>
-                  <div class="guest-tab">
-                    <p><b>어린이</b><br>만 2~12세</p>
-                    <div class="tab__count">
-                      <button type="button" class="minus-btn inactive">-</button>
-                      <input class="count-result" type="number" value="0"/>
-                      <button type="button" class="plus-btn">+</button>
-                    </div>
-                  </div>
-                  <div class="guest-tab">
-                    <p><b>유아</b><br>만 2세 미만</p>
-                    <div class="tab__count">
-                      <button type="button" class="minus-btn inactive">-</button>
-                      <input class="count-result" type="number" value="0"/>
-                      <button type="button" class="plus-btn">+</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <form id="experience" class="form-search__form">
-              <div>
-                <label">
-                  <input type="text" placeholder="">
-                </label>
-                <div class="tab-modal"></div>
-              </div>
-              <div>
-                <label>
-                  <input type="text" placeholder="">
-                </label>
-                <div class="tab-modal"></div>
-              </div>
-            </form>
-            <button type="submit"><i class="fas fa-search"></i></button>
-            <span></span>
-          </div>
-        </div>
+        <div class="nav__blank"></div>
         <div class="nav__right">
           <a class="right-bundle" href="host.html">호스트 되기</a>
           <button type="button" class="nav__right-global right-bundle" onclick="modalLng();">
@@ -145,8 +24,8 @@
           </button>
           <div class="nav__right-myBtn-modal">
             <ul>
-              <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
-              <li><button type="button" onclick="modalLogin();">로그인</a></button>
+              <li><button type="button"><b>회원가입</b></button></li>
+              <li><button type="button">로그인</a></button>
             </ul>
             <ul>
               <li><a href="#;">숙소 호스트 되기</a></li>
@@ -158,96 +37,63 @@
       </nav>
     </header>
     <!-- header-end -->
-    <main id="main">
-      <section class="content__main">
-        <div class="wrapper">
-          <img class="section-img" src="https://a0.muscache.com/im/pictures/b649a6dc-761c-45f0-938c-7eac950620e7.jpg?im_w=1440">
-          <div class="main-title">
-            <img src="https://a0.muscache.com/pictures/Storefronts/NoHo_Header_TitleLogo/original/3e8e526b-a760-47b0-89c2-e27049f2ede2.svg">
-            <h3>겨울 업그레이드</h3>
-            <button type="button"><i class="fas fa-play"></i> 발표 영상 보기</button>
-          </div>
-          <div class="main-sub-title">
-            <h4>2021 겨울 업그레이드의 일환으로 선보이는 50가지 이상의 사항을 확인하세요.</h4>
-            <button type="button" class="btn-white">자세히 알아보기</button>
-          </div>
+    <main id="login-main" style="border-bottom:1px solid #cfcfcf;">
+        <div class="login-content">
+            <div class="modal__wrapper">
+                <h4 class="modal-title">로그인 또는 회원가입</h4>
+              <div class="modal__container">
+                <div class="content">
+                  <div class="content_cont">
+                    <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
+                    <div class="cont">
+                      <div class="phone-login">
+                        <div class="phone-form">
+                          <form>
+                            <label for="national">
+                              <span>국가/지역</span>
+                              <select id="national">
+                                <option>한국 (+82)</option>
+                                <option>미국 (+1)</option>
+                                <option>프랑스 (+33)</option>
+                                <option>영국 (+44)</option>
+                                <option>덴마크 (+45)</option>
+                              </select>
+                            </label>
+                            <label for="phoneNum">
+                              <span>전화번호</span>
+                              <b>+82</b>
+                              <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
+                            </label>
+                          </form>
+                        </div>
+                        <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
+                        <button class="phone-login__btn" type="submit">계속</button>
+                      </div>
+                      <div class="sns-login">
+                        <span>또는</span>
+                        <a class="sns-btn" href="#;" target="_blank">
+                          <i class="fab fa-facebook"></i>
+                          <span>페이스북으로 로그인하기</span>
+                        </a>
+                        <a class="sns-btn" href="#;" target="_blank">
+                          <i class="fab fa-google"></i>
+                          <span>구글로 로그인하기</span>
+                        </a>
+                        <a class="sns-btn" href="#;" target="_blank">
+                          <i class="fab fa-apple"></i>
+                          <span>Apple 계정으로 계속하기</span>
+                        </a>
+                        <a class="sns-btn" href="#;" target="_blank">
+                          <i class="far fa-envelope"></i>
+                          <span>이메일로 로그인하기</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
-      </section>
-      <section class="content__search">
-        <div class="wrapper">
-          <img class="section-img" src="https://a0.muscache.com/im/pictures/73b52a62-f4e8-411c-b2a8-125a6e3e59e2.jpg?im_w=1200">
-          <div class="search-title">
-            <h2>에어비앤비가 <br>여행지를 찾아드릴게요!</h2>
-            <button type="button">유연한 검색</button>
-          </div>
-        </div>
-      </section>
-      <section class="content__idea">
-        <div class="wrapper">
-          <h2 class="section-title">설레는 다음 여행을 위한 아이디어</h2>
-          <div class="idea-card">
-            <a href="#;" class="card">
-              <div class="card-img">
-                <img src="https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320">
-              </div>
-              <div class="card-text">
-                <h3>서울</h3>
-                <span>차로 30분 거리</span>
-              </div>
-            </a>
-            <a href="#;" class="card">
-              <div class="card-img">
-                <img src="https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320">
-              </div>
-              <div class="card-text">
-                <h3>인천</h3>
-                <span>차로 30분 거리</span>
-              </div>
-            </a>
-            <a href="#;" class="card">
-              <div class="card-img">
-                <img src="https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320">
-              </div>
-              <div class="card-text">
-                <h3>대구</h3>
-                <span>차로 4시간 거리</span>
-              </div>
-            </a>
-            <a href="#;" class="card">
-              <div class="card-img">
-                <img src="https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320">
-              </div>
-              <div class="card-text">
-                <h3>대전</h3>
-                <span>차로 2.5시간 거리</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="content__experience">
-        <div class="wrapper">
-          <h2 class="section-title">에어비앤비 체험 둘러보기</h2>
-          <div class="experience-card">
-            <a href="#;" class="card">
-              <h2>여행 중 만나는 <br>
-                이색적인 즐길 거리</h2>
-              <button type="button" class="btn-white">체험</button>
-            </a>
-            <a href="#;" class="card">
-              <h2>집에서 만나는 <br>
-                다양한 즐길 거리</h2>
-              <button type="button" class="btn-white">온라인 체험</button>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="content__superhost">
-        <div class="wrapper">
-          <h1>호스팅에 관해 궁금하신 점이 있나요?</h1>
-          <button type="button" class="btn-white">슈퍼호스트에게 물어보세요</button>
-        </div>
-      </section>
     </main>
     <!-- main-end -->
     <footer>
@@ -331,7 +177,7 @@
     </footer>
     <!-- footer-end -->
     <div id="mobileNav">
-      <a href="index.html" class="active">
+      <a href="index.html">
         <i class="fas fa-search"></i>
         <span>둘러보기</span>
       </a>
@@ -339,7 +185,7 @@
         <i class="far fa-heart"></i>
         <span>위시리스트</span>
       </a>
-      <a href="login.html">
+      <a href="login.html" class="active">
         <i class="far fa-user-circle"></i>
         <span>로그인</span>
       </a>
@@ -513,73 +359,11 @@
         </div>
       </div>
     </div>
-    <div id="modal_login" class="modal">
-      <div class="modal__wrapper">
-        <div class="modal__top">
-          <button class="btn-close" type="button" onclick="modalLoginClose();"><i class="fas fa-times"></i></button>
-          <h4 class="modal-title">로그인 또는 회원가입</h4>
-        </div>
-        <div class="modal__container">
-          <div class="content">
-            <div class="content_cont">
-              <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
-              <div class="cont">
-                <div class="phone-login">
-                  <div class="phone-form">
-                    <form>
-                      <label for="national">
-                        <span>국가/지역</span>
-                        <select id="national">
-                          <option>한국 (+82)</option>
-                          <option>미국 (+1)</option>
-                          <option>프랑스 (+33)</option>
-                          <option>영국 (+44)</option>
-                          <option>덴마크 (+45)</option>
-                        </select>
-                      </label>
-                      <label for="phoneNum">
-                        <span>전화번호</span>
-                        <b>+82</b>
-                        <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
-                      </label>
-                    </form>
-                  </div>
-                  <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
-                  <button class="phone-login__btn" type="submit">계속</button>
-                </div>
-                <div class="sns-login">
-                  <span>또는</span>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                    <span>페이스북으로 로그인하기</span>
-                  </a>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="fab fa-google"></i>
-                    <span>구글로 로그인하기</span>
-                  </a>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="fab fa-apple"></i>
-                    <span>Apple 계정으로 계속하기</span>
-                  </a>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="far fa-envelope"></i>
-                    <span>이메일로 로그인하기</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="modalBg"></div>
     
 
     <script src="js/index.js"></script>
-    <script src="js/fixed-header.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/guest-count.js"></script>
-    <script src="js/calendar.js"></script>
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
   </body>
 </html>

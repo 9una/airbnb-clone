@@ -1,4 +1,6 @@
-/*let date = new Date();
+//Date 객체 생성
+let date = new Date();
+console.log('test');
 
 const renderCalendar = () => {
     const viewYear = date.getFullYear(),
@@ -76,7 +78,7 @@ const renderCalendar = () => {
             ? 'this'
             : 'other';
 
-        dates[i] = `<div class="date"><span class="${condition}">${date}</span></div>`;
+        dates[i] = `<button type="button" class="date ${condition}">${date}</button>`;
     });
 
     datesNext.forEach((date, i) => {
@@ -84,12 +86,12 @@ const renderCalendar = () => {
             ? 'this'
             : 'other';
 
-        datesNext[i] = `<div class="date"><span class="${condition}">${date}</span></div>`;
+        datesNext[i] = `<button type="button" class="date ${condition}">${date}</button>`;
     });
 
     //Dates 그리기
     document.querySelector('.dates').innerHTML = dates.join('');
-    document.querySelector('.nextMonthDates').innerHTML = datesNext.join('');
+    document.querySelector('.next-month-dates').innerHTML = datesNext.join('');
 
     // 오늘 날짜 그리기
     const today = new Date();
@@ -116,6 +118,3 @@ const goToday = () => {
     date = new Date();
     renderCalendar();
 };
-
-
-*/

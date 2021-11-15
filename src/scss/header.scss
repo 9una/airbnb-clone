@@ -712,6 +712,88 @@ header {
       .tab__schedule {
       }
     }
+    .calendar-cont {
+      width: 100%;
+      padding: 0 30px;
+      margin-bottom: 20px;
+      .calendar__header {
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        position: relative;
+        button {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #e9e9e9;
+          top: -7px;
+          &.go-prev {
+            left: 12px;
+          }
+          &.go-next {
+            right: 12px;
+          }
+          &:hover {
+            background: #cfcfcf;
+            color: white;
+          }
+        }
+        & > div {
+          width: 50%;
+          text-align: center;
+          &.year-month {
+          }
+          &.next-year-month {
+          }
+        }
+      }
+      .calendar__body {
+        margin-top: 30px;
+        display: flex;
+        gap: 30px;
+        & > div {
+          width: 50%;
+          .days,
+          .dates,
+          .next-month-dates {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            justify-content: center;
+            text-align: center;
+            .day {
+              font-weight: bold;
+              margin-bottom: 20px;
+            }
+            .date {
+              width: 30px;
+              height: 30px;
+              margin: auto;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #444;
+              &.today {
+                background: #777;
+                color: white;
+              }
+              &.checkin,
+              &.checkout {
+                background: black;
+                color: white;
+              }
+              &.other {
+                color: #cfcfcf;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &.guest {
     flex-direction: column;

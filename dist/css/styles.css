@@ -690,6 +690,95 @@ header nav > div:last-child {
 .tab-modal.when .calendar-tab button.active {
   background: white;
 }
+.tab-modal.when .calendar-cont {
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
+.tab-modal.when .calendar-cont .calendar__header {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  position: relative;
+}
+.tab-modal.when .calendar-cont .calendar__header button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9e9e9;
+  top: -7px;
+}
+.tab-modal.when .calendar-cont .calendar__header button.go-prev {
+  left: 12px;
+}
+.tab-modal.when .calendar-cont .calendar__header button.go-next {
+  right: 12px;
+}
+.tab-modal.when .calendar-cont .calendar__header button:hover {
+  background: #cfcfcf;
+  color: white;
+}
+.tab-modal.when .calendar-cont .calendar__header > div {
+  width: 50%;
+  text-align: center;
+}
+.tab-modal.when .calendar-cont .calendar__body {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+.tab-modal.when .calendar-cont .calendar__body > div {
+  width: 50%;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days,
+.tab-modal.when .calendar-cont .calendar__body > div .dates,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: center;
+  text-align: center;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days .day,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .day,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .day {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days .date,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .date,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days .date.today,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .date.today,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date.today {
+  background: #777;
+  color: white;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days .date.checkin, .tab-modal.when .calendar-cont .calendar__body > div .days .date.checkout,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .date.checkin,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .date.checkout,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date.checkin,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date.checkout {
+  background: black;
+  color: white;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days .date.other,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .date.other,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date.other {
+  color: #cfcfcf;
+}
 .tab-modal.guest {
   flex-direction: column;
   left: auto;

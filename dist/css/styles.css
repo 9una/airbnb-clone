@@ -2594,20 +2594,19 @@ footer .fnb__top {
   border-bottom: 1px solid #ddd;
 }
 footer .fnb__top .fnb__top-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   width: 100%;
-}
-footer .fnb__top .fnb__top-list .fnb__top-item {
-  width: 25%;
-  padding: 0 12px;
 }
 footer .fnb__top .fnb__top-list .fnb__top-item ul {
   display: flex;
   flex-direction: column;
 }
 footer .fnb__top .fnb__top-list .fnb__top-item ul span {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
+  margin-bottom: 5px;
 }
 footer .fnb__top .fnb__top-list .fnb__top-item ul li {
   margin-top: 15px;

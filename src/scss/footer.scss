@@ -5,17 +5,18 @@ footer {
     padding: 48px 0;
     border-bottom: 1px solid #ddd;
     .fnb__top-list {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
       width: 100%;
       .fnb__top-item {
-        width: 25%;
-        padding: 0 12px;
         ul {
           display: flex;
           flex-direction: column;
           span {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
+            margin-bottom: 5px;
           }
           li {
             margin-top: 15px;

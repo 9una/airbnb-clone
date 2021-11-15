@@ -97,12 +97,13 @@ footer {
     .fnb__top {
       padding-bottom: 0;
       .fnb__top-list {
+        display: flex;
         flex-direction: column;
         .fnb__top-item {
           width: auto;
           padding: 0;
           &:not(:first-child) {
-            margin-top: 25px;
+            margin-top: 10px;
           }
           &:not(:last-child) {
             border-bottom: 1px solid #ddd;
@@ -111,7 +112,7 @@ footer {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             margin-bottom: 25px;
-            gap: 10px;
+            gap: 10px 20px;
             span {
               grid-column: span 3;
               font-size: 0.9rem;

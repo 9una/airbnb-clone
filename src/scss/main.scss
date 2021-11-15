@@ -3,9 +3,11 @@
   word-break: keep-all !important;
   section {
     width: 100%;
+    height: 100%;
     padding: 0 80px;
     .wrapper {
       position: relative;
+      height: 100%;
       .section-img {
         width: 100%;
         object-fit: cover;
@@ -47,11 +49,9 @@
 /* main-screen */
 .content__main {
   background: black;
-  height: clac(100vh + 25vh);
   .wrapper {
     padding-top: 25vh;
     width: 100%;
-    height: 100vh;
     .section-img {
       height: 75vh;
     }
@@ -82,7 +82,7 @@
     }
     .main-sub-title {
       display: flex;
-      margin-top: 3vh;
+      margin: 3vh 0 10vh;
       justify-content: space-between;
       align-items: center;
       color: white;
@@ -142,10 +142,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    height: 430px;
     .card {
       border-radius: 12px;
       overflow: hidden;
-      height: 430px;
       .card-img {
         height: 50%;
         img {
@@ -249,11 +249,139 @@
       height: 0;
     }
     section {
+      padding: 0 40px;
+      .wrapper {
+        .section-title {
+          margin: 50px 0 10px;
+        }
+      }
+    }
+    h1 {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    /*h4 {
+      font-size: ;
+    }*/
+
+    .content__main {
+      padding: 0;
+      .wrapper {
+        .section-img {
+          height: 80vh;
+          border-radius: 0;
+        }
+        .main-sub-title {
+          padding: 0 40px;
+          h4 {
+            font-size: 1rem;
+            width: 45%;
+            line-height: 1.3rem;
+          }
+        }
+      }
+    }
+    .content__search {
+      .wrapper {
+        height: 82vh;
+        .search-title {
+          h2 {
+            margin-top: 50vh;
+            font-size: 2rem !important;
+            line-height: 2.3rem;
+          }
+          button {
+            margin-top: 10px;
+            padding: 15px 25px;
+          }
+        }
+      }
+    }
+    .content__idea {
+      .idea-card {
+        height: 50vh;
+        .card {
+          .card-text {
+            padding: 15px 15px;
+            span {
+              font-size: 1rem;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+    .content__experience {
+      .experience-card {
+        .card {
+          padding: 25px;
+          h2 {
+            font-size: 2rem !important;
+            line-height: 2.5rem !important;
+          }
+        }
+      }
+    }
+    .content__superhost {
+      height: 83vh;
+      .wrapper {
+        padding: 40px 0 !important;
+        width: 40%;
+      }
     }
   }
 
   @media (max-width: $medium) {
     #main {
+      .content__main {
+        .wrapper {
+          padding-top: 37vh;
+          .section-img {
+            height: 100vh;
+          }
+        }
+      }
+      .content__search {
+        .wrapper {
+          height: 100%;
+          .section-img {
+            height: 65vh;
+          }
+          .search-title {
+            h2 {
+              margin-top: 35vh;
+            }
+          }
+        }
+      }
+      .content__idea {
+        padding-right: 0;
+        .wrapper {
+          overflow: auto;
+          .idea-card {
+            width: 155%;
+
+            height: 45vw;
+          }
+        }
+      }
+      .content__experience {
+        .experience-card {
+          height: 80vh;
+        }
+      }
+      .content__superhost {
+        height: 70vh;
+      }
     }
   }
 
@@ -270,20 +398,76 @@
       }
     }
     #main {
-      .content__main {
-        height: calc(100vh - 58px);
-        max-height: 130vw;
-        padding-top: 14vh;
-        span {
-          width: 188px;
-          white-space: pre-line !important;
-          line-height: 1.3rem;
-          &:after {
-            content: "에어비앤비가 여행지를 찾아드릴게요!";
+      section {
+        padding: 0 20px;
+        .wrapper {
+          .section-title {
+            width: 80%;
+            line-height: 2.2rem;
+            margin-bottom: 25px;
           }
         }
-        button {
-          padding: 15px 30px;
+      }
+      h1 {
+        font-size: 2.6rem;
+        line-height: 3rem;
+      }
+      .content__main {
+        border-bottom: 1px solid #cfcfcf;
+        .wrapper {
+          padding: 0;
+          .section-img {
+            height: 100vh;
+          }
+          .main-sub-title {
+            padding: 0 20px;
+            margin-bottom: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            h4 {
+              margin-bottom: 30px;
+              width: 80%;
+            }
+            button {
+              width: 100%;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+      .content__search {
+        padding-top: 30px;
+        .wrapper {
+          .section-img {
+            height: 70vh;
+          }
+        }
+      }
+      .content__idea {
+        .wrapper {
+          .idea-card {
+            width: 240%;
+            gap: 15px;
+            height: 72vw;
+          }
+        }
+      }
+      .content__experience {
+        .wrapper {
+          .experience-card {
+            height: 100%;
+            grid-template-columns: 1fr;
+            margin-bottom: 0;
+            .card {
+              height: 75vh;
+            }
+          }
+        }
+      }
+      .content__superhost {
+        height: 90vh;
+        .wrapper {
+          width: 75%;
         }
       }
     }

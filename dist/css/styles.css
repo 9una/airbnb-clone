@@ -883,10 +883,12 @@ header nav > div:last-child {
 }
 #main section {
   width: 100%;
+  height: 100%;
   padding: 0 80px;
 }
 #main section .wrapper {
   position: relative;
+  height: 100%;
 }
 #main section .wrapper .section-img {
   width: 100%;
@@ -924,12 +926,10 @@ header nav > div:last-child {
 /* main-screen */
 .content__main {
   background: black;
-  height: clac(125vh);
 }
 .content__main .wrapper {
   padding-top: 25vh;
   width: 100%;
-  height: 100vh;
 }
 .content__main .wrapper .section-img {
   height: 75vh;
@@ -961,7 +961,7 @@ header nav > div:last-child {
 }
 .content__main .wrapper .main-sub-title {
   display: flex;
-  margin-top: 3vh;
+  margin: 3vh 0 10vh;
   justify-content: space-between;
   align-items: center;
   color: white;
@@ -1014,11 +1014,11 @@ header nav > div:last-child {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  height: 430px;
 }
 .content__idea .idea-card .card {
   border-radius: 12px;
   overflow: hidden;
-  height: 430px;
 }
 .content__idea .idea-card .card .card-img {
   height: 50%;
@@ -1101,9 +1101,117 @@ header nav > div:last-child {
 }
 
 @media (max-width: 1110px) {
+  #main {
+    /*h4 {
+      font-size: ;
+    }*/
+  }
   #main ::-webkit-scrollbar {
     width: 0;
     height: 0;
+  }
+  #main section {
+    padding: 0 40px;
+  }
+  #main section .wrapper .section-title {
+    margin: 50px 0 10px;
+  }
+  #main h1 {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    margin: 0;
+  }
+  #main h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  #main h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  #main .content__main {
+    padding: 0;
+  }
+  #main .content__main .wrapper .section-img {
+    height: 80vh;
+    border-radius: 0;
+  }
+  #main .content__main .wrapper .main-sub-title {
+    padding: 0 40px;
+  }
+  #main .content__main .wrapper .main-sub-title h4 {
+    font-size: 1rem;
+    width: 45%;
+    line-height: 1.3rem;
+  }
+  #main .content__search .wrapper {
+    height: 82vh;
+  }
+  #main .content__search .wrapper .search-title h2 {
+    margin-top: 50vh;
+    font-size: 2rem !important;
+    line-height: 2.3rem;
+  }
+  #main .content__search .wrapper .search-title button {
+    margin-top: 10px;
+    padding: 15px 25px;
+  }
+  #main .content__idea .idea-card {
+    height: 50vh;
+  }
+  #main .content__idea .idea-card .card .card-text {
+    padding: 15px 15px;
+  }
+  #main .content__idea .idea-card .card .card-text span {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  #main .content__experience .experience-card .card {
+    padding: 25px;
+  }
+  #main .content__experience .experience-card .card h2 {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+  #main .content__superhost {
+    height: 83vh;
+  }
+  #main .content__superhost .wrapper {
+    padding: 40px 0 !important;
+    width: 40%;
+  }
+}
+@media (max-width: 1110px) and (max-width: 932px) {
+  #main .content__main .wrapper {
+    padding-top: 37vh;
+  }
+  #main .content__main .wrapper .section-img {
+    height: 100vh;
+  }
+  #main .content__search .wrapper {
+    height: 100%;
+  }
+  #main .content__search .wrapper .section-img {
+    height: 65vh;
+  }
+  #main .content__search .wrapper .search-title h2 {
+    margin-top: 35vh;
+  }
+  #main .content__idea {
+    padding-right: 0;
+  }
+  #main .content__idea .wrapper {
+    overflow: auto;
+  }
+  #main .content__idea .wrapper .idea-card {
+    width: 155%;
+    height: 45vw;
+  }
+  #main .content__experience .experience-card {
+    height: 80vh;
+  }
+  #main .content__superhost {
+    height: 70vh;
   }
 }
 @media (max-width: 1110px) and (max-width: 726px) {
@@ -1114,21 +1222,65 @@ header nav > div:last-child {
     text-align: center;
   }
 
+  #main section {
+    padding: 0 20px;
+  }
+  #main section .wrapper .section-title {
+    width: 80%;
+    line-height: 2.2rem;
+    margin-bottom: 25px;
+  }
+  #main h1 {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
   #main .content__main {
-    height: calc(100vh - 58px);
-    max-height: 130vw;
-    padding-top: 14vh;
+    border-bottom: 1px solid #cfcfcf;
   }
-  #main .content__main span {
-    width: 188px;
-    white-space: pre-line !important;
-    line-height: 1.3rem;
+  #main .content__main .wrapper {
+    padding: 0;
   }
-  #main .content__main span:after {
-    content: "에어비앤비가 여행지를 찾아드릴게요!";
+  #main .content__main .wrapper .section-img {
+    height: 100vh;
   }
-  #main .content__main button {
-    padding: 15px 30px;
+  #main .content__main .wrapper .main-sub-title {
+    padding: 0 20px;
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #main .content__main .wrapper .main-sub-title h4 {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  #main .content__main .wrapper .main-sub-title button {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #main .content__search {
+    padding-top: 30px;
+  }
+  #main .content__search .wrapper .section-img {
+    height: 70vh;
+  }
+  #main .content__idea .wrapper .idea-card {
+    width: 240%;
+    gap: 15px;
+    height: 72vw;
+  }
+  #main .content__experience .wrapper .experience-card {
+    height: 100%;
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+  #main .content__experience .wrapper .experience-card .card {
+    height: 75vh;
+  }
+  #main .content__superhost {
+    height: 90vh;
+  }
+  #main .content__superhost .wrapper {
+    width: 75%;
   }
 }
 /* modal Bg */
@@ -2684,6 +2836,7 @@ footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns a {
     padding-bottom: 0;
   }
   footer .fnb__top .fnb__top-list {
+    display: flex;
     flex-direction: column;
   }
   footer .fnb__top .fnb__top-list .fnb__top-item {
@@ -2691,7 +2844,7 @@ footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns a {
     padding: 0;
   }
   footer .fnb__top .fnb__top-list .fnb__top-item:not(:first-child) {
-    margin-top: 25px;
+    margin-top: 10px;
   }
   footer .fnb__top .fnb__top-list .fnb__top-item:not(:last-child) {
     border-bottom: 1px solid #ddd;
@@ -2700,7 +2853,7 @@ footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 25px;
-    gap: 10px;
+    gap: 10px 20px;
   }
   footer .fnb__top .fnb__top-list .fnb__top-item ul span {
     grid-column: span 3;

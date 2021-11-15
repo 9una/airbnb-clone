@@ -844,6 +844,41 @@ header nav > div:last-child {
   /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+/* mobile size fixed nav */
+#mobileNav {
+  width: 100%;
+  position: fixed;
+  bottom: -100px;
+  opacity: 0;
+  background: white;
+  border-top: 1px solid black;
+  padding: 0 20vw;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.5s;
+}
+#mobileNav.active {
+  bottom: 0;
+  opacity: 1;
+}
+#mobileNav a {
+  padding: 10px 0;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+#mobileNav a i {
+  color: #b0b0b0;
+  font-size: 1.4rem;
+}
+#mobileNav a span {
+  font-size: 0.7rem;
+}
+#mobileNav a.active i {
+  color: #ff385c;
+}
+
 @media (max-width: 1110px) {
   #header nav {
     padding: 0 40px;

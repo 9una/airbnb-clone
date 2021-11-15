@@ -1,6 +1,5 @@
 //Date 객체 생성
 let date = new Date();
-console.log('test');
 
 const renderCalendar = () => {
     const viewYear = date.getFullYear(),

@@ -55,9 +55,7 @@
     padding: 64px 120px;
   }
   .sentence-large {
-    font-size: 4rem;
     font-weight: bold;
-    line-height: 115%;
     .host-name {
       font-family: "Poiret One", cursive;
       color: black;
@@ -78,14 +76,10 @@
     }
   }
   h2 {
-    font-size: 3rem;
-    line-height: 115%;
     margin-top: 20px;
   }
   h4 {
-    font-size: 2rem;
     margin: 0;
-    line-height: 120%;
   }
 
   #super__main-screen {
@@ -98,7 +92,6 @@
     .start-btn {
       background-color: $wine;
       max-width: 280px;
-      font-size: 1.1rem;
       padding: 20px 0;
     }
   }
@@ -117,7 +110,6 @@
         flex-direction: column;
         justify-content: flex-end;
         p {
-          font-size: 1.4rem;
           font-weight: bold;
         }
       }
@@ -152,12 +144,8 @@
           width: 80%;
           margin-bottom: 20px;
           font-weight: bold;
-          font-size: 1.65rem;
-          line-height: 120%;
         }
         p {
-          font-size: 1.1rem;
-          line-height: 130%;
         }
       }
     }
@@ -179,7 +167,6 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         span {
           font-weight: bold;
-          font-size: 1.2rem;
         }
         h4 {
           margin: 10px 0 30px;
@@ -204,13 +191,10 @@
               grid-row: span 2;
             }
             span {
-              font-size: 0.8rem;
               b {
-                font-size: 1.1rem;
               }
             }
             p {
-              line-height: 120%;
             }
           }
         }
@@ -244,11 +228,8 @@
         display: flex;
         flex-direction: column;
         color: $wine;
-        line-height: 120%;
         b {
           font-weight: bold;
-          font-size: 1.2rem;
-          line-height: 160%;
         }
       }
     }
@@ -260,7 +241,6 @@
     .start-btn {
       background-color: $wine;
       max-width: 280px;
-      font-size: 1.1rem;
       padding: 20px 0;
     }
   }
@@ -276,7 +256,6 @@
     span {
       color: white;
       margin-bottom: 40px;
-      font-size: 1.1rem;
       padding: 0 120px;
     }
     .hosting-btn {
@@ -326,8 +305,6 @@
             padding: 30px;
             p {
               width: 60%;
-              font-size: 1.6rem;
-              line-height: 120%;
               font-weight: bold;
               color: white;
             }
@@ -343,7 +320,6 @@
               &::after {
                 content: "▶";
                 color: black;
-                line-height: 25px;
               }
             }
           }
@@ -360,7 +336,6 @@
 @media (max-width: $large) {
   #super-host__main {
     .sentence-large {
-      font-size: 3.9rem;
     }
     section {
       padding: 64px 80px;
@@ -427,7 +402,6 @@
           li {
             .list-text {
               p {
-                font-size: 1.1rem;
                 width: 65%;
               }
             }

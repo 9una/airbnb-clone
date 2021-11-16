@@ -88,8 +88,6 @@
 #host__main {
   padding-top: 0;
   .host__content-title {
-    font-size: 64px;
-    line-height: 68px;
     letter-spacing: -1px;
     padding-top: 160px;
     margin-top: 0;
@@ -108,8 +106,6 @@
   .main-screen__left {
     h1 {
       color: white;
-      font-size: 64px;
-      line-height: 70px;
       margin: 0 0 55px 0;
       letter-spacing: -1px;
       text-align: center;
@@ -156,7 +152,6 @@
         height: 36px;
         border-radius: 50%;
         margin-bottom: 30px;
-        font-size: 14px;
         &.active {
           display: flex;
         }
@@ -177,7 +172,6 @@
         }
         span {
           color: white;
-          font-size: 20px;
         }
         &.visible {
           display: flex;
@@ -227,9 +221,7 @@
               opacity: 1;
             }
             p {
-              font-size: 26px;
               margin: 48px 0 34px 0;
-              line-height: 32px;
               opacity: 0.9;
             }
             img {
@@ -269,7 +261,6 @@
       box-sizing: border-box;
       padding: 0 48px;
       text-align: center;
-      font-size: 40px;
       form {
         display: flex;
         flex-direction: column;
@@ -282,18 +273,15 @@
         select {
           background: none;
           border: none;
-          font-size: 38px;
           font-weight: bold;
           margin-bottom: 30px;
           text-decoration: underline;
         }
       }
       h1 {
-        font-size: 40px;
         margin: 30px 0 80px 0;
       }
       button {
-        font-size: 16px;
         text-decoration: underline;
         font-weight: bold;
       }
@@ -350,11 +338,8 @@
             margin-bottom: 15px;
           }
           p {
-            font-size: 22px;
-            line-height: 28px;
             font-weight: bold;
             i {
-              font-size: 16px;
               margin-left: 15px;
               vertical-align: 2px;
             }
@@ -375,15 +360,11 @@
     .end-screen__right {
       h1 {
         color: white;
-        font-size: 48px;
-        line-height: 56px;
         margin: 0 0 32px 0;
         letter-spacing: -1px;
       }
       p {
         color: white;
-        font-size: 18px;
-        line-height: 26px;
         width: 46%;
         margin-bottom: 50px;
       }
@@ -445,7 +426,6 @@
       }
       .super-host__text {
         h1 {
-          font-size: 3rem;
           padding-top: 30vh;
         }
       }
@@ -522,8 +502,6 @@
       .super-host__text {
         h1 {
           padding-top: 10.5vh;
-          font-size: 2.3rem;
-          line-height: 3rem;
           margin-bottom: 60px;
         }
       }
@@ -549,8 +527,6 @@
           h1 {
             text-align: left;
             margin-bottom: 20px;
-            font-size: 2.1rem;
-            line-height: 2.5rem;
           }
           p {
             text-align: left;
@@ -581,7 +557,6 @@
         right: 0;
         height: auto;
         display: block;
-        font-size: 0.9rem;
         &::before {
           display: none;
         }
@@ -612,8 +587,6 @@
   }
   #host__main {
     .host__content-title {
-      font-size: 1.6rem;
-      line-height: 2rem;
       text-align: left;
       margin: $padding25;
       margin-bottom: 30px;
@@ -631,8 +604,6 @@
           h1 {
             text-align: left;
             margin-bottom: 20px;
-            font-size: 2.5rem;
-            line-height: 2.9rem;
           }
           a {
             top: 9rem;
@@ -658,7 +629,6 @@
           li {
             &.text {
               p {
-                font-size: 1.2rem;
                 letter-spacing: -1px;
                 br {
                   display: none;
@@ -673,7 +643,6 @@
       }
       .start-hosting__form {
         padding: $padding25;
-        font-size: 1.5rem;
         align-items: flex-start;
         text-align: left;
         margin-top: 140px;
@@ -683,11 +652,9 @@
             font-weight: 100;
           }
           select {
-            font-size: 1.5rem;
           }
         }
         h1 {
-          font-size: 1.6rem;
           margin: 10px 0 30px;
         }
       }
@@ -703,8 +670,6 @@
         h1 {
           padding-left: 25px;
           padding-right: 25px;
-          font-size: 2.05rem;
-          line-height: 2.2rem;
           text-align: center;
           margin: 12vh 0 8vh;
           br {
@@ -742,8 +707,6 @@
               p {
                 display: flex;
                 align-items: center;
-                font-size: 0.9rem;
-                line-height: 1.2rem;
                 margin-left: 15px;
                 i {
                   display: none;
@@ -770,10 +733,8 @@
           display: block;
           text-align: left;
           h1 {
-            font-size: 1.95rem;
           }
           p {
-            font-size: 1rem;
             width: 100%;
           }
           button {
@@ -793,7 +754,6 @@
       }
       & > div {
         button {
-          font-size: 12px;
           margin-bottom: 15px;
           width: 30px;
           height: 30px;

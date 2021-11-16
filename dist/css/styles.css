@@ -20,7 +20,6 @@ header #notice-bar {
 header #notice-bar a {
   color: #a3a3a3;
   font-weight: 600;
-  font-size: 15px;
   text-decoration: underline;
   letter-spacing: -1px;
 }
@@ -69,14 +68,37 @@ header nav > div:last-child {
 }
 .nav__form .nav__form-tab button,
 .nav__form .nav__form-tab a {
-  font-size: 16px;
+  font-size: 1.15em;
+  line-height: 2em;
   color: white;
   margin: 0 15px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  transition: all 0.3s;
 }
-.nav__form .nav__form-tab button.active {
-  border-bottom: 2px solid white;
-  line-height: 38px;
+.nav__form .nav__form-tab button::after,
+.nav__form .nav__form-tab a::after {
+  transition: all 0.3s;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  margin: auto;
+  background: white;
+}
+.nav__form .nav__form-tab button:hover,
+.nav__form .nav__form-tab a:hover {
+  opacity: 0.6;
+}
+.nav__form .nav__form-tab button:hover::after,
+.nav__form .nav__form-tab a:hover::after {
+  width: 10px;
+}
+.nav__form .nav__form-tab button.active:hover,
+.nav__form .nav__form-tab a.active:hover {
+  opacity: 1;
+}
+.nav__form .nav__form-tab button.active::after,
+.nav__form .nav__form-tab a.active::after {
+  width: 15px;
 }
 .nav__form .nav__form-search {
   display: flex;
@@ -90,9 +112,7 @@ header nav > div:last-child {
 .nav__form .nav__form-search > span {
   display: none;
   font-weight: bold;
-  font-size: 0.9rem;
   position: absolute;
-  line-height: 45px;
   padding: 0 20px;
 }
 .nav__form .nav__form-search.active {
@@ -126,14 +146,14 @@ header nav > div:last-child {
   display: flex;
 }
 .nav__form .nav__form-search .form-search__form > div label {
+  font-size: 0.85em;
+  font-weight: bold;
   cursor: pointer;
   width: 100%;
   border-radius: 100px;
   padding: 14px 25px;
   display: flex;
   flex-direction: column;
-  font-size: 13px;
-  line-height: 16px;
   position: relative;
 }
 .nav__form .nav__form-search .form-search__form > div label::after {
@@ -149,11 +169,13 @@ header nav > div:last-child {
 .nav__form .nav__form-search .form-search__form > div label input,
 .nav__form .nav__form-search .form-search__form > div label button {
   border: 0;
-  margin: 0;
+  margin: 4px 0 0;
   padding: 0;
   background: none;
   text-align: left;
   color: #777;
+  font-weight: normal;
+  font-size: 1.2em;
 }
 .nav__form .nav__form-search .form-search__form > div label:hover {
   background: #ebebeb;
@@ -204,8 +226,7 @@ header nav > div:last-child {
 .nav__right > a {
   margin-right: -5px;
   font-weight: bold;
-  font-size: 14px;
-  letter-spacing: -0.5pxl;
+  letter-spacing: -0.5px;
 }
 .nav__right .right-bundle {
   padding: 0 13px;
@@ -217,16 +238,17 @@ header nav > div:last-child {
   background: white;
   display: flex;
   align-items: center;
-  padding: 0 8px 0 12px;
+  padding: 0 8px 0 10px;
   margin-left: 10px;
 }
 .nav__right .nav__right-myBtn .fa-bars {
   margin: 0 8px 0 3px;
   color: black;
+  font-size: 1.1em;
 }
 .nav__right .nav__right-myBtn .fa-user-circle {
-  font-size: 29px;
   color: #717171;
+  font-size: 2em;
 }
 .nav__right .nav__right-myBtn-modal {
   display: none;
@@ -253,7 +275,6 @@ header nav > div:last-child {
   color: black;
   box-sizing: border-box;
   padding: 13px 20px;
-  font-size: 14px;
   text-align: left;
 }
 .nav__right .nav__right-myBtn-modal ul li button:hover,
@@ -268,10 +289,9 @@ header nav > div:last-child {
 /* nav__form-formBox-modal */
 .modal-place {
   width: 500px;
-  justify-content: flex-start;
+  justify-content: flexstart;
 }
 .modal-place span {
-  font-size: 12px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -283,7 +303,6 @@ header nav > div:last-child {
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px !important;
   font-weight: bold;
-  font-size: 18px;
   letter-spacing: -0.2px;
   color: #7e0197;
 }
@@ -302,7 +321,6 @@ header nav > div:last-child {
 .modal-checkInOut .calendar-type button {
   padding: 8px 13px;
   border-radius: 50px;
-  font-size: 14px;
   font-weight: bold;
   transition: all 0.2s;
 }
@@ -311,7 +329,6 @@ header nav > div:last-child {
 }
 .modal-checkInOut .calendar-type button:active {
   font-weight: normal;
-  font-size: 13.5px;
 }
 .modal-checkInOut .calendar-type button.active {
   background: white !important;
@@ -332,7 +349,6 @@ header nav > div:last-child {
   height: 25px;
   border: none;
   border-radius: 50%;
-  font-size: 16px;
   cursor: pointer;
 }
 .modal-checkInOut .calendar-type__normal .calendar-box .calendar-header .calendar-btn button:hover {
@@ -350,7 +366,6 @@ header nav > div:last-child {
   width: 49%;
   box-sizing: border-box;
   text-align: center;
-  font-size: 15px !important;
   font-weight: bold;
   letter-spacing: 0px;
   font-family: "roboto";
@@ -365,7 +380,6 @@ header nav > div:last-child {
   margin: 0 30px;
 }
 .modal-checkInOut .calendar-type__normal .calendar-box .calendar-main > div .days {
-  font-size: 13px;
   display: flex;
   margin: 25px 0 10px 0;
 }
@@ -388,8 +402,6 @@ header nav > div:last-child {
   text-align: center;
   padding: 7px 0;
   font-weight: normal;
-  line-height: 20px;
-  font-size: 13px;
 }
 .modal-checkInOut .calendar-type__normal .calendar-box .calendar-main > div .dates .date:nth-child(7n+1),
 .modal-checkInOut .calendar-type__normal .calendar-box .calendar-main > div .nextMonthDates .date:nth-child(7n+1) {
@@ -418,8 +430,6 @@ header nav > div:last-child {
 .modal-checkInOut .calendar-type__normal .calendar-box .calendar-main > div .dates .date .today,
 .modal-checkInOut .calendar-type__normal .calendar-box .calendar-main > div .nextMonthDates .date .today {
   font-weight: bold;
-  font-size: 15px;
-  line-height: 15px;
 }
 .modal-checkInOut .calendar-type__normal .calendar-box .calendar-main .thisMonth {
   margin-left: 30px;
@@ -443,7 +453,6 @@ header nav > div:last-child {
 .modal-checkInOut .calendar-type__flexible .schedule-btn button {
   border: 1px solid #b0b0b0;
   padding: 10px 18px;
-  font-size: 14px;
   border-radius: 30px;
   margin: 0 4px;
 }
@@ -474,7 +483,6 @@ header nav > div:last-child {
   color: #717171;
 }
 .modal-checkInOut .calendar-type__flexible .schedule-month-btn button span {
-  font-size: 14px;
   font-weight: 300;
   margin-top: 15px;
 }
@@ -491,7 +499,6 @@ header nav > div:last-child {
   margin-top: 30px;
   margin-bottom: 20px;
   color: #717171;
-  font-size: 18px;
   font-weight: 300;
 }
 
@@ -519,13 +526,11 @@ header nav > div:last-child {
   margin-bottom: 0;
 }
 .modal-guest ul li span {
-  font-size: 16px;
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
 }
 .modal-guest ul li p {
-  font-size: 13px;
   color: #777;
 }
 .modal-guest ul li .guest-num {
@@ -564,6 +569,10 @@ header nav > div:last-child {
 #header.fixed nav .nav__form .nav__form-tab button,
 #header.fixed nav .nav__form .nav__form-tab a {
   color: black;
+}
+#header.fixed nav .nav__form .nav__form-tab button::after,
+#header.fixed nav .nav__form .nav__form-tab a::after {
+  background: black;
 }
 #header.fixed nav .nav__form .nav__form-tab button.active,
 #header.fixed nav .nav__form .nav__form-tab a.active {
@@ -610,6 +619,8 @@ header nav > div:last-child {
 }
 #header.fixed nav.active .nav__form .nav__form-search > span {
   display: block;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #header.fixed nav.active .nav__form .nav__form-search > span:after {
   content: "검색 시작하기";
@@ -625,7 +636,6 @@ header nav > div:last-child {
   height: 34px;
   top: 6px;
   right: 7px;
-  font-size: 0.85rem;
 }
 #header.fixed nav.active .nav__form .nav__form-search > button:after {
   display: none;
@@ -653,17 +663,18 @@ header nav > div:last-child {
   flex-direction: column;
 }
 .tab-modal.where p {
-  font-size: 0.75rem;
+  font-size: 0.85em;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 .tab-modal.where a {
+  font-size: 1.3em;
   display: flex;
   justify-content: space-between;
   width: 400px;
   padding: 20px 25px;
   border-radius: 30px;
   color: purple;
-  font-size: 1.2rem;
   font-weight: bold;
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
 }
@@ -684,7 +695,6 @@ header nav > div:last-child {
 .tab-modal.when .calendar-tab button {
   border-radius: inherit;
   font-weight: bold;
-  font-size: 0.9rem;
   padding: 8px 10px;
 }
 .tab-modal.when .calendar-tab button.active {
@@ -709,20 +719,20 @@ header nav > div:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e9e9e9;
   top: -7px;
 }
 .tab-modal.when .calendar-cont .calendar__header button.go-prev {
-  left: 12px;
+  left: 0;
 }
 .tab-modal.when .calendar-cont .calendar__header button.go-next {
-  right: 12px;
+  right: 0;
 }
 .tab-modal.when .calendar-cont .calendar__header button:hover {
-  background: #cfcfcf;
-  color: white;
+  background: #f7f7f7;
 }
 .tab-modal.when .calendar-cont .calendar__header > div {
+  font-size: 1.1em;
+  font-weight: bold;
   width: 50%;
   text-align: center;
 }
@@ -747,24 +757,36 @@ header nav > div:last-child {
 .tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .day {
   font-weight: bold;
   margin-bottom: 20px;
+  font-size: 0.85em;
+  color: #777;
 }
 .tab-modal.when .calendar-cont .calendar__body > div .days .date,
 .tab-modal.when .calendar-cont .calendar__body > div .dates .date,
 .tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   margin: auto;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #444;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days .date:hover,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .date:hover,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date:hover {
+  border: 1px solid black;
+}
+.tab-modal.when .calendar-cont .calendar__body > div .days .date:active,
+.tab-modal.when .calendar-cont .calendar__body > div .dates .date:active,
+.tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date:active {
+  background: black;
+  color: white;
 }
 .tab-modal.when .calendar-cont .calendar__body > div .days .date.today,
 .tab-modal.when .calendar-cont .calendar__body > div .dates .date.today,
 .tab-modal.when .calendar-cont .calendar__body > div .next-month-dates .date.today {
-  background: #777;
-  color: white;
+  font-weight: bold;
+  color: blue;
 }
 .tab-modal.when .calendar-cont .calendar__body > div .days .date.checkin, .tab-modal.when .calendar-cont .calendar__body > div .days .date.checkout,
 .tab-modal.when .calendar-cont .calendar__body > div .dates .date.checkin,
@@ -796,11 +818,10 @@ header nav > div:last-child {
 .tab-modal.guest .guest-tab p {
   width: 230px;
   color: #777;
-  font-size: 0.85rem;
+  line-height: 1.4em;
 }
 .tab-modal.guest .guest-tab p b {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.1em;
   font-weight: bold;
   color: black;
 }
@@ -817,7 +838,6 @@ header nav > div:last-child {
   align-items: center;
   color: #999;
   border: 1px solid #ccc;
-  font-size: 1.3rem;
 }
 .tab-modal.guest .guest-tab .tab__count button:hover {
   border-color: black;
@@ -870,10 +890,6 @@ header nav > div:last-child {
 }
 #mobileNav a i {
   color: #b0b0b0;
-  font-size: 1.4rem;
-}
-#mobileNav a span {
-  font-size: 0.7rem;
 }
 #mobileNav a.active i {
   color: #ff385c;
@@ -892,7 +908,6 @@ header nav > div:last-child {
   #header nav .nav__form .nav__form-tab button,
 #header nav .nav__form .nav__form-tab a {
     font-weight: bold;
-    font-size: 0.9rem;
     margin: 0 10px;
   }
 
@@ -965,7 +980,6 @@ header nav > div:last-child {
     justify-content: center;
     box-sizing: content-box;
     padding: 5px 0;
-    font-size: 100%;
     transition: none;
   }
   #header nav .nav__form .nav__form-search > button i {
@@ -974,7 +988,6 @@ header nav > div:last-child {
   #header nav .nav__form .nav__form-search > button:after {
     display: block;
     font-weight: bold;
-    font-size: 0.9rem;
     content: "어디로 여행가세요?";
     color: black;
   }
@@ -1029,23 +1042,12 @@ header nav > div:last-child {
   background: white;
   color: black;
   padding: 18px 25px 15px;
-  font-size: 1rem;
   font-weight: bold;
   border-radius: 8px;
 }
-#main h1 {
-  font-size: 5.8rem;
-  line-height: 6.2rem;
-}
 #main h2 {
-  font-size: 2.6rem;
   margin-bottom: 16px;
-  line-height: 52px;
   letter-spacing: -1px;
-}
-#main h3 {
-  font-size: 2rem;
-  line-height: 2.2rem;
 }
 /* main-screen */
 .content__main {
@@ -1076,12 +1078,10 @@ header nav > div:last-child {
   padding: 20px 30px;
   border: 1px solid black;
   border-radius: 50px;
-  font-size: 1.2rem;
   font-weight: bold;
 }
 .content__main .wrapper .main-title button i {
   margin-right: 8px;
-  font-size: 1rem;
 }
 .content__main .wrapper .main-sub-title {
   display: flex;
@@ -1091,7 +1091,6 @@ header nav > div:last-child {
   color: white;
 }
 .content__main .wrapper .main-sub-title h4 {
-  font-size: 1.5rem;
   font-weight: normal;
   margin: 0;
 }
@@ -1118,7 +1117,6 @@ header nav > div:last-child {
   align-items: center;
 }
 .content__search .wrapper .search-title h2 {
-  font-size: 2.9rem !important;
   margin-top: 60vh;
   color: white;
   text-align: center;
@@ -1128,7 +1126,6 @@ header nav > div:last-child {
   padding: 18px 40px;
   background: white;
   border-radius: 50px;
-  font-size: 1.2rem;
   font-weight: bold;
   color: #ff385c;
 }
@@ -1159,7 +1156,6 @@ header nav > div:last-child {
 }
 .content__idea .idea-card .card .card-text span {
   display: block;
-  font-size: 1.3rem;
   margin-top: 20px;
 }
 .content__idea .idea-card .card:nth-child(1) .card-text {
@@ -1190,8 +1186,6 @@ header nav > div:last-child {
 }
 .content__experience .experience-card .card h2 {
   margin-top: 0;
-  font-size: 3.4rem !important;
-  line-height: 4rem !important;
   color: white;
 }
 .content__experience .experience-card .card:first-child {
@@ -1241,16 +1235,12 @@ header nav > div:last-child {
     margin: 50px 0 10px;
   }
   #main h1 {
-    font-size: 3rem;
-    line-height: 3.6rem;
     margin: 0;
   }
   #main h2 {
-    font-size: 1.6rem;
     margin-bottom: 20px;
   }
   #main h3 {
-    font-size: 1.5rem;
     margin: 0;
   }
   #main .content__main {
@@ -1264,17 +1254,13 @@ header nav > div:last-child {
     padding: 0 40px;
   }
   #main .content__main .wrapper .main-sub-title h4 {
-    font-size: 1rem;
     width: 45%;
-    line-height: 1.3rem;
   }
   #main .content__search .wrapper {
     height: 82vh;
   }
   #main .content__search .wrapper .search-title h2 {
     margin-top: 50vh;
-    font-size: 2rem !important;
-    line-height: 2.3rem;
   }
   #main .content__search .wrapper .search-title button {
     margin-top: 10px;
@@ -1287,15 +1273,10 @@ header nav > div:last-child {
     padding: 15px 15px;
   }
   #main .content__idea .idea-card .card .card-text span {
-    font-size: 1rem;
     margin-top: 5px;
   }
   #main .content__experience .experience-card .card {
     padding: 25px;
-  }
-  #main .content__experience .experience-card .card h2 {
-    font-size: 2rem !important;
-    line-height: 2.5rem !important;
   }
   #main .content__superhost {
     height: 83vh;
@@ -1340,8 +1321,6 @@ header nav > div:last-child {
 }
 @media (max-width: 1110px) and (max-width: 726px) {
   header #notice-bar a {
-    font-size: 0.8rem;
-    line-height: 1rem;
     padding: 0 30px !important;
     text-align: center;
   }
@@ -1351,12 +1330,7 @@ header nav > div:last-child {
   }
   #main section .wrapper .section-title {
     width: 80%;
-    line-height: 2.2rem;
     margin-bottom: 25px;
-  }
-  #main h1 {
-    font-size: 2.6rem;
-    line-height: 3rem;
   }
   #main .content__main {
     border-bottom: 1px solid #cfcfcf;
@@ -1470,9 +1444,6 @@ header nav > div:last-child {
 .modal .modal__wrapper .modal__top .btn-close:hover {
   background: #f7f7f7;
 }
-.modal .modal__wrapper .modal__top .btn-close:active {
-  font-size: 17px;
-}
 .modal .modal__wrapper .modal__top .modal-title {
   margin: 0;
 }
@@ -1490,7 +1461,6 @@ header nav > div:last-child {
   border-radius: 8px;
   margin-right: 5px;
   margin-bottom: 9px;
-  font-size: 0.9rem;
   letter-spacing: -0.5px;
   font-weight: bold;
   color: #777;
@@ -1523,7 +1493,6 @@ header nav > div:last-child {
 }
 .modal .modal__wrapper .modal__container .content .content_cont .cont-title {
   color: #484848;
-  font-size: 22px;
   margin-bottom: 24px;
   margin-left: 5px;
 }
@@ -1540,8 +1509,6 @@ header nav > div:last-child {
   border: 1px solid white;
   border-radius: 10px;
   padding: 10px 15px;
-  font-size: 0.9rem;
-  line-height: 1.1rem;
 }
 #modal_lng_cur .modal__wrapper .cont ul li a span {
   display: block;
@@ -1593,10 +1560,6 @@ header nav > div:last-child {
 #modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child b {
   font-weight: 300;
 }
-#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label span {
-  font-size: 0.75rem;
-  line-height: 1.2rem;
-}
 #modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select,
 #modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label input {
   border: none;
@@ -1615,9 +1578,7 @@ header nav > div:last-child {
 }
 #modal_login .modal__wrapper .modal__container .content .content_cont .phone-login > p {
   margin: 20px 0;
-  font-size: 0.75rem;
   color: #555;
-  line-height: 1rem;
 }
 #modal_login .modal__wrapper .modal__container .content .content_cont .phone-login > p a {
   display: inline;
@@ -1636,7 +1597,6 @@ header nav > div:last-child {
   margin-bottom: 10px;
 }
 #modal_login .modal__wrapper .modal__container .content .content_cont .sns-login > span {
-  font-size: 0.75rem;
   color: #444;
   text-align: center;
   margin: 15px 0 20px;
@@ -1667,7 +1627,6 @@ header nav > div:last-child {
 }
 #modal_login .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn i {
   width: 30px;
-  font-size: 1.25rem;
   display: flex;
   justify-content: center;
   margin-right: 5px;
@@ -1676,7 +1635,6 @@ header nav > div:last-child {
   display: block;
   text-align: center;
   width: 100%;
-  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -1791,8 +1749,6 @@ header nav > div:last-child {
   /* end-screen - e */
 }
 #host__main .host__content-title {
-  font-size: 64px;
-  line-height: 68px;
   letter-spacing: -1px;
   padding-top: 160px;
   margin-top: 0;
@@ -1811,8 +1767,6 @@ header nav > div:last-child {
 }
 #host__main .main-screen__left h1 {
   color: white;
-  font-size: 64px;
-  line-height: 70px;
   margin: 0 0 55px 0;
   letter-spacing: -1px;
   text-align: center;
@@ -1860,7 +1814,6 @@ header nav > div:last-child {
   height: 36px;
   border-radius: 50%;
   margin-bottom: 30px;
-  font-size: 14px;
 }
 #host__main .main-screen__right > div button.active,
 #host__main .end-screen__left > div button.active {
@@ -1887,7 +1840,6 @@ header nav > div:last-child {
 #host__main .main-screen__right .main-screen__video-text .video__host-item span,
 #host__main .end-screen__left .main-screen__video-text .video__host-item span {
   color: white;
-  font-size: 20px;
 }
 #host__main .main-screen__right .main-screen__video-text .video__host-item.visible,
 #host__main .end-screen__left .main-screen__video-text .video__host-item.visible {
@@ -1939,9 +1891,7 @@ header nav > div:last-child {
   opacity: 1;
 }
 #host__main #content__start-hosting .start-hosting__host > ul li.text p {
-  font-size: 26px;
   margin: 48px 0 34px 0;
-  line-height: 32px;
   opacity: 0.9;
 }
 #host__main #content__start-hosting .start-hosting__host > ul li.text img {
@@ -1977,7 +1927,6 @@ header nav > div:last-child {
   box-sizing: border-box;
   padding: 0 48px;
   text-align: center;
-  font-size: 40px;
 }
 #host__main #content__start-hosting .start-hosting__form form {
   display: flex;
@@ -1992,17 +1941,14 @@ header nav > div:last-child {
 #host__main #content__start-hosting .start-hosting__form form select {
   background: none;
   border: none;
-  font-size: 38px;
   font-weight: bold;
   margin-bottom: 30px;
   text-decoration: underline;
 }
 #host__main #content__start-hosting .start-hosting__form h1 {
-  font-size: 40px;
   margin: 30px 0 80px 0;
 }
 #host__main #content__start-hosting .start-hosting__form button {
-  font-size: 16px;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -2057,12 +2003,9 @@ header nav > div:last-child {
   margin-bottom: 15px;
 }
 #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
-  font-size: 22px;
-  line-height: 28px;
   font-weight: bold;
 }
 #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p i {
-  font-size: 16px;
   margin-left: 15px;
   vertical-align: 2px;
 }
@@ -2073,15 +2016,11 @@ header nav > div:last-child {
 }
 #host__main #host__end-screen .end-screen__right h1 {
   color: white;
-  font-size: 48px;
-  line-height: 56px;
   margin: 0 0 32px 0;
   letter-spacing: -1px;
 }
 #host__main #host__end-screen .end-screen__right p {
   color: white;
-  font-size: 18px;
-  line-height: 26px;
   width: 46%;
   margin-bottom: 50px;
 }
@@ -2133,7 +2072,6 @@ header nav > div:last-child {
     box-shadow: 0 5px 50px rgba(0, 0, 0, 0.3);
   }
   #host__main #content__super-host .super-host__text h1 {
-    font-size: 3rem;
     padding-top: 30vh;
   }
   #host__main #host__end-screen .end-screen__right p {
@@ -2192,8 +2130,6 @@ header nav > div:last-child {
   }
   #host__main #content__super-host .super-host__text h1 {
     padding-top: 10.5vh;
-    font-size: 2.3rem;
-    line-height: 3rem;
     margin-bottom: 60px;
   }
   #host__main #host__end-screen {
@@ -2218,8 +2154,6 @@ header nav > div:last-child {
   #host__main #host__end-screen > div:last-child h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 2.1rem;
-    line-height: 2.5rem;
   }
   #host__main #host__end-screen > div:last-child p {
     text-align: left;
@@ -2247,7 +2181,6 @@ header nav > div:last-child {
     right: 0;
     height: auto;
     display: block;
-    font-size: 0.9rem;
   }
   #host__header .header__right .super-btn::before {
     display: none;
@@ -2276,8 +2209,6 @@ header nav > div:last-child {
   }
 
   #host__main .host__content-title {
-    font-size: 1.6rem;
-    line-height: 2rem;
     text-align: left;
     margin: 0 25px;
     margin-bottom: 30px;
@@ -2298,8 +2229,6 @@ header nav > div:last-child {
   #host__main #host__main-screen > div:first-child h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 2.5rem;
-    line-height: 2.9rem;
   }
   #host__main #host__main-screen > div:first-child a {
     top: 9rem;
@@ -2321,7 +2250,6 @@ header nav > div:last-child {
     left: -80%;
   }
   #host__main #content__start-hosting .start-hosting__host ul li.text p {
-    font-size: 1.2rem;
     letter-spacing: -1px;
   }
   #host__main #content__start-hosting .start-hosting__host ul li.text p br {
@@ -2332,7 +2260,6 @@ header nav > div:last-child {
   }
   #host__main #content__start-hosting .start-hosting__form {
     padding: 0 25px;
-    font-size: 1.5rem;
     align-items: flex-start;
     text-align: left;
     margin-top: 140px;
@@ -2343,11 +2270,7 @@ header nav > div:last-child {
   #host__main #content__start-hosting .start-hosting__form form label {
     font-weight: 100;
   }
-  #host__main #content__start-hosting .start-hosting__form form select {
-    font-size: 1.5rem;
-  }
   #host__main #content__start-hosting .start-hosting__form h1 {
-    font-size: 1.6rem;
     margin: 10px 0 30px;
   }
   #host__main #content__super-host {
@@ -2361,8 +2284,6 @@ header nav > div:last-child {
   #host__main #content__super-host .super-host__text h1 {
     padding-left: 25px;
     padding-right: 25px;
-    font-size: 2.05rem;
-    line-height: 2.2rem;
     text-align: center;
     margin: 12vh 0 8vh;
   }
@@ -2401,8 +2322,6 @@ header nav > div:last-child {
   #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item a p {
     display: flex;
     align-items: center;
-    font-size: 0.9rem;
-    line-height: 1.2rem;
     margin-left: 15px;
   }
   #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item a p i {
@@ -2422,11 +2341,7 @@ header nav > div:last-child {
     display: block;
     text-align: left;
   }
-  #host__main #host__end-screen > div:last-child h1 {
-    font-size: 1.95rem;
-  }
   #host__main #host__end-screen > div:last-child p {
-    font-size: 1rem;
     width: 100%;
   }
   #host__main #host__end-screen > div:last-child button {
@@ -2438,7 +2353,6 @@ header nav > div:last-child {
   }
   #host__main .main-screen__right > div button,
 #host__main .end-screen__left > div button {
-    font-size: 12px;
     margin-bottom: 15px;
     width: 30px;
     height: 30px;
@@ -2500,9 +2414,7 @@ header nav > div:last-child {
   padding: 64px 120px;
 }
 #super-host__main .sentence-large {
-  font-size: 4rem;
   font-weight: bold;
-  line-height: 115%;
 }
 #super-host__main .sentence-large .host-name {
   font-family: "Poiret One", cursive;
@@ -2522,14 +2434,10 @@ header nav > div:last-child {
   vertical-align: middle;
 }
 #super-host__main h2 {
-  font-size: 3rem;
-  line-height: 115%;
   margin-top: 20px;
 }
 #super-host__main h4 {
-  font-size: 2rem;
   margin: 0;
-  line-height: 120%;
 }
 #super-host__main #super__main-screen {
   color: #60012b;
@@ -2542,7 +2450,6 @@ header nav > div:last-child {
 #super-host__main #super__main-screen .start-btn {
   background-color: #60012b;
   max-width: 280px;
-  font-size: 1.1rem;
   padding: 20px 0;
 }
 #super-host__main #super__ask-host {
@@ -2563,7 +2470,6 @@ header nav > div:last-child {
   justify-content: flex-end;
 }
 #super-host__main #super__ask-host .ask-content.left p {
-  font-size: 1.4rem;
   font-weight: bold;
 }
 #super-host__main #super__ask-host .ask-content.right {
@@ -2592,12 +2498,6 @@ header nav > div:last-child {
   width: 80%;
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 1.65rem;
-  line-height: 120%;
-}
-#super-host__main #super__mentoring .mentoring__list li p {
-  font-size: 1.1rem;
-  line-height: 130%;
 }
 #super-host__main #super__step {
   height: auto;
@@ -2619,7 +2519,6 @@ header nav > div:last-child {
 }
 #super-host__main #super__step .step-content .text-box span {
   font-weight: bold;
-  font-size: 1.2rem;
 }
 #super-host__main #super__step .step-content .text-box h4 {
   margin: 10px 0 30px;
@@ -2644,15 +2543,6 @@ header nav > div:last-child {
   border-radius: 50%;
   background: cornflowerblue;
   grid-row: span 2;
-}
-#super-host__main #super__step .step-content .text-box .comment div span {
-  font-size: 0.8rem;
-}
-#super-host__main #super__step .step-content .text-box .comment div span b {
-  font-size: 1.1rem;
-}
-#super-host__main #super__step .step-content .text-box .comment div p {
-  line-height: 120%;
 }
 #super-host__main #super__step .step-content.step1 {
   background: #e9e9e9;
@@ -2683,12 +2573,9 @@ header nav > div:last-child {
   display: flex;
   flex-direction: column;
   color: #60012b;
-  line-height: 120%;
 }
 #super-host__main #super__end-screen .host-user div b {
   font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 160%;
 }
 #super-host__main #super__end-screen .sentence-large {
   width: 60%;
@@ -2698,7 +2585,6 @@ header nav > div:last-child {
 #super-host__main #super__end-screen .start-btn {
   background-color: #60012b;
   max-width: 280px;
-  font-size: 1.1rem;
   padding: 20px 0;
 }
 #super-host__main #super__end-video {
@@ -2714,7 +2600,6 @@ header nav > div:last-child {
 #super-host__main #super__end-video span {
   color: white;
   margin-bottom: 40px;
-  font-size: 1.1rem;
   padding: 0 120px;
 }
 #super-host__main #super__end-video .hosting-btn {
@@ -2768,8 +2653,6 @@ header nav > div:last-child {
 }
 #super-host__main #super__end-video .hosting-video .video__list li .list-text p {
   width: 60%;
-  font-size: 1.6rem;
-  line-height: 120%;
   font-weight: bold;
   color: white;
 }
@@ -2786,7 +2669,6 @@ header nav > div:last-child {
 #super-host__main #super__end-video .hosting-video .video__list li .list-text span::after {
   content: "▶";
   color: black;
-  line-height: 25px;
 }
 
 #modal_video {
@@ -2794,9 +2676,6 @@ header nav > div:last-child {
 }
 
 @media (max-width: 1110px) {
-  #super-host__main .sentence-large {
-    font-size: 3.9rem;
-  }
   #super-host__main section {
     padding: 64px 80px;
   }
@@ -2851,7 +2730,6 @@ header nav > div:last-child {
     left: -41%;
   }
   #super-host__main #super__end-video .hosting-video .video__list li .list-text p {
-    font-size: 1.1rem;
     width: 65%;
   }
 }
@@ -2879,7 +2757,6 @@ header nav > div:last-child {
   padding: 30px;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .cont-title {
-  font-size: 22px !important;
   margin: 0 0 10px 0 !important;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form {
@@ -2908,10 +2785,6 @@ header nav > div:last-child {
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child b {
   font-weight: 300;
 }
-#login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label span {
-  font-size: 0.75rem;
-  line-height: 1.2rem;
-}
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select,
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label input {
   border: none;
@@ -2930,9 +2803,7 @@ header nav > div:last-child {
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login > p {
   margin: 20px 0;
-  font-size: 0.75rem;
   color: #555;
-  line-height: 1rem;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login > p a {
   display: inline;
@@ -2951,7 +2822,6 @@ header nav > div:last-child {
   margin-bottom: 10px;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login > span {
-  font-size: 0.75rem;
   color: #444;
   text-align: center;
   margin: 15px 0 20px;
@@ -2982,7 +2852,6 @@ header nav > div:last-child {
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn i {
   width: 30px;
-  font-size: 1.25rem;
   display: flex;
   justify-content: center;
   margin-right: 5px;
@@ -2991,7 +2860,6 @@ header nav > div:last-child {
   display: block;
   text-align: center;
   width: 100%;
-  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -3027,14 +2895,11 @@ footer .fnb__top .fnb__top-list .fnb__top-item ul {
   flex-direction: column;
 }
 footer .fnb__top .fnb__top-list .fnb__top-item ul span {
-  font-size: 14px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 footer .fnb__top .fnb__top-list .fnb__top-item ul li {
   margin-top: 15px;
-  font-size: 14px;
-  line-height: 22px;
 }
 footer .fnb__top .fnb__top-list .fnb__top-item ul li a:hover {
   text-decoration: underline;
@@ -3050,7 +2915,6 @@ footer .fnb__bottom .fnb__bottom-right {
   display: flex;
   font-weight: 300;
   align-items: center;
-  font-size: 15px;
 }
 footer .fnb__bottom .fnb__bottom-left ul li,
 footer .fnb__bottom .fnb__bottom-right li {
@@ -3069,7 +2933,6 @@ footer .fnb__bottom .fnb__bottom-left ul li a,
 footer .fnb__bottom .fnb__bottom-right li a {
   letter-spacing: -0.6px;
   font-weight: 500;
-  font-size: 14px;
 }
 footer .fnb__bottom .fnb__bottom-left ul li a:hover,
 footer .fnb__bottom .fnb__bottom-right li a:hover {
@@ -3088,7 +2951,6 @@ footer .fnb__bottom .fnb__bottom-right .fnb__bottom-global button span {
   margin-left: 7px;
   text-decoration: underline;
   font-weight: 500;
-  font-size: 14px;
 }
 footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns {
   display: flex;
@@ -3096,7 +2958,6 @@ footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns {
 }
 footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns a {
   margin: 0 10px;
-  font-size: 20px;
 }
 
 @media (max-width: 1110px) {
@@ -3128,7 +2989,6 @@ footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns a {
   }
   footer .fnb__top .fnb__top-list .fnb__top-item ul span {
     grid-column: span 3;
-    font-size: 0.9rem;
     margin-bottom: 5px;
   }
   footer .fnb__top .fnb__top-list .fnb__top-item ul li {
@@ -3181,7 +3041,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -167,3 +167,10 @@ footer {
     }
   }
 }
+
+@media (min-width: $xlarge) {
+  footer > div {
+    max-width: 1600px;
+    margin: auto;
+  }
+}

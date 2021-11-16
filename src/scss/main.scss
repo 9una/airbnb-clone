@@ -1,10 +1,11 @@
 #main {
   padding-top: 58px;
+  margin-bottom: 100px;
   word-break: keep-all !important;
   section {
     width: 100%;
     height: 100%;
-    padding: 0 80px;
+    padding: 48px 80px;
     .wrapper {
       position: relative;
       height: 100%;
@@ -14,11 +15,11 @@
         border-radius: 12px;
       }
       .section-title {
-        margin: 60px 0 40px;
+        font-size: 3em;
+        margin: 0 0 1em 0;
       }
     }
     & > div {
-      padding-bottom: 25px;
     }
   }
   .btn-white {
@@ -27,14 +28,22 @@
     padding: 18px 25px 15px;
     font-weight: bold;
     border-radius: 8px;
+    font-size: 1.15em;
   }
   h1 {
+    font-size: 6.7em;
+    line-height: 1.15em;
+    margin: 0;
   }
   h2 {
     margin-bottom: 16px;
     letter-spacing: -1px;
+    font-size: 3.8em;
+    line-height: 1.15em;
   }
   h3 {
+    font-size: 2.4em;
+    margin: 10px 0 0;
   }
   h4 {
   }
@@ -43,41 +52,46 @@
 .content__main {
   background: black;
   .wrapper {
-    padding-top: 25vh;
+    padding-top: 128px;
     width: 100%;
     .section-img {
-      height: 75vh;
+      height: 72vh;
     }
     .main-title {
       position: absolute;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
       width: 100%;
-      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       img {
-        width: 300px;
+        width: 320px;
       }
       button {
+        font-size: 1.3em;
         margin-top: 16px;
-        padding: 20px 30px;
+        padding: 18px 25px;
         border: 1px solid black;
         border-radius: 50px;
         font-weight: bold;
+        display: flex;
+        align-items: center;
         i {
-          margin-right: 8px;
+          margin-right: 10px;
+          font-size: 0.8em;
         }
       }
     }
     .main-sub-title {
       display: flex;
-      margin: 3vh 0 10vh;
+      padding-top: 24px;
       justify-content: space-between;
       align-items: center;
       color: white;
       h4 {
+        font-size: 1.7em;
         font-weight: normal;
         margin: 0;
       }
@@ -181,11 +195,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    height: 100vh;
+    height: 86vh;
     .card {
       border-radius: 12px;
       overflow: hidden;
-      padding: 5vw;
+      padding: 4vw;
       h2 {
         margin-top: 0;
         color: white;
@@ -207,14 +221,15 @@
 }
 /* superhost */
 .content__superhost {
-  height: 100vh;
+  max-width: 1600px;
+  margin: auto;
+  height: 86vh !important;
   background: url(https://a0.muscache.com/im/pictures/0528b0f7-4c0c-47bc-9786-d91454f531ba.jpg?im_w=1200)
     no-repeat center;
   background-size: cover;
   .wrapper {
     width: 50%;
-    height: 100%;
-    padding: 80px 0 !important;
+    padding: 40px 0 !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -250,10 +265,6 @@
     h3 {
       margin: 0;
     }
-    /*h4 {
-      font-size: ;
-    }*/
-
     .content__main {
       padding: 0;
       .wrapper {
@@ -437,6 +448,23 @@
         .wrapper {
           width: 75%;
         }
+      }
+    }
+  }
+}
+
+@media (min-width: $xlarge) {
+  #main {
+    section {
+      .wrapper {
+        max-width: 1600px;
+        margin: auto;
+      }
+    }
+    .content__superhost {
+      border-radius: 12px;
+      .wrapper {
+        margin-left: 0;
       }
     }
   }

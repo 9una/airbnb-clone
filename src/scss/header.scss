@@ -21,27 +21,30 @@ header {
   }
   nav {
     width: 100%;
-    box-sizing: border-box;
-    padding: $padding80;
-    display: flex;
-    justify-content: space-between;
     transition: all 0.2s;
-    & > div {
-      &:first-child,
-      &:last-child {
-        width: 20%;
-        height: 80px;
-        display: flex;
-        align-items: center;
-      }
-      &:first-child {
-        justify-content: flex-start;
-      }
-      &:nth-child(2) {
-        width: 60%;
-      }
-      &:last-child {
-        justify-content: flex-end;
+    .nav-wrap {
+      width: 100%;
+      box-sizing: border-box;
+      padding: $padding80;
+      display: flex;
+      justify-content: space-between;
+      & > div {
+        &:first-child,
+        &:last-child {
+          width: 20%;
+          height: 80px;
+          display: flex;
+          align-items: center;
+        }
+        &:first-child {
+          justify-content: flex-start;
+        }
+        &:nth-child(2) {
+          width: 60%;
+        }
+        &:last-child {
+          justify-content: flex-end;
+        }
       }
     }
   }
@@ -147,7 +150,7 @@ header {
           cursor: pointer;
           width: 100%;
           border-radius: 100px;
-          padding: 14px 25px;
+          padding: 18px 27px;
           display: flex;
           flex-direction: column;
           position: relative;
@@ -1061,6 +1064,23 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: $xlarge) {
+  header {
+    nav {
+      .nav-wrap {
+        max-width: 1600px;
+        margin: auto;
+        padding: 0;
+      }
+    }
+  }
+  header.fixed {
+    nav {
+      margin: auto;
     }
   }
 }

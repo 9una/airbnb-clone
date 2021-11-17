@@ -8,6 +8,11 @@ header {
   position: absolute;
   top: 0;
 }
+header .wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+}
 header #notice-bar {
   background-color: #222;
   width: 100%;
@@ -20,33 +25,34 @@ header #notice-bar {
 header #notice-bar a {
   color: #a3a3a3;
   font-weight: 600;
+  text-align: center;
   text-decoration: underline;
-  letter-spacing: -1px;
 }
 header nav {
   width: 100%;
   transition: all 0.2s;
+  padding: 0 80px;
 }
-header nav .nav-wrap {
+header nav .global-nav {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 80px;
-  display: flex;
-  justify-content: space-between;
 }
-header nav .nav-wrap > div:first-child, header nav .nav-wrap > div:last-child {
-  width: 20%;
+header nav .global-nav .wrapper {
+  display: flex;
+}
+header nav .global-nav .wrapper > div:first-child, header nav .global-nav .wrapper > div:last-child {
+  width: 25%;
   height: 80px;
   display: flex;
   align-items: center;
 }
-header nav .nav-wrap > div:first-child {
+header nav .global-nav .wrapper .nav__left {
   justify-content: flex-start;
 }
-header nav .nav-wrap > div:nth-child(2) {
-  width: 60%;
+header nav .global-nav .wrapper .nav__form {
+  width: 50%;
 }
-header nav .nav-wrap > div:last-child {
+header nav .global-nav .wrapper .nav__right {
   justify-content: flex-end;
 }
 
@@ -690,7 +696,7 @@ header nav .nav-wrap > div:last-child {
   display: flex;
   justify-content: center;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   background: #e9e9e9;
   border-radius: 25px;
   padding: 5px;
@@ -810,13 +816,19 @@ header nav .nav-wrap > div:last-child {
   right: 0;
 }
 .tab-modal.guest .guest-tab {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
 }
 .tab-modal.guest .guest-tab:not(:last-child) {
   margin-bottom: 15px;
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 15px;
+}
+.tab-modal.guest .guest-tab.animal .notice-text {
+  grid-column: span 2;
+  width: 300px;
+  margin-top: 20px;
 }
 .tab-modal.guest .guest-tab p {
   width: 230px;
@@ -827,6 +839,11 @@ header nav .nav-wrap > div:last-child {
   font-size: 1.1em;
   font-weight: bold;
   color: black;
+}
+.tab-modal.guest .guest-tab p a {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .tab-modal.guest .guest-tab .tab__count {
   display: flex;
@@ -839,7 +856,7 @@ header nav .nav-wrap > div:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #999;
+  color: #717171;
   border: 1px solid #ccc;
 }
 .tab-modal.guest .guest-tab .tab__count button:hover {
@@ -874,9 +891,9 @@ header nav .nav-wrap > div:last-child {
   bottom: -100px;
   opacity: 0;
   background: white;
-  border-top: 1px solid black;
+  border-top: 1px solid #e9e9e9;
   padding: 0 20vw;
-  display: flex;
+  display: none;
   justify-content: space-around;
   transition: all 0.5s;
 }
@@ -890,8 +907,10 @@ header nav .nav-wrap > div:last-child {
   gap: 5px;
   flex-direction: column;
   align-items: center;
+  font-size: 0.8em;
 }
 #mobileNav a i {
+  font-size: 2.1em;
   color: #b0b0b0;
 }
 #mobileNav a.active i {
@@ -902,14 +921,17 @@ header nav .nav-wrap > div:last-child {
   #header nav {
     padding: 0 40px;
   }
-  #header nav > div:first-child, #header nav > div:last-child {
+  #header nav .global-nav .wrapper {
+    box-sizing: border-box;
+  }
+  #header nav .global-nav .wrapper > div:first-child, #header nav .global-nav .wrapper > div:last-child {
     width: 30%;
   }
-  #header nav > div:nth-child(2) {
+  #header nav .global-nav .wrapper > div:nth-child(2) {
     width: 40%;
   }
-  #header nav .nav__form .nav__form-tab button,
-#header nav .nav__form .nav__form-tab a {
+  #header nav .global-nav .wrapper .nav__form .nav__form-tab button,
+#header nav .global-nav .wrapper .nav__form .nav__form-tab a {
     font-weight: bold;
     margin: 0 10px;
   }
@@ -925,107 +947,104 @@ header nav .nav-wrap > div:last-child {
   }
 }
 @media (max-width: 932px) {
-  #header nav {
+  #header nav .global-nav .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  #header nav > div:first-child, #header nav > div:last-child {
+  #header nav .global-nav .wrapper > div:first-child, #header nav .global-nav .wrapper > div:last-child {
     width: 100%;
   }
-  #header nav > div:nth-child(2) {
+  #header nav .global-nav .wrapper > div:nth-child(2) {
     width: 100%;
     order: 3;
     grid-column: span 2;
   }
-  #header nav .nav__form .nav__form-search {
-    width: 100%;
+  #header nav .global-nav .wrapper .nav__form .nav__form-search {
+    width: calc(100vw - 96px);
   }
   #header.fixed nav.active .nav__form .nav__form-search {
+    width: 20vw;
     position: absolute;
     top: 16px;
     left: 95px;
   }
-
   .nav__form .nav__form-tab {
     align-items: baseline;
     height: 60px;
   }
 }
 @media (max-width: 726px) {
-  #header nav {
-    padding: 0 25px;
+  #header #notice-bar a {
+    font-size: 0.85em;
   }
-  #header nav .logo,
-#header nav .nav__right {
+  #header nav .global-nav .wrapper .nav__left,
+#header nav .global-nav .wrapper .nav__right {
     display: none;
   }
-  #header nav .nav__form {
-    margin-top: 20px;
-  }
-  #header nav .nav__form .nav__form-tab {
+  #header nav .global-nav .wrapper .nav__form .nav__form-tab {
     display: none;
   }
-  #header nav .nav__form .nav__form-search {
+  #header nav .global-nav .wrapper .nav__form-search {
+    width: calc(100vw - 60px) !important;
+    margin-top: 15px;
+    height: 50px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
-  #header nav .nav__form .nav__form-search form {
+  #header nav .global-nav .wrapper .nav__form-search form {
     display: none;
   }
-  #header nav .nav__form .nav__form-search > button {
+  #header nav .global-nav .wrapper .nav__form-search form > div label,
+#header nav .global-nav .wrapper .nav__form-search form > div .tab-modal {
+    display: none;
+  }
+  #header nav .global-nav .wrapper .nav__form-search > button {
+    top: inherit;
+    right: inherit;
     position: relative;
-    width: 100%;
-    left: 0;
-    top: 0;
     background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: content-box;
-    padding: 5px 0;
-    transition: none;
-  }
-  #header nav .nav__form .nav__form-search > button i {
     color: #ff385c;
   }
-  #header nav .nav__form .nav__form-search > button:after {
-    display: block;
-    font-weight: bold;
-    content: "어디로 여행가세요?";
-    color: black;
+  #header nav .global-nav .wrapper .nav__form-search > button i {
+    font-size: 1.2em;
   }
-  #header nav .nav__form .nav__form-search > span {
-    display: block;
+  #header nav .global-nav .wrapper .nav__form-search > span {
     position: relative;
+    display: block;
     padding: 0;
+  }
+  #header nav .global-nav .wrapper .nav__form-search > span::after {
+    content: "어디로 여행가세요?";
+  }
+  #header.fixed nav {
+    height: 80px;
+  }
+  #header.fixed nav .global-nav .wrapper .nav__form .nav__form-search button {
+    margin-right: 5px;
   }
   #header.fixed nav.active {
-    padding: 0 20px 20px;
-    height: auto;
+    height: 80px;
   }
   #header.fixed nav.active .nav__form .nav__form-search {
-    position: relative;
     top: 0;
-    left: 0;
-    height: 52px;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+    box-shadow: none;
+    background: #f7f7f7;
+    border: none;
   }
-  #header.fixed nav.active .nav__form .nav__form-search button {
-    top: 0;
-    right: 0;
+  #header.fixed nav.active .nav__form .nav__form-search > button {
+    top: inherit;
   }
-  #header.fixed nav.active .nav__form .nav__form-search button:after {
-    display: none;
-  }
-}
-@media (min-width: 1601px) {
-  header nav .nav-wrap {
-    max-width: 1600px;
-    margin: auto;
-    padding: 0;
+  #header.fixed nav.active .nav__form .nav__form-search > span {
+    top: inherit;
+    transform: none;
   }
 
-  header.fixed nav {
-    margin: auto;
+  #mobileNav {
+    display: flex;
   }
 }
 #main {
@@ -1035,15 +1054,14 @@ header nav .nav-wrap > div:last-child {
 }
 #main section {
   width: 100%;
-  height: 100%;
   padding: 48px 80px;
 }
 #main section .wrapper {
   position: relative;
-  height: 100%;
 }
 #main section .wrapper .section-img {
   width: 100%;
+  height: 50vw;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -1131,11 +1149,7 @@ header nav .nav-wrap > div:last-child {
 }
 .content__search .wrapper {
   width: 100%;
-  height: 100vh;
   border-radius: 10px;
-}
-.content__search .wrapper .section-img {
-  height: 100%;
 }
 .content__search .wrapper .search-title {
   position: absolute;
@@ -1407,7 +1421,7 @@ header nav .nav-wrap > div:last-child {
     width: 75%;
   }
 }
-@media (min-width: 1601px) {
+@media (min-width: 1422px) {
   #main section .wrapper {
     max-width: 1600px;
     margin: auto;
@@ -2778,7 +2792,15 @@ header nav .nav-wrap > div:last-child {
     padding-right: 24px;
   }
 }
-/* modal - join & login */
+/* login-header */
+#header.fixed nav {
+  padding-bottom: 0;
+}
+#header.fixed nav .global-nav .wrapper {
+  justify-content: space-between;
+}
+
+/* join & login */
 #login-main .login-content {
   max-width: 568px;
   width: 100%;
@@ -2790,13 +2812,15 @@ header nav .nav-wrap > div:last-child {
   border-bottom: 1px solid #e9e9e9;
   text-align: center;
   margin: 0;
-  padding: 20px 0;
+  padding: 25px 0;
+  font-size: 1.1em;
 }
 #login-main .login-content .modal__wrapper .modal__container {
-  padding: 30px;
+  padding: 45px 30px 30px;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .cont-title {
-  margin: 0 0 10px 0 !important;
+  margin: 0 0 20px 0 !important;
+  font-size: 1.6em;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form {
   border: 1px solid #ccc;
@@ -2841,24 +2865,26 @@ header nav .nav-wrap > div:last-child {
   width: 100%;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login > p {
-  margin: 20px 0;
+  margin: 5px 0 20px;
   color: #555;
+  font-size: 0.85em;
+  line-height: 1.4em;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login > p a {
   display: inline;
-  margin: 0 5px;
   color: #333;
   font-weight: bold;
   text-decoration: underline;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-login__btn {
   width: 100%;
-  padding: 15px 10px;
+  padding: 18px 10px;
   background: #ff385c;
   border-radius: 10px;
   color: white;
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 1.2em;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login > span {
   color: #444;
@@ -2879,7 +2905,7 @@ header nav .nav-wrap > div:last-child {
   width: 100%;
   border: 2px solid #b4b4b4;
   border-radius: 10px;
-  padding: 12px 10px;
+  padding: 15px 10px;
   display: flex;
   align-items: center;
 }
@@ -2908,11 +2934,17 @@ header nav .nav-wrap > div:last-child {
   }
 
   #login-main {
+    border-bottom: none !important;
     padding-top: 0;
   }
   #login-main .login-content {
+    max-width: inherit;
     margin-top: 0;
     border: none;
+  }
+
+  footer {
+    display: none;
   }
 }
 footer {
@@ -3072,7 +3104,7 @@ footer .fnb__bottom .fnb__bottom-right .fnb__bottom-sns a {
     display: none;
   }
 }
-@media (min-width: 1601px) {
+@media (min-width: 1422px) {
   footer > div {
     max-width: 1600px;
     margin: auto;

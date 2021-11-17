@@ -4,6 +4,11 @@ header {
   height: 58px;
   position: absolute;
   top: 0;
+  .wrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+  }
   #notice-bar {
     background-color: #222;
     width: 100%;
@@ -15,34 +20,35 @@ header {
     a {
       color: #a3a3a3;
       font-weight: 600;
+      text-align: center;
       text-decoration: underline;
-      letter-spacing: -1px;
     }
   }
   nav {
     width: 100%;
     transition: all 0.2s;
-    .nav-wrap {
+    padding: $padding80;
+    .global-nav {
       width: 100%;
       box-sizing: border-box;
-      padding: $padding80;
-      display: flex;
-      justify-content: space-between;
-      & > div {
-        &:first-child,
-        &:last-child {
-          width: 20%;
-          height: 80px;
-          display: flex;
-          align-items: center;
+      .wrapper {
+        display: flex;
+        & > div {
+          &:first-child,
+          &:last-child {
+            width: 25%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+          }
         }
-        &:first-child {
+        .nav__left {
           justify-content: flex-start;
         }
-        &:nth-child(2) {
-          width: 60%;
+        .nav__form {
+          width: 50%;
         }
-        &:last-child {
+        .nav__right {
           justify-content: flex-end;
         }
       }
@@ -704,7 +710,7 @@ header {
       display: flex;
       justify-content: center;
       margin: auto;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       background: #e9e9e9;
       border-radius: 25px;
       padding: 5px;
@@ -817,12 +823,20 @@ header {
     left: auto;
     right: 0;
     .guest-tab {
-      display: flex;
+      display: grid;
+      grid-template-columns: auto auto;
       justify-content: space-between;
       &:not(:last-child) {
         margin-bottom: 15px;
         border-bottom: 1px solid #e1e1e1;
         padding-bottom: 15px;
+      }
+      &.animal {
+        .notice-text {
+          grid-column: span 2;
+          width: 300px;
+          margin-top: 20px;
+        }
       }
       p {
         width: 230px;
@@ -832,6 +846,11 @@ header {
           font-size: 1.1em;
           font-weight: bold;
           color: black;
+        }
+        a {
+          color: black;
+          font-weight: bold;
+          text-decoration: underline;
         }
       }
       .tab__count {
@@ -844,7 +863,7 @@ header {
           display: flex;
           justify-content: center;
           align-items: center;
-          color: #999;
+          color: #717171;
           border: 1px solid #ccc;
           &:hover {
             border-color: black;
@@ -883,9 +902,9 @@ header {
   bottom: -100px;
   opacity: 0;
   background: white;
-  border-top: 1px solid black;
+  border-top: 1px solid #e9e9e9;
   padding: 0 20vw;
-  display: flex;
+  display: none;
   justify-content: space-around;
   transition: all 0.5s;
   &.active {
@@ -898,7 +917,9 @@ header {
     gap: 5px;
     flex-direction: column;
     align-items: center;
+    font-size: 0.8em;
     i {
+      font-size: 2.1em;
       color: #b0b0b0;
     }
     span {
@@ -911,25 +932,40 @@ header {
   }
 }
 
+@media (max-width: $xxlarge) {
+  header {
+    nav {
+    }
+  }
+}
+
+@media (max-width: $xlarge) {
+}
+
 @media (max-width: $large) {
   #header {
     nav {
       padding: $padding40;
-      & > div {
-        &:first-child,
-        &:last-child {
-          width: 30%;
-        }
-        &:nth-child(2) {
-          width: 40%;
-        }
-      }
-      .nav__form {
-        .nav__form-tab {
-          button,
-          a {
-            font-weight: bold;
-            margin: 0 10px;
+      .global-nav {
+        .wrapper {
+          box-sizing: border-box;
+          & > div {
+            &:first-child,
+            &:last-child {
+              width: 30%;
+            }
+            &:nth-child(2) {
+              width: 40%;
+            }
+          }
+          .nav__form {
+            .nav__form-tab {
+              button,
+              a {
+                font-weight: bold;
+                margin: 0 10px;
+              }
+            }
           }
         }
       }
@@ -952,22 +988,26 @@ header {
 @media (max-width: $medium) {
   #header {
     nav {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      & > div {
-        &:first-child,
-        &:last-child {
-          width: 100%;
-        }
-        &:nth-child(2) {
-          width: 100%;
-          order: 3;
-          grid-column: span 2;
-        }
-      }
-      .nav__form {
-        .nav__form-search {
-          width: 100%;
+      .global-nav {
+        .wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          & > div {
+            &:first-child,
+            &:last-child {
+              width: 100%;
+            }
+            &:nth-child(2) {
+              width: 100%;
+              order: 3;
+              grid-column: span 2;
+            }
+          }
+          .nav__form {
+            .nav__form-search {
+              width: calc(100vw - 96px);
+            }
+          }
         }
       }
     }
@@ -976,9 +1016,12 @@ header {
         &.active {
           .nav__form {
             .nav__form-search {
+              width: 20vw;
               position: absolute;
               top: 16px;
               left: 95px;
+              .form-search__form {
+              }
             }
           }
         }
@@ -995,92 +1038,103 @@ header {
 
 @media (max-width: $small) {
   #header {
-    nav {
-      padding: 0 25px;
-      .logo,
-      .nav__right {
-        display: none;
-      }
-      .nav__form {
-        margin-top: 20px;
-        .nav__form-tab {
-          display: none;
-        }
-        .nav__form-search {
-          align-items: center;
-          justify-content: center;
-          form {
-            display: none;
-          }
-          & > button {
-            position: relative;
-            width: 100%;
-            left: 0;
-            top: 0;
-            background: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-sizing: content-box;
-            padding: 5px 0;
-            transition: none;
-            i {
-              color: $pink;
-            }
-            &:after {
-              display: block;
-              font-weight: bold;
-              content: "어디로 여행가세요?";
-              color: black;
-            }
-          }
-          & > span {
-            display: block;
-            position: relative;
-            padding: 0;
-          }
-        }
+    #notice-bar {
+      a {
+        font-size: 0.85em;
       }
     }
-    &.fixed {
-      nav {
-        &.active {
-          padding: 0 20px 20px;
-          height: auto;
+    nav {
+      .global-nav {
+        .wrapper {
+          .nav__left,
+          .nav__right {
+            display: none;
+          }
           .nav__form {
-            .nav__form-search {
-              position: relative;
-              top: 0;
-              left: 0;
-              height: 52px;
-              button {
-                top: 0;
-                right: 0;
-                &:after {
+            .nav__form-tab {
+              display: none;
+            }
+          }
+          .nav__form-search {
+            width: calc(100vw - 60px) !important;
+            margin-top: 15px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            form {
+              display: none;
+              & > div {
+                label,
+                .tab-modal {
                   display: none;
                 }
+              }
+            }
+            & > button {
+              top: inherit;
+              right: inherit;
+              position: relative;
+              background: none;
+              color: $pink;
+              i {
+                font-size: 1.2em;
+              }
+            }
+            & > span {
+              position: relative;
+              display: block;
+              padding: 0;
+              &::after {
+                content: "어디로 여행가세요?";
               }
             }
           }
         }
       }
     }
-  }
-}
+    &.fixed {
+      //스크롤 + 터치
+      nav {
+        height: 80px;
+        .global-nav {
+          .wrapper {
+            .nav__form {
+              .nav__form-search {
+                button {
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
 
-@media (min-width: $xlarge) {
-  header {
-    nav {
-      .nav-wrap {
-        max-width: 1600px;
-        margin: auto;
-        padding: 0;
+      //스크롤시
+      nav.active {
+        height: 80px;
+        .nav__form {
+          .nav__form-search {
+            top: 0;
+            left: 50%;
+            width: auto;
+            transform: translateX(-50%);
+            box-shadow: none;
+            background: #f7f7f7;
+            border: none;
+            & > button {
+              top: inherit;
+            }
+            & > span {
+              top: inherit;
+              transform: none;
+            }
+          }
+        }
       }
     }
   }
-  header.fixed {
-    nav {
-      margin: auto;
-    }
+  #mobileNav {
+    display: flex;
   }
 }

@@ -10,28 +10,35 @@
   </head>
   <body>
     <header id="header" class="login fixed">
-      <nav class="active">
-        <div class="nav__left logo"><a href="index.html"></a></div>
-        <div class="nav__blank"></div>
-        <div class="nav__right">
-          <a class="right-bundle" href="host.html">호스트 되기</a>
-          <button type="button" class="nav__right-global right-bundle" onclick="modalLng();">
-            <i class="fas fa-globe-americas"></i>
-          </button>
-          <button type="button" class="nav__right-myBtn" onclick="mypageModalToggle();">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-user-circle"></i>
-          </button>
-          <div class="nav__right-myBtn-modal">
-            <ul>
-              <li><button type="button"><b>회원가입</b></button></li>
-              <li><button type="button">로그인</a></button>
-            </ul>
-            <ul>
-              <li><a href="#;">숙소 호스트 되기</a></li>
-              <li><a href="#;">체험 호스팅하기</a></li>
-              <li><a href="#;">도움말</a></li>
-            </ul>
+      <div id="notice-bar">
+        <a href="#;" class="wrapper">에어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.</a>
+      </div>
+      <nav>
+        <div class="global-nav">
+          <div class="wrapper">
+            <div class="nav__left logo"><a href="index.html"></a></div>
+            <div class="nav__blank"></div>
+            <div class="nav__right">
+              <a class="right-bundle" href="host.html">호스트 되기</a>
+              <button type="button" class="nav__right-global right-bundle" onclick="modalLng();">
+                <i class="fas fa-globe-americas"></i>
+              </button>
+              <button type="button" class="nav__right-myBtn" onclick="mypageModalToggle();">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-user-circle"></i>
+              </button>
+              <div class="nav__right-myBtn-modal">
+                <ul>
+                  <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
+                  <li><button type="button" onclick="modalLogin();">로그인</a></button>
+                </ul>
+                <ul>
+                  <li><a href="#;">숙소 호스트 되기</a></li>
+                  <li><a href="#;">체험 호스팅하기</a></li>
+                  <li><a href="#;">도움말</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -41,57 +48,57 @@
         <div class="login-content">
             <div class="modal__wrapper">
                 <h4 class="modal-title">로그인 또는 회원가입</h4>
-              <div class="modal__container">
-                <div class="content">
-                  <div class="content_cont">
-                    <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
-                    <div class="cont">
-                      <div class="phone-login">
-                        <div class="phone-form">
-                          <form>
-                            <label for="national">
-                              <span>국가/지역</span>
-                              <select id="national">
-                                <option>한국 (+82)</option>
-                                <option>미국 (+1)</option>
-                                <option>프랑스 (+33)</option>
-                                <option>영국 (+44)</option>
-                                <option>덴마크 (+45)</option>
-                              </select>
-                            </label>
-                            <label for="phoneNum">
-                              <span>전화번호</span>
-                              <b>+82</b>
-                              <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
-                            </label>
-                          </form>
+                <div class="modal__container">
+                    <div class="content">
+                        <div class="content_cont">
+                            <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
+                            <div class="cont">
+                                <div class="phone-login">
+                                    <div class="phone-form">
+                                      <form>
+                                        <label for="national">
+                                          <span>국가/지역</span>
+                                          <select id="national">
+                                            <option>한국 (+82)</option>
+                                            <option>미국 (+1)</option>
+                                            <option>프랑스 (+33)</option>
+                                            <option>영국 (+44)</option>
+                                            <option>덴마크 (+45)</option>
+                                          </select>
+                                        </label>
+                                        <label for="phoneNum">
+                                          <span>전화번호</span>
+                                          <b>+82</b>
+                                          <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
+                                        </label>
+                                      </form>
+                                    </div>
+                                    <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
+                                    <button class="phone-login__btn" type="submit">계속</button>
+                                </div>
+                                <div class="sns-login">
+                                  <span>또는</span>
+                                  <a class="sns-btn" href="#;" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>페이스북으로 로그인하기</span>
+                                  </a>
+                                  <a class="sns-btn" href="#;" target="_blank">
+                                    <i class="fab fa-google"></i>
+                                    <span>구글로 로그인하기</span>
+                                  </a>
+                                  <a class="sns-btn" href="#;" target="_blank">
+                                    <i class="fab fa-apple"></i>
+                                    <span>Apple 계정으로 계속하기</span>
+                                  </a>
+                                  <a class="sns-btn" href="#;" target="_blank">
+                                    <i class="far fa-envelope"></i>
+                                    <span>이메일로 로그인하기</span>
+                                  </a>
+                                </div>
+                            </div>
                         </div>
-                        <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
-                        <button class="phone-login__btn" type="submit">계속</button>
-                      </div>
-                      <div class="sns-login">
-                        <span>또는</span>
-                        <a class="sns-btn" href="#;" target="_blank">
-                          <i class="fab fa-facebook"></i>
-                          <span>페이스북으로 로그인하기</span>
-                        </a>
-                        <a class="sns-btn" href="#;" target="_blank">
-                          <i class="fab fa-google"></i>
-                          <span>구글로 로그인하기</span>
-                        </a>
-                        <a class="sns-btn" href="#;" target="_blank">
-                          <i class="fab fa-apple"></i>
-                          <span>Apple 계정으로 계속하기</span>
-                        </a>
-                        <a class="sns-btn" href="#;" target="_blank">
-                          <i class="far fa-envelope"></i>
-                          <span>이메일로 로그인하기</span>
-                        </a>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
         </div>
     </main>
@@ -181,7 +188,7 @@
         <i class="fas fa-search"></i>
         <span>둘러보기</span>
       </a>
-      <a href="wishlist.html">
+      <a href="#;">
         <i class="far fa-heart"></i>
         <span>위시리스트</span>
       </a>

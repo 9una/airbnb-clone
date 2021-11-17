@@ -1,4 +1,16 @@
-/* modal - join & login */
+/* login-header */
+#header.fixed {
+  nav {
+    padding-bottom: 0;
+    .global-nav {
+      .wrapper {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+/* join & login */
 #login-main {
   .login-content {
     max-width: 568px;
@@ -11,14 +23,16 @@
         border-bottom: 1px solid #e9e9e9;
         text-align: center;
         margin: 0;
-        padding: 20px 0;
+        padding: 25px 0;
+        font-size: 1.1em;
       }
       .modal__container {
-        padding: 30px;
+        padding: 45px 30px 30px;
         .content {
           .content_cont {
             .cont-title {
-              margin: 0 0 10px 0 !important;
+              margin: 0 0 20px 0 !important;
+              font-size: 1.6em;
             }
             .phone-login {
               .phone-form {
@@ -68,11 +82,12 @@
                 }
               }
               & > p {
-                margin: 20px 0;
+                margin: 5px 0 20px;
                 color: #555;
+                font-size: 0.85em;
+                line-height: 1.4em;
                 a {
                   display: inline;
-                  margin: 0 5px;
                   color: #333;
                   font-weight: bold;
                   text-decoration: underline;
@@ -80,12 +95,13 @@
               }
               .phone-login__btn {
                 width: 100%;
-                padding: 15px 10px;
+                padding: 18px 10px;
                 background: $pink;
                 border-radius: 10px;
                 color: white;
                 font-weight: bold;
                 margin-bottom: 10px;
+                font-size: 1.2em;
               }
             }
             .sns-login {
@@ -109,7 +125,7 @@
                 width: 100%;
                 border: 2px solid #b4b4b4;
                 border-radius: 10px;
-                padding: 12px 10px;
+                padding: 15px 10px;
                 display: flex;
                 align-items: center;
                 &:not(:last-child) {
@@ -138,20 +154,20 @@
     }
   }
 }
-
-@media (max-width: $large) {
-}
-@media (max-width: $medium) {
-}
 @media (max-width: $small) {
   header.login {
     display: none;
   }
   #login-main {
+    border-bottom: none !important;
     padding-top: 0;
     .login-content {
+      max-width: inherit;
       margin-top: 0;
       border: none;
     }
+  }
+  footer {
+    display: none;
   }
 }

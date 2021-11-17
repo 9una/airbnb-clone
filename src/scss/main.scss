@@ -4,13 +4,12 @@
   word-break: keep-all !important;
   section {
     width: 100%;
-    height: 100%;
     padding: 48px 80px;
     .wrapper {
       position: relative;
-      height: 100%;
       .section-img {
         width: 100%;
+        height: 50vw;
         object-fit: cover;
         border-radius: 12px;
       }
@@ -109,11 +108,7 @@
   ); //background-size 100% 50%
   .wrapper {
     width: 100%;
-    height: 100vh;
     border-radius: 10px;
-    .section-img {
-      height: 100%;
-    }
     .search-title {
       position: absolute;
       top: 0;

@@ -191,78 +191,83 @@
   #content__start-hosting {
     position: relative;
     .start-hosting__host {
-      margin-left: 48px;
-      width: calc(100% - 48px);
-      overflow-x: auto;
-      overflow-y: hidden;
       position: relative;
-      &::-webkit-scrollbar {
+      ::-webkit-scrollbar {
         width: 0;
         height: 0;
       }
-      & > ul {
-        display: flex;
-        padding-right: 20px;
-        position: relative;
-        width: 200%;
-        &.start-host-list__text {
-          height: 300px;
-        }
-        li {
-          width: 30vw;
-          height: 30vw;
-          margin-left: 13px;
-          margin-right: 4px;
-          &.img {
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-            img {
+      .host-wrap {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        ul {
+          margin-left: 80px;
+          width: 200%;
+          display: flex;
+          gap: 30px;
+          li {
+            width: 31vw;
+            cursor: pointer;
+            .item-img {
               width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 8px;
+              height: 31vw;
+              border-radius: 12px;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
             }
-          }
-          &.text {
-            display: flex;
-            opacity: 0;
-            flex-direction: column;
-            align-items: flex-start;
+            .item-text {
+              margin-top: 30px;
+              display: flex;
+              flex-direction: column;
+              opacity: 0;
+              transition: opacity 0.3s;
+              p {
+                font-size: 1.8em;
+                line-height: 1.2em;
+              }
+              img {
+                margin: 20px 0;
+                margin-right: auto;
+                height: 40px;
+                object-fit: contain;
+              }
+              span {
+              }
+            }
             &.active {
-              opacity: 1;
-            }
-            p {
-              margin: 48px 0 34px 0;
-              opacity: 0.9;
-              font-size: 1.85em;
-              line-height: 1.15em;
-            }
-            img {
-              height: 32px;
-              width: auto;
-            }
-            span {
-              margin-top: 24px;
-              opacity: 0.6;
-              font-size: 1.1em;
+              .item-text {
+                opacity: 1;
+              }
             }
           }
         }
       }
-      button {
-        position: absolute;
+      .host-btn {
+        width: 31vw;
         bottom: 30px;
-        width: 32px;
-        height: 32px;
-        background: #ebebeb;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &.host-list__prev {
-          right: calc(34.5% + 45px);
-        }
-        &.host-list__next {
-          right: 34.5%;
+        position: absolute;
+        left: calc(31vw + 80px + 30px);
+        button {
+          position: absolute;
+          bottom: 0;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: #e9e9e9;
+          color: #444;
+          &:hover {
+            background: #cfcfcf;
+          }
+          &.host-list__prev {
+            right: 45px;
+          }
+          &.host-list__next {
+            right: 0;
+          }
         }
       }
     }
@@ -425,8 +430,10 @@
 }
 @media (max-width: $xlarge) {
   #host__main {
-    .host__content-title {
-      font-size: 4.8vw;
+    #content__super-host {
+      .host__content-title {
+        font-size: 4.8vw;
+      }
     }
   }
 }
@@ -437,29 +444,26 @@
     }
   }
   #host__main {
-    ::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
     #content__start-hosting {
       .start-hosting__host {
-        margin-left: 40px;
-        width: calc(100% - 40px);
-        ul {
-          width: 354%;
-          left: -60%;
-          li {
-            width: 55vw;
-            height: 55vw;
+        .host-wrap {
+          ul {
+            margin-left: 48px;
+            gap: 20px;
+            width: 350%;
+            position: relative;
+            left: -55vw;
+            li {
+              width: 55vw;
+              .item-img {
+                height: 55vw;
+              }
+            }
           }
         }
-        button {
-          &.host-list__prev {
-            right: calc(41% + 50px);
-          }
-          &.host-list__next {
-            right: 41%;
-          }
+        .host-btn {
+          width: 55vw;
+          left: calc(48px + 20px);
         }
       }
     }
@@ -528,23 +532,6 @@
       }
     }
     #content__start-hosting {
-      .start-hosting__host {
-        ul {
-          &.start-host-list__text {
-            height: 30vw;
-            .text {
-              p {
-                br {
-                  display: none;
-                }
-              }
-            }
-          }
-          li {
-            margin-right: 0.6%;
-          }
-        }
-      }
     }
     #content__super-host {
       height: 50vh;
@@ -620,6 +607,7 @@
         padding-bottom: 25px;
         border-radius: 0;
         box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+        font-size: 1.1em;
         span {
           display: block;
           border-radius: 10px;
@@ -641,6 +629,7 @@
       margin: $padding25;
       margin-bottom: 30px;
       padding-top: 0;
+      font-size: 2em;
     }
     #host__main-screen {
       background: none;
@@ -654,6 +643,7 @@
           h1 {
             text-align: left;
             margin-bottom: 20px;
+            font-size: 10vw;
           }
           a {
             top: 9rem;
@@ -669,50 +659,6 @@
       }
     }
     #content__start-hosting {
-      .start-hosting__host {
-        margin-left: 25px;
-        width: calc(100% - 25px);
-        ul {
-          width: 400%;
-          left: -65%;
-          li {
-            &.text {
-              p {
-                letter-spacing: -1px;
-                font-size: 1.3em;
-                br {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-        button {
-          display: none;
-        }
-      }
-      .start-hosting__form {
-        padding: $padding25;
-        align-items: flex-start;
-        text-align: left;
-        margin-top: 140px;
-        form {
-          align-items: flex-start;
-          label {
-            font-weight: 100;
-            font-size: 1.7em;
-          }
-          select {
-            font-size: 1.7em;
-            text-align: left;
-            width: auto;
-          }
-        }
-        h1 {
-          margin: 10px 0 30px;
-          font-size: 1.7em;
-        }
-      }
     }
     #content__super-host {
       padding: $padding25;
@@ -742,6 +688,7 @@
       }
       .hosting-info__content {
         padding: $padding25;
+        margin-bottom: 120px;
         .hosting-info__content-list {
           grid-template-columns: 1fr;
           .hosting-info__content-item {

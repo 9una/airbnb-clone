@@ -1703,6 +1703,14 @@ header nav .global-nav .wrapper .nav__right {
   }
 }
 @media (max-width: 726px) {
+  .modal {
+    padding: 60px 0 0 0;
+    align-items: flex-end;
+  }
+  .modal .modal__wrapper {
+    border-radius: 12px 12px 0 0;
+  }
+
   #modal_lng_cur .modal__wrapper .cont ul {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1910,80 +1918,81 @@ header nav .global-nav .wrapper .nav__right {
   position: relative;
 }
 #host__main #content__start-hosting .start-hosting__host {
-  margin-left: 48px;
-  width: calc(100% - 48px);
-  overflow-x: auto;
-  overflow-y: hidden;
   position: relative;
 }
-#host__main #content__start-hosting .start-hosting__host::-webkit-scrollbar {
+#host__main #content__start-hosting .start-hosting__host ::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
-#host__main #content__start-hosting .start-hosting__host > ul {
-  display: flex;
-  padding-right: 20px;
-  position: relative;
+#host__main #content__start-hosting .start-hosting__host .host-wrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+  margin-left: 80px;
   width: 200%;
+  display: flex;
+  gap: 30px;
 }
-#host__main #content__start-hosting .start-hosting__host > ul.start-host-list__text {
-  height: 300px;
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li {
+  width: 31vw;
+  cursor: pointer;
 }
-#host__main #content__start-hosting .start-hosting__host > ul li {
-  width: 30vw;
-  height: 30vw;
-  margin-left: 13px;
-  margin-right: 4px;
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img {
+  width: 100%;
+  height: 31vw;
+  border-radius: 12px;
+  overflow: hidden;
 }
-#host__main #content__start-hosting .start-hosting__host > ul li.img {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-#host__main #content__start-hosting .start-hosting__host > ul li.img img {
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
 }
-#host__main #content__start-hosting .start-hosting__host > ul li.text {
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
+  margin-top: 30px;
   display: flex;
-  opacity: 0;
   flex-direction: column;
-  align-items: flex-start;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-#host__main #content__start-hosting .start-hosting__host > ul li.text.active {
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
+  font-size: 1.8em;
+  line-height: 1.2em;
+}
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text img {
+  margin: 20px 0;
+  margin-right: auto;
+  height: 40px;
+  object-fit: contain;
+}
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li.active .item-text {
   opacity: 1;
 }
-#host__main #content__start-hosting .start-hosting__host > ul li.text p {
-  margin: 48px 0 34px 0;
-  opacity: 0.9;
-  font-size: 1.85em;
-  line-height: 1.15em;
-}
-#host__main #content__start-hosting .start-hosting__host > ul li.text img {
-  height: 32px;
-  width: auto;
-}
-#host__main #content__start-hosting .start-hosting__host > ul li.text span {
-  margin-top: 24px;
-  opacity: 0.6;
-  font-size: 1.1em;
-}
-#host__main #content__start-hosting .start-hosting__host button {
-  position: absolute;
+#host__main #content__start-hosting .start-hosting__host .host-btn {
+  width: 31vw;
   bottom: 30px;
-  width: 32px;
-  height: 32px;
-  background: #ebebeb;
+  position: absolute;
+  left: calc(31vw + 80px + 30px);
+}
+#host__main #content__start-hosting .start-hosting__host .host-btn button {
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #e9e9e9;
+  color: #444;
 }
-#host__main #content__start-hosting .start-hosting__host button.host-list__prev {
-  right: calc(34.5% + 45px);
+#host__main #content__start-hosting .start-hosting__host .host-btn button:hover {
+  background: #cfcfcf;
 }
-#host__main #content__start-hosting .start-hosting__host button.host-list__next {
-  right: 34.5%;
+#host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
+  right: 45px;
+}
+#host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__next {
+  right: 0;
 }
 #host__main #content__start-hosting .start-hosting__form {
   display: flex;
@@ -2128,7 +2137,7 @@ header nav .global-nav .wrapper .nav__right {
   }
 }
 @media (max-width: 1422px) {
-  #host__main .host__content-title {
+  #host__main #content__super-host .host__content-title {
     font-size: 4.8vw;
   }
 }
@@ -2137,27 +2146,22 @@ header nav .global-nav .wrapper .nav__right {
     background-position: center;
   }
 
-  #host__main ::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+    margin-left: 48px;
+    gap: 20px;
+    width: 350%;
+    position: relative;
+    left: -55vw;
   }
-  #host__main #content__start-hosting .start-hosting__host {
-    margin-left: 40px;
-    width: calc(100% - 40px);
-  }
-  #host__main #content__start-hosting .start-hosting__host ul {
-    width: 354%;
-    left: -60%;
-  }
-  #host__main #content__start-hosting .start-hosting__host ul li {
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li {
     width: 55vw;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img {
     height: 55vw;
   }
-  #host__main #content__start-hosting .start-hosting__host button.host-list__prev {
-    right: calc(41% + 50px);
-  }
-  #host__main #content__start-hosting .start-hosting__host button.host-list__next {
-    right: 41%;
+  #host__main #content__start-hosting .start-hosting__host .host-btn {
+    width: 55vw;
+    left: 68px;
   }
   #host__main #content__super-host {
     padding: 0 50px;
@@ -2212,15 +2216,6 @@ header nav .global-nav .wrapper .nav__right {
   }
   #host__main #host__main-screen > div:last-child .main-screen__video-text {
     bottom: calc(14% + 150px);
-  }
-  #host__main #content__start-hosting .start-hosting__host ul.start-host-list__text {
-    height: 30vw;
-  }
-  #host__main #content__start-hosting .start-hosting__host ul.start-host-list__text .text p br {
-    display: none;
-  }
-  #host__main #content__start-hosting .start-hosting__host ul li {
-    margin-right: 0.6%;
   }
   #host__main #content__super-host {
     height: 50vh;
@@ -2292,6 +2287,7 @@ header nav .global-nav .wrapper .nav__right {
     padding-bottom: 25px;
     border-radius: 0;
     box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+    font-size: 1.1em;
   }
   #host__header .header__right .start-btn span {
     display: block;
@@ -2311,6 +2307,7 @@ header nav .global-nav .wrapper .nav__right {
     margin: 0 25px;
     margin-bottom: 30px;
     padding-top: 0;
+    font-size: 2em;
   }
   #host__main #host__main-screen {
     background: none;
@@ -2327,6 +2324,7 @@ header nav .global-nav .wrapper .nav__right {
   #host__main #host__main-screen > div:first-child h1 {
     text-align: left;
     margin-bottom: 20px;
+    font-size: 10vw;
   }
   #host__main #host__main-screen > div:first-child a {
     top: 9rem;
@@ -2337,46 +2335,6 @@ header nav .global-nav .wrapper .nav__right {
   #host__main #host__main-screen > div:last-child .main-screen__video-text {
     bottom: 15%;
     left: 25px;
-  }
-  #host__main #content__start-hosting .start-hosting__host {
-    margin-left: 25px;
-    width: calc(100% - 25px);
-  }
-  #host__main #content__start-hosting .start-hosting__host ul {
-    width: 400%;
-    left: -65%;
-  }
-  #host__main #content__start-hosting .start-hosting__host ul li.text p {
-    letter-spacing: -1px;
-    font-size: 1.3em;
-  }
-  #host__main #content__start-hosting .start-hosting__host ul li.text p br {
-    display: none;
-  }
-  #host__main #content__start-hosting .start-hosting__host button {
-    display: none;
-  }
-  #host__main #content__start-hosting .start-hosting__form {
-    padding: 0 25px;
-    align-items: flex-start;
-    text-align: left;
-    margin-top: 140px;
-  }
-  #host__main #content__start-hosting .start-hosting__form form {
-    align-items: flex-start;
-  }
-  #host__main #content__start-hosting .start-hosting__form form label {
-    font-weight: 100;
-    font-size: 1.7em;
-  }
-  #host__main #content__start-hosting .start-hosting__form form select {
-    font-size: 1.7em;
-    text-align: left;
-    width: auto;
-  }
-  #host__main #content__start-hosting .start-hosting__form h1 {
-    margin: 10px 0 30px;
-    font-size: 1.7em;
   }
   #host__main #content__super-host {
     padding: 0 25px;
@@ -2403,6 +2361,7 @@ header nav .global-nav .wrapper .nav__right {
   }
   #host__main #content__hosting-info .hosting-info__content {
     padding: 0 25px;
+    margin-bottom: 120px;
   }
   #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list {
     grid-template-columns: 1fr;
@@ -2989,10 +2948,6 @@ header nav .global-nav .wrapper .nav__right {
     max-width: inherit;
     margin-top: 0;
     border: none;
-  }
-
-  footer {
-    display: none;
   }
 }
 footer {

@@ -13,7 +13,7 @@
       <a class="logo" href="index.html"></a>
       <div class="header__right">
         <a class="super-btn" href="superhost.html">슈퍼호스트에게 물어보기</a>
-        <button class="start-btn" onclick="modalLng();"><span>호스팅 시작하기</span></button>
+        <button class="start-btn" onclick="modalLogin();"><span>호스팅 시작하기</span></button>
       </div>
     </header>
     <!-- header-end -->
@@ -57,70 +57,84 @@
         <section id="content__start-hosting" class="host__content">
             <h1 class="host__content-title">언제 어디서든<br>호스팅하실 수 있습니다</h1>
             <div class="start-hosting__host">
-              <ul class="start-host-list__img">
-                <li class="img">
-                  <img src="https://a0.muscache.com/im/pictures/e7fd2596-a03c-43a0-acc9-c8f19ade63b9.jpg?im_w=480" alt="호스트 Reka의 사진"/>
-                </li>
-                <li class="img">
-                  <img src="https://a0.muscache.com/im/pictures/86dfe10f-cc9e-46bf-b69f-b60a71523f81.jpg?im_w=480" alt="호스트 Darrel의 사진"/>
-                </li>
-                <li class="img">
-                  <img src="https://a0.muscache.com/im/pictures/b21ec45b-8bac-4f8a-89b1-e967a69018b2.jpg?im_w=480" alt="호스트 Nerina의 사진"/>
-                </li>
-                <li class="img">
-                  <img src="https://a0.muscache.com/im/pictures/20a9b238-f685-4041-9538-e3c5e5430d46.jpg?im_w=480" alt="호스트 Clair의 사진"/>
-                </li>
-                <li class="img">
-                  <img src="https://a0.muscache.com/im/pictures/27ab0b1d-a5b7-40a6-a78d-3cfb851aea4e.jpg?im_w=480" alt="호스트 Mohammed의 사진"/>
-                </li>
-                <li class="img">
-                  <img src="https://a0.muscache.com/im/pictures/fbfee215-d5e7-4e99-88ba-1a50101eb69c.jpg?im_w=480" alt="호스트 Marko의 사진"/>
-                </li>
-              </ul>
-              <ul class="start-host-list__text">
-                <li class="text">
-                  <p>스튜디오 호스팅 덕에 새로운 삶을 사는<br>
-                  느낌이에요. 좋은 인연과 잊을 수 없는<br>
-                  추억은 덤이죠.</p>
-                  <img src="https://a0.muscache.com/im/pictures/f2b0e082-6872-47a3-a9f6-d01a9c44a088.jpg?im_w=240" alt="Reka" />
-                  <span>밀라노의 호스트</span>
-                </li>
-                <li class="text active">
-                  <p>집을 숙소로 호스팅하면서 자영업자가<br>
-                  되어 경제적 자유에 한 걸음 더 가까워질<br>
-                  수 있었어요.</p>
-                  <img src="https://a0.muscache.com/im/pictures/b0123613-6e48-4108-af8b-bb2d347b4de8.jpg?im_w=240" alt="Darrel" />
-                  <span>애틀랜타의 호스트</span>
-                </li>
-                <li class="text">
-                  <p>파스타 만들기 체험을 호스팅함으로써<br>
-                  문화 보존에 기여할 수 있습니다.</p>
-                  <img src="https://a0.muscache.com/im/pictures/4314911d-559f-4fc7-a493-2edce264d839.jpg?im_w=240" alt="NERINA" />
-                  <span>팔롬바라사비나의 호스트</span>
-                </li>
-                <li class="text">
-                  <p>에어비앤비 덕분에 제가 제일 좋아하는<br>
-                  일을 업으로 삼을 수 있게 되었어요. 바로<br>
-                  집에서 게스트를 맞이하고 돌보는 일이죠.</p>
-                  <img src="https://a0.muscache.com/im/pictures/80b16be2-f6bf-4a68-846f-b35d4b85c455.jpg?im_w=240" alt="Clair" />
-                  <span>치앙마이의 호스트</span>
-                </li>
-                <li class="text">
-                  <p>베두인 텐트 호스팅을 통해 세계 각지에서<br>
-                  온 분들을 만날 수 있었습니다.</p>
-                  <img src="https://a0.muscache.com/im/pictures/82a3e33e-a83e-49e8-b642-0de04018075b.jpg?im_w=240" alt="mohammed" />
-                  <span>와디럼의 호스트</span>
-                </li>
-                <li class="text">
-                  <p>게스트가 소중한 사람들과 자연 속에서<br>
-                  교감할 수 있도록 친환경 숙소를<br>
-                  호스팅하는 게 참 보람 있어요.</p>
-                  <img src="https://a0.muscache.com/im/pictures/62dccc5f-5fa6-4e24-8406-8ced33d1c403.jpg?im_w=240" alt="MARKO" />
-                  <span>파라치의 호스트</span>
-                </li>
-              </ul>
-              <button class="host-list__prev"><i class="fas fa-chevron-left"></i></button>
-              <button class="host-list__next"><i class="fas fa-chevron-right"></i></button>
+              <div class="host-wrap">
+                <ul class="host-list">
+                  <li class="host-item">
+                    <div class="item-img">
+                      <img src="https://a0.muscache.com/im/pictures/e7fd2596-a03c-43a0-acc9-c8f19ade63b9.jpg?im_w=480" alt="호스트 Reka의 사진"/>
+                    </div>
+                    <div class="item-text">
+                        <p>스튜디오 호스팅 덕에 새로운 삶을 사는
+                        느낌이에요. 좋은 인연과 잊을 수 없는
+                        추억은 덤이죠.</p>
+                        <img src="https://a0.muscache.com/im/pictures/f2b0e082-6872-47a3-a9f6-d01a9c44a088.jpg?im_w=240" alt="Reka" />
+                        <span>밀라노의 호스트</span>
+                    </div>
+                  </li>
+                  <li class="host-item active">
+                    <div class="item-img">
+                      <img src="https://a0.muscache.com/im/pictures/86dfe10f-cc9e-46bf-b69f-b60a71523f81.jpg?im_w=480" alt="호스트 Darrel의 사진"/>
+                    </div>
+                    <div class="item-text">
+                        <p>집을 숙소로 호스팅하면서 자영업자가
+                        되어 경제적 자유에 한 걸음 더 가까워질
+                        수 있었어요.</p>
+                        <img src="https://a0.muscache.com/im/pictures/b0123613-6e48-4108-af8b-bb2d347b4de8.jpg?im_w=240" alt="Darrel" />
+                        <span>애틀랜타의 호스트</span>
+                    </div>
+                  </li>
+                  <li class="host-item">
+                    <div class="item-img">
+                      <img src="https://a0.muscache.com/im/pictures/b21ec45b-8bac-4f8a-89b1-e967a69018b2.jpg?im_w=480" alt="호스트 Nerina의 사진"/>
+                    </div>
+                    <div class="item-text">
+                        <p>파스타 만들기 체험을 호스팅함으로써
+                        문화 보존에 기여할 수 있습니다.</p>
+                        <img src="https://a0.muscache.com/im/pictures/4314911d-559f-4fc7-a493-2edce264d839.jpg?im_w=240" alt="NERINA" />
+                        <span>팔롬바라사비나의 호스트</span>
+                    </div>
+                  </li>
+                  <li class="host-item">
+                    <div class="item-img">
+                      <img src="https://a0.muscache.com/im/pictures/20a9b238-f685-4041-9538-e3c5e5430d46.jpg?im_w=480" alt="호스트 Clair의 사진"/>
+                    </div>
+                    <div class="item-text">
+                        <p>에어비앤비 덕분에 제가 제일 좋아하는
+                        일을 업으로 삼을 수 있게 되었어요. 바로
+                        집에서 게스트를 맞이하고 돌보는 일이죠.</p>
+                        <img src="https://a0.muscache.com/im/pictures/80b16be2-f6bf-4a68-846f-b35d4b85c455.jpg?im_w=240" alt="Clair" />
+                        <span>치앙마이의 호스트</span>
+                    </div>
+                  </li>
+                  <li class="host-item">
+                    <div class="item-img">
+                      <img src="https://a0.muscache.com/im/pictures/27ab0b1d-a5b7-40a6-a78d-3cfb851aea4e.jpg?im_w=480" alt="호스트 Mohammed의 사진"/>
+                    </div>
+                    <div class="item-text">
+                        <p>베두인 텐트 호스팅을 통해 세계 각지에서
+                        온 분들을 만날 수 있었습니다.</p>
+                        <img src="https://a0.muscache.com/im/pictures/82a3e33e-a83e-49e8-b642-0de04018075b.jpg?im_w=240" alt="mohammed" />
+                        <span>와디럼의 호스트</span>
+                    </div>
+                  </li>
+                  <li class="host-item">
+                    <div class="item-img">
+                      <img src="https://a0.muscache.com/im/pictures/fbfee215-d5e7-4e99-88ba-1a50101eb69c.jpg?im_w=480" alt="호스트 Marko의 사진"/>
+                    </div>
+                    <div class="item-text">
+                        <p>게스트가 소중한 사람들과 자연 속에서
+                        교감할 수 있도록 친환경 숙소를
+                        호스팅하는 게 참 보람 있어요.</p>
+                        <img src="https://a0.muscache.com/im/pictures/62dccc5f-5fa6-4e24-8406-8ced33d1c403.jpg?im_w=240" alt="MARKO" />
+                        <span>파라치의 호스트</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="host-btn">
+                <button class="host-list__prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="host-list__next"><i class="fas fa-chevron-right"></i></button>
+              </div>
             </div>
             <div class="start-hosting__form">
               <form>
@@ -199,7 +213,7 @@
           <div class="end-screen__right">
             <h1>에어비앤비에서<br>호스팅을 시작해보세요</h1>
             <p>에어비앤비 호스트가 되어보세요. 에어비앤비가 모든 단계에서 도와드립니다.</p>
-            <button type="button" class="start-btn" onclick="modalLng();">시작하기</button>
+            <button type="button" class="start-btn" onclick="modalLogin();">시작하기</button>
           </div>
         </section>
     </main>
@@ -209,50 +223,44 @@
         <ul class="fnb__top-list">
           <li class="fnb__top-item">
             <ul>
-              <span>소개</span>
-              <li><a href="#;">에어비앤비 이용 방법</a></li>
-              <li><a href="#;">뉴스룸</a></li>
-              <li><a href="#;">에어비앤비 2021</a></li>
-              <li><a href="#;">투자자 정보</a></li>
-              <li><a href="#;">에어비앤비 플러스</a></li>
-              <li><a href="#;">에어비앤비 Luxe</a></li>
-              <li><a href="#;">호텔투나잇</a></li>
-              <li><a href="#;">에어비앤비 비즈니스 프로그램</a></li>
-              <li><a href="#;">호스트 분들이 있기에 가능합니다</a></li>
-              <li><a href="#;">채용정보</a></li>
-              <li><a href="#;">창립자 편지</a></li>
+              <span>에어비앤비 지원</span>
+              <li><a href="#;">도움말 센터</a></li>
+              <li><a href="#;">안전 정보</a></li>
+              <li><a href="#;">예약 취소 옵션</a></li>
+              <li><a href="#;">에어비앤비의 코로나19 대응 방안</a></li>
+              <li><a href="#;">장애인 지원</a></li>
+              <li><a href="#;">이웃 민원 신고</a></li>
             </ul>
           </li>
           <li class="fnb__top-item">
             <ul>
               <span>커뮤니티</span>
-              <li><a href="#;">다양성 및 소속감</a></li>
-              <li><a href="#;">접근성</a></li>
-              <li><a href="#;">에어비앤비 어소시에이트</a></li>
-              <li><a href="#;">아프간 난민 호스팅하기</a></li>
-              <li><a href="#;">게스트 추천</a></li>
-              <li><a href="#;">Airbnb.org</a></li>
+              <li><a href="#;">Airbnb.org: 재난 구호 숙소</a></li>
+              <li><a href="#;">아프간 난민 지원</a></li>
+              <li><a href="#;">다양성과 소속감 증진</a></li>
+              <li><a href="#;">차별 철폐를 위한 노력</a></li>
             </ul>
           </li>
           <li class="fnb__top-item">
             <ul>
-              <span>호스팅하기</span>
-              <li><a href="host.html">숙소 호스팅</a></li>
-              <li><a href="#;">온라인 체험 호스팅하기</a></li>
-              <li><a href="#;">체험 호스팅하기</a></li>
+              <span>호스팅</span>
+              <li><a href="host.html">호스팅 시작하기</a></li>
+              <li><a href="#;">에어커버: 호스트를 위한 보호 프로그램</a></li>
+              <li><a href="#;">호스팅 자료 둘러보기</a></li>
+              <li><a href="#;">커뮤니티 포럼 방문하기</a></li>
               <li><a href="#;">책임감 있는 호스팅</a></li>
-              <li><a href="#;">자료 센터</a></li>
-              <li><a href="#;">커뮤니티 센터</a></li>
+              <li><a href="#;"></a></li>
             </ul>
           </li>
           <li class="fnb__top-item">
             <ul>
-              <span>에어비앤비 지원</span>
-              <li><a href="#;">에어비앤비의 코로나19 대응 방안</a></li>
-              <li><a href="#;">도움말 센터</a></li>
-              <li><a href="#;">예약 취소 옵션</a></li>
-              <li><a href="#;">에어비앤비 이웃 민원 지원</a></li>
-              <li><a href="#;">신뢰와 안전</a></li>
+              <span>소개</span>
+              <li><a href="#;">뉴스룸</a></li>
+              <li><a href="#;">새로운 기능에 대해 알아보기</a></li>
+              <li><a href="#;">에어비앤비 공동창업자의 메시지</a></li>
+              <li><a href="#;">채용정보</a></li>
+              <li><a href="#;">투자자 정보</a></li>
+              <li><a href="#;">에어비앤비 Luxe</a></li>
             </ul>
           </li>
         </ul>
@@ -290,25 +298,29 @@
       </div>
     </footer>
     <!-- footer-end -->
-    <div class="modal lng-cur__modal" style="display:none;">
-      <div class="modal__container container__lng-cur">
-        <button class="btn-close" type="button" onclick="gnbModalClose();"><i class="fas fa-times"></i></button>
-        <div class="lng-cur__contents">
-          <div class="lng-cur__type">
+    <div id="modal_lng_cur" class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__top">
+          <button class="btn-close" type="button" onclick="modalLngClose();"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__container">
+          <div class="tab">
             <button class="type-btn active" onclick="tabLngCur();" type="button">언어와 지역</button>
             <button class="type-btn" onclick="tabLngCur();" type="button">통화</button>
           </div>
-          <div class="lng-cur__cont-box">
-            <div class="cont-box active">
-              <div class="lng__recommend">
-                <h2 class="lng-cur__contents-title">추천 언어 및 지역</h2>
+          <div class="content">
+            <div class="content_cont">
+              <h2 class="cont-title">추천 언어 및 지역</h2>
+              <div class="cont">
                 <ul class="lng-cur__contents-list">
                   <li><a href="#;">English<span>Untied States</span></a></li>
                   <li><a href="#;">English<span>Untied Kingdom</span></a></li>
                 </ul>
               </div>
-              <div class="lng__language-check">
-                <h2 class="lng-cur__contents-title">언어와 지역을 선택하세요</h2>
+            </div>
+            <div class="content_cont">
+              <h2 class="cont-title">언어와 지역을 선택하세요</h2>
+              <div class="cont">
                 <ul class="lng-cur__contents-list">
                   <li class="active"><a href="#;">한국어<span>대한민국</span></a></li>
                   <li><a href="#;">Azərbaycan dili<span>Azərbaycan</span></a></li>
@@ -402,9 +414,11 @@
                 </ul>
               </div>
             </div>
-            <div class="cont-box">
-              <div class="cur__currency-check">
-                <h2 class="lng-cur__contents-title">통화를 선택하세요.</h2>
+          </div>
+          <div class="content invisible">
+            <div class="content_cont">
+              <h2 class="cont-title">통화를 선택하세요.</h2>
+              <div class="cont">
                 <ul class="lng-cur__contents-list">
                   <li class="active"><a href="#;">한국 원<span>KRW - ₩</span></a></li>
                   <li><a href="#;">남아프리카공화국 란드<span>ZAR - R</span></a></li>
@@ -453,52 +467,61 @@
         </div>
       </div>
     </div>
-    <div class="modal join-login__modal" style="display:none;">
-      <div class="modal__container container__join-login">
-        <button class="btn-close" type="button" onclick="loginModalClose();"><i class="fas fa-times"></i></button>
-        <h4>로그인 또는 회원가입</h4>
-        <div class="join-login__contents">
-          <h2 class="join-login__contents-title">추천 언어 및 지역</h2>
-          <div class="phone-login">
-            <div class="phone-form">
-              <form>
-                <label for="">국가/지역</label>
-                <select id="">
-                  <option>한국 (+82)</option>
-                  <option>미국 (+1)</option>
-                  <option>프랑스 (+33)</option>
-                  <option>영국 (+44)</option>
-                  <option>덴마크 (+45)</option>
-                </select>
-              </form>
-              <form>
-                <label for="">전화번호</label>
-                <span>+82</span>
-                <input id="" type="text" required placeholder="" />
-              </form>
+    <div id="modal_login" class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__top">
+          <button class="btn-close" type="button" onclick="modalLoginClose();"><i class="fas fa-times"></i></button>
+          <h4 class="modal-title">로그인 또는 회원가입</h4>
+        </div>
+        <div class="modal__container">
+          <div class="content">
+            <div class="content_cont">
+              <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
+              <div class="cont">
+                <div class="phone-login">
+                  <div class="phone-form">
+                    <form>
+                      <label for="national">
+                        <span>국가/지역</span>
+                        <select id="national">
+                          <option>한국 (+82)</option>
+                          <option>미국 (+1)</option>
+                          <option>프랑스 (+33)</option>
+                          <option>영국 (+44)</option>
+                          <option>덴마크 (+45)</option>
+                        </select>
+                      </label>
+                      <label for="phoneNum">
+                        <span>전화번호</span>
+                        <b>+82</b>
+                        <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
+                      </label>
+                    </form>
+                  </div>
+                  <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
+                  <button class="phone-login__btn" type="submit">계속</button>
+                </div>
+                <div class="sns-login">
+                  <span>또는</span>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>페이스북으로 로그인하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-google"></i>
+                    <span>구글로 로그인하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple 계정으로 계속하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="far fa-envelope"></i>
+                    <span>이메일로 로그인하기</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.</p>
-            <a href="#;">개인정보 처리방침</a>
-            <button class="phone-login__next" type="submit">계속</button>
-          </div>
-          <div class="sns-login">
-            <span>또는</span>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="fab fa-facebook"></i>
-              <span>페이스북으로 로그인하기</span>
-            </a>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="fab fa-google"></i>
-              <span>구글로 로그인하기</span>
-            </a>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="fab fa-apple"></i>
-              <span>Apple 계정으로 계속하기</span>
-            </a>
-            <a class="sns-btn" href="#;" target="_blank">
-              <i class="far fa-envelope"></i>
-              <span>이메일로 로그인하기</span>
-            </a>
           </div>
         </div>
       </div>
@@ -506,9 +529,8 @@
     <div id="modalBg"></div>
 
 
-    <script src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
     <script src="js/host.js"></script>
-    <script src="js/modal.js"></script> 
+    <script src="js/modal.js"></script>
 </body>
 </html>

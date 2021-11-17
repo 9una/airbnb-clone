@@ -16,7 +16,30 @@ function scrollFunc(){
 
 document.addEventListener('scroll', scrollFunc);
 
-// max-width:726px 호스팅 시작하기 btn - fixed로 bottom:0;
-/*if (winMedSmall.matches){
-    
-}*/
+/* video - play & pause */
+function playVid(event){
+
+    const playBtn = event.currentTarget;
+    const parent = playBtn.parentNode.parentNode.parentNode;
+    const vid = parent.querySelector('video');
+    vid.play();
+    playBtn.classList.remove('active');
+    const pauseBtn = parent.querySelector('.btn-pause');
+    pauseBtn.classList.add('active');
+    vid.addEventListener("ended",()=>{
+        pauseBtn.classList.remove('active');
+        playBtn.classList.add('active');
+    }); //영상이 끝나면 다시 재생버튼으로
+}
+
+function pauseVid(event){
+
+    const pauseBtn = event.currentTarget;
+    const parent = pauseBtn.parentNode.parentNode.parentNode;
+    const vid = parent.querySelector('video');
+    vid.pause();
+    pauseBtn.classList.remove('active');
+    const playBtn = parent.querySelector('.btn-play');
+    playBtn.classList.add('active');
+
+}

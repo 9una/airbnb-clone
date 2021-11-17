@@ -10,11 +10,11 @@
 </head>
 <body>
     <header id="host__header">
-        <a class="logo" href="index.html"></a>
-        <div class="header__right">
-          <a class="super-btn" href="superhost.html">슈퍼호스트에게 물어보기</a>
-          <button class="start-btn" onclick="modalLng();"><span>호스팅 시작하기</span></button>
-        </div>
+      <a class="logo" href="index.html"></a>
+      <div class="header__right">
+        <a class="super-btn" href="superhost.html">슈퍼호스트에게 물어보기</a>
+        <button class="start-btn" onclick="modalLng();"><span>호스팅 시작하기</span></button>
+      </div>
     </header>
     <!-- header-end -->
     <main id="host__main">
@@ -29,9 +29,9 @@
                 <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4" type="video/mp4">
               </video>
               <div class="main-screen__video-text">
-                <div class="video-button">
-                  <button class="btn-play active"><i class="fas fa-play"></i></button>
-                  <button class="btn-pause"><i class="fas fa-pause"></i></button>
+                <div class="video-btn">
+                  <button class="btn-play active" onclick="playVid(event)"><i class="fas fa-play"></i></button>
+                  <button class="btn-pause" onclick="pauseVid(event)"><i class="fas fa-pause"></i></button>
                 </div>
                 <ul class="video__host-list">
                   <li class="video__host-item visible">
@@ -52,7 +52,6 @@
                   </li>
                 </ul>
               </div>
-              
             </div>
         </section>
         <section id="content__start-hosting" class="host__content">
@@ -142,16 +141,9 @@
                     <option value="">게스트 7명</option>
                     <option value="">게스트 8명</option>
                     <option value="">게스트 9명</option>
-                    <option value="">게스트 10명</option>
-                    <option value="">게스트 11명</option>
-                    <option value="">게스트 12명</option>
-                    <option value="">게스트 13명</option>
-                    <option value="">게스트 14명</option>
-                    <option value="">게스트 15명</option>
                   </select>
                   <label for="">숙소 위치는 어디인가요?</label>
                   <select id="" name="">
-                    <option value="">Daehwa-dong</option>
                     <option value="">Goyang-si</option>
                     <option value="">Ilsan-dong</option>
                   </select>
@@ -198,8 +190,10 @@
               <source src="https://a0.muscache.com/v/9a/7a/9a7ad4a1-cfab-5f7d-96e6-fda8abceabe7/9a7ad4a1cfab5f7d96e6fda8abceabe7_4000k_1.mp4" type="video/mp4">
             </video>
             <div class="end-screen__video-text">
-              <button class="btn-play active"><i class="fas fa-play"></i></button>
-              <button class="btn-pause"><i class="fas fa-pause"></i></button>
+              <div class="video-btn">
+                <button class="btn-play active" onclick="playVid(event)"><i class="fas fa-play"></i></button>
+                <button class="btn-pause" onclick="pauseVid(event)"><i class="fas fa-pause"></i></button>
+              </div>
             </div>
           </div>
           <div class="end-screen__right">

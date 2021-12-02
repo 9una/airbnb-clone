@@ -43,3 +43,46 @@ function pauseVid(event){
     playBtn.classList.add('active');
 
 }
+
+
+//slider
+let curPos = 2;
+let postion = -16.7;
+let start_x, end_x;
+const IMAGE_WIDTH = 16.7;
+const prevBtn = document.querySelector(".host-list__prev");
+const nextBtn = document.querySelector(".host-list__next");
+const hostList = document.querySelector(".host-list");
+
+function prev(){
+    if(curPos > 0){
+      nextBtn.removeAttribute("disabled")
+      postion += IMAGE_WIDTH;
+      hostList.style.transform = `translateX(${postion}%)`;
+      curPos -= 1;
+    }
+    // if(curPos == 0){
+    //   prevBtn.setAttribute('disabled', 'true')
+    // }
+  }
+  function next(){
+      if (curPos < 6) {
+      prevBtn.removeAttribute("disabled")
+      postion -= IMAGE_WIDTH;
+      hostList.style.transform = `translateX(${postion}%)`;
+      curPos += 1;
+          
+        console.log(curPos);
+    }
+    // if(curPos == 3){
+    //     nextBtn.setAttribute('disabled', 'true')
+    // }
+  }
+   
+  function init(){
+    // prevBtn.setAttribute('disabled', 'true')
+    prevBtn.addEventListener("click", prev)
+    nextBtn.addEventListener("click", next)
+  }
+   
+  init();

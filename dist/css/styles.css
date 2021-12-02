@@ -1925,50 +1925,46 @@ header nav .global-nav .wrapper .nav__right {
   height: 0;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  width: 30%;
+  border: 3px solid blue;
+  margin: 0 auto;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
-  margin-left: 80px;
-  width: 200%;
+  position: relative;
   display: flex;
-  gap: 30px;
+  height: 400px;
+  width: 600%;
+  transform: translateX(-16.7%);
+  transition: transform 0.3s;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li {
-  width: 31vw;
-  cursor: pointer;
+  width: 16.5%;
+}
+#host__main #content__start-hosting .start-hosting__host .host-wrap ul li:not(:last-child) {
+  margin-right: 0.2%;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img {
-  width: 100%;
-  height: 31vw;
-  border-radius: 12px;
-  overflow: hidden;
+  width: 94%;
+  padding-bottom: 94%;
+  margin: 0 3% 10px;
+  position: relative;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
   width: 100%;
   height: 100%;
+  position: absolute;
   object-fit: cover;
+  border-radius: 10px;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
+  width: 94%;
+  font-size: 20px;
+  margin: auto;
   opacity: 0;
   transition: opacity 0.3s;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
-  font-size: 1.8em;
-  line-height: 1.2em;
-}
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text img {
-  margin: 20px 0;
-  margin-right: auto;
-  height: 40px;
-  object-fit: contain;
-}
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li.active .item-text {
-  opacity: 1;
+  width: 100%;
 }
 #host__main #content__start-hosting .start-hosting__host .host-btn {
   width: 31vw;
@@ -2146,19 +2142,6 @@ header nav .global-nav .wrapper .nav__right {
     background-position: center;
   }
 
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
-    margin-left: 48px;
-    gap: 20px;
-    width: 350%;
-    position: relative;
-    left: -55vw;
-  }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li {
-    width: 55vw;
-  }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img {
-    height: 55vw;
-  }
   #host__main #content__start-hosting .start-hosting__host .host-btn {
     width: 55vw;
     left: 68px;

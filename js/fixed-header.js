@@ -1,11 +1,13 @@
 // 스크롤시 헤더 고정
 const header = document.getElementById("header"),
-    nav = document.querySelector('nav');
+    nav = document.querySelector('nav'),
+    mobileSearch = document.querySelector('.mobile-search');
 
 function scrollFunc(){
     if(scrollY >= 70){
         header.classList.add("fixed");
         nav.classList.add("active");
+        mobileSearch.classList.add("active");
         if(searchBtn.className = 'active'){
             searchBtn.classList.remove('active');
         }
@@ -17,6 +19,7 @@ function scrollFunc(){
         headerHost.classList.add("fixed");
     }else{
         header.classList.remove("fixed");
+        mobileSearch.classList.remove("active");
     }
 }
 document.addEventListener('scroll', scrollFunc);

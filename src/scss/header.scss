@@ -54,6 +54,12 @@ header {
       }
     }
   }
+  .mobile-search {
+    display: none;
+  }
+  #mobileSearch {
+    display: none;
+  }
 }
 
 /* nav */
@@ -68,6 +74,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  transition: all 0.3s;
   .nav__form-tab {
     height: 80px;
     display: flex;
@@ -106,12 +114,12 @@ header {
   }
   .nav__form-search {
     display: flex;
-    position: relative;
+    position: absolute;
     width: 850px;
+    top: 80px;
     background: white;
     border-radius: 100px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s;
     & > span {
       display: none;
       font-weight: bold;
@@ -127,6 +135,7 @@ header {
       grid-template-columns: 1.5fr 2fr 1.5fr;
       gap: 1px;
       align-items: center;
+      transition: all 0.3s;
       &.active {
         display: grid;
       }
@@ -574,7 +583,13 @@ header {
     left: 0;
     top: 0;
     box-shadow: rgb(0 0 0 / 8%) 0px 1px 12px !important;
-    padding-bottom: 40px;
+    padding-bottom: 95px !important;
+    &.active {
+      padding-bottom: 0 !important;
+      .nav__form {
+        top: -64px;
+      }
+    }
     .logo {
       background: url(../../img/logo_1.png) no-repeat left center;
       background-size: auto 32px;
@@ -908,7 +923,7 @@ header {
   justify-content: space-around;
   transition: all 0.5s;
   &.active {
-    bottom: 0;
+    bottom: -1px;
     opacity: 1;
   }
   a {
@@ -933,13 +948,124 @@ header {
 }
 
 /*responsive*/
-@include desktopLarge {
-}
 
 @include desktop {
+  header {
+    nav {
+      padding: 0 40px;
+    }
+  }
+  .logo {
+    background: url(../../img/logo_white_2.png) no-repeat left center;
+    background-size: auto 32px;
+  }
+  #header.fixed {
+    nav {
+      padding-bottom: 160px !important;
+      .logo {
+        background-image: url(../../img/logo_2.png) !important;
+      }
+      .nav__form {
+        top: 65px;
+      }
+      &.active {
+        .nav__form {
+          .nav__form-search {
+            top: 80px;
+            left: 55px;
+          }
+        }
+      }
+    }
+  }
 }
-
+@include max900 {
+  //header조정
+  header {
+    nav {
+      .global-nav {
+        .wrapper {
+          & > div {
+            &:first-child,
+            &:last-child {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav__form {
+    position: absolute;
+    width: calc(100% - 80px) !important;
+    top: 120px;
+    .nav__form-search {
+      width: 100%;
+    }
+  }
+}
 @include tablet {
+  header {
+    #notice-bar {
+      a {
+        font-size: 0.85em;
+        padding: 0 20px;
+        line-height: 1.3;
+      }
+    }
+  }
+  nav {
+    display: none !important;
+  }
+  .mobile-search {
+    display: block !important;
+    width: 100%;
+    padding: 15px 20px;
+    transition: all 0.3s;
+    button {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #dbdbdb;
+      border-radius: 50px;
+      background: white;
+      font-weight: bold;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      i {
+        color: $pink;
+        margin-right: 10px;
+      }
+    }
+    &.active {
+      position: fixed;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      button {
+        background: #f7f7f7;
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+  #header.fixed {
+    .mobile-search {
+      position: fixed;
+      top: 0;
+    }
+  }
+  #mobileNav {
+    display: flex !important;
+  }
+  #mobileSearch {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: yellow;
+    z-index: 999;
+  }
 }
 
 @include mobile {

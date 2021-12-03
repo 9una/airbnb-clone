@@ -154,17 +154,16 @@
     }
   }
 }
-@media (max-width: $small) {
-  header.login {
-    display: none;
-  }
-  #login-main {
-    border-bottom: none !important;
-    padding-top: 0;
-    .login-content {
-      max-width: inherit;
-      margin-top: 0;
-      border: none;
-    }
-  }
+
+/*responsive*/
+@include desktopLarge {
+}
+
+@include desktop {
+}
+
+@include tablet {
+}
+
+@include mobile {
 }

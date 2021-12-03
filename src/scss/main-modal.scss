@@ -281,27 +281,15 @@
 
 /* modal - 공동 */
 
-@media (max-width: $large) {
-  #modal_lng_cur .modal__wrapper .cont ul {
-    grid-template-columns: repeat(4, 1fr);
-  }
+/*responsive*/
+@include desktopLarge {
 }
 
-@media (max-width: $medium) {
-  #modal_lng_cur .modal__wrapper .cont ul {
-    grid-template-columns: repeat(3, 1fr);
-  }
+@include desktop {
 }
 
-@media (max-width: $small) {
-  .modal {
-    padding: 60px 0 0 0;
-    align-items: flex-end;
-    .modal__wrapper {
-      border-radius: 12px 12px 0 0;
-    }
-  }
-  #modal_lng_cur .modal__wrapper .cont ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@include tablet {
+}
+
+@include mobile {
 }

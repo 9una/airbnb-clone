@@ -6,9 +6,8 @@ $padding25: 0 25px;
 $hostPadding48: 0 48px;
 
 //media screen size
-$xsmall: 480px;
-$small: 726px;
-$medium: 932px;
-$large: 1110px;
-$xlarge: 1422px;
-$xxlarge: 1600px;
+$breakpoint-mobile-min: 320px;
+$breakpoint-mobile-max: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-screen-large: 1200px;

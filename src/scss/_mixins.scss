@@ -1,0 +1,25 @@
+@import "./variables";
+
+@mixin mobile {
+  @media (min-width: #{$breakpoint-mobile-min}) and (max-width: #{$breakpoint-mobile-max}) {
+    @content;
+  }
+} // 320 ~ 480
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-mobile-max + 1px}) and (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+} // 481 ~ 768
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-tablet + 1px}) and (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+} // 769 ~ 1024
+
+@mixin desktopLarge {
+  @media (min-width: #{$breakpoint-desktop + 1px}) and (max-width: #{$breakpoint-screen-large}) {
+    @content;
+  }
+} // 1025 ~ 1200

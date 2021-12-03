@@ -1,3 +1,8 @@
+//반응형 window size
+window.onresize = function(event){
+    const innerWidth = window.innerWidth;
+}
+
 //100vh 스크롤시 헤더 고정
 const header = document.getElementById("host__header");
 
@@ -15,6 +20,10 @@ function scrollFunc(){
 }
 
 document.addEventListener('scroll', scrollFunc);
+
+
+let objImg = document.querySelector(".video__host-list img");
+let objText = document.querySelector(".video__host-list span");
 
 /* video - play & pause */
 function playVid(event){
@@ -41,17 +50,23 @@ function pauseVid(event){
     pauseBtn.classList.remove('active');
     const playBtn = parent.querySelector('.btn-play');
     playBtn.classList.add('active');
-
 }
 
 //slider
 let curPos = 1;
 let position = 0;
-const IMG_WIDTH = 16.7;
+let IMG_WIDTH = 16.7;
 const prevBtn = document.querySelector('.host-list__prev');
 const nextBtn = document.querySelector('.host-list__next');
 const images = document.querySelector('.host-list')
 const item = images.querySelectorAll('.host-list li');
+
+if (innerWidth < 932){
+    item[1].classList.remove('active');
+    item[0].classList.add('active');
+    curPos = 0;
+    console.log(curPos);
+}
 
 function prev(){
     if(curPos > 0){

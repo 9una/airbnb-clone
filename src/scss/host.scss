@@ -156,7 +156,6 @@
         width: 36px;
         height: 36px;
         border-radius: 50%;
-        margin-bottom: 30px;
         &.active {
           display: flex;
         }
@@ -168,23 +167,6 @@
       flex-direction: column;
       bottom: 54px;
       left: 8%;
-      .video__host-item {
-        display: none;
-        img {
-          height: 56px;
-          object-fit: contain;
-          margin-bottom: 20px;
-        }
-        span {
-          color: white;
-          font-size: 1.2em;
-        }
-        &.visible {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-      }
     }
   }
   /* host & end video screen - e */
@@ -527,6 +509,21 @@
       }
     }
     #content__start-hosting {
+      .start-hosting__host {
+        .host-wrap {
+          margin: 0 auto;
+          ul {
+            width: 300%;
+            li {
+              width: 50%;
+            }
+          }
+        }
+        .host-btn {
+          width: 46vw;
+          left: 0;
+        }
+      }
     }
     #content__super-host {
       height: 50vh;
@@ -663,6 +660,7 @@
         height: 100%;
       }
       .super-host__text {
+        width: calc(100% - 50px);
         h1 {
           padding-left: 25px;
           padding-right: 25px;
@@ -740,18 +738,77 @@
     }
     .main-screen__right,
     .end-screen__left {
-      .main-screen__video-text {
-        .video__host-item {
-          img {
-            height: 35px !important;
-          }
-        }
-      }
       & > div {
         button {
           margin-bottom: 15px;
           width: 30px;
           height: 30px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $xsmall) {
+  #host__main {
+    #host__main-screen {
+      & > div:first-child {
+        a {
+          top: 35vw;
+        }
+      }
+      .main-screen__left {
+        h1 {
+          line-height: 1.2;
+        }
+      }
+    }
+    #content__start-hosting {
+      .start-hosting__host {
+        .host-wrap {
+          width: calc(100% - 20px);
+          margin: 0 auto;
+          ul {
+            width: 600%;
+            li {
+              width: 100%;
+              .item-text {
+                p {
+                  font-size: 1.1em;
+                  line-height: 1.3;
+                }
+              }
+            }
+          }
+        }
+        .host-btn {
+          width: auto;
+          right: 50px;
+        }
+      }
+      .start-hosting__form {
+        padding: 0 20px;
+        form {
+          label,
+          select {
+            font-size: 2em;
+          }
+        }
+        h1 {
+          font-size: 2em;
+          line-height: 1.3;
+        }
+      }
+    }
+    #content__super-host {
+      .super-host__text {
+        h1 {
+          padding: 0;
+          margin: 4vh 0;
+          font-size: 5.8vw;
+          line-height: 1.3;
+        }
+        button {
+          width: calc(100% - 15% - 50px);
         }
       }
     }

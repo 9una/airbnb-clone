@@ -1879,7 +1879,6 @@ header nav .global-nav .wrapper .nav__right {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  margin-bottom: 30px;
 }
 #host__main .main-screen__right > div button.active,
 #host__main .end-screen__left > div button.active {
@@ -1892,27 +1891,6 @@ header nav .global-nav .wrapper .nav__right {
   flex-direction: column;
   bottom: 54px;
   left: 8%;
-}
-#host__main .main-screen__right .main-screen__video-text .video__host-item,
-#host__main .end-screen__left .main-screen__video-text .video__host-item {
-  display: none;
-}
-#host__main .main-screen__right .main-screen__video-text .video__host-item img,
-#host__main .end-screen__left .main-screen__video-text .video__host-item img {
-  height: 56px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-#host__main .main-screen__right .main-screen__video-text .video__host-item span,
-#host__main .end-screen__left .main-screen__video-text .video__host-item span {
-  color: white;
-  font-size: 1.2em;
-}
-#host__main .main-screen__right .main-screen__video-text .video__host-item.visible,
-#host__main .end-screen__left .main-screen__video-text .video__host-item.visible {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 #host__main #content__start-hosting {
   position: relative;
@@ -2214,6 +2192,19 @@ header nav .global-nav .wrapper .nav__right {
   #host__main #host__main-screen > div:last-child .main-screen__video-text {
     bottom: calc(14% + 150px);
   }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap {
+    margin: 0 auto;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+    width: 300%;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li {
+    width: 50%;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-btn {
+    width: 46vw;
+    left: 0;
+  }
   #host__main #content__super-host {
     height: 50vh;
     margin: 90px 0;
@@ -2341,6 +2332,9 @@ header nav .global-nav .wrapper .nav__right {
   #host__main #content__super-host img {
     height: 100%;
   }
+  #host__main #content__super-host .super-host__text {
+    width: calc(100% - 50px);
+  }
   #host__main #content__super-host .super-host__text h1 {
     padding-left: 25px;
     padding-right: 25px;
@@ -2404,15 +2398,57 @@ header nav .global-nav .wrapper .nav__right {
   #host__main #host__end-screen > div:last-child button {
     display: none;
   }
-  #host__main .main-screen__right .main-screen__video-text .video__host-item img,
-#host__main .end-screen__left .main-screen__video-text .video__host-item img {
-    height: 35px !important;
-  }
   #host__main .main-screen__right > div button,
 #host__main .end-screen__left > div button {
     margin-bottom: 15px;
     width: 30px;
     height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  #host__main #host__main-screen > div:first-child a {
+    top: 35vw;
+  }
+  #host__main #host__main-screen .main-screen__left h1 {
+    line-height: 1.2;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+    width: 600%;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li {
+    width: 100%;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
+    font-size: 1.1em;
+    line-height: 1.3;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-btn {
+    width: auto;
+    right: 50px;
+  }
+  #host__main #content__start-hosting .start-hosting__form {
+    padding: 0 20px;
+  }
+  #host__main #content__start-hosting .start-hosting__form form label,
+#host__main #content__start-hosting .start-hosting__form form select {
+    font-size: 2em;
+  }
+  #host__main #content__start-hosting .start-hosting__form h1 {
+    font-size: 2em;
+    line-height: 1.3;
+  }
+  #host__main #content__super-host .super-host__text h1 {
+    padding: 0;
+    margin: 4vh 0;
+    font-size: 5.8vw;
+    line-height: 1.3;
+  }
+  #host__main #content__super-host .super-host__text button {
+    width: calc(85% - 50px);
   }
 }
 #super-host__header {

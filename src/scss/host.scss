@@ -197,62 +197,78 @@
         height: 0;
       }
       .host-wrap {
-        width: 30%;
-        border: 3px solid blue;
-        margin: 0 auto;
+        width: calc(100% - 80px);
+        overflow: hidden;
+        margin-left: 80px;
         ul {
           position: relative;
           display: flex;
-          height: 400px;
-          width: 600%;
-          transform: translateX(-16.7%);
+          width: 200%;
           transition: transform 0.3s;
           li {
-            width: 16.5%;
-            &:not(:last-child) {
-              margin-right: 0.2%;
-            }
+            width: 33.333%;
             .item-img {
-              width: 94%;
-              padding-bottom: 94%;
-              margin: 0 3% 10px;
+              width: 100%;
+              padding-bottom: 100%;
               position: relative;
               img {
-                width: 100%;
-                height: 100%;
+                width: 90%;
+                height: 90%;
+                margin: 5%;
                 position: absolute;
                 object-fit: cover;
                 border-radius: 10px;
               }
             }
             .item-text {
-              width: 94%;
-              font-size: 20px;
+              width: 90%;
               margin: auto;
               opacity: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
               transition: opacity 0.3s;
               p {
                 width: 100%;
+                font-size: 1.3em;
+                line-height: 1.5;
+              }
+              img {
+                height: 35px;
+                margin: 20px 0;
+                object-fit: contain;
+              }
+            }
+            &.active {
+              .item-text {
+                opacity: 1;
               }
             }
           }
         }
       }
       .host-btn {
-        width: 31vw;
+        width: 30%;
         bottom: 30px;
         position: absolute;
-        left: calc(31vw + 80px + 30px);
+        left: calc(30% + 80px + 20px);
         button {
           position: absolute;
           bottom: 0;
           width: 30px;
           height: 30px;
           border-radius: 50%;
-          background: #e9e9e9;
+          background: #ebebeb;
           color: #444;
           &:hover {
             background: #cfcfcf;
+          }
+          &:disabled {
+            opacity: 0.5;
+            cursor: auto;
+            &:hover {
+              background: #ebebeb;
+            }
           }
           &.host-list__prev {
             right: 45px;

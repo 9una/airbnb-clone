@@ -44,45 +44,54 @@ function pauseVid(event){
 
 }
 
-
 //slider
-let curPos = 2;
-let postion = -16.7;
-let start_x, end_x;
-const IMAGE_WIDTH = 16.7;
-const prevBtn = document.querySelector(".host-list__prev");
-const nextBtn = document.querySelector(".host-list__next");
-const hostList = document.querySelector(".host-list");
+let curPos = 1;
+let position = 0;
+const IMG_WIDTH = 16.7;
+const prevBtn = document.querySelector('.host-list__prev');
+const nextBtn = document.querySelector('.host-list__next');
+const images = document.querySelector('.host-list')
+const item = images.querySelectorAll('.host-list li');
 
 function prev(){
     if(curPos > 0){
-      nextBtn.removeAttribute("disabled")
-      postion += IMAGE_WIDTH;
-      hostList.style.transform = `translateX(${postion}%)`;
-      curPos -= 1;
+        nextBtn.removeAttribute("disabled");
+        position += IMG_WIDTH;
+        images.style.transform = `translateX(${position}%)`;
+        curPos = curPos - 1;
+
+        let i = curPos;
+        while(i < item.length){
+            item[i++].classList.remove('active');
+        }
+        item[curPos].classList.add('active');
     }
-    // if(curPos == 0){
-    //   prevBtn.setAttribute('disabled', 'true')
-    // }
-  }
-  function next(){
-      if (curPos < 6) {
-      prevBtn.removeAttribute("disabled")
-      postion -= IMAGE_WIDTH;
-      hostList.style.transform = `translateX(${postion}%)`;
-      curPos += 1;
-          
-        console.log(curPos);
+    if(curPos == 0){
+        prevBtn.setAttribute('disabled', 'true')
     }
-    // if(curPos == 3){
-    //     nextBtn.setAttribute('disabled', 'true')
-    // }
-  }
-   
-  function init(){
-    // prevBtn.setAttribute('disabled', 'true')
-    prevBtn.addEventListener("click", prev)
-    nextBtn.addEventListener("click", next)
-  }
-   
-  init();
+}
+
+function next(){
+    if(curPos < 5){
+        prevBtn.removeAttribute("disabled");
+        position -= IMG_WIDTH;
+        images.style.transform = `translateX(${position}%)`;
+
+        let i = curPos;
+        while(i < item.length){
+            item[i++].classList.remove('active');
+        }
+        curPos = curPos + 1;
+        item[curPos].classList.add('active');
+        
+    }
+    if(curPos == 5){
+        nextBtn.setAttribute('disabled', 'true')
+    }
+}
+
+function init(){
+    prevBtn.setAttribute('disabled', true);
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+}

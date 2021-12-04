@@ -1,56 +1,30 @@
 //반응형 window size
 window.onresize = function(event){
     const innerWidth = window.innerWidth;
-}
 
-//100vh 스크롤시 헤더 고정
-const header = document.getElementById("host__header");
+    //769px 이상일때 100vh 스크롤시 헤더 고정
+    const header = document.getElementById("host__header");
 
-const winMedSmall = window.matchMedia("(max-width: 726px)"); //media screen max-width:726
+    if(innerWidth >= 769){
+        function scrollFunc(){
+            if(scrollY >= window.innerHeight){
+                //first section height = 100vh
+                header.classList.add("fixed");
+            }else{
+                header.classList.remove("fixed");
+            }
+        }
+    }
 
-function scrollFunc(){
-    if(scrollY >= window.innerHeight){
+    if (innerWidth <= 768){ //768 이하일떄
         header.classList.add("fixed");
-    }else{
-        header.classList.remove("fixed");
     }
-    if (winMedSmall.matches){
-        header.classList.remove("fixed");
-    }
+
+    
+    document.addEventListener('scroll', scrollFunc);
 }
 
-document.addEventListener('scroll', scrollFunc);
 
-
-let objImg = document.querySelector(".video__host-list img");
-let objText = document.querySelector(".video__host-list span");
-
-/* video - play & pause */
-function playVid(event){
-
-    const playBtn = event.currentTarget;
-    const parent = playBtn.parentNode.parentNode.parentNode;
-    const vid = parent.querySelector('video');
-    vid.play();
-    playBtn.classList.remove('active');
-    const pauseBtn = parent.querySelector('.btn-pause');
-    pauseBtn.classList.add('active');
-    vid.addEventListener("ended",()=>{
-        pauseBtn.classList.remove('active');
-        playBtn.classList.add('active');
-    }); //영상이 끝나면 다시 재생버튼으로
-}
-
-function pauseVid(event){
-
-    const pauseBtn = event.currentTarget;
-    const parent = pauseBtn.parentNode.parentNode.parentNode;
-    const vid = parent.querySelector('video');
-    vid.pause();
-    pauseBtn.classList.remove('active');
-    const playBtn = parent.querySelector('.btn-play');
-    playBtn.classList.add('active');
-}
 
 //slider
 let curPos = 1;
@@ -61,11 +35,10 @@ const nextBtn = document.querySelector('.host-list__next');
 const images = document.querySelector('.host-list')
 const item = images.querySelectorAll('.host-list li');
 
-if (innerWidth < 932){
+if (window.innerWidth < 1025){
     item[1].classList.remove('active');
     item[0].classList.add('active');
     curPos = 0;
-    console.log(curPos);
 }
 
 function prev(){
@@ -109,4 +82,32 @@ function init(){
     prevBtn.setAttribute('disabled', true);
     prevBtn.addEventListener('click', prev);
     nextBtn.addEventListener('click', next);
+}
+
+
+/* video - play & pause */
+function playVid(event){
+
+    const playBtn = event.currentTarget;
+    const parent = playBtn.parentNode.parentNode.parentNode;
+    const vid = parent.querySelector('video');
+    vid.play();
+    playBtn.classList.remove('active');
+    const pauseBtn = parent.querySelector('.btn-pause');
+    pauseBtn.classList.add('active');
+    vid.addEventListener("ended",()=>{
+        pauseBtn.classList.remove('active');
+        playBtn.classList.add('active');
+    }); //영상이 끝나면 다시 재생버튼으로
+}
+
+function pauseVid(event){
+
+    const pauseBtn = event.currentTarget;
+    const parent = pauseBtn.parentNode.parentNode.parentNode;
+    const vid = parent.querySelector('video');
+    vid.pause();
+    pauseBtn.classList.remove('active');
+    const playBtn = parent.querySelector('.btn-play');
+    playBtn.classList.add('active');
 }

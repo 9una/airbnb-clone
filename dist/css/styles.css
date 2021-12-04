@@ -2046,16 +2046,17 @@ header .mobile-search {
   position: relative;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
-  width: 90%;
-  height: 90%;
-  margin: 5%;
+  width: 94%;
+  height: 94%;
+  margin: 3%;
   position: absolute;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
   width: 90%;
-  margin: auto;
+  margin: 20px auto 0;
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -2064,8 +2065,8 @@ header .mobile-search {
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
   width: 100%;
-  font-size: 1.3em;
-  line-height: 1.5;
+  font-size: 1.7em;
+  line-height: 1.2;
 }
 #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text img {
   height: 35px;
@@ -2131,7 +2132,7 @@ header .mobile-search {
   border: none;
   font-weight: bold;
   margin-bottom: 30px;
-  text-decoration: underline;
+  border-bottom: 2px solid black;
   font-size: 3em;
 }
 #host__main #content__start-hosting .start-hosting__form h1 {
@@ -2167,6 +2168,7 @@ header .mobile-search {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 48px;
 }
 #host__main #content__super-host .super-host__text h1 {
   padding: 0;
@@ -2244,6 +2246,288 @@ header .mobile-search {
 }
 
 /*responsive*/
+@media (max-width: 1024px) {
+  #host__main #content__start-hosting .start-hosting__host .host-wrap {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+    width: 360%;
+    gap: 20px;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
+    width: 100%;
+    height: 100%;
+    margin: inherit;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
+    margin-top: 50px;
+    width: 100%;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-btn {
+    left: 30%;
+    bottom: 20px;
+  }
+  #host__main #content__super-host .super-host__text h1 {
+    font-size: 5vw;
+  }
+  #host__main #content__hosting-info .hosting-info__content {
+    margin-bottom: 100px;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-item p {
+    font-size: 2vw !important;
+  }
+}
+@media (max-width: 900px) {
+  #host__main .host__content-title {
+    padding-top: 100px;
+  }
+  #host__main #host__main-screen > div,
+#host__main #host__end-screen > div {
+    width: 100%;
+  }
+  #host__main #host__main-screen {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+  #host__main #host__main-screen .main-screen__left {
+    background: white;
+    padding: 40px 40px 0;
+    border-radius: 12px 12px 0 0;
+    position: absolute;
+    top: 70%;
+    height: 30%;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  #host__main #host__main-screen .main-screen__left h1 {
+    color: black;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  #host__main #host__main-screen .main-screen__left button {
+    display: none;
+  }
+  #host__main #host__main-screen .main-screen__left a {
+    color: #777;
+    bottom: inherit;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #host__main #host__main-screen .main-screen__right {
+    height: calc(70% + 12px);
+    margin-bottom: auto;
+  }
+  #host__main #host__end-screen {
+    flex-direction: column;
+    position: relative;
+  }
+  #host__main #host__end-screen .end-screen__left {
+    height: calc(45% + 12px);
+    margin-bottom: auto;
+  }
+  #host__main #host__end-screen .end-screen__left .end-screen__video-text {
+    bottom: 25px;
+    left: 40px;
+  }
+  #host__main #host__end-screen .end-screen__right {
+    padding: 40px 40px;
+    border-radius: 12px 12px 0 0;
+    position: absolute;
+    height: 55%;
+    top: 45%;
+    background: black;
+    z-index: 1;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+  }
+  #host__main #host__end-screen .end-screen__right h1 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+  }
+  #host__main #host__end-screen .end-screen__right p {
+    margin-bottom: auto;
+  }
+  #host__main #host__end-screen .end-screen__right button {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  #host__header .logo {
+    display: none;
+  }
+  #host__header.fixed {
+    background: none;
+    box-shadow: none;
+  }
+  #host__header.fixed .header__right {
+    right: 0;
+  }
+  #host__header.fixed .header__right .super-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    margin-right: 0;
+    padding: 8px 10px;
+  }
+  #host__header.fixed .header__right .super-btn::before {
+    display: none;
+  }
+  #host__header.fixed .header__right > div {
+    width: 100%;
+    padding: 25px;
+    bottom: 0;
+    position: fixed;
+    background: white;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  #host__header.fixed .header__right > div .start-btn {
+    width: 100%;
+    font-size: 1.1em;
+  }
+
+  #host__main .host__content-title {
+    font-size: 5.7vw;
+  }
+  #host__main #host__main-screen {
+    height: calc(100vh - 97px);
+  }
+  #host__main #host__main-screen .main-screen__left h1 {
+    font-size: 3.2em;
+  }
+  #host__main #content__hosting-info .hosting-info__content {
+    padding: 0 25px;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list {
+    display: flex;
+    flex-direction: column;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item {
+    margin-bottom: 10px;
+  }
+  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
+    font-size: 3.5vw !important;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
+    margin-top: 30px;
+  }
+  #host__main #content__start-hosting .start-hosting__form {
+    font-size: 1.85vw;
+    line-height: 1.3;
+  }
+  #host__main #content__super-host {
+    min-height: 520px !important;
+  }
+  #host__main #content__super-host .super-host__text h1 {
+    font-size: 2.2em;
+  }
+}
+@media (max-width: 480px) {
+  #host__main .host__content-title {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  #host__main #host__main-screen .main-screen__left {
+    padding: 25px 25px 0;
+  }
+  #host__main #host__main-screen .main-screen__left h1 {
+    font-size: 2.85em;
+  }
+  #host__main #host__main-screen .main-screen__left a {
+    bottom: 3vh;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap {
+    width: calc(100% - 25px);
+    margin-left: 25px;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+    width: 480%;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
+    font-size: 1.3em;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-btn {
+    left: inherit;
+    right: 23%;
+  }
+  #host__main #content__start-hosting .start-hosting__form {
+    padding: 0 25px;
+    margin-top: 100px;
+    align-items: flex-start;
+    font-size: 1.85vw;
+    line-height: 0.7;
+  }
+  #host__main #content__start-hosting .start-hosting__form form {
+    align-items: flex-start;
+  }
+  #host__main #content__start-hosting .start-hosting__form form label {
+    font-weight: normal;
+  }
+  #host__main #content__start-hosting .start-hosting__form form select {
+    border-bottom: 1px solid black;
+    margin-bottom: 40px;
+  }
+  #host__main #content__start-hosting .start-hosting__form h1 {
+    text-align: left;
+    font-size: 3.1em;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+  #host__main #content__start-hosting .start-hosting__form button {
+    font-size: 2em;
+  }
+  #host__main #content__super-host {
+    margin-top: 50px;
+    padding: 25px;
+    height: calc(100vh - 97px);
+  }
+  #host__main #content__super-host .super-host__text {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    margin-top: 25px;
+    padding: 50px 25px;
+    justify-content: space-between;
+  }
+  #host__main #content__super-host .super-host__text h1 {
+    font-size: 2.4em;
+    margin: auto;
+    text-align: center;
+  }
+  #host__main #content__super-host .super-host__text button {
+    width: 100%;
+  }
+  #host__main #host__end-screen .end-screen__left {
+    height: calc(55% + 12px);
+  }
+  #host__main #host__end-screen .end-screen__left .end-screen__video-text {
+    left: 25px;
+  }
+  #host__main #host__end-screen .end-screen__right {
+    padding: 25px 25px 0;
+    height: 45%;
+    top: 55%;
+  }
+  #host__main #host__end-screen .end-screen__right button {
+    display: none;
+  }
+}
+@media (max-width: 378px) {
+  #host__main .host__content-title {
+    padding-top: 70px;
+    font-size: 7vw;
+  }
+  #host__main #content__start-hosting .start-hosting__form {
+    font-size: 2vw;
+  }
+  #host__main #content__super-host .super-host__text h1 {
+    font-size: 2.2em;
+  }
+}
 #super-host__header {
   position: fixed;
   padding: 0 50px;

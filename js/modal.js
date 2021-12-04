@@ -48,11 +48,13 @@ for (let i = 0; i < typeLngCurBtn.length; i++) {
 }
 
 
-/*
-1 - 첫번째 버튼은 active 상태 유지
-3 - 버튼 두개와 컨텐츠 2개의 index 연결
-2 - 두번쨰 버튼을 누르면 1번의 active 없어짐
-*/
+//모바일 검색창 모달
+const mobileSearchBox = document.getElementById('mobileSearch');
+function callSearch(){
+    mobileSearchBox.classList.add('active');
+}
 
-// searchForm - 체크인-체크아웃
-// searchForm - 게스트 카운트
+function closeSearch(){
+    console.log('hi');
+    mobileSearchBox.classList.remove('active');
+}

@@ -135,6 +135,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
+      height: 100%;
       .card {
         border-radius: 12px;
         overflow: hidden;

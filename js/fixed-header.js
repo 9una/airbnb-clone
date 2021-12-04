@@ -33,12 +33,15 @@ const searchBtn = document.querySelector('.nav__form-search > button');
 
 for (let i = 0; i < searchTab.length; i++) {
     searchTab[i].onclick = function(){
+        if(searchTab[i].parentNode.id === 'rooms'){
+            console.log('hi');
+        }
         searchForm.classList.add('active');
         let j = 0;
         while(j < searchTab.length){
-            searchTab[j++].className = "modal-tab";
+            searchTab[j++].classList.remove('active');
         }
-        searchTab[i].className = 'modal-tab active';
+        searchTab[i].classList.add('active');
         searchBtn.classList.add('active');
     }
 }

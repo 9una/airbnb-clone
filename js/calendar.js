@@ -13,7 +13,6 @@ const renderCalendar = () => {
     const nextYearMonth = document.querySelector('.next-year-month');
     nextYearMonth.textContent = `${viewYear}년 ${viewNextMonth + 1}월`;
     if(viewNextMonth == 12){
-        console.log('무야호');
         nextYearMonth.textContent = `${viewYear + 1}년 ${viewNextMonth - 11}월`;
     }
 

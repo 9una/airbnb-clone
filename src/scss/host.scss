@@ -287,6 +287,7 @@
           font-weight: bold;
           margin-bottom: 30px;
           border-bottom: 2px solid black;
+          color: black;
           font-size: 3em;
         }
       }
@@ -459,7 +460,7 @@
         margin-bottom: 100px;
         .hosting-info__content-item {
           p {
-            font-size: 2vw !important;
+            font-size: 1.2em !important;
           }
         }
       }
@@ -604,7 +605,8 @@
           .hosting-info__content-item {
             margin-bottom: 10px;
             p {
-              font-size: 3.5vw !important;
+              font-size: 1.05em !important;
+              letter-spacing: -0.05em;
             }
           }
         }

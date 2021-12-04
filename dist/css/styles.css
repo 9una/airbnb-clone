@@ -1056,7 +1056,7 @@ header .mobile-search {
   #mobileSearch .wrap .search-header form input {
     border: none;
     font-size: 1.1em;
-    padding: 10px 10px 0;
+    padding: 10px 10px;
     width: 100%;
   }
   #mobileSearch .wrap .search-content {
@@ -2133,6 +2133,7 @@ header .mobile-search {
   font-weight: bold;
   margin-bottom: 30px;
   border-bottom: 2px solid black;
+  color: black;
   font-size: 3em;
 }
 #host__main #content__start-hosting .start-hosting__form h1 {
@@ -2275,7 +2276,7 @@ header .mobile-search {
     margin-bottom: 100px;
   }
   #host__main #content__hosting-info .hosting-info__content .hosting-info__content-item p {
-    font-size: 2vw !important;
+    font-size: 1.2em !important;
   }
 }
 @media (max-width: 900px) {
@@ -2408,7 +2409,8 @@ header .mobile-search {
     margin-bottom: 10px;
   }
   #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
-    font-size: 3.5vw !important;
+    font-size: 1.05em !important;
+    letter-spacing: -0.05em;
   }
   #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
     margin-top: 30px;

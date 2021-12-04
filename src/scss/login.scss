@@ -15,8 +15,8 @@
   .login-content {
     max-width: 568px;
     width: 100%;
-    margin: 180px auto 50px;
-    border: 1px solid #cfcfcf;
+    margin: 90px auto 50px;
+    border: 1px solid #b0b0b0;
     border-radius: 12px;
     .modal__wrapper {
       .modal-title {
@@ -55,6 +55,7 @@
                       grid-template-columns: auto 1fr;
                       span {
                         grid-column: span 2;
+                        margin-bottom: 3px;
                       }
                       b {
                         font-weight: 300;
@@ -72,8 +73,9 @@
                       position: absolute;
                       width: 100%;
                       padding: 0 12px;
-                      bottom: 15px;
+                      bottom: 11px;
                       appearance: 30px;
+                      font-size: 1.1em;
                       option {
                         width: 100%;
                       }
@@ -148,6 +150,12 @@
                 }
               }
             }
+            .help {
+              display: none;
+              padding-top: 50px;
+              text-align: center;
+              font-weight: bold;
+            }
           }
         }
       }
@@ -156,14 +164,16 @@
 }
 
 /*responsive*/
-@include desktopLarge {
-}
-
-@include desktop {
-}
 
 @include tablet {
-}
-
-@include mobile {
+  #login-main {
+    .login-content {
+      margin: 0;
+      border: none;
+      max-width: 100%;
+      .help {
+        display: block !important;
+      }
+    }
+  }
 }

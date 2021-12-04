@@ -2858,8 +2858,8 @@ header .mobile-search {
 #login-main .login-content {
   max-width: 568px;
   width: 100%;
-  margin: 180px auto 50px;
-  border: 1px solid #cfcfcf;
+  margin: 90px auto 50px;
+  border: 1px solid #b0b0b0;
   border-radius: 12px;
 }
 #login-main .login-content .modal__wrapper .modal-title {
@@ -2898,6 +2898,7 @@ header .mobile-search {
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child span {
   grid-column: span 2;
+  margin-bottom: 3px;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child b {
   font-weight: 300;
@@ -2912,8 +2913,9 @@ header .mobile-search {
   position: absolute;
   width: 100%;
   padding: 0 12px;
-  bottom: 15px;
+  bottom: 11px;
   appearance: 30px;
+  font-size: 1.1em;
 }
 #login-main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select option {
   width: 100%;
@@ -2981,8 +2983,24 @@ header .mobile-search {
   width: 100%;
   font-weight: bold;
 }
+#login-main .login-content .modal__wrapper .modal__container .content .content_cont .help {
+  display: none;
+  padding-top: 50px;
+  text-align: center;
+  font-weight: bold;
+}
 
 /*responsive*/
+@media (max-width: 768px) {
+  #login-main .login-content {
+    margin: 0;
+    border: none;
+    max-width: 100%;
+  }
+  #login-main .login-content .help {
+    display: block !important;
+  }
+}
 footer {
   padding: 0 80px;
   background: #f7f7f7;

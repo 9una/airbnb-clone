@@ -28,28 +28,140 @@
             </div>
             <div class="nav-center__form">
               <div class="form-tab">
-                <button type="button" onclick="modalOpen(event)">1</button>
-                <button type="button" onclick="modalOpen(event)">2</button>
-                <button type="button" onclick="modalOpen(event)">3</button>
-                <button type="button" onclick="modalOpen(event)">4</button>
+                <button type="button">
+                  <form>
+                    <label for="placeText">위치</label>
+                    <input type="text" id="placeText" required placeholder="어디로 여행가세요?">
+                  </form>
+                </button>
+                <button type="button">
+                  <p>
+                    <span>체크인</span>
+                    날짜 입력
+                  </p>
+                </button>
+                <button type="button">
+                  <p>
+                    <span>체크아웃</span>
+                    날짜 입력
+                  </p>
+                </button>
+                <button type="button">
+                  <p>
+                    <span>인원</span>
+                    게스트 추가
+                  </p>
+                </button>
               </div>
-              <button type="button" class="search-btn">검색</button>
+              <button type="button" class="search-btn"><i class="fas fa-search"></i></button>
             </div>
-            <di class="nav-center__modal">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
-            </di>
+            <div class="nav-center__modal">
+              <div class="where">
+                <p>언제 어디로든 떠나는 여행</p>
+                <a href="#;">유연한 검색<i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="when">
+                <div class="tab-modal when">
+                  <div class="calendar-tab">
+                    <button type="button" class="tab__calendar active">달력</button>
+                    <button type="button" class="tab__schedule">유연한 일정</button>
+                  </div>
+                  <div class="calendar-cont">
+                    <div class="calendar__header">
+                      <button type="button" class="btn go-prev" onclick="prevMonth()"><i class="fas fa-chevron-left"></i></button>
+                      <button type="button" class="go-next" onclick="nextMonth()"><i class="fas fa-chevron-right"></i></button>
+                      <div class="year-month"></div>
+                      <div class="next-year-month"></div>
+                    </div>
+                    <div class="calendar__body">
+                      <div class="this-month">
+                        <div class="days">
+                          <span class="day">일</span>
+                          <span class="day">월</span>
+                          <span class="day">화</span>
+                          <span class="day">수</span>
+                          <span class="day">목</span>
+                          <span class="day">금</span>
+                          <span class="day">토</span>
+                        </div>
+                        <div class="dates"></div>
+                      </div>
+                      <div class="next-month">
+                        <div class="days">
+                          <span class="day">일</span>
+                          <span class="day">월</span>
+                          <span class="day">화</span>
+                          <span class="day">수</span>
+                          <span class="day">목</span>
+                          <span class="day">금</span>
+                          <span class="day">토</span>
+                        </div>
+                        <div class="next-month-dates"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="guest">
+                <div class="guest-tab">
+                  <p><b>성인</b> 만 13세 이상</p>
+                  <div class="tab__count">
+                    <button type="button" class="minus-btn inactive">-</button>
+                    <input class="count-result" type="number" value="0"/>
+                    <button type="button" class="plus-btn">+</button>
+                  </div>
+                </div>
+                <div class="guest-tab">
+                  <p><b>어린이</b> 만 2~12세</p>
+                  <div class="tab__count">
+                    <button type="button" class="minus-btn inactive">-</button>
+                    <input class="count-result" type="number" value="0"/>
+                    <button type="button" class="plus-btn">+</button>
+                  </div>
+                </div>
+                <div class="guest-tab">
+                  <p><b>유아</b> 만 2세 미만</p>
+                  <div class="tab__count">
+                    <button type="button" class="minus-btn inactive">-</button>
+                    <input class="count-result" type="number" value="0"/>
+                    <button type="button" class="plus-btn">+</button>
+                  </div>
+                </div>
+                <div class="guest-tab animal">
+                  <p>
+                    <b>반려동물</b>
+                    <a href="#;">도우미 반려동물을 동반하시나요?</a>
+                  </p>
+                  <div class="tab__count">
+                    <button type="button" class="minus-btn inactive">-</button>
+                    <input class="count-result" type="number" value="0"/>
+                    <button type="button" class="plus-btn">+</button>
+                  </div>
+                  <p class="notice-text">반려동물을 3마리 이상 동반하는 경우, 반드시 호스트에게 알려주세요.</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="nav-right">
             <a class="right-bundle" href="host.html">호스트 되기</a>
-            <button type="button" class="nav__right-global right-bundle" onclick="modalLng();">
+            <button type="button" class="lng-btn" onclick="modalLng()">
               <i class="fas fa-globe-americas"></i>
             </button>
-            <button type="button" class="nav__right-myBtn" onclick="mypageModalToggle();">
+            <button type="button" class="user-btn" onclick="mypageModalToggle()">
               <i class="fas fa-bars"></i>
               <i class="fas fa-user-circle"></i>
             </button>
+            <div class="user-btn-modal">
+              <ul>
+                <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
+                <li><button type="button" onclick="modalLogin();">로그인</a></button>
+              </ul>
+              <ul>
+                <li><a href="#;">숙소 호스트 되기</a></li>
+                <li><a href="#;">체험 호스팅하기</a></li>
+                <li><a href="#;">도움말</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>

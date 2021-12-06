@@ -8,7 +8,6 @@ minusBtns.forEach((btnPlus) => {
     if(result.value > 1){
         result.value--;
     } else{
-        console.log(result.value);
         minusBtn.classList.add('inactive');
         result.value = 0;
     }

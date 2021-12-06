@@ -1,8 +1,6 @@
 //마이페이지 모달
-const mypageModal = document.querySelector(".nav__right-myBtn-modal");
-
 function mypageModalToggle(){
-    mypageModal.classList.toggle('active');
+    document.querySelector(".user-btn-modal").classList.toggle('active');
 }
 
 // 언어&통화 모달

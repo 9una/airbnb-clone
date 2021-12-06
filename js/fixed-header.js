@@ -1,12 +1,48 @@
+// header - nav-center__form 모달
+const formBtn = document.querySelectorAll('.form-tab button');
+const formSearchBtn = document.querySelector('.nav-center__form .search-btn');
+const formModal = document.querySelectorAll('.nav-center__modal div');
+for(let i = 0; i < formBtn.length; i++){
+    formBtn[i].addEventListener('click', openModal);
+
+    function openModal(){
+        document.querySelector('.form-tab').style.background = "#e9e9e9";
+        formSearchBtn.classList.add('active');
+        let j = 0,
+            k = 0;
+        while(j < formBtn.length - 1 && k < formBtn.length){
+            formModal[j++].classList.remove('active');
+            formBtn[k++].classList.remove('active');
+            if(k < 3){
+                formBtn[3].classList.remove('active');
+            }
+        }
+        if(i == 0){
+            document.querySelector('.where').classList.add('active');
+        }
+        if(i == 1 || i == 2){
+            document.querySelector('.when').classList.add('active');
+        } // 체크인&아웃 버튼 일시 when modal open
+        if(i == 3){
+            document.querySelector('.guest').classList.add('active');
+        }
+        if(i != 3){
+            document.querySelector('.guest').classList.remove('active');
+        }
+        formBtn[i].classList.add('active');
+    }
+    
+}
+
 // 스크롤시 헤더 고정
 const header = document.getElementById("header"),
-    nav = document.querySelector('.global-nav');
+    nav = document.querySelector('.global-nav'),
     mobileSearch = document.querySelector('.mobile-search');
 
 function scrollFunc(){
     if(scrollY >= 58){
         nav.classList.add("fixed");
-        mobileSearch.classList.add("active");
+        mobileSearch.classList.add("fixed");
         document.querySelector('.nav-center__form').addEventListener('click', ()=>{
             nav.classList.add("white");
         }); //global-nav.fixed일때 클릭하면 white클래스 추가
@@ -19,33 +55,18 @@ function scrollFunc(){
     }else if(scrollY >= 100){
         headerHost.classList.add("fixed");
     }else{
-        
         document.querySelector('.nav-left a').innerHTML = `<img src="img/logo_white_1.png" alt="로고 이미지" />`;
         nav.classList.remove("fixed");
-        mobileSearch.classList.remove("active");
+        mobileSearch.classList.remove("fixed");
+    }
+
+    if(document.querySelector('.nav-center__modal > div.active')){
+        //modal중에 active가 있을때 스크롤 하면..
+        document.querySelector('.search-btn').classList.remove('active');
+        document.querySelector('.form-tab').style.background = "white";
+        
+        document.querySelector('.form-tab > button.active').classList.remove('active')
+        document.querySelector('.nav-center__modal > div.active').classList.remove('active');
     }
 }
 document.addEventListener('scroll', scrollFunc);
-
-
-// header - searchForm 모달
-// const formTab = document.querySelector('.nav__form-tab');
-// const searchForm = document.querySelector('.nav__form-search');
-// const searchTab = document.querySelectorAll('.form-search__form.active > div');
-// const searchBtn = document.querySelector('.nav__form-search > button');
-
-// for (let i = 0; i < searchTab.length; i++) {
-//     searchTab[i].onclick = function(){
-//         if(searchTab[i].parentNode.id === 'rooms'){
-//             console.log('hi');
-//         }
-//         searchForm.classList.add('active');
-//         let j = 0;
-//         while(j < searchTab.length){
-//             searchTab[j++].classList.remove('active');
-//         }
-//         searchTab[i].classList.add('active');
-//         searchBtn.classList.add('active');
-//     }
-// }
-//https://kyounghwan01.github.io/blog/JS/JSbasic/addEventListener/ 참고

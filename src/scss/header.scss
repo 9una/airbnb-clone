@@ -160,6 +160,9 @@ header {
           &.when {
             width: 100%;
             flex-direction: column;
+            max-height: 558px;
+            height: 60vh;
+            overflow: auto;
             .calendar-tab {
               width: 158px;
               display: flex;
@@ -702,6 +705,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    opacity: 0;
     transform: translateY(100%);
     background: white;
     padding: 20px 30px;
@@ -709,6 +713,7 @@ header {
     transition: transform 0.3s;
     &.active {
       transform: translateY(0);
+      opacity: 1;
     }
     .wrap {
       height: 100%;
@@ -794,4 +799,10 @@ header {
   }
 }
 @include mobile {
+  header {
+    #notice-bar {
+      padding: 0 10px;
+      font-size: 0.85em;
+    }
+  }
 }

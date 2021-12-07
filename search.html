@@ -9,46 +9,152 @@
     <title>어디로 떠나세요?</title>
 </head>
 <body>
-    <header id="searchHeader">
-        <nav>
-          <div class="global-nav">
-            <div class="wrapper">
-              <div class="nav__left logo"><a href="index.html"></a></div>
-              <div class="nav__right">
-                <a class="right-bundle" href="host.html">호스트 되기</a>
-                <button type="button" class="nav__right-global right-bundle" onclick="modalLng();">
-                  <i class="fas fa-globe-americas"></i>
-                </button>
-                <button type="button" class="nav__right-myBtn" onclick="mypageModalToggle();">
-                  <i class="fas fa-bars"></i>
-                  <i class="fas fa-user-circle"></i>
-                </button>
-                <div class="nav__right-myBtn-modal">
-                  <ul>
-                    <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
-                    <li><button type="button" onclick="modalLogin();">로그인</a></button>
-                  </ul>
-                  <ul>
-                    <li><a href="#;">숙소 호스트 되기</a></li>
-                    <li><a href="#;">체험 호스팅하기</a></li>
-                    <li><a href="#;">도움말</a></li>
-                  </ul>
+  <header id="search-header">
+    <nav class="global-nav">
+      <div class="wrapper">
+        <div class="nav-left">
+          <a href="index.html">
+            <img src="img/logo_1.png" alt="로고 이미지" />
+          </a>
+        </div>
+        <div class="nav-right">
+          <a class="right-bundle" href="host.html">호스트 되기</a>
+          <button type="button" class="lng-btn" onclick="modalLng()">
+            <i class="fas fa-globe-americas"></i>
+          </button>
+          <button type="button" class="user-btn" onclick="mypageModalToggle()">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-user-circle"></i>
+          </button>
+          <div class="user-btn-modal">
+            <ul>
+              <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
+              <li><button type="button" onclick="modalLogin();">로그인</a></button>
+            </ul>
+            <ul>
+              <li><a href="#;">숙소 호스트 되기</a></li>
+              <li><a href="#;">체험 호스팅하기</a></li>
+              <li><a href="#;">도움말</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="local-nav">
+      <div class="wrapper">
+        <div class="local-nav-left">
+          <ul>
+            <li><button type="button">농장</button></li>
+            <li><button type="button">해변 근처</button></li>
+            <li><button type="button">멋진 수영장</button></li>
+            <li><button type="button">초소형 주택</button></li>
+            <li><button type="button">통나무집</button></li>
+            <li><button type="button">키클라데스 주택</button></li>
+            <li><button type="button">돔</button></li>
+            <li><button type="button">객잔</button></li>
+            <li><button type="button">성</button></li>
+            <li><button type="button">료칸</button></li>
+            <li><button type="button">A자형 주택</button></li>
+            <li><button type="button" class="more-btn" onclick="moreFilter()">더 보기 <i class="fas fa-angle-down"></i></button></li>
+          </ul>
+        </div>
+        <div class="local-nav-right">
+          <div class="when">
+            <button type="button">언제든 <i class="fas fa-angle-down"></i></button>
+            <div class="modal modal-when">
+                <div class="calendar-tab">
+                  <button type="button" class="tab__calendar">달력</button>
+                  <button type="button" class="tab__schedule active">유연한 일정</button>
                 </div>
-              </div>
+                <div class="schedule-cont date">
+                  <span>숙박 기간을 선택하세요.</span>
+                  <div>
+                    <button type="button">주말</button>
+                    <button type="button">일주일</button>
+                    <button type="button">한 달</button>
+                  </div>
+                </div>
+                <div>
+                  <div class="schedule-cont month">
+                    <span>여행 날짜를 선택하세요.</span>
+                    <div>
+                      <button type="button" onclick="check(e)">
+                        <i class="far fa-calendar"></i>
+                        <span>12월</span>
+                      </button>
+                      <button type="button" onclick="check(e)">
+                        <i class="far fa-calendar"></i>
+                        <span>12월</span>
+                      </button>
+                      <button type="button" onclick="check(e)">
+                        <i class="far fa-calendar"></i>
+                        <span>12월</span>
+                      </button>
+                      <button type="button" onclick="check(e)">
+                        <i class="far fa-calendar"></i>
+                        <span>12월</span>
+                      </button>
+                      <button type="button" onclick="check(e)">
+                        <i class="far fa-calendar"></i>
+                        <span>12월</span>
+                      </button>
+                      <button type="button" onclick="check(e)">
+                        <i class="far fa-calendar"></i>
+                        <span>12월</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
-        </nav>
-        <nav>
-            <div class="local-nav">
-                <div class="wrapper">
-                    
-                </div>
-            </div>
-        </nav>
-    </header>
+          <div class="guest">
+            <button type="button">인원 <i class="fas fa-angle-down"></i></button>
+            <div class="modal modal-guest">2</div>
+          </div>
+          <div class="filter">
+            <button type="button"><i class="fas fa-sliders-h"></i> 필터</button>
+            <div class="modal modal-filter">3</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-search">
+      <button type="button" onclick="callSearch()"><i class="fas fa-search"></i>어디로 여행가세요?</button>
+    </div>
+  </header>
     <!-- header-end -->
-    <main>
-        hi
+    <main id="main">
+      <section>
+        <div class="wrapper">
+          <div class="content">
+            <ul class="cont-list">
+              <li class="cont-item">
+                <div class="img-slide">
+                  <div class="slide">
+                    <ul>
+                      <li><a href="#"><img src="https://picsum.photos/400/400" alt="" /></a></li>
+                      <li><a href="#"><img src="https://picsum.photos/350/350" alt="" /></a></li>
+                      <li><a href="#"><img src="https://picsum.photos/300/300" alt="" /></a></li>
+                    </ul>
+                  </div>
+                  <button type="button" class="prev-btn" onclick="prev()"><i class="fas fa-angle-left"></i></button>
+                  <button type="button" class="next-btn" onclick="next()"><i class="fas fa-angle-right"></i></button>
+                  <ul class="pagination"></ul>
+                </div>
+                <div class="img-text">
+                  <a href="#">
+                    <span class="place">Chattaroy, 워싱턴</span>
+                    <span class="price">￦148,566 / 박</span>
+                    <span class="distance">8,578km 거리</span>
+                    <span class="date">12월 10일 ~ 17일</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="map-btn">지도 표시하기 <i class="fas fa-map"></i></button>
+        </div>
+      </section>
     </main>
     <!-- main-end -->
     <footer>

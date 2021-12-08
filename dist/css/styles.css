@@ -2229,13 +2229,14 @@ header .mobile-search button i {
   border-radius: 5px;
 }
 #search-header .local-nav .wrapper ::-webkit-scrollbar-thumb {
-  background: #e9e9e9;
+  background: #dbdbdb;
   border-radius: 5px;
 }
 #search-header .local-nav .wrapper .local-nav-left .filter-wrap {
   display: grid;
   grid-template-columns: auto 100px;
   align-items: center;
+  margin-bottom: 5px;
 }
 #search-header .local-nav .wrapper .local-nav-left .filter-wrap .filter-list {
   width: 100%;
@@ -2260,16 +2261,34 @@ header .mobile-search button i {
   background: #f3f3f3;
   border-radius: 8px;
 }
-#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more-btn {
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more {
+  position: relative;
+}
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-btn {
   width: 100px;
   font-weight: bold;
   color: #555;
   padding: 12px 13px;
   font-size: 1.02em;
 }
-#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more-btn:hover {
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-btn:hover {
   background: #f3f3f3;
   border-radius: 8px;
+}
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-filter-modal {
+  position: absolute;
+  padding: 25px;
+  top: 50px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  width: max-content;
+}
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-filter-modal.active {
+  display: block;
+}
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-filter-modal ul li {
+  margin-bottom: 25px;
 }
 #search-header .local-nav .wrapper .local-nav-right {
   margin-left: auto;
@@ -2425,18 +2444,21 @@ header .mobile-search button i {
   background: #eeeeee;
   color: #0059ff;
 }
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest > div {
+  padding: 25px 25px 0;
+}
 #search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab {
   display: grid;
+  width: 100%;
   grid-template-columns: auto auto;
   justify-content: space-between;
+  align-items: center;
 }
-#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab:not(:last-child) {
-  margin-bottom: 15px;
-  border-bottom: 1px solid #e1e1e1;
-  padding-bottom: 15px;
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab:nth-child(5) {
+  padding-bottom: 25px;
 }
 #search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab p {
-  width: 230px;
+  width: 200px;
   color: #777;
   line-height: 1.4em;
 }
@@ -2488,13 +2510,20 @@ header .mobile-search button i {
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */
 }
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .animal {
+  margin-bottom: 0;
+}
 #search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .animal .notice-text {
   grid-column: span 2;
   width: 300px;
   margin-top: 20px;
 }
 #search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .save {
-  border: none;
+  justify-content: flex-end;
+}
+#search-header .local-nav .wrapper .local-nav-right .filter .modal-filter {
+  background: white;
+  padding: 25px;
 }
 
 #main {
@@ -2525,7 +2554,7 @@ header .mobile-search button i {
 
 .cont-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px 25px;
 }
 .cont-list .cont-item .img-slide {
@@ -2672,7 +2701,7 @@ header .mobile-search button i {
 }
 @media (max-width: 768px) {
   #search-header {
-    height: 120px;
+    height: 125px;
   }
   #search-header .local-nav {
     padding: 0;

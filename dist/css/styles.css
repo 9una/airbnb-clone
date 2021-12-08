@@ -2305,14 +2305,16 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .filter > .modal {
   display: none;
   position: absolute;
-  padding: 20px;
-  border: 1px solid black;
+  padding: 0;
+  border: 1px solid #cfcfcf;
   top: 50px;
   height: auto;
   width: max-content;
   left: auto;
   right: 0;
   background: white;
+  border-radius: 12px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
 }
 #search-header .local-nav .wrapper .local-nav-right .when > .modal.active,
 #search-header .local-nav .wrapper .local-nav-right .guest > .modal.active,
@@ -2323,12 +2325,30 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .guest > .modal .close-btn-mobile,
 #search-header .local-nav .wrapper .local-nav-right .filter > .modal .close-btn-mobile {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  top: 29px;
+  left: 29px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #e9e9e9;
+}
+#search-header .local-nav .wrapper .local-nav-right .when > .modal .save,
+#search-header .local-nav .wrapper .local-nav-right .guest > .modal .save,
+#search-header .local-nav .wrapper .local-nav-right .filter > .modal .save {
+  padding: 13px !important;
+  border-top: 1px solid #e9e9e9;
+}
+#search-header .local-nav .wrapper .local-nav-right .when > .modal .save button,
+#search-header .local-nav .wrapper .local-nav-right .guest > .modal .save button,
+#search-header .local-nav .wrapper .local-nav-right .filter > .modal .save button {
+  background: #2e2e2e;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-left: auto;
 }
 #search-header .local-nav .wrapper .local-nav-right .when > button {
   border: 2px solid black;
@@ -2337,11 +2357,11 @@ header .mobile-search button i {
   width: 158px;
   display: flex;
   justify-content: center;
-  margin: auto;
-  margin-bottom: 50px;
   background: #e9e9e9;
   border-radius: 25px;
+  height: 40px;
   padding: 5px;
+  margin: 30px auto 50px;
 }
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .calendar-tab button {
   border-radius: inherit;
@@ -2356,6 +2376,7 @@ header .mobile-search button i {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 25px;
 }
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont .comment {
   color: #999;
@@ -2363,6 +2384,9 @@ header .mobile-search button i {
   margin-bottom: 20px;
   font-size: 1.3em;
   font-weight: bold;
+}
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.date {
+  padding-bottom: 30px;
 }
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.date > div button {
   padding: 10px 15px;
@@ -2372,23 +2396,105 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.date > div button:nth-child(2) {
   margin: 0 5px;
 }
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month {
+  padding-bottom: 30px;
+}
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div {
   display: flex;
+  gap: 10px;
 }
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button {
   display: flex;
   flex-direction: column;
   padding: 30px 40px;
   border-radius: 15px;
-  border: 1px solid #cfcfcf;
+  border: 2px solid #cfcfcf;
   align-items: center;
 }
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button i {
   margin-bottom: 10px;
   font-size: 2em;
 }
-#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button:not(:last-child) {
-  margin-right: 10px;
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button span {
+  opacity: 0.5;
+  margin-top: 5px;
+  font-size: 0.85em;
+}
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button.active {
+  border-color: #0059ff;
+  background: #eeeeee;
+  color: #0059ff;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab:not(:last-child) {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 15px;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab p {
+  width: 230px;
+  color: #777;
+  line-height: 1.4em;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab p b {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: black;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab p a {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count {
+  display: flex;
+  align-items: center;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count button {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #717171;
+  border: 1px solid #ccc;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count button:hover {
+  border-color: black;
+  color: black;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count button.inactive {
+  opacity: 0.4;
+  cursor: default;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count button.inactive:hover {
+  border: 1px solid #cfcfcf;
+  color: #999;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count input {
+  width: 35px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count input::-webkit-outer-spin-button, #search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab .tab__count input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .animal .notice-text {
+  grid-column: span 2;
+  width: 300px;
+  margin-top: 20px;
+}
+#search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .save {
+  border: none;
 }
 
 #main {

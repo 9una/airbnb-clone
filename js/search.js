@@ -32,6 +32,12 @@ function closeModal(event){
     closeBtn.parentNode.classList.remove('active');
 }
 
+// nav - modal
+// modal-when
+function check(event){
+    const checkBtn = event.currentTarget;
+    checkBtn.classList.toggle('active');
+}
 
 // main- slide - start
 const contentItem = document.querySelectorAll('.cont-item');

@@ -26,6 +26,9 @@ for(let i = 0; i < modalBtn.length; i++){
         modalBtn[i].querySelector('.modal').classList.add('active');
         modalBtn[i].querySelector('button').classList.add('active');
 
+        document.addEventListener('scroll', ()=>{
+            modalBtn[i].querySelector('.modal').classList.remove('active');
+        });
     })
 }
 

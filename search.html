@@ -880,55 +880,352 @@
       </div>
       <div id="modal_filter" class="modal">
         <div class="modal__wrapper">
-          <div class="modal__top">
-            <button onclick="modalFilterClose();" class="close-btn-mobile"><i class="fas fa-times"></i></button>
-            <h4 class="modal-title">필터</h4>
-          </div>
-          <div class="modal__container">
-            <div class="content">
-              <ul>
-                <li>
-                  <strong>숙소 유형</strong>
-                </li>
-                <li>
-                  <strong>검증된 숙소</strong>
-                </li>
-                <li>
-                  <strong>가격범위</strong>
-                </li>
-                <li>
-                  <p>
-                    <span>즉시예약</span>
-                    호스트 승인을 기다릴 필요 없이 예약할 수 있는 숙소
-                  </p>
-                </li>
-                <li>
-                  <strong>침실과 침대</strong>
-                </li>
-                <li>
-                  <strong>편의시설 더 보기</strong>
-                </li>
-                <li>
-                  <strong>접근성 편의</strong>
-                </li>
-                <li>
-                  <strong>편의 시설</strong>
-                </li>
-                <li>
-                  <strong>시설</strong>
-                </li>
-                <li>
-                  <strong>숙소 이용규칙</strong>
-                </li>
-                <li>
-                  <strong>호스트 언어</strong>
-                </li>
-              </ul>
+          <form>
+            <div class="modal__top">
+              <button type="button" onclick="modalFilterClose();" class="close-btn-mobile"><i class="fas fa-times"></i></button>
+              <h4 class="modal-title">필터</h4>
             </div>
-          </div>
-          <div class="save">
-            <button type="button">300개 이상의 숙소 보기</button>
-          </div>
+            <div class="modal__container">
+              <div class="content">
+                <ul>
+                  <li class="check-box">
+                    <strong>숙소 유형</strong>
+                    <div>
+                      <input type="checkbox" id="house">
+                      <label for="house">
+                        <span>집 전체</span>
+                        집 전체를 단독으로 사용합니다.
+                      </label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="personal">
+                      <label for="personal">
+                        <span>개인실</span>
+                        침실은 단독으로 쓰고, 이외의 공간은 호스트나 다른 게스트와 함께 이용할 수도 있습니다.
+                      </label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="hotel">
+                      <label for="hotel">
+                        <span>호텔 객실</span>
+                        부티크 호텔, 호스텔 등의 개인실이나 다인실을 이용합니다.
+                      </label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="shared">
+                      <label for="shared">
+                        <span>다인실</span>
+                        사적 공간 없이, 침실이나 욕실 등을 호스트나 다른 게스트와 함께 이용합니다.
+                      </label>
+                    </div>
+                  </li>
+                  <li class="toggle-tab">
+                    <strong>검증된 숙소</strong>
+                    <p>
+                      <span>에어비앤비 플러스</span>
+                      퀄리티와 인테리어 디자인이 검증된 숙소 셀렉션
+                    </p>
+                    <div class="toggle-bg">
+                      <button class="toggle-fg" onclick="toggleBtn(event)" type="button"></button>
+                    </div>
+                  </li>
+                  <li>
+                    <strong>가격범위</strong>
+                    <p><span>요금을 확인하려면 여행 날짜를 입력하세요</span></p>
+                    <button type="button">날짜 입력</button>
+                  </li>
+                  <li class="count-tab">
+                    <strong>침실과 침대</strong>
+                    <div class="count-list">
+                      <p>침대 수</p>
+                      <div class="tab__count">
+                        <button type="button" class="minus-btn inactive">-</button>
+                        <input class="count-result" type="number" value="0"/>
+                        <button type="button" class="plus-btn">+</button>
+                      </div>
+                    </div>
+                    <div class="count-list">
+                      <p>침실 수</p>
+                      <div class="tab__count">
+                        <button type="button" class="minus-btn inactive">-</button>
+                        <input class="count-result" type="number" value="0"/>
+                        <button type="button" class="plus-btn">+</button>
+                      </div>
+                    </div>
+                    <div class="count-list">
+                      <p>욕실 수</p>
+                      <div class="tab__count">
+                        <button type="button" class="minus-btn inactive">-</button>
+                        <input class="count-result" type="number" value="0"/>
+                        <button type="button" class="plus-btn">+</button>
+                      </div>
+                    </div>
+
+                  </li>
+                  <li class="toggle-tab">
+                    <p>
+                      <span>즉시예약</span>
+                      호스트 승인을 기다릴 필요 없이 예약할 수 있는 숙소
+                    </p>
+                    <div class="toggle-bg">
+                      <button class="toggle-fg" onclick="toggleBtn(event)" type="button"></button>
+                    </div>
+                  </li>
+                  <li class="toggle-tab">
+                    <strong>편의시설 더 보기</strong>
+                    <div>
+                      <p>
+                        <span>슈퍼호스트</span>
+                        슈퍼호스트의 숙소에 머물러보세요.
+                      </p>
+                      <a href="#">더 알아보기</a>
+                    </div>
+                    <div class="toggle-bg">
+                      <button class="toggle-fg" onclick="toggleBtn(event)" type="button"></button>
+                    </div>
+                  </li>
+                  <li class="check-box facilities-list">
+                    <strong>접근성 편의</strong>
+                    <b>게스트 출입구 및 주차장</b>
+                    <div>
+                      <input type="checkbox" id="facilities1">
+                      <label for="facilities1">게스트 출입구에 계단이나 문턱 없음</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities2">
+                      <label for="facilities2">너비 81cm 이상의 게스트 출입구</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities3">
+                      <label for="facilities3">휠체어 접근 가능 주차 공간</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities4">
+                      <label for="facilities4">게스트 출입구까지 계단이나 문턱 없이 이동 가능</label>
+                    </div>
+                    <b>침실</b>
+                    <div>
+                      <input type="checkbox" id="facilities5">
+                      <label for="facilities5">계단이나 문턱 없는 침실</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities6">
+                      <label for="facilities6">너비 81cm 이상의 침실 출입구</label>
+                    </div>
+                    <b>욕실</b>
+                    <div>
+                      <input type="checkbox" id="facilities7">
+                      <label for="facilities7">계단이나 문턱 없는 욕실</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities8">
+                      <label for="facilities8">너비 81cm 이상의 욕실 출입구</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities9">
+                      <label for="facilities9">샤워실 고정 손잡이</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities10">
+                      <label for="facilities10">변기 옆 고정 손잡이</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities11">
+                      <label for="facilities11">계단이나 문턱 없는 샤워실</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facilities12">
+                      <label for="facilities12">샤워/목욕 의자</label>
+                    </div>
+                    <b>장애인용 보조 장치</b>
+                    <div>
+                      <input type="checkbox" id="facilities13">
+                      <label for="facilities13">천장형 또는 이동식 리프트</label>
+                    </div>
+                    <button type="button" class="more" onclick="moreList(event)">접근성 모두 보기 <i class="fas fa-angle-down"></i></button>
+                  </li>
+                  <li class="check-box">
+                    <strong>편의 시설</strong>
+                    <div>
+                      <input type="checkbox" id="kitchen">
+                      <label for="kitchen">주방</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="heater">
+                      <label for="heater">난방</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="air-conditioner">
+                      <label for="air-conditioner">에어컨</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="laundry">
+                      <label for="laundry">세탁기</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="charging">
+                      <label for="charging">전기차 충전시설</label>
+                    </div>
+                    <button type="button" class="more" onclick="moreList(event)">편의시설 모두 보기 <i class="fas fa-angle-down"></i></button>
+                  </li>
+                  <li class="check-box">
+                    <strong>시설</strong>
+                    <div>
+                      <input type="checkbox" id="facility1">
+                      <label for="facility1">무료 주차 공간</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility2">
+                      <label for="facility2">헬스장</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility3">
+                      <label for="facility3">자쿠지</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility4">
+                      <label for="facility4">수영장</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility5">
+                      <label for="facility5">건조기</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility6">
+                      <label for="facility6">무선 인터넷</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility7">
+                      <label for="facility7">아침식사</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility8">
+                      <label for="facility8">실내 벽난로</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility9">
+                      <label for="facility9">다리미</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility10">
+                      <label for="facility10">헤어드라이어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility11">
+                      <label for="facility11">업무 전용 공간</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility12">
+                      <label for="facility12">TV</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility13">
+                      <label for="facility13">아기 침대</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility14">
+                      <label for="facility14">유아용 식탁의자</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility15">
+                      <label for="facility15">셀프 체크인</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility16">
+                      <label for="facility16">화재경보기</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility17">
+                      <label for="facility17">스키를 탄 채로 출입 가능</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility18">
+                      <label for="facility18">해변에 인접</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility19">
+                      <label for="facility19">수변에 인접</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility20">
+                      <label for="facility20">일산화탄소 경보기</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="facility21">
+                      <label for="facility21">욕실 단독 사용</label>
+                    </div>
+                    <button type="button" class="more" onclick="moreList(event)">시설 모두 보기 <i class="fas fa-angle-down"></i></button>
+                  </li>
+                  <li class="check-box">
+                    <strong>숙소 이용규칙</strong>
+                    <div>
+                      <input type="checkbox" id="smoking">
+                      <label for="smoking">흡연 가능</label>
+                    </div>
+                  </li>
+                  <li class="check-box">
+                    <strong>호스트 언어</strong>
+                    <div>
+                      <input type="checkbox" id="language1">
+                      <label for="language1">영어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language2">
+                      <label for="language2">프랑스어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language3">
+                      <label for="language3">독일어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language4">
+                      <label for="language4">일본어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">이탈리아어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">러시아어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">스페인어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">중국어(간체)</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">터키어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">한국어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">뱅골어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">태국어</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="language">
+                      <label for="language">타갈로그어</label>
+                    </div>
+                    <button type="button" onclick="moreList(event)" class="more">모두 보기 <i class="fas fa-angle-down"></i></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="save">
+              <button type="button">300개 이상의 숙소 보기</button>
+            </div>
+          </form>
         </div>
       </div>
       <div id="modalBg"></div>

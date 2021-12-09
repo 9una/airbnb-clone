@@ -403,6 +403,7 @@ header .mobile-search button i {
   position: absolute;
   top: 70px;
   right: 0;
+  z-index: 1;
   border-radius: 13px;
   box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.11);
 }
@@ -2355,12 +2356,11 @@ header .mobile-search button i {
   position: absolute;
   width: 40px;
   height: 40px;
-  top: 29px;
-  left: 29px;
+  bottom: 10px;
+  left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e9e9e9;
 }
 #search-header .local-nav .wrapper .local-nav-right .when > .modal .save,
 #search-header .local-nav .wrapper .local-nav-right .guest > .modal .save,
@@ -2669,26 +2669,229 @@ header .mobile-search button i {
   transform: translateX(-50%);
   background: none;
   border: none;
+}
+#modal_filter .modal__wrapper {
+  width: auto;
+}
+#modal_filter .modal__wrapper form {
   max-width: 780px;
   width: 100%;
+  height: 100%;
 }
-#modal_filter .modal__top {
+#modal_filter .modal__wrapper form .modal__top {
+  width: 100%;
   border-bottom: 1px solid #e9e9e9;
 }
-#modal_filter .modal__top button {
-  left: 10px;
-  top: 10px;
+#modal_filter .modal__wrapper form .modal__top button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 1.5em;
 }
-#modal_filter .modal__container .content ul {
+#modal_filter .modal__wrapper form .modal__top h4 {
+  font-size: 1.3em;
+}
+#modal_filter .modal__wrapper form .modal__container {
+  height: calc(100% - 120px);
+  padding: 0 40px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul {
   margin-top: 20px;
 }
-#modal_filter .modal__container .content ul li {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+#modal_filter .modal__wrapper form .modal__container .content ul li {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li:not(:last-child) {
   border-bottom: 1px solid #e9e9e9;
 }
-#modal_filter .save {
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 10px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box strong {
+  grid-column: span 2;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box:not(.facilities-list) > div:nth-child(n+6) {
+  display: none;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box .more {
+  margin-top: 10px;
+  grid-column: span 2;
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 0;
+  background: none;
+  color: black;
+  text-align: left;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box > div {
+  display: flex;
+  width: 100%;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box > div input {
+  margin: 0 10px 0 0;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box > div input[type=checkbox] {
+  zoom: 1.6;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box > div label {
+  color: #777;
+  line-height: 1.5;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box > div label span {
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 1.15em;
+  color: black;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box.more-list:not(.facilities-list) > div:nth-child(n+6) {
+  display: block;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box.more-list .more i {
+  transform: rotate(180deg);
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box.facilities-list b {
+  display: none;
+  grid-column: span 2;
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box.facilities-list > div:nth-child(n+7) {
+  display: none;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box.facilities-list.more-list b {
+  display: block;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.check-box.facilities-list.more-list > div:nth-child(n+7) {
+  display: block;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab .toggle-bg {
+  width: 50px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab .toggle-bg .toggle-fg {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background: #fff;
+  position: relative;
+  left: 0;
+  transition: left 0.2s;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab .toggle-bg.active {
+  background: #222;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab .toggle-bg.active .toggle-fg {
+  left: 20px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab strong {
+  margin-bottom: 10px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list p {
+  color: black;
+  font-size: 1.15em;
+  margin-bottom: 0;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count {
+  display: flex;
+  align-items: center;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count button {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #717171;
+  border: 1px solid #ccc;
+  background: white;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count button:hover {
+  border-color: black;
+  color: black;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count button.inactive {
+  opacity: 0.4;
+  cursor: default;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count button.inactive:hover {
+  border: 1px solid #cfcfcf;
+  color: #999;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count input {
+  width: 35px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count input::-webkit-outer-spin-button, #modal_filter .modal__wrapper form .modal__container .content ul li.count-tab .count-list .tab__count input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li strong {
+  display: block;
+  font-size: 1.6em;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 0 15px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li p {
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li p span {
+  display: block;
+  font-size: 1.15em;
+  color: black;
+  margin-bottom: 3px;
+}
+#modal_filter .modal__wrapper form .modal__container .content ul li button {
+  background: #222;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+#modal_filter .modal__wrapper form .save {
+  height: 60px;
+  display: flex;
+  align-items: center;
   border-top: 1px solid #e9e9e9;
+  padding: 0 13px;
+}
+#modal_filter .modal__wrapper form .save button {
+  margin-left: auto;
+  background: #222;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 @media (max-width: 1200px) {

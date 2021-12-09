@@ -56,6 +56,18 @@ function modalFilterClose(){
     modalBg.classList.remove('active');
 }
 
+function toggleBtn(event){
+    const target = event.target.parentNode;
+    target.classList.toggle('active');
+    
+}
+function moreList(event){
+    const target = event.target
+    const targetList = target.parentNode;
+    targetList.classList.toggle('more-list');
+}
+
+
 //모바일 검색창 모달
 const mobileSearchBox = document.getElementById('mobileSearch');
 function callSearch(){

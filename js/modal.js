@@ -75,6 +75,5 @@ function callSearch(){
 }
 
 function closeSearch(){
-    console.log('hi');
     mobileSearchBox.classList.remove('active');
 }

@@ -1,3 +1,5 @@
+
+
 // 헤더- 스크롤시 헤더 고정
 const localNav = document.querySelector('.local-nav');
 
@@ -26,15 +28,25 @@ for(let i = 0; i < modalBtn.length; i++){
         modalBtn[i].querySelector('.modal').classList.add('active');
         modalBtn[i].querySelector('button').classList.add('active');
 
-        document.addEventListener('scroll', ()=>{
-            modalBtn[i].querySelector('.modal').classList.remove('active');
-        });
+        (window.onresize = function(e){
+            if(window.innerWidth < 769){
+                console.log(window.innerWidth);
+                document.querySelector('body').style.overflow ="hidden";
+            }else {
+                document.addEventListener('scroll', ()=>{
+                    modalBtn[i].querySelector('.modal').classList.remove('active');
+                })
+            }
+        })();
     })
 }
 
 function closeModal(event){
     const closeBtn = event.currentTarget;
     closeBtn.parentNode.classList.remove('active');
+    if(window.innerWidth < 769){
+        document.querySelector('body').style.overflow ="";
+    }
 }
 
 // nav - modal
@@ -164,3 +176,11 @@ for(let i = 0; i < contentItem.length; i++){
 }
 
 // main- slide - end
+document.addEventListener('scroll', ()=>{
+    if(document.getElementById('mobileNav').classList.contains('active')){
+        document.querySelector('.map-btn').style.bottom = "70px";
+    } else {
+        document.querySelector('.map-btn').style.bottom = "30px";
+    }
+})
+    

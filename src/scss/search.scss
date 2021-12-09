@@ -120,6 +120,8 @@
             padding: 10px 15px;
             border: 1px solid #e9e9e9;
             border-radius: 30px;
+            display: flex;
+            align-items: center;
             i {
               margin-left: 5px;
             }
@@ -128,7 +130,6 @@
             }
           }
           & > .modal {
-            display: none;
             position: absolute;
             padding: 0;
             border: 1px solid #cfcfcf;
@@ -140,10 +141,11 @@
             background: white;
             border-radius: 12px;
             box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+            display: none;
             &.active {
               display: block;
             }
-            .close-btn-mobile {
+            .close-btn-modal {
               position: absolute;
               width: 40px;
               height: 40px;
@@ -215,29 +217,31 @@
               }
               &.month {
                 padding-bottom: 30px;
-                & > div {
-                  display: flex;
-                  gap: 10px;
-                  button {
+                & > .cont-wrap {
+                  & > div {
                     display: flex;
-                    flex-direction: column;
-                    padding: 30px 40px;
-                    border-radius: 15px;
-                    border: 2px solid #cfcfcf;
-                    align-items: center;
-                    i {
-                      margin-bottom: 10px;
-                      font-size: 2em;
-                    }
-                    span {
-                      opacity: 0.5;
-                      margin-top: 5px;
-                      font-size: 0.85em;
-                    }
-                    &.active {
-                      border-color: rgb(0, 89, 255);
-                      background: #eeeeee;
-                      color: rgb(0, 89, 255);
+                    gap: 10px;
+                    button {
+                      display: flex;
+                      flex-direction: column;
+                      padding: 30px 40px;
+                      border-radius: 15px;
+                      border: 2px solid #cfcfcf;
+                      align-items: center;
+                      i {
+                        margin-bottom: 10px;
+                        font-size: 2em;
+                      }
+                      span {
+                        opacity: 0.5;
+                        margin-top: 5px;
+                        font-size: 0.85em;
+                      }
+                      &.active {
+                        border-color: rgb(0, 89, 255);
+                        background: #eeeeee;
+                        color: rgb(0, 89, 255);
+                      }
                     }
                   }
                 }
@@ -260,7 +264,8 @@
                 padding-bottom: 25px;
               }
               p {
-                width: 200px;
+                max-width: 200px;
+                width: 100%;
                 color: #777;
                 line-height: 1.4em;
                 b {
@@ -329,6 +334,11 @@
         .filter {
           position: inherit;
           & > button {
+            &::after {
+              content: "필터";
+              display: inline;
+              margin-left: 5px;
+            }
           }
         }
       }
@@ -353,7 +363,8 @@
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 30px;
+        bottom: 20px;
+        transition: bottom 0.5s;
         i {
           margin-left: 5px;
         }
@@ -559,7 +570,7 @@
                 &.more-list {
                   &:not(.facilities-list) {
                     & > div:nth-child(n + 6) {
-                      display: block;
+                      display: flex;
                     }
                   }
                   .more {
@@ -583,7 +594,7 @@
                       display: block;
                     }
                     & > div:nth-child(n + 7) {
-                      display: block;
+                      display: flex;
                     }
                   }
                 }
@@ -770,13 +781,15 @@
     }
   }
 }
+@include max900 {
+}
 @include tablet {
   #search-header {
     height: 125px;
     .local-nav {
       padding: 0;
       &.fixed {
-        height: 120px;
+        height: 127px;
       }
       .wrapper {
         display: flex;
@@ -795,6 +808,9 @@
                 padding-left: 20px;
               }
             }
+            .more {
+              display: none;
+            }
           }
         }
         .local-nav-right {
@@ -807,17 +823,72 @@
             border-radius: 30px;
             .when,
             .guest {
+              margin-left: 0;
               position: inherit;
               & > button {
+                border: none;
+                padding-top: 12px;
+                padding-bottom: 12px;
                 font-weight: bold;
+                &.active {
+                  border: none;
+                }
                 i {
                   display: none;
                 }
               }
               .modal {
+                position: fixed;
                 width: 100%;
                 height: 100vh;
-                top: 0;
+                top: 100vh;
+                border: none;
+                border-radius: 0;
+                transition: all 0.3s;
+                opacity: 0;
+                display: block;
+                & > button {
+                  margin-right: auto;
+                }
+                .save {
+                  margin-top: auto;
+                }
+                .close-btn-modal {
+                  position: relative;
+                  margin-top: 20px;
+                }
+                &.active {
+                  display: flex;
+                  opacity: 1;
+                  top: 0;
+                  flex-direction: column;
+                  justify-content: space-between;
+                }
+              }
+            }
+            .when {
+              .calendar-tab {
+                margin-top: 50px;
+                &::before {
+                  content: "날짜를 선택하세요";
+                  display: block;
+                  font-size: 1.7em;
+                  top: 60px;
+                  left: 25px;
+                  font-weight: bold;
+                  position: absolute;
+                }
+              }
+              .schedule-cont {
+                &.month {
+                  & > .cont-wrap {
+                    width: 100%;
+                    overflow: auto;
+                    & > div {
+                      margin-bottom: 10px;
+                    }
+                  }
+                }
               }
             }
             .guest {
@@ -825,21 +896,29 @@
                 padding-left: 0;
                 color: #777;
               }
-            }
-          }
-          .when,
-          .guest,
-          .filter {
-            margin-left: 0;
-            & > button {
-              border: none;
-              padding-top: 12px;
-              padding-bottom: 12px;
+              .guest-tab:nth-child(2) {
+                margin-top: 30px;
+                &::before {
+                  content: "일행에 대해 알려주세요";
+                  display: block;
+                  position: absolute;
+                  font-size: 1.7em;
+                  top: 60px;
+                  left: 25px;
+                  font-weight: bold;
+                }
+              }
             }
           }
           .filter {
             position: absolute;
-            right: 25px;
+            right: 5px;
+            button {
+              border: none;
+              &::after {
+                content: "";
+              }
+            }
           }
         }
       }
@@ -850,9 +929,54 @@
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 50px;
   }
+  #modal_filter {
+    padding: 0;
+    .modal__wrapper {
+      border-radius: 0;
+      width: 100%;
+      form {
+        .modal__container {
+          padding: 0 25px;
+          .content {
+            ul {
+              margin-top: 0;
+              li {
+                &.check-box {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 20px;
+                  strong {
+                  }
+                  div {
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                  }
+                }
+                strong {
+                  font-size: 1.3em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @include mobile {
   .cont-list {
     grid-template-columns: 1fr;
+  }
+  #modal_filter {
+    .modal__wrapper {
+      form {
+        .save {
+          button {
+            width: 100%;
+            padding: 15px;
+          }
+        }
+      }
+    }
   }
 }

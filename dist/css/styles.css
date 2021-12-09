@@ -2318,6 +2318,8 @@ header .mobile-search button i {
   padding: 10px 15px;
   border: 1px solid #e9e9e9;
   border-radius: 30px;
+  display: flex;
+  align-items: center;
 }
 #search-header .local-nav .wrapper .local-nav-right .when > button i,
 #search-header .local-nav .wrapper .local-nav-right .guest > button i,
@@ -2332,7 +2334,6 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .when > .modal,
 #search-header .local-nav .wrapper .local-nav-right .guest > .modal,
 #search-header .local-nav .wrapper .local-nav-right .filter > .modal {
-  display: none;
   position: absolute;
   padding: 0;
   border: 1px solid #cfcfcf;
@@ -2344,15 +2345,16 @@ header .mobile-search button i {
   background: white;
   border-radius: 12px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 #search-header .local-nav .wrapper .local-nav-right .when > .modal.active,
 #search-header .local-nav .wrapper .local-nav-right .guest > .modal.active,
 #search-header .local-nav .wrapper .local-nav-right .filter > .modal.active {
   display: block;
 }
-#search-header .local-nav .wrapper .local-nav-right .when > .modal .close-btn-mobile,
-#search-header .local-nav .wrapper .local-nav-right .guest > .modal .close-btn-mobile,
-#search-header .local-nav .wrapper .local-nav-right .filter > .modal .close-btn-mobile {
+#search-header .local-nav .wrapper .local-nav-right .when > .modal .close-btn-modal,
+#search-header .local-nav .wrapper .local-nav-right .guest > .modal .close-btn-modal,
+#search-header .local-nav .wrapper .local-nav-right .filter > .modal .close-btn-modal {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -2424,11 +2426,11 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month {
   padding-bottom: 30px;
 }
-#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div {
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > .cont-wrap > div {
   display: flex;
   gap: 10px;
 }
-#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button {
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > .cont-wrap > div button {
   display: flex;
   flex-direction: column;
   padding: 30px 40px;
@@ -2436,16 +2438,16 @@ header .mobile-search button i {
   border: 2px solid #cfcfcf;
   align-items: center;
 }
-#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button i {
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > .cont-wrap > div button i {
   margin-bottom: 10px;
   font-size: 2em;
 }
-#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button span {
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > .cont-wrap > div button span {
   opacity: 0.5;
   margin-top: 5px;
   font-size: 0.85em;
 }
-#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > div button.active {
+#search-header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month > .cont-wrap > div button.active {
   border-color: #0059ff;
   background: #eeeeee;
   color: #0059ff;
@@ -2464,7 +2466,8 @@ header .mobile-search button i {
   padding-bottom: 25px;
 }
 #search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab p {
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   color: #777;
   line-height: 1.4em;
 }
@@ -2530,6 +2533,12 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .filter {
   position: inherit;
 }
+#search-header .local-nav .wrapper .local-nav-right .filter > button::after {
+  content: "필터";
+  display: inline;
+  margin-left: 5px;
+}
+
 #main {
   padding-top: 0;
   margin-bottom: 0;
@@ -2550,7 +2559,8 @@ header .mobile-search button i {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 30px;
+  bottom: 20px;
+  transition: bottom 0.5s;
 }
 #main section .wrapper .map-btn i {
   margin-left: 5px;
@@ -2748,7 +2758,7 @@ header .mobile-search button i {
   color: black;
 }
 #modal_filter .modal__wrapper form .modal__container .content ul li.check-box.more-list:not(.facilities-list) > div:nth-child(n+6) {
-  display: block;
+  display: flex;
 }
 #modal_filter .modal__wrapper form .modal__container .content ul li.check-box.more-list .more i {
   transform: rotate(180deg);
@@ -2766,7 +2776,7 @@ header .mobile-search button i {
   display: block;
 }
 #modal_filter .modal__wrapper form .modal__container .content ul li.check-box.facilities-list.more-list > div:nth-child(n+7) {
-  display: block;
+  display: flex;
 }
 #modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab {
   display: flex;
@@ -2941,7 +2951,7 @@ header .mobile-search button i {
     padding: 0;
   }
   #search-header .local-nav.fixed {
-    height: 120px;
+    height: 127px;
   }
   #search-header .local-nav .wrapper {
     display: flex;
@@ -2963,6 +2973,9 @@ header .mobile-search button i {
     height: auto;
     padding-left: 20px;
   }
+  #search-header .local-nav .wrapper .local-nav-left .filter-wrap .more {
+    display: none;
+  }
   #search-header .local-nav .wrapper .local-nav-right {
     width: 100%;
     padding: 0 25px;
@@ -2975,11 +2988,19 @@ header .mobile-search button i {
   }
   #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when,
 #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest {
+    margin-left: 0;
     position: inherit;
   }
   #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when > button,
 #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest > button {
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-weight: bold;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when > button.active,
+#search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest > button.active {
+    border: none;
   }
   #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when > button i,
 #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest > button i {
@@ -2987,39 +3008,122 @@ header .mobile-search button i {
   }
   #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .modal,
 #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest .modal {
+    position: fixed;
     width: 100%;
     height: 100vh;
+    top: 100vh;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s;
+    opacity: 0;
+    display: block;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .modal > button,
+#search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest .modal > button {
+    margin-right: auto;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .modal .save,
+#search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest .modal .save {
+    margin-top: auto;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .modal .close-btn-modal,
+#search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest .modal .close-btn-modal {
+    position: relative;
+    margin-top: 20px;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .modal.active,
+#search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest .modal.active {
+    display: flex;
+    opacity: 1;
     top: 0;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .calendar-tab {
+    margin-top: 50px;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .calendar-tab::before {
+    content: "날짜를 선택하세요";
+    display: block;
+    font-size: 1.7em;
+    top: 60px;
+    left: 25px;
+    font-weight: bold;
+    position: absolute;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .schedule-cont.month > .cont-wrap {
+    width: 100%;
+    overflow: auto;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .when .schedule-cont.month > .cont-wrap > div {
+    margin-bottom: 10px;
   }
   #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest > button {
     padding-left: 0;
     color: #777;
   }
-  #search-header .local-nav .wrapper .local-nav-right .when,
-#search-header .local-nav .wrapper .local-nav-right .guest,
-#search-header .local-nav .wrapper .local-nav-right .filter {
-    margin-left: 0;
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest .guest-tab:nth-child(2) {
+    margin-top: 30px;
   }
-  #search-header .local-nav .wrapper .local-nav-right .when > button,
-#search-header .local-nav .wrapper .local-nav-right .guest > button,
-#search-header .local-nav .wrapper .local-nav-right .filter > button {
-    border: none;
-    padding-top: 12px;
-    padding-bottom: 12px;
+  #search-header .local-nav .wrapper .local-nav-right .nav-right-tab .guest .guest-tab:nth-child(2)::before {
+    content: "일행에 대해 알려주세요";
+    display: block;
+    position: absolute;
+    font-size: 1.7em;
+    top: 60px;
+    left: 25px;
+    font-weight: bold;
   }
   #search-header .local-nav .wrapper .local-nav-right .filter {
     position: absolute;
-    right: 25px;
+    right: 5px;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .filter button {
+    border: none;
+  }
+  #search-header .local-nav .wrapper .local-nav-right .filter button::after {
+    content: "";
   }
 
   .cont-list {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 50px;
   }
+
+  #modal_filter {
+    padding: 0;
+  }
+  #modal_filter .modal__wrapper {
+    border-radius: 0;
+    width: 100%;
+  }
+  #modal_filter .modal__wrapper form .modal__container {
+    padding: 0 25px;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul {
+    margin-top: 0;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul li.check-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul li.check-box div {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul li strong {
+    font-size: 1.3em;
+  }
 }
 @media (max-width: 480px) {
   .cont-list {
     grid-template-columns: 1fr;
+  }
+
+  #modal_filter .modal__wrapper form .save button {
+    width: 100%;
+    padding: 15px;
   }
 }
 /* login-header */

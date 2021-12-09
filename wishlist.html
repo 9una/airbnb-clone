@@ -6,141 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/css/reset.css" />
     <link rel="stylesheet" href="dist/css/styles.css" />
-    <title>Airbnb web clone coding : )</title>
+    <title>Wishlist</title>
   </head>
   <body>
-    <header id="header">
-      <div id="notice-bar">
-        <a href="#;" class="wrapper">에어비앤비의 코로나19 대응 방안에 대한 최신 정보를 확인하세요.</a>
-      </div>
+    <header id="wishlist-header">
       <nav class="global-nav">
         <div class="wrapper">
           <div class="nav-left">
             <a href="index.html">
-              <img src="img/logo_white_1.png" alt="로고 이미지" />
+              <img src="img/logo_1.png" alt="로고 이미지" />
             </a>
-          </div>
-          <div class="nav-center">
-            <div class="nav-center__tab">
-              <button type="button" class="active">숙소</button>
-              <button type="button">체험</button>
-              <a href="">온라인 체험</a>
-            </div>
-            <div class="nav-center__form">
-              <div class="form-tab">
-                <button type="button">
-                  <form>
-                    <label for="placeText">위치</label>
-                    <input type="text" id="placeText" required placeholder="어디로 여행가세요?">
-                  </form>
-                </button>
-                <button type="button">
-                  <p>
-                    <span>체크인</span>
-                    날짜 입력
-                  </p>
-                </button>
-                <button type="button">
-                  <p>
-                    <span>체크아웃</span>
-                    날짜 입력
-                  </p>
-                </button>
-                <button type="button">
-                  <p>
-                    <span>인원</span>
-                    게스트 추가
-                  </p>
-                </button>
-              </div>
-              <button type="button" class="search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="nav-center__modal">
-              <div class="where">
-                <p>언제 어디로든 떠나는 여행</p>
-                <a href="search.html">유연한 검색<i class="fas fa-chevron-right"></i></a>
-              </div>
-              <div class="when">
-                <div class="tab-modal when">
-                  <div class="calendar-tab">
-                    <button type="button" class="tab__calendar active">달력</button>
-                    <button type="button" class="tab__schedule">유연한 일정</button>
-                  </div>
-                  <div class="calendar-cont">
-                    <div class="calendar__header">
-                      <button type="button" class="btn go-prev" onclick="prevMonth()"><i class="fas fa-chevron-left"></i></button>
-                      <button type="button" class="go-next" onclick="nextMonth()"><i class="fas fa-chevron-right"></i></button>
-                      <div class="year-month"></div>
-                      <div class="next-year-month"></div>
-                    </div>
-                    <div class="calendar__body">
-                      <div class="this-month">
-                        <div class="days">
-                          <span class="day">일</span>
-                          <span class="day">월</span>
-                          <span class="day">화</span>
-                          <span class="day">수</span>
-                          <span class="day">목</span>
-                          <span class="day">금</span>
-                          <span class="day">토</span>
-                        </div>
-                        <div class="dates"></div>
-                      </div>
-                      <div class="next-month">
-                        <div class="days">
-                          <span class="day">일</span>
-                          <span class="day">월</span>
-                          <span class="day">화</span>
-                          <span class="day">수</span>
-                          <span class="day">목</span>
-                          <span class="day">금</span>
-                          <span class="day">토</span>
-                        </div>
-                        <div class="next-month-dates"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="guest">
-                <div class="guest-tab">
-                  <p><b>성인</b> 만 13세 이상</p>
-                  <div class="tab__count">
-                    <button type="button" class="minus-btn inactive">-</button>
-                    <input class="count-result" type="number" value="0"/>
-                    <button type="button" class="plus-btn">+</button>
-                  </div>
-                </div>
-                <div class="guest-tab">
-                  <p><b>어린이</b> 만 2~12세</p>
-                  <div class="tab__count">
-                    <button type="button" class="minus-btn inactive">-</button>
-                    <input class="count-result" type="number" value="0"/>
-                    <button type="button" class="plus-btn">+</button>
-                  </div>
-                </div>
-                <div class="guest-tab">
-                  <p><b>유아</b> 만 2세 미만</p>
-                  <div class="tab__count">
-                    <button type="button" class="minus-btn inactive">-</button>
-                    <input class="count-result" type="number" value="0"/>
-                    <button type="button" class="plus-btn">+</button>
-                  </div>
-                </div>
-                <div class="guest-tab animal">
-                  <p>
-                    <b>반려동물</b>
-                    <a href="#;">도우미 반려동물을 동반하시나요?</a>
-                  </p>
-                  <div class="tab__count">
-                    <button type="button" class="minus-btn inactive">-</button>
-                    <input class="count-result" type="number" value="0"/>
-                    <button type="button" class="plus-btn">+</button>
-                  </div>
-                  <p class="notice-text">반려동물을 3마리 이상 동반하는 경우, 반드시 호스트에게 알려주세요.</p>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="nav-right">
             <a class="right-bundle" href="host.html">호스트 되기</a>
@@ -165,112 +40,109 @@
           </div>
         </div>
       </nav>
-      <div class="mobile-search">
-        <button type="button" onclick="callSearch()"><i class="fas fa-search"></i>어디로 여행가세요?</button>
-      </div>
     </header>
     <!-- header-end -->
-    <main id="main">
-      <section class="content__main">
+    <main id="wishlist-main">
         <div class="wrapper">
-          <div class="section-img" >
-            <img src="https://a0.muscache.com/im/pictures/b649a6dc-761c-45f0-938c-7eac950620e7.jpg?im_w=1440">
-            <div class="img-inner-text">
-              <img src="https://a0.muscache.com/pictures/Storefronts/NoHo_Header_TitleLogo/original/3e8e526b-a760-47b0-89c2-e27049f2ede2.svg">
-              <h3>겨울 업그레이드</h3>
-              <button type="button"><i class="fas fa-play"></i> 발표 영상 보기</button>
+            <h4>위시리스트</h4>
+            <button type="button" onclick="modalLogin()" class="login-btn">로그인</button>
+            <div class="content">
+                <span class="best-wish-title">인기 위시리스트</span>
+                <ul class="best-wish-list">
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/200/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/250/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/350/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/300/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/250/400" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/450/350" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/300/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/430/320" alt="" /></div>
+                                <div><img src="https://picsum.photos/220/280" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/240" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/200/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/250/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/350/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/300/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="more-btn">더 보기</button>
             </div>
-          </div>
-          <div class="sub-text">
-            <h4>2021 겨울 업그레이드의 일환으로 선보이는 50가지 이상의 사항을 확인하세요.</h4>
-            <button type="button" class="btn-white">자세히 알아보기</button>
-          </div>
         </div>
-      </section>
-      <section class="content__search">
-        <div class="wrapper">
-          <div class="section-img" >
-            <img src="https://a0.muscache.com/im/pictures/73b52a62-f4e8-411c-b2a8-125a6e3e59e2.jpg?im_w=1200">
-            <div class="img-inner-text">
-              <h2>에어비앤비가 <br>여행지를 찾아드릴게요!</h2>
-              <a href="search.html">유연한 검색</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content__idea">
-        <div class="wrapper">
-          <h2 class="section-title">설레는 다음 여행을 위한 아이디어</h2>
-          <div class="idea-card">
-            <div>
-              <a href="#;" class="card">
-                <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320">
-                </div>
-                <div class="card-text">
-                  <h3>서울</h3>
-                  <span>차로 30분 거리</span>
-                </div>
-              </a>
-              <a href="#;" class="card">
-                <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320">
-                </div>
-                <div class="card-text">
-                  <h3>인천</h3>
-                  <span>차로 30분 거리</span>
-                </div>
-              </a>
-              <a href="#;" class="card">
-                <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320">
-                </div>
-                <div class="card-text">
-                  <h3>대구</h3>
-                  <span>차로 4시간 거리</span>
-                </div>
-              </a>
-              <a href="#;" class="card">
-                <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320">
-                </div>
-                <div class="card-text">
-                  <h3>대전</h3>
-                  <span>차로 2.5시간 거리</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content__experience">
-        <div class="wrapper">
-          <h2 class="section-title">에어비앤비 체험 둘러보기</h2>
-          <div class="experience-card">
-            <a href="#;" class="card">
-              <h2>여행 중 만나는 <br>
-                이색적인 즐길 거리</h2>
-              <button type="button" class="btn-white">체험</button>
-            </a>
-            <a href="#;" class="card">
-              <h2>집에서 만나는 <br>
-                다양한 즐길 거리</h2>
-              <button type="button" class="btn-white">온라인 체험</button>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="content__superhost">
-        <div class="wrapper">
-          <div class="section-img" >
-            <img src="https://a0.muscache.com/im/pictures/0528b0f7-4c0c-47bc-9786-d91454f531ba.jpg?im_w=1200">
-            <div class="img-inner-text">
-              <h1>호스팅에 관해 궁금하신 점이 있나요?</h1>
-              <z type="button" class="btn-white">슈퍼호스트에게 물어보세요</button>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <!-- main-end -->
     <footer>
@@ -354,11 +226,11 @@
     </footer>
     <!-- footer-end -->
     <div id="mobileNav">
-      <a href="index.html" class="active">
+      <a href="index.html">
         <i class="fas fa-search"></i>
         <span>둘러보기</span>
       </a>
-      <a href="wishlist.html">
+      <a href="wishlist.html" class="active">
         <i class="far fa-heart"></i>
         <span>위시리스트</span>
       </a>
@@ -366,95 +238,6 @@
         <i class="far fa-user-circle"></i>
         <span>로그인</span>
       </a>
-    </div>
-    <div id="mobileSearch">
-      <div class="wrap">
-        <div class="search-header">
-          <button type="button" class="close-search" onclick="closeSearch()"><i class="fas fa-chevron-left"></i></button>
-          <form>
-            <input type="text" placeholder="어디로 여행가세요?" />
-          </form>
-        </div>
-        <div class="search-content">
-          <span>언제 어디로든 떠나는 여행</span>
-          <button type="button" class="search-more">유연한 검색 <i class="fas fa-chevron-right"></i></button>
-          <ul>
-            <span>근처의 인기 여행지</span>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/f7ac6e57-65cb-446b-8631-331072463af4.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>경주시</span>
-                  차로 4시간 거리
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>강릉시</span>
-                  차로 3시간 거리
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>속초시</span>
-                  차로 3시간 거리
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/585d1e53-e2e1-4baf-a34e-36301dd1e2da.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>전주시</span>
-                  차로 2.5시간 거리
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/562f9bb5-c8b1-412b-b290-2d970498ee07.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>제주시</span>
-                  차로 6.5시간 거리
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/e639b7ab-aee3-48ee-9743-216684a51319.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>양양군</span>
-                  차로 2시간 거리
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/560c06e1-a396-4414-9e38-4fbe8e9f04c4.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>여수시</span>
-                  차로 4시간 거리
-                </p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>부산광역시</span>
-                  차로 5시간 거리
-                </p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
     <div id="modal_lng_cur" class="modal">
       <div class="modal__wrapper">
@@ -688,10 +471,7 @@
     
 
     <script src="js/index.js"></script>
-    <script src="js/fixed-header.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/guest-count.js"></script>
-    <script src="js/calendar.js"></script>
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
   </body>
 </html>

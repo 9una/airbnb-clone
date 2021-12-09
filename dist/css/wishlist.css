@@ -1,0 +1,28 @@
+/* Error: Undefined mixin.
+ *     ,
+ * 95  | / @include desktop {
+ * 96  | |   #wishlist-main {
+ * 97  | |     padding-left: 40px;
+ * 98  | |     padding-right: 40px;
+ * 99  | |     .wrapper {
+ * 100 | |       .content {
+ * 101 | |         ul {
+ * 102 | |           grid-template-columns: repeat(2, 1fr);
+ * 103 | |         }
+ * 104 | |       }
+ * 105 | |     }
+ * 106 | |   }
+ * 107 | \ }
+ *     '
+ *   src\scss\wishlist.scss 95:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a     \2577 \a 95  \2502  \250c  @include desktop {\a 96  \2502  \2502    #wishlist-main {\a 97  \2502  \2502      padding-left: 40px;\a 98  \2502  \2502      padding-right: 40px;\a 99  \2502  \2502      .wrapper {\a 100 \2502  \2502        .content {\a 101 \2502  \2502          ul {\a 102 \2502  \2502            grid-template-columns: repeat(2, 1fr);\a 103 \2502  \2502          }\a 104 \2502  \2502        }\a 105 \2502  \2502      }\a 106 \2502  \2502    }\a 107 \2502  \2514  }\a     \2575 \a   src\\scss\\wishlist.scss 95:1  root stylesheet";
+}

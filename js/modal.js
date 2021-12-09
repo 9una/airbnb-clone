@@ -13,18 +13,15 @@ function modalLng(){
     modalBg.classList.add('active');
     document.querySelector('body').style.overflow ="hidden";
 }
-function modalLngClose(){
-    lngCurModal.classList.remove('active');
-    modalBg.classList.remove('active');
-    document.querySelector('body').style.overflow ="";
-}
 function modalLogin(){
     loginModal.classList.add('active');
     modalBg.classList.add('active');
     document.querySelector('body').style.overflow ="hidden";
 }
-function modalLoginClose(){
-    loginModal.classList.remove('active');
+
+function modalClose(event){
+    const target = event.currentTarget.parentNode.parentNode.parentNode;
+    target.classList.remove('active');
     modalBg.classList.remove('active');
     document.querySelector('body').style.overflow ="";
 }

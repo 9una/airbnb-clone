@@ -6,7 +6,7 @@ for(let i = 0; i < formBtn.length; i++){
     formBtn[i].addEventListener('click', openModal);
 
     function openModal(){
-        document.querySelector('.form-tab').style.background = "#e9e9e9";
+        document.querySelector('.form-tab').style.background = "#efefef";
         formSearchBtn.classList.add('active');
         let j = 0,
             k = 0;

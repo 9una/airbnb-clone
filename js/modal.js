@@ -11,18 +11,22 @@ const modalBg = document.getElementById('modalBg'),
 function modalLng(){
     lngCurModal.classList.add('active');
     modalBg.classList.add('active');
+    document.querySelector('body').style.overflow ="hidden";
 }
 function modalLngClose(){
     lngCurModal.classList.remove('active');
     modalBg.classList.remove('active');
+    document.querySelector('body').style.overflow ="";
 }
 function modalLogin(){
     loginModal.classList.add('active');
     modalBg.classList.add('active');
+    document.querySelector('body').style.overflow ="hidden";
 }
 function modalLoginClose(){
     loginModal.classList.remove('active');
     modalBg.classList.remove('active');
+    document.querySelector('body').style.overflow ="";
 }
 
 // 언어&통화 모달 탭전환
@@ -50,12 +54,14 @@ const modalFilter = document.getElementById('modal_filter');
 function callModalFilter(){
     modalFilter.classList.add('active');
     modalBg.classList.add('active');
+    document.querySelector('body').style.overflow ="hidden";
 }
 function modalFilterClose(){
     modalFilter.classList.remove('active');
     modalBg.classList.remove('active');
+    document.querySelector('body').style.overflow ="";
 }
-
+    //필터모달에 토글 css
 function toggleBtn(event){
     const target = event.target.parentNode;
     target.classList.toggle('active');

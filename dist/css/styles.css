@@ -3112,6 +3112,23 @@ header .mobile-search button i {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
+  #modal_filter .modal__wrapper form .modal__container .content ul li.check-box div input {
+    margin-right: 0;
+    min-width: 13px;
+    min-height: 13px;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul li.check-box div label {
+    width: 85%;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab div {
+    width: 100%;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab div a {
+    display: none;
+  }
+  #modal_filter .modal__wrapper form .modal__container .content ul li.toggle-tab p {
+    width: 100%;
+  }
   #modal_filter .modal__wrapper form .modal__container .content ul li strong {
     font-size: 1.3em;
   }

@@ -45,6 +45,16 @@ for (let i = 0; i < typeLngCurBtn.length; i++) {
     }
 }
 
+//search.html - 필터모달
+const modalFilter = document.getElementById('modal_filter');
+function callModalFilter(){
+    modalFilter.classList.add('active');
+    modalBg.classList.add('active');
+}
+function modalFilterClose(){
+    modalFilter.classList.remove('active');
+    modalBg.classList.remove('active');
+}
 
 //모바일 검색창 모달
 const mobileSearchBox = document.getElementById('mobileSearch');

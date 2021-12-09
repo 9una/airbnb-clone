@@ -438,6 +438,7 @@ header .mobile-search button i {
   display: flex;
   background: white;
   border-radius: 32px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 }
 .nav-center__form .form-tab button {
   width: 100%;
@@ -580,6 +581,7 @@ header .mobile-search button i {
 }
 .global-nav.fixed.white .nav-center .nav-center__form .form-tab {
   display: flex;
+  box-shadow: none;
 }
 .global-nav.fixed.white .nav-center .nav-center__form .search-btn {
   width: 90px;
@@ -2212,7 +2214,7 @@ header .mobile-search button i {
   border: 1px solid #cfcfcf;
 }
 #search-header .local-nav {
-  height: 80px;
+  height: 84px;
 }
 #search-header .local-nav.fixed {
   position: fixed;
@@ -2275,19 +2277,21 @@ header .mobile-search button i {
   background: #f3f3f3;
   border-radius: 8px;
 }
-#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-filter-modal {
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .modal-more {
   position: absolute;
+  display: none;
   padding: 25px;
   top: 50px;
   background: white;
   border-radius: 12px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
   width: max-content;
+  height: fit-content;
 }
-#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-filter-modal.active {
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .modal-more.active {
   display: block;
 }
-#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .more-filter-modal ul li {
+#search-header .local-nav .wrapper .local-nav-left .filter-wrap .more .modal-more ul li:not(:last-child) {
   margin-bottom: 25px;
 }
 #search-header .local-nav .wrapper .local-nav-right {
@@ -2318,6 +2322,11 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .guest > button i,
 #search-header .local-nav .wrapper .local-nav-right .filter > button i {
   margin-left: 5px;
+}
+#search-header .local-nav .wrapper .local-nav-right .when > button.active,
+#search-header .local-nav .wrapper .local-nav-right .guest > button.active,
+#search-header .local-nav .wrapper .local-nav-right .filter > button.active {
+  border: 2px solid black;
 }
 #search-header .local-nav .wrapper .local-nav-right .when > .modal,
 #search-header .local-nav .wrapper .local-nav-right .guest > .modal,
@@ -2368,9 +2377,6 @@ header .mobile-search button i {
   padding: 10px 15px;
   border-radius: 8px;
   margin-left: auto;
-}
-#search-header .local-nav .wrapper .local-nav-right .when > button {
-  border: 2px solid black;
 }
 #search-header .local-nav .wrapper .local-nav-right .when .modal-when .calendar-tab {
   width: 158px;
@@ -2521,11 +2527,9 @@ header .mobile-search button i {
 #search-header .local-nav .wrapper .local-nav-right .guest .modal-guest .save {
   justify-content: flex-end;
 }
-#search-header .local-nav .wrapper .local-nav-right .filter .modal-filter {
-  background: white;
-  padding: 25px;
+#search-header .local-nav .wrapper .local-nav-right .filter {
+  position: inherit;
 }
-
 #main {
   padding-top: 0;
   margin-bottom: 0;
@@ -2658,6 +2662,33 @@ header .mobile-search button i {
 }
 .cont-list .cont-item:hover .img-slide > button {
   opacity: 0.8;
+}
+
+#modal_filter {
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  max-width: 780px;
+  width: 100%;
+}
+#modal_filter .modal__top {
+  border-bottom: 1px solid #e9e9e9;
+}
+#modal_filter .modal__top button {
+  left: 10px;
+  top: 10px;
+}
+#modal_filter .modal__container .content ul {
+  margin-top: 20px;
+}
+#modal_filter .modal__container .content ul li {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e9e9e9;
+}
+#modal_filter .save {
+  border-top: 1px solid #e9e9e9;
 }
 
 @media (max-width: 1200px) {

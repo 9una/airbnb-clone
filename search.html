@@ -60,22 +60,22 @@
                 <li><button type="button">섬</button></li>
               </ul>
             </div>
-            <div class="more">
-              <button type="button" class="more-btn" onclick="moreFilter()">더 보기 <i class="fas fa-angle-down"></i></button>
-              <div class="more-filter-modal">
+            <div class="modal-tab more">
+              <button type="button" class="more-btn">더 보기 <i class="fas fa-angle-down"></i></button>
+              <div class="modal modal-more">
                 <ul>
-                  <li><button type="button">스키를 탄 채로 출입 가능</button></li>
-                  <li><button type="button">하우스보트</button></li>
-                  <li><button type="button">유르트</button></li>
-                  <li><button type="button">토룰로</button></li>
-                  <li><button type="button">보트</button></li>
-                  <li><button type="button">캠핑카</button></li>
-                  <li><button type="button">개성 넘치는 숙소</button></li>
-                  <li><button type="button">화물 컨테이너</button></li>
-                  <li><button type="button">속세를 벗어난 숙소</button></li>
-                  <li><button type="button">Luxe</button></li>
-                  <li><button type="button">헛간</button></li>
-                  <li><button type="button">트리하우스</button></li>
+                  <li><a href="#">스키를 탄 채로 출입 가능</a></li>
+                  <li><a href="#">하우스보트</a></li>
+                  <li><a href="#">유르트</a></li>
+                  <li><a href="#">토룰로</a></li>
+                  <li><a href="#">보트</a></li>
+                  <li><a href="#">캠핑카</a></li>
+                  <li><a href="#">개성 넘치는 숙소</a></li>
+                  <li><a href="#">화물 컨테이너</a></li>
+                  <li><a href="#">속세를 벗어난 숙소</a></li>
+                  <li><a href="#">Luxe</a></li>
+                  <li><a href="#">헛간</a></li>
+                  <li><a href="#">트리하우스</a></li>
                 </ul>
               </div>
             </div>
@@ -84,7 +84,7 @@
         <div class="local-nav-right">
           <div class="nav-right-tab">
             <div class="modal-tab when">
-              <button type="button">언제든 <i class="fas fa-angle-down"></i></button>
+              <button type="button" class="active">언제든 <i class="fas fa-angle-down"></i></button>
               <div class="modal modal-when">
                 <button onclick="closeModal(event)" class="close-btn-mobile"><i class="fas fa-times"></i></button>
                 <div class="calendar-tab">
@@ -104,33 +104,33 @@
                   <div>
                     <button type="button" onclick="check(event)" class="active">
                       <i class="far fa-calendar"></i>
-                      <strong>12월</strong>
-                      <span>2021</span>
+                      <strong></strong>
+                      <span></span>
                     </button>
                     <button type="button" onclick="check(event)">
                       <i class="far fa-calendar"></i>
-                      <strong>12월</strong>
-                      <span>2021</span>
+                      <strong></strong>
+                      <span></span>
                     </button>
                     <button type="button" onclick="check(event)">
                       <i class="far fa-calendar"></i>
-                      <strong>12월</strong>
-                      <span>2021</span>
+                      <strong></strong>
+                      <span></span>
                     </button>
                     <button type="button" onclick="check(event)">
                       <i class="far fa-calendar"></i>
-                      <strong>12월</strong>
-                      <span>2021</span>
+                      <strong></strong>
+                      <span></span>
                     </button>
                     <button type="button" onclick="check(event)">
                       <i class="far fa-calendar"></i>
-                      <strong>12월</strong>
-                      <span>2021</span>
+                      <strong></strong>
+                      <span></span>
                     </button>
                     <button type="button" onclick="check(event)">
                       <i class="far fa-calendar"></i>
-                      <strong>12월</strong>
-                      <span>2021</span>
+                      <strong></strong>
+                      <span></span>
                     </button>
                   </div>
                 </div>
@@ -183,12 +183,8 @@
               </div>
             </div>
           </div>
-          <div class="modal-tab filter">
-            <button type="button"><i class="fas fa-sliders-h"></i> 필터</button>
-            <div class="modal modal-filter">
-              <button onclick="closeModal(event)" class="close-btn-mobile"><i class="fas fa-times"></i></button>
-              3
-            </div>
+          <div class="filter">
+            <button type="button" onclick="callModalFilter()"><i class="fas fa-sliders-h"></i> 필터</button>
           </div>
         </div>
       </div>
@@ -882,10 +878,64 @@
           </div>
         </div>
       </div>
+      <div id="modal_filter" class="modal">
+        <div class="modal__wrapper">
+          <div class="modal__top">
+            <button onclick="modalFilterClose();" class="close-btn-mobile"><i class="fas fa-times"></i></button>
+            <h4 class="modal-title">필터</h4>
+          </div>
+          <div class="modal__container">
+            <div class="content">
+              <ul>
+                <li>
+                  <strong>숙소 유형</strong>
+                </li>
+                <li>
+                  <strong>검증된 숙소</strong>
+                </li>
+                <li>
+                  <strong>가격범위</strong>
+                </li>
+                <li>
+                  <p>
+                    <span>즉시예약</span>
+                    호스트 승인을 기다릴 필요 없이 예약할 수 있는 숙소
+                  </p>
+                </li>
+                <li>
+                  <strong>침실과 침대</strong>
+                </li>
+                <li>
+                  <strong>편의시설 더 보기</strong>
+                </li>
+                <li>
+                  <strong>접근성 편의</strong>
+                </li>
+                <li>
+                  <strong>편의 시설</strong>
+                </li>
+                <li>
+                  <strong>시설</strong>
+                </li>
+                <li>
+                  <strong>숙소 이용규칙</strong>
+                </li>
+                <li>
+                  <strong>호스트 언어</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="save">
+            <button type="button">300개 이상의 숙소 보기</button>
+          </div>
+        </div>
+      </div>
       <div id="modalBg"></div>
 
     <script src="js/index.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/guest-count.js"></script>
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
 </body>

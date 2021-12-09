@@ -1,29 +1,31 @@
 // 헤더- 스크롤시 헤더 고정
-const localNav = document.querySelector('.local-nav'),
-    mobileSearch = document.querySelector('.mobile-search');
+const localNav = document.querySelector('.local-nav');
 
 function scrollFunc(){
     if(scrollY >= 80){
         localNav.classList.add("fixed");
-        mobileSearch.classList.add("fixed");
     }else{
         localNav.classList.remove("fixed");
-        mobileSearch.classList.remove("fixed");
     }
 }
 document.addEventListener('scroll', scrollFunc);
 
 
 // 헤더- local-nav 필터
-const filterSection = document.querySelectorAll('.modal-tab');
-for(let i = 0; i < filterSection.length; i++){
-    const filterBtn = filterSection[i].querySelector('button');
+const modalBtn = document.querySelectorAll('.modal-tab');
+for(let i = 0; i < modalBtn.length; i++){
+    const filterBtn = modalBtn[i].querySelector('button');
+    
     filterBtn.addEventListener('click', ()=>{
-        let j = 0;
-        while(j < filterSection.length){
-            filterSection[j++].querySelector('.modal').classList.remove('active');
+        let j = 0,
+            k = 0;
+        while(j < modalBtn.length && k < modalBtn.length){
+            modalBtn[j++].querySelector('.modal').classList.remove('active');
+            modalBtn[k++].querySelector('button').classList.remove('active');
         }
-        filterSection[i].querySelector('.modal').classList.add('active');
+        modalBtn[i].querySelector('.modal').classList.add('active');
+        modalBtn[i].querySelector('button').classList.add('active');
+
     })
 }
 
@@ -38,6 +40,34 @@ function check(event){
     const checkBtn = event.currentTarget;
     checkBtn.classList.toggle('active');
 }
+
+(function monthCheck(){
+    const date = new Date();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+
+    let sumMonth = 0;
+    let sumYear = year;
+
+    const monthBtn = document.querySelectorAll('.schedule-cont.month button');
+    for(i = 0; i < monthBtn.length; i++){
+        sumMonth = month + i;
+        if(sumMonth >= 12){
+            sumMonth -= 12;
+            if(sumMonth == month){
+                sumYear = year;
+            } else {
+                sumYear = year + 1;
+            }
+        }
+        
+        const viewMonth = monthBtn[i].querySelector('strong');
+        const viewYear = monthBtn[i].querySelector('span');
+        viewMonth.innerText = `${sumMonth + 1}월`;
+        viewYear.innerText = `${sumYear}`;
+    }
+})();
+
 
 // main- slide - start
 const contentItem = document.querySelectorAll('.cont-item');

@@ -43,21 +43,18 @@ function scrollFunc(){
     if(scrollY >= 58){
         nav.classList.add("fixed");
         mobileSearch.classList.add("fixed");
+        document.querySelector('.nav-center__form').classList.add('add-text');
         document.querySelector('.nav-center__form').addEventListener('click', ()=>{
             nav.classList.add("white");
+            document.querySelector('.nav-center__form').classList.remove('add-text');
         }); //global-nav.fixed일때 클릭하면 white클래스 추가
         if(nav.classList.contains("white")){
             nav.classList.remove("white");
         } //white클래스 추가되어 있을때 스크롤하면 white제거
-        if(nav.classList.contains('fixed')){
-            document.querySelector('.nav-left a').innerHTML = `<img src="img/logo_1.png" alt="로고 이미지" />`;
-        }
-    }else if(scrollY >= 100){
-        headerHost.classList.add("fixed");
     }else{
-        document.querySelector('.nav-left a').innerHTML = `<img src="img/logo_white_1.png" alt="로고 이미지" />`;
         nav.classList.remove("fixed");
         mobileSearch.classList.remove("fixed");
+        document.querySelector('.nav-center__form').classList.remove('add-text');
     }
 
     if(document.querySelector('.nav-center__modal > div.active')){

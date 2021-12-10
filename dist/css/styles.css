@@ -73,10 +73,15 @@ header .mobile-search button i {
 }
 .global-nav .wrapper .nav-left {
   left: 0;
+  max-width: 112px;
+  width: 100%;
 }
-.global-nav .wrapper .nav-left a img {
-  height: 32px;
-  object-fit: contain;
+.global-nav .wrapper .nav-left a {
+  width: 100%;
+  height: 34px;
+  font-size: 0;
+  background: url(../../img/logo_white_1.png) no-repeat center left;
+  background-size: contain;
 }
 .global-nav .wrapper .nav-center {
   width: 100%;
@@ -129,6 +134,15 @@ header .mobile-search button i {
   top: 80px;
   height: 66px;
   transition: all 0.2s;
+}
+.global-nav .wrapper .nav-center .nav-center__form.add-text::before {
+  content: "검색 시작하기";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  font-weight: bold;
 }
 .global-nav .wrapper .nav-center .nav-center__modal {
   position: absolute;
@@ -281,6 +295,12 @@ header .mobile-search button i {
   font-weight: 900;
   background: #efefef;
 }
+.global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .days .date.today:active,
+.global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .dates .date.today:active,
+.global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .next-month-dates .date.today:active {
+  background: black;
+  color: white;
+}
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .days .date.checkin, .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .days .date.checkout,
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .dates .date.checkin,
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .dates .date.checkout,
@@ -299,6 +319,12 @@ header .mobile-search button i {
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .dates .date.other:hover,
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .next-month-dates .date.other:hover {
   border: none;
+}
+.global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .days .date.other:active,
+.global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .dates .date.other:active,
+.global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .next-month-dates .date.other:active {
+  background: none;
+  color: #cfcfcf;
 }
 .global-nav .wrapper .nav-center .nav-center__modal > div.guest {
   width: auto;
@@ -522,11 +548,15 @@ header .mobile-search button i {
   width: 100%;
   background: white;
 }
+
 .global-nav.fixed {
   position: fixed;
   top: 0;
   background: white;
   border-bottom: 1px solid #ddd;
+}
+.global-nav.fixed .nav-left a {
+  background-image: url(../../img/logo_1.png);
 }
 .global-nav.fixed .nav-center .nav-center__tab {
   display: none;
@@ -641,6 +671,13 @@ header .mobile-search button i {
 @media (max-width: 1024px) {
   header nav {
     padding: 0 40px;
+  }
+
+  .global-nav .nav-left a {
+    background-image: url(../../img/logo_white_2.png) !important;
+  }
+  .global-nav.fixed .nav-left a {
+    background-image: url(../../img/logo_2.png) !important;
   }
 }
 @media (max-width: 900px) {
@@ -1507,6 +1544,16 @@ header .mobile-search button i {
 
 /* modal - 공동 */
 /*responsive*/
+@media (max-width: 1024px) {
+  #modal_lng_cur .modal__wrapper .cont ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  #modal_lng_cur .modal__wrapper .cont ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /* host__header */
 #host__header {
   box-sizing: border-box;
@@ -2122,7 +2169,16 @@ header .mobile-search button i {
   }
   #host__main #content__start-hosting .start-hosting__host .host-btn {
     left: inherit;
-    right: 23%;
+    right: 25px;
+    bottom: auto;
+    top: -50px;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-btn button {
+    width: 35px;
+    height: 35px;
+  }
+  #host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
+    right: 45px;
   }
   #host__main #content__start-hosting .start-hosting__form {
     padding: 0 25px;
@@ -3242,7 +3298,7 @@ header .mobile-search button i {
   }
 }
 @media (max-width: 768px) {
-  header {
+  #wishlist-header {
     display: none;
   }
 
@@ -3630,7 +3686,5 @@ body {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
   font-size: 14px;
 }
-
-/*responsive*/
 
 /*# sourceMappingURL=styles.css.map */

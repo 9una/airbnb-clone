@@ -677,7 +677,16 @@
         }
         .host-btn {
           left: inherit;
-          right: 23%;
+          right: 25px;
+          bottom: auto;
+          top: -50px;
+          button {
+            width: 35px;
+            height: 35px;
+            &.host-list__prev {
+              right: 45px;
+            }
+          }
         }
       }
       .start-hosting__form {

@@ -288,9 +288,23 @@
 }
 
 @include desktop {
+  #modal_lng_cur .modal__wrapper {
+    .cont {
+      ul {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
 }
 
 @include tablet {
+  #modal_lng_cur .modal__wrapper {
+    .cont {
+      ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
 }
 
 @include mobile {

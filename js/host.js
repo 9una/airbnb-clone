@@ -1,29 +1,23 @@
-//반응형 window size
-window.onresize = function(event){
-    const innerWidth = window.innerWidth;
+const header = document.getElementById("host__header");
 
-    //769px 이상일때 100vh 스크롤시 헤더 고정
-    const header = document.getElementById("host__header");
 
-    if(innerWidth >= 769){
-        function scrollFunc(){
-            if(scrollY >= window.innerHeight){
-                //first section height = 100vh
-                header.classList.add("fixed");
-            }else{
-                header.classList.remove("fixed");
-            }
+if(window.innerWidth >= 769){
+    //769px 이상(desktop ~ ): 100vh 스크롤시 헤더 고정
+    function scrollFunc(){
+        if(scrollY >= window.innerHeight){
+            //window.innerHeight = 100vh
+            header.classList.add("fixed");
+        }else{
+            header.classList.remove("fixed");
         }
     }
-
-    if (innerWidth <= 768){ //768 이하일떄
-        header.classList.add("fixed");
-    }
-
-    
-    document.addEventListener('scroll', scrollFunc);
+} else {
+    //769px 이하( ~ tablet) mobile header css
+    header.classList.add("fixed");
 }
 
+document.addEventListener('scroll', scrollFunc);
+window.addEventListener('resize', scrollFunc); //responsive...
 
 
 //slider

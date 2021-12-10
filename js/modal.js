@@ -1,6 +1,10 @@
 //마이페이지 모달
 function mypageModalToggle(){
     document.querySelector(".user-btn-modal").classList.toggle('active');
+
+    document.addEventListener('scroll', ()=>{
+        document.querySelector(".user-btn-modal").classList.remove('active');
+    })
 }
 
 // 언어&통화 모달

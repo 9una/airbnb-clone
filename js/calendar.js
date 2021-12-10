@@ -101,6 +101,48 @@ const renderCalendar = () => {
             }
         }
     }
+
+    //오늘보다 과거 날짜 -> other
+    if(viewYear == today.getFullYear()){
+        //지금 년도인 경우
+        if(viewMonth == today.getMonth()){
+            for(let date of document.querySelectorAll('.dates .this')){
+                if(+date.innerText < today.getDate()){
+                    date.className = "date other";
+                }
+            }
+        }
+        if(viewMonth < today.getMonth()){
+            if(viewNextMonth == today.getMonth()){
+                //viewNextMonth가 지금 월인 경우
+                for(let date of document.querySelectorAll('.dates .this')){
+                    date.className = "date other";
+                }
+                for(let date of document.querySelectorAll('.next-month-dates .this')){
+                    if(+date.innerText < today.getDate()){
+                        date.className = "date other";
+                    }
+                    if(+date.innerText === today.getDate()){
+                        date.classList.add('today');
+                        break;
+                    }
+                }
+                console.log(':)');
+            }
+            if(viewNextMonth < today.getMonth()){
+                //viewNextMonth가 지금 월보다 작음
+                for(let date of document.querySelectorAll('.this')){
+                    date.className = "date other";
+                }
+            }
+        }
+    }
+    if(viewYear < today.getFullYear()){
+        //지금 년도보다 과거
+        for(let date of document.querySelectorAll('.this')){
+            date.className = "date other";
+        }
+    }
 };
 renderCalendar();
 

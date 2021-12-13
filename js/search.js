@@ -177,10 +177,9 @@ for(let i = 0; i < contentItem.length; i++){
 
 // main- slide - end
 document.addEventListener('scroll', ()=>{
-    if(document.getElementById('mobileNav').classList.contains('active')){
+    if(window.innerWidth < 769 && document.getElementById('mobileNav').classList.contains('active')){
         document.querySelector('.map-btn').style.bottom = "70px";
-    } else {
+    }else {
         document.querySelector('.map-btn').style.bottom = "30px";
     }
 })
-    

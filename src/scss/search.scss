@@ -351,7 +351,6 @@
     }
   }
 }
-
 #search__main {
   padding-top: 0;
   margin-bottom: 0;
@@ -760,6 +759,22 @@
         }
       }
     }
+    .local-nav {
+      .wrapper {
+        .local-nav-right {
+          .nav-right-tab {
+            .when,
+            .guest {
+              position: inherit;
+              & > .modal {
+                right: 20px;
+                top: 75px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   #search__main {
     section {
@@ -856,6 +871,7 @@
                 position: fixed;
                 width: 100%;
                 height: 100vh;
+                right: 0;
                 top: 100vh;
                 border: none;
                 border-radius: 0;
@@ -993,6 +1009,9 @@
         }
       }
     }
+  }
+  #search__footer {
+    display: none;
   }
 }
 @include mobile {

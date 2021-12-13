@@ -9,7 +9,7 @@
     <title>Login / Join Us</title>
   </head>
   <body>
-    <main id="login-main">
+    <main id="login__main">
         <div class="login-content">
             <div class="modal__wrapper">
                 <h4 class="modal-title">로그인 또는 회원가입</h4>
@@ -69,7 +69,7 @@
         </div>
     </main>
     <!-- main-end -->
-    <footer style="display:none;">
+    <footer id="login__footer">
       <div class="fnb__top">
         <ul class="fnb__top-list">
           <li class="fnb__top-item">
@@ -150,7 +150,7 @@
     </footer>
     <!-- footer-end -->
     <div id="mobileNav">
-      <a href="index.html">
+      <a href="index.html" class="active">
         <i class="fas fa-search"></i>
         <span>둘러보기</span>
       </a>
@@ -158,7 +158,7 @@
         <i class="far fa-heart"></i>
         <span>위시리스트</span>
       </a>
-      <a href="login.html" class="active">
+      <a href="login.html">
         <i class="far fa-user-circle"></i>
         <span>로그인</span>
       </a>
@@ -166,7 +166,7 @@
     <div id="modal_lng_cur" class="modal">
       <div class="modal__wrapper">
         <div class="modal__top">
-          <button class="btn-close" type="button" onclick="modalLngClose();"><i class="fas fa-times"></i></button>
+          <button class="btn-close" type="button" onclick="modalClose(event);"><i class="fas fa-times"></i></button>
         </div>
         <div class="modal__container">
           <div class="tab">

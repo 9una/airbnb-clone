@@ -1,23 +1,22 @@
 const header = document.getElementById("host__header");
 
-
-if(window.innerWidth >= 769){
-    //769px 이상(desktop ~ ): 100vh 스크롤시 헤더 고정
-    function scrollFunc(){
+function scrollFunc(){
+    if(window.innerWidth >= 769){
+        //769px 이상(desktop ~ ): 100vh 스크롤시 헤더 고정
         if(scrollY >= window.innerHeight){
             //window.innerHeight = 100vh
             header.classList.add("fixed");
         }else{
             header.classList.remove("fixed");
         }
+    } else {
+        //769px 이하
+        header.classList.remove("fixed");
     }
-} else {
-    //769px 이하( ~ tablet) mobile header css
-    header.classList.add("fixed");
 }
 
 document.addEventListener('scroll', scrollFunc);
-window.addEventListener('resize', scrollFunc); //responsive...
+window.addEventListener('resize', scrollFunc); //리사이징시
 
 
 //slider
@@ -32,6 +31,7 @@ const item = images.querySelectorAll('.host-list li');
 if (window.innerWidth < 1025){
     item[1].classList.remove('active');
     item[0].classList.add('active');
+    prevBtn.setAttribute('disabled', 'true');
     curPos = 0;
 }
 

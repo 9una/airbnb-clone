@@ -1,4 +1,4 @@
-#main {
+.main {
   padding-top: 58px;
   margin-bottom: 100px;
   word-break: keep-all !important;
@@ -224,7 +224,7 @@
 
 /*responsive*/
 @include desktopLarge {
-  #main {
+  .main {
     margin-bottom: 0;
     section {
       &.content__main,
@@ -299,7 +299,7 @@
 }
 
 @include desktop {
-  #main {
+  .main {
     margin-bottom: 0;
     section {
       padding: 48px 0 0;
@@ -412,7 +412,7 @@
 }
 
 @include tablet {
-  #main {
+  .main {
     section {
       &.content__main,
       &.content__search {
@@ -485,7 +485,7 @@
 }
 
 @include mobile {
-  #main {
+  .main {
     h1 {
       font-size: 3em;
     }
@@ -547,7 +547,7 @@
 }
 
 @include mobileSmall {
-  #main {
+  .main {
     h1 {
       font-size: 12vw;
     }

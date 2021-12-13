@@ -11,7 +11,7 @@
 }
 
 /* join & login */
-#login-main {
+#login__main {
   .login-content {
     max-width: 568px;
     width: 100%;
@@ -166,7 +166,8 @@
 /*responsive*/
 
 @include tablet {
-  #login-main {
+  #login__main {
+    padding-bottom: 60px;
     .login-content {
       margin: 0;
       border: none;
@@ -175,5 +176,8 @@
         display: block !important;
       }
     }
+  }
+  #login__footer {
+    display: none;
   }
 }

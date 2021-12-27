@@ -4,13 +4,13 @@
   @media (max-width: #{$breakpoint-mobile-min}) {
     @content;
   }
-}
+} // ~ 378
 
 @mixin mobile {
   @media (max-width: #{$breakpoint-mobile-max}) {
     @content;
   }
-} // 320 ~ 480
+} // ~ 480
 
 @mixin tablet {
   @media (max-width: #{$breakpoint-tablet}) {

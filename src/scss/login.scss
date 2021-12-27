@@ -1,17 +1,7 @@
-/* login-header */
-#header.fixed {
-  nav {
-    padding-bottom: 0;
-    .global-nav {
-      .wrapper {
-        justify-content: space-between;
-      }
-    }
-  }
-}
-
 /* join & login */
 #login__main {
+  padding-top: 80px;
+  border-bottom: 1px solid #dbdbdb;
   .login-content {
     max-width: 568px;
     width: 100%;
@@ -72,9 +62,14 @@
                       outline: none;
                       position: absolute;
                       width: 100%;
-                      padding: 0 12px;
+                      padding: 0 16px;
                       bottom: 11px;
-                      appearance: 30px;
+                      appearance: none;
+                      // -moz-appearance: none;
+                      // -webkit-appearance: none;
+                      background: url(../../img/angle-down-solid.svg) no-repeat
+                        97% center;
+
                       font-size: 1.1em;
                       option {
                         width: 100%;
@@ -164,9 +159,9 @@
 }
 
 /*responsive*/
-
 @include tablet {
   #login__main {
+    padding-top: 0;
     padding-bottom: 60px;
     .login-content {
       margin: 0;

@@ -9,6 +9,37 @@
     <title>Login / Join Us</title>
   </head>
   <body>
+    <header id="login__header">
+      <nav class="global-nav">
+        <div class="wrapper">
+          <div class="nav-left">
+            <a href="index.html">로고</a>
+          </div>
+          <div class="nav-right">
+            <a class="right-bundle" href="host.html">호스트 되기</a>
+            <button type="button" class="lng-btn" onclick="modalLng()">
+              <i class="fas fa-globe-americas"></i>
+            </button>
+            <button type="button" class="user-btn" onclick="mypageModalToggle()">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-user-circle"></i>
+            </button>
+            <div class="user-btn-modal">
+              <ul>
+                <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
+                <li><button type="button" onclick="modalLogin();">로그인</a></button>
+              </ul>
+              <ul>
+                <li><a href="#;">숙소 호스트 되기</a></li>
+                <li><a href="#;">체험 호스팅하기</a></li>
+                <li><a href="#;">도움말</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header-end -->
     <main id="login__main">
         <div class="login-content">
             <div class="modal__wrapper">
@@ -150,7 +181,7 @@
     </footer>
     <!-- footer-end -->
     <div id="mobileNav">
-      <a href="index.html" class="active">
+      <a href="index.html">
         <i class="fas fa-search"></i>
         <span>둘러보기</span>
       </a>
@@ -158,7 +189,7 @@
         <i class="far fa-heart"></i>
         <span>위시리스트</span>
       </a>
-      <a href="login.html">
+      <a href="login.html" class="active">
         <i class="far fa-user-circle"></i>
         <span>로그인</span>
       </a>

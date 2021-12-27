@@ -163,24 +163,30 @@ header .mobile-search button i {
 .global-nav .wrapper .nav-center .nav-center__modal > div.where {
   max-width: 420px;
   width: 100%;
+  height: 60vh;
+  overflow: auto;
   left: 0;
   flex-direction: column;
 }
-.global-nav .wrapper .nav-center .nav-center__modal > div.where p {
+.global-nav .wrapper .nav-center .nav-center__modal > div.where > p {
   font-size: 0.85em;
   font-weight: bold;
   margin-bottom: 20px;
 }
-.global-nav .wrapper .nav-center .nav-center__modal > div.where a {
+.global-nav .wrapper .nav-center .nav-center__modal > div.where > a {
   font-size: 1.3em;
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 20px 25px;
+  margin-bottom: 35px;
   border-radius: 30px;
   color: purple;
   font-weight: bold;
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.global-nav .wrapper .nav-center .nav-center__modal > div.where .best-travel {
+  padding-bottom: 10px;
 }
 .global-nav .wrapper .nav-center .nav-center__modal > div.when {
   width: 100%;
@@ -629,7 +635,30 @@ header .mobile-search button i {
   display: block;
 }
 
-/* nav : local-nav (superhost) */
+/* wishlist, login header */
+#wishlist__header,
+#login__header {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  background: white;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.05);
+}
+#wishlist__header .nav-left a,
+#login__header .nav-left a {
+  background: url(../../img/logo_1.png) no-repeat center left;
+  background-size: contain;
+}
+#wishlist__header .nav-right > a:first-child, #wishlist__header .nav-right > button:nth-child(2),
+#login__header .nav-right > a:first-child,
+#login__header .nav-right > button:nth-child(2) {
+  color: black;
+}
+#wishlist__header .nav-right .user-btn,
+#login__header .nav-right .user-btn {
+  border: 1px solid #999;
+}
+
 /*footer-end*/
 #mobileSearch {
   display: none;
@@ -667,6 +696,40 @@ header .mobile-search button i {
   color: #ff385c;
 }
 
+/*근처의 인기 여행지 - pc, 모바일 공통*/
+.best-travel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 30px;
+}
+.best-travel > span {
+  font-size: 0.85em;
+  font-weight: bold;
+}
+.best-travel li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.best-travel li a img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.best-travel li a p {
+  font-size: 0.9em;
+  color: #777;
+}
+.best-travel li a p span {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: black;
+}
+
 /*responsive*/
 @media (max-width: 1024px) {
   header nav {
@@ -677,6 +740,11 @@ header .mobile-search button i {
     background-image: url(../../img/logo_white_2.png) !important;
   }
   .global-nav.fixed .nav-left a {
+    background-image: url(../../img/logo_2.png) !important;
+  }
+
+  #login__header .nav-left a,
+#wishlist__header .nav-left a {
     background-image: url(../../img/logo_2.png) !important;
   }
 }
@@ -714,6 +782,11 @@ header .mobile-search button i {
     top: 0;
     background: white;
     border-bottom: 1px solid #cfcfcf;
+  }
+
+  #login__header,
+#wishlist__header {
+    display: none;
   }
 
   #mobileSearch {
@@ -781,43 +854,12 @@ header .mobile-search button i {
     margin: 20px auto 25px;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
   }
-  #mobileSearch .wrap .search-content ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding-bottom: 30px;
-  }
-  #mobileSearch .wrap .search-content ul > span {
-    font-size: 0.85em;
-    font-weight: bold;
-  }
-  #mobileSearch .wrap .search-content ul li a {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  #mobileSearch .wrap .search-content ul li a img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  #mobileSearch .wrap .search-content ul li a p {
-    font-size: 0.9em;
-    color: #777;
-  }
-  #mobileSearch .wrap .search-content ul li a p span {
-    display: block;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    color: black;
-  }
 }
 @media (max-width: 480px) {
   header #notice-bar {
     padding: 0 10px;
     font-size: 0.85em;
+    line-height: 1.4;
   }
 }
 .main {
@@ -885,51 +927,21 @@ header .mobile-search button i {
   margin: 10px 0 0;
 }
 
-/* main-screen */
+/* main */
 .content__main {
   background: black;
 }
 .content__main .wrapper {
   padding-top: 128px;
   width: 100%;
-}
-.content__main .wrapper .section-img .img-inner-text img {
-  margin-bottom: 10px;
-}
-.content__main .wrapper .section-img .img-inner-text button {
-  padding: 13px 25px;
-  border-radius: 50px;
-  border: 2px solid black;
-  font-weight: bold;
-  margin-top: 20px;
-}
-.content__main .wrapper .sub-text {
-  display: flex;
-  padding-top: 24px;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-.content__main .wrapper .sub-text h4 {
-  font-size: 1.4em;
-  font-weight: normal;
-  margin: 0;
-}
-
-/* search */
-.content__search {
-  background: linear-gradient(to bottom, #000000 0%, #000000 50%, #ffffff 50%, #ffffff 100%);
-}
-.content__search .wrapper {
-  width: 100%;
   border-radius: 10px;
 }
-.content__search .wrapper .img-inner-text h2 {
+.content__main .wrapper .img-inner-text h2 {
   color: white;
   text-align: center;
   margin-top: auto;
 }
-.content__search .wrapper .img-inner-text a {
+.content__main .wrapper .img-inner-text a {
   margin-top: 16px;
   margin-bottom: 5%;
   padding: 18px 30px;
@@ -1026,7 +1038,7 @@ header .mobile-search button i {
   .main {
     margin-bottom: 0;
   }
-  .main section.content__main .wrapper .section-img, .main section.content__search .wrapper .section-img {
+  .main section.content__main .wrapper .section-img {
     height: 43vw;
     min-height: 550px;
   }
@@ -1045,7 +1057,7 @@ header .mobile-search button i {
     margin-top: 0;
   }
 
-  .content__search .wrapper .img-inner-text a {
+  .content__main .wrapper .img-inner-text a {
     margin-top: 5px;
     margin-bottom: 6%;
   }
@@ -1086,7 +1098,7 @@ header .mobile-search button i {
   .main section {
     padding: 48px 0 0;
   }
-  .main section.content__main .wrapper .section-img, .main section.content__search .wrapper .section-img {
+  .main section.content__main .wrapper .section-img {
     height: 57vw;
     min-height: 550px;
   }
@@ -1116,15 +1128,7 @@ header .mobile-search button i {
     font-size: 1.7em;
   }
 
-  .content__main .wrapper .sub-text {
-    padding: 24px 40px 0;
-  }
-  .content__main .wrapper .sub-text h4 {
-    font-size: 1.4em;
-    line-height: 1.3;
-  }
-
-  .content__search .wrapper .img-inner-text a {
+  .content__main .wrapper .img-inner-text a {
     margin-bottom: 8%;
     margin-top: 10px;
   }
@@ -1168,7 +1172,7 @@ header .mobile-search button i {
   }
 }
 @media (max-width: 768px) {
-  .main section.content__main .wrapper .section-img, .main section.content__search .wrapper .section-img {
+  .main section.content__main .wrapper .section-img {
     height: calc(100vh - 58px);
   }
   .main section.content__idea, .main section.content__experience {
@@ -1203,19 +1207,7 @@ header .mobile-search button i {
   .content__main .wrapper {
     padding-top: 0;
   }
-  .content__main .wrapper .sub-text {
-    padding: 24px 25px;
-    flex-direction: column;
-  }
-  .content__main .wrapper .sub-text h4 {
-    font-size: 1.25em;
-    margin-bottom: 20px;
-  }
-  .content__main .wrapper .sub-text button {
-    width: 100%;
-  }
-
-  .content__search .wrapper .section-img .img-inner-text a {
+  .content__main .wrapper .section-img .img-inner-text a {
     margin-bottom: 10vh;
   }
 }
@@ -1225,11 +1217,6 @@ header .mobile-search button i {
   }
   .main h2 {
     font-size: 2.4em;
-  }
-
-  .content__main .img-inner-text img {
-    width: 66%;
-    min-width: 240px;
   }
 
   .content__idea .section-title {
@@ -1277,7 +1264,7 @@ header .mobile-search button i {
     font-size: 1.9em;
   }
 
-  .content__search .wrapper .section-img .img-inner-text a {
+  .content__main .wrapper .section-img .img-inner-text a {
     font-size: 1em;
     padding: 15px 25px;
   }
@@ -2522,6 +2509,9 @@ header .mobile-search button i {
 #search__header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.date > div button:nth-child(2) {
   margin: 0 5px;
 }
+#search__header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.date > div button.active {
+  border: 2px solid black;
+}
 #search__header .local-nav .wrapper .local-nav-right .when .modal-when .schedule-cont.month {
   padding-bottom: 30px;
 }
@@ -2557,6 +2547,7 @@ header .mobile-search button i {
 #search__header .local-nav .wrapper .local-nav-right .guest .modal-guest .guest-tab {
   display: grid;
   width: 100%;
+  gap: 100px;
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
@@ -2628,6 +2619,7 @@ header .mobile-search button i {
 }
 #search__header .local-nav .wrapper .local-nav-right .guest .modal-guest .save {
   justify-content: flex-end;
+  gap: 0;
 }
 #search__header .local-nav .wrapper .local-nav-right .filter {
   position: inherit;
@@ -2669,6 +2661,7 @@ header .mobile-search button i {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px 25px;
+  margin-bottom: 50px;
 }
 .cont-list .cont-item .img-slide {
   position: relative;
@@ -3006,7 +2999,6 @@ header .mobile-search button i {
 @media (max-width: 1200px) {
   .cont-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px 25px;
   }
 }
 @media (max-width: 1024px) {
@@ -3199,7 +3191,7 @@ header .mobile-search button i {
 
   .cont-list {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 
   #modal_filter {
@@ -3252,6 +3244,7 @@ header .mobile-search button i {
 @media (max-width: 480px) {
   .cont-list {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   #modal_filter .modal__wrapper form .save button {
@@ -3259,24 +3252,6 @@ header .mobile-search button i {
     padding: 15px;
   }
 }
-#wishlist__header {
-  position: fixed;
-  top: 0;
-  height: 80px;
-  background: white;
-  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.05);
-}
-#wishlist__header .nav-left a {
-  background: url(../../img/logo_1.png) no-repeat center left;
-  background-size: contain;
-}
-#wishlist__header .nav-right > a:first-child, #wishlist__header .nav-right > button:nth-child(2) {
-  color: black;
-}
-#wishlist__header .nav-right .user-btn {
-  border: 1px solid #999;
-}
-
 #wishlist__main {
   padding: 80px 80px 0;
 }
@@ -3290,6 +3265,7 @@ header .mobile-search button i {
 #wishlist__main .wrapper .login-btn {
   background: #222;
   color: white;
+  display: inline-block;
   font-weight: bold;
   padding: 15px 25px;
   border-radius: 8px;
@@ -3351,10 +3327,6 @@ header .mobile-search button i {
 
 /*responsive*/
 @media (max-width: 1024px) {
-  #wishlist__header .nav-left a {
-    background-image: url(../../img/logo_2.png) !important;
-  }
-
   #wishlist__main {
     padding-left: 40px;
     padding-right: 40px;
@@ -3364,10 +3336,6 @@ header .mobile-search button i {
   }
 }
 @media (max-width: 768px) {
-  #wishlist__header {
-    display: none;
-  }
-
   #wishlist__main {
     padding: 10px 25px 40px;
   }
@@ -3377,6 +3345,8 @@ header .mobile-search button i {
   }
   #wishlist__main .wrapper .login-btn {
     width: 100%;
+    text-align: center;
+    padding: 18px 25px;
   }
   #wishlist__main .wrapper .content {
     margin-top: 20px;
@@ -3432,15 +3402,11 @@ header .mobile-search button i {
     font-size: 1em;
   }
 }
-/* login-header */
-#header.fixed nav {
-  padding-bottom: 0;
-}
-#header.fixed nav .global-nav .wrapper {
-  justify-content: space-between;
-}
-
 /* join & login */
+#login__main {
+  padding-top: 80px;
+  border-bottom: 1px solid #dbdbdb;
+}
 #login__main .login-content {
   max-width: 568px;
   width: 100%;
@@ -3498,9 +3464,10 @@ header .mobile-search button i {
   outline: none;
   position: absolute;
   width: 100%;
-  padding: 0 12px;
+  padding: 0 16px;
   bottom: 11px;
-  appearance: 30px;
+  appearance: none;
+  background: url(../../img/angle-down-solid.svg) no-repeat 97% center;
   font-size: 1.1em;
 }
 #login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select option {
@@ -3579,6 +3546,7 @@ header .mobile-search button i {
 /*responsive*/
 @media (max-width: 768px) {
   #login__main {
+    padding-top: 0;
     padding-bottom: 60px;
   }
   #login__main .login-content {

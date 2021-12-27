@@ -152,23 +152,29 @@ header {
           &.where {
             max-width: 420px;
             width: 100%;
+            height: 60vh;
+            overflow: auto;
             left: 0;
             flex-direction: column;
-            p {
+            & > p {
               font-size: 0.85em;
               font-weight: bold;
               margin-bottom: 20px;
             }
-            a {
+            & > a {
               font-size: 1.3em;
               display: flex;
               justify-content: space-between;
               width: 100%;
               padding: 20px 25px;
+              margin-bottom: 35px;
               border-radius: 30px;
               color: purple;
               font-weight: bold;
               box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+            }
+            .best-travel {
+              padding-bottom: 10px;
             }
           }
           &.when {
@@ -621,7 +627,30 @@ header {
   }
 }
 
-/* nav : local-nav (superhost) */
+/* wishlist, login header */
+#wishlist__header,
+#login__header {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  background: white;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.05);
+  .nav-left {
+    a {
+      background: url(../../img/logo_1.png) no-repeat center left;
+      background-size: contain;
+    }
+  }
+  .nav-right {
+    & > a:first-child,
+    & > button:nth-child(2) {
+      color: black;
+    }
+    .user-btn {
+      border: 1px solid #999;
+    }
+  }
+}
 
 /*footer-end*/
 
@@ -664,6 +693,42 @@ header {
   }
 }
 
+/*근처의 인기 여행지 - pc, 모바일 공통*/
+.best-travel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 30px;
+  & > span {
+    font-size: 0.85em;
+    font-weight: bold;
+  }
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      p {
+        font-size: 0.9em;
+        color: #777;
+        span {
+          display: block;
+          font-size: 1.2em;
+          margin-bottom: 5px;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
 /*responsive*/
 @include desktop {
   //~ 1024
@@ -678,6 +743,14 @@ header {
     }
     &.fixed {
       .nav-left a {
+        background-image: url(../../img/logo_2.png) !important;
+      }
+    }
+  }
+  #login__header,
+  #wishlist__header {
+    .nav-left {
+      a {
         background-image: url(../../img/logo_2.png) !important;
       }
     }
@@ -727,6 +800,10 @@ header {
         border-bottom: 1px solid #cfcfcf;
       }
     }
+  }
+  #login__header,
+  #wishlist__header {
+    display: none;
   }
   #mobileSearch {
     display: block;
@@ -790,40 +867,6 @@ header {
           margin: 20px auto 25px;
           box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
         }
-        ul {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          padding-bottom: 30px;
-          & > span {
-            font-size: 0.85em;
-            font-weight: bold;
-          }
-          li {
-            a {
-              display: flex;
-              align-items: center;
-              gap: 15px;
-              img {
-                width: 50px;
-                height: 50px;
-                object-fit: cover;
-                border-radius: 8px;
-              }
-              p {
-                font-size: 0.9em;
-                color: #777;
-                span {
-                  display: block;
-                  font-size: 1.2em;
-                  margin-bottom: 5px;
-                  color: black;
-                }
-              }
-            }
-          }
-        }
       }
     }
   }
@@ -833,6 +876,7 @@ header {
     #notice-bar {
       padding: 0 10px;
       font-size: 0.85em;
+      line-height: 1.4;
     }
   }
 }

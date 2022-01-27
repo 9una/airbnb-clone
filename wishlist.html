@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/reset.css" />
+    <link rel="stylesheet" href="dist/css/styles.css" />
+    <title>Wishlist</title>
+  </head>
+  <body>
+    <header id="wishlist__header">
+      <nav class="global-nav">
+        <div class="wrapper">
+          <div class="nav-left">
+            <a href="index.html">로고</a>
+          </div>
+          <div class="nav-right">
+            <a class="right-bundle" href="host.html">호스트 되기</a>
+            <button type="button" class="lng-btn" onclick="modalLng()">
+              <i class="fas fa-globe-americas"></i>
+            </button>
+            <button type="button" class="user-btn" onclick="mypageModalToggle()">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-user-circle"></i>
+            </button>
+            <div class="user-btn-modal">
+              <ul>
+                <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
+                <li><button type="button" onclick="modalLogin();">로그인</a></button>
+              </ul>
+              <ul>
+                <li><a href="#;">숙소 호스트 되기</a></li>
+                <li><a href="#;">체험 호스팅하기</a></li>
+                <li><a href="#;">도움말</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header-end -->
+    <main id="wishlist__main">
+        <div class="wrapper">
+            <h4>위시리스트</h4>
+            <a href="login.html" class="login-btn">로그인</a>
+            <div class="content">
+                <span class="best-wish-title">인기 위시리스트</span>
+                <ul class="best-wish-list">
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/200/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/250/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/350/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/300/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/250/400" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/450/350" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/300/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/430/320" alt="" /></div>
+                                <div><img src="https://picsum.photos/220/280" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/240" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/200/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/250/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/250/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="images">
+                                <div><img src="https://picsum.photos/350/300" alt="" /></div>
+                                <div><img src="https://picsum.photos/300/200" alt="" /></div>
+                                <div><img src="https://picsum.photos/200/250" alt="" /></div>
+                            </div>
+                            <strong>Modern European Villas</strong>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="more-btn">더 보기</button>
+            </div>
+        </div>
+    </main>
+    <!-- main-end -->
+    <footer id="wishlist__footer">
+      <div class="fnb__top">
+        <ul class="fnb__top-list">
+          <li class="fnb__top-item">
+            <ul>
+              <span>에어비앤비 지원</span>
+              <li><a href="#;">도움말 센터</a></li>
+              <li><a href="#;">안전 정보</a></li>
+              <li><a href="#;">예약 취소 옵션</a></li>
+              <li><a href="#;">에어비앤비의 코로나19 대응 방안</a></li>
+              <li><a href="#;">장애인 지원</a></li>
+              <li><a href="#;">이웃 민원 신고</a></li>
+            </ul>
+          </li>
+          <li class="fnb__top-item">
+            <ul>
+              <span>커뮤니티</span>
+              <li><a href="#;">Airbnb.org: 재난 구호 숙소</a></li>
+              <li><a href="#;">아프간 난민 지원</a></li>
+              <li><a href="#;">다양성과 소속감 증진</a></li>
+              <li><a href="#;">차별 철폐를 위한 노력</a></li>
+            </ul>
+          </li>
+          <li class="fnb__top-item">
+            <ul>
+              <span>호스팅</span>
+              <li><a href="host.html">호스팅 시작하기</a></li>
+              <li><a href="#;">에어커버: 호스트를 위한 보호 프로그램</a></li>
+              <li><a href="#;">호스팅 자료 둘러보기</a></li>
+              <li><a href="#;">커뮤니티 포럼 방문하기</a></li>
+              <li><a href="#;">책임감 있는 호스팅</a></li>
+              <li><a href="#;"></a></li>
+            </ul>
+          </li>
+          <li class="fnb__top-item">
+            <ul>
+              <span>소개</span>
+              <li><a href="#;">뉴스룸</a></li>
+              <li><a href="#;">새로운 기능에 대해 알아보기</a></li>
+              <li><a href="#;">에어비앤비 공동창업자의 메시지</a></li>
+              <li><a href="#;">채용정보</a></li>
+              <li><a href="#;">투자자 정보</a></li>
+              <li><a href="#;">에어비앤비 Luxe</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="fnb__bottom">
+        <div class="fnb__bottom-left">
+          <ul>
+            <span>© 2021 Airbnb, Inc.</span>
+            <li><a href="#;">개인정보 처리방침</a></li>
+            <li><a href="#;">이용약관</a></li>
+            <li><a href="#;">사이트맵</a></li>
+            <li><a href="#;">한국의 변경된 환불 정책</a></li>
+            <li><a href="#;">회사 세부정보</a></li>
+          </ul>
+        </div>
+        <div class="fnb__bottom-right">
+          <div class="fnb__bottom-global">
+            <button type="button" class="fnb__bottom-language" onclick="modalLng();">
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="height: 16px; width: 16px; fill: currentcolor;">
+                <path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path>
+              </svg>
+              <span>한국어 (KR)</span>
+            </button>
+            <button type="button" class="fnb__bottom-currency" onclick="modalLng();">
+              <i class="fas fa-won-sign"></i>
+              <span>KRW</span>
+            </button>
+          </div>
+          <div class="fnb__bottom-sns">
+            <a href="#;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#;"><i class="fab fa-twitter"></i></a>
+            <a href="#;"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer-end -->
+    <div id="mobileNav">
+      <a href="index.html">
+        <i class="fas fa-search"></i>
+        <span>둘러보기</span>
+      </a>
+      <a href="wishlist.html" class="active">
+        <i class="far fa-heart"></i>
+        <span>위시리스트</span>
+      </a>
+      <a href="login.html">
+        <i class="far fa-user-circle"></i>
+        <span>로그인</span>
+      </a>
+    </div>
+    <div id="modal_lng_cur" class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__top">
+          <button class="btn-close" type="button" onclick="modalClose(event);"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__container">
+          <div class="tab">
+            <button class="type-btn active" onclick="tabLngCur();" type="button">언어와 지역</button>
+            <button class="type-btn" onclick="tabLngCur();" type="button">통화</button>
+          </div>
+          <div class="content">
+            <div class="content_cont">
+              <h2 class="cont-title">추천 언어 및 지역</h2>
+              <div class="cont">
+                <ul class="lng-cur__contents-list">
+                  <li><a href="#;">English<span>Untied States</span></a></li>
+                  <li><a href="#;">English<span>Untied Kingdom</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="content_cont">
+              <h2 class="cont-title">언어와 지역을 선택하세요</h2>
+              <div class="cont">
+                <ul class="lng-cur__contents-list">
+                  <li class="active"><a href="#;">한국어<span>대한민국</span></a></li>
+                  <li><a href="#;">Azərbaycan dili<span>Azərbaycan</span></a></li>
+                  <li><a href="#;">Bahasa Indonesia<span>Indonesia</span></a></li>
+                  <li><a href="#;">Bosanski<span>Bosna i Hercegovina</span></a></li>
+                  <li><a href="#;">Català<span>Espanya</span></a></li>
+                  <li><a href="#;">Čeština<span>Česká republika</span></a></li>
+                  <li><a href="#;">Crnogorski<span>Crna Gora</span></a></li>
+                  <li><a href="#;">Dansk<span>Danmark</span></a></li>
+                  <li><a href="#;">Deutsch<span>Deutschland</span></a></li>
+                  <li><a href="#;">Deutsch<span>Österreich</span></a></li>
+                  <li><a href="#;">Deutsch<span>Schweiz</span></a></li>
+                  <li><a href="#;">Eesti<span>Eesti</span></a></li>
+                  <li><a href="#;">English<span>Australia</span></a></li>
+                  <li><a href="#;">English<span>Canada</span></a></li>
+                  <li><a href="#;">English<span>Guyana</span></a></li>
+                  <li><a href="#;">English<span>India</span></a></li>
+                  <li><a href="#;">English<span>Ireland</span></a></li>
+                  <li><a href="#;">English<span>New Zealand</span></a></li>
+                  <li><a href="#;">English<span>Singapore</span></a></li>
+                  <li><a href="#;">English<span>United Arab Emirates</span></a></li>
+                  <li><a href="#;">Español<span>Argentina</span></a></li>
+                  <li><a href="#;">Español<span>Belice</span></a></li>
+                  <li><a href="#;">Español<span>Bolivia</span></a></li>
+                  <li><a href="#;">Español<span>Chile</span></a></li>
+                  <li><a href="#;">Español<span>Colombia</span></a></li>
+                  <li><a href="#;">Español<span>Costa Rica</span></a></li>
+                  <li><a href="#;">Español<span>Ecuador</span></a></li>
+                  <li><a href="#;">Español<span>El Salvador</span></a></li>
+                  <li><a href="#;">Español<span>España</span></a></li>
+                  <li><a href="#;">Español<span>Estados Unidos</span></a></li>
+                  <li><a href="#;">Español<span>Guatemala</span></a></li>
+                  <li><a href="#;">Español<span>Honduras</span></a></li>
+                  <li><a href="#;">Español<span>Latinoamérica</span></a></li>
+                  <li><a href="#;">Español<span>México</span></a></li>
+                  <li><a href="#;">Español<span>Nicaragua</span></a></li>
+                  <li><a href="#;">Español<span>Panamá</span></a></li>
+                  <li><a href="#;">Español<span>Paraguay</span></a></li>
+                  <li><a href="#;">Español<span>Perú</span></a></li>
+                  <li><a href="#;">Español<span>Venezuela</span></a></li>
+                  <li><a href="#;">Français<span>Belgique</span></a></li>
+                  <li><a href="#;">Français<span>Canada</span></a></li>
+                  <li><a href="#;">Français<span>France</span></a></li>
+                  <li><a href="#;">Français<span>Suisse</span></a></li>
+                  <li><a href="#;">Gaeilge<span>Éire</span></a></li>
+                  <li><a href="#;">Hrvatski<span>Hrvatska</span></a></li>
+                  <li><a href="#;">isiXhosa<span>eMzantsi Afrika</span></a></li>
+                  <li><a href="#;">isiZulu<span>iNingizimu Afrika</span></a></li>
+                  <li><a href="#;">Íslenska<span>Ísland</span></a></li>
+                  <li><a href="#;">Italiano<span>Italia</span></a></li>
+                  <li><a href="#;">Italiano<span>Svizzera</span></a></li>
+                  <li><a href="#;">Kisahili<span>Āfrika</span></a></li>
+                  <li><a href="#;">Latviešu<span>Latvija</span></a></li>
+                  <li><a href="#;">Lietuvių<span>Lietuva</span></a></li>
+                  <li><a href="#;">Magyar<span>Magyarország</span></a></li>
+                  <li><a href="#;">Malti<span>Malta</span></a></li>
+                  <li><a href="#;">Melayu<span>Malaysia</span></a></li>
+                  <li><a href="#;">Nederlands<span>België</span></a></li>
+                  <li><a href="#;">Nederlands<span>Nederland</span></a></li>
+                  <li><a href="#;">Norsk<span>Norge</span></a></li>
+                  <li><a href="#;">Polski<span>Polska</span></a></li>
+                  <li><a href="#;">Português<span>Brasil</span></a></li>
+                  <li><a href="#;">Português<span>Portugal</span></a></li>
+                  <li><a href="#;">Română<span>România</span></a></li>
+                  <li><a href="#;">Shqip<span>Shqipëri</span></a></li>
+                  <li><a href="#;">Slovenčina<span>Slovensko</span></a></li>
+                  <li><a href="#;">Slovenščina<span>Slovenjia</span></a></li>
+                  <li><a href="#;">Srpski<span>Srbija</span></a></li>
+                  <li><a href="#;">Suomi<span>Suomi</span></a></li>
+                  <li><a href="#;">Svenska<span>Sverige</span></a></li>
+                  <li><a href="#;">Tagalog<span>Pilipinas</span></a></li>
+                  <li><a href="#;">Tiếng Việt<span>Việt Nam</span></a></li>
+                  <li><a href="#;">Türkçe<span>Türkiye</span></a></li>
+                  <li><a href="#;">Ελληνικά<span>Ελλάδα</span></a></li>
+                  <li><a href="#;">Български<span>България</span></a></li>
+                  <li><a href="#;">Македонски<span>Северна Македонија</span></a></li>
+                  <li><a href="#;">Русский<span>Россия</span></a></li>
+                  <li><a href="#;">Українська<span>Україна</span></a></li>
+                  <li><a href="#;">ქართული<span>საქართველო</span></a></li>
+                  <li><a href="#;">Հայերեն<span>Հայաստան</span></a></li>
+                  <li><a href="#;">עברית<span>ישראל</span></a></li>
+                  <li><a href="#;">العربية<span>العالم</span></a></li>
+                  <li><a href="#;">हिन्दी<span>भारत</span></a></li>
+                  <li><a href="#;">ไทย<span>ประเทศไทย</span></a></li>
+                  <li><a href="#;">日本語<span>日本</span></a></li>
+                  <li><a href="#;">简体中文<span>美国</span></a></li>
+                  <li><a href="#;">繁體中文<span>美國</span></a></li>
+                  <li><a href="#;">简体中文<span>中国</span></a></li>
+                  <li><a href="#;">繁體中文<span>香港</span></a></li>
+                  <li><a href="#;">繁體中文<span>台灣</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content invisible">
+            <div class="content_cont">
+              <h2 class="cont-title">통화를 선택하세요.</h2>
+              <div class="cont">
+                <ul class="lng-cur__contents-list">
+                  <li class="active"><a href="#;">한국 원<span>KRW - ₩</span></a></li>
+                  <li><a href="#;">남아프리카공화국 란드<span>ZAR - R</span></a></li>
+                  <li><a href="#;">노르웨이 크로네<span>NOK - kr</span></a></li>
+                  <li><a href="#;">뉴질랜드 달러<span>NZD - $</span></a></li>
+                  <li><a href="#;">덴마크 크로네<span>DKK - kr</span></a></li>
+                  <li><a href="#;">러시아 루블<span>RUB - ₽</span></a></li>
+                  <li><a href="#;">루마니아 레우<span>RON - lei</span></a></li>
+                  <li><a href="#;">말레이시아 링깃<span>MYR - RM</span></a></li>
+                  <li><a href="#;">멕시코 페소<span>MXN - $</span></a></li>
+                  <li><a href="#;">모로코 디르함<span>MAD</span></a></li>
+                  <li><a href="#;">미국 달러<span>USD - $</span></a></li>
+                  <li><a href="#;">불가리아 레프<span>BGN - лв.</span></a></li>
+                  <li><a href="#;">브라질 레알<span>BRL - R$</span></a></li>
+                  <li><a href="#;">사우스아라비아 리얄<span>SAR - SR</span></a></li>
+                  <li><a href="#;">스웨덴 크로나<span>SEK - kr</span></a></li>
+                  <li><a href="#;">스위스 프랑<span>CHF</span></a></li>
+                  <li><a href="#;">신 타이완 달러<span>TWD - $</span></a></li>
+                  <li><a href="#;">싱가포르 달러<span>SGD - $</span></a></li>
+                  <li><a href="#;">아랍에미리트 디르함<span>AED - ﺩ.ﺇ</span></a></li>
+                  <li><a href="#;">영국 파운드<span>GBP - £</span></a></li>
+                  <li><a href="#;">우루과이 페소<span>UYU - $U</span></a></li>
+                  <li><a href="#;">유로<span>EUR - €</span></a></li>
+                  <li><a href="#;">이스라엘 신 셰켈<span>ILS - ₪</span></a></li>
+                  <li><a href="#;">인도 루피<span>INR - ₹</span></a></li>
+                  <li><a href="#;">일본 엔<span>JPY - ¥</span></a></li>
+                  <li><a href="#;">중국 위안<span>CNY - ￥</span></a></li>
+                  <li><a href="#;">체코 코루나<span>CZK - Kč</span></a></li>
+                  <li><a href="#;">칠레 페소<span>CLP - $</span></a></li>
+                  <li><a href="#;">캐나다 달러<span>CAD - $</span></a></li>
+                  <li><a href="#;">코스타리카 콜론<span>CRC - ₡</span></a></li>
+                  <li><a href="#;">콜롬비아 페소<span>COP - $</span></a></li>
+                  <li><a href="#;">크로아티아 쿠나<span>HRK - kn</span></a></li>
+                  <li><a href="#;">태국 바트<span>THB - ฿</span></a></li>
+                  <li><a href="#;">터키 리라<span>TRY - ₺</span></a></li>
+                  <li><a href="#;">페루 솔<span>PEN - S/</span></a></li>
+                  <li><a href="#;">폴란드 즐로티<span>PLN - zł</span></a></li>
+                  <li><a href="#;">필리핀 페소<span>PHP - ₱</span></a></li>
+                  <li><a href="#;">헝가리 포린트<span>HUF - Ft</span></a></li>
+                  <li><a href="#;">호주 달러<span>AUD - $</span></a></li>
+                  <li><a href="#;">홍콩 달러<span>HKD - $</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_login" class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__top">
+          <button class="btn-close" type="button" onclick="modalClose(event);"><i class="fas fa-times"></i></button>
+          <h4 class="modal-title">로그인 또는 회원가입</h4>
+        </div>
+        <div class="modal__container">
+          <div class="content">
+            <div class="content_cont">
+              <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
+              <div class="cont">
+                <div class="phone-login">
+                  <div class="phone-form">
+                    <form>
+                      <label for="national">
+                        <span>국가/지역</span>
+                        <select id="national">
+                          <option>한국 (+82)</option>
+                          <option>미국 (+1)</option>
+                          <option>프랑스 (+33)</option>
+                          <option>영국 (+44)</option>
+                          <option>덴마크 (+45)</option>
+                        </select>
+                      </label>
+                      <label for="phoneNum">
+                        <span>전화번호</span>
+                        <b>+82</b>
+                        <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
+                      </label>
+                    </form>
+                  </div>
+                  <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
+                  <button class="phone-login__btn" type="submit">계속</button>
+                </div>
+                <div class="sns-login">
+                  <span>또는</span>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>페이스북으로 로그인하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-google"></i>
+                    <span>구글로 로그인하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple 계정으로 계속하기</span>
+                  </a>
+                  <a class="sns-btn" href="#;" target="_blank">
+                    <i class="far fa-envelope"></i>
+                    <span>이메일로 로그인하기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modalBg"></div>
+    
+
+    <script src="js/index.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
+  </body>
+</html>

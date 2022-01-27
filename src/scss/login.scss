@@ -1,0 +1,178 @@
+/* join & login */
+#login__main {
+  padding-top: 80px;
+  border-bottom: 1px solid #dbdbdb;
+  .login-content {
+    max-width: 568px;
+    width: 100%;
+    margin: 90px auto 50px;
+    border: 1px solid #b0b0b0;
+    border-radius: 12px;
+    .modal__wrapper {
+      .modal-title {
+        border-bottom: 1px solid #e9e9e9;
+        text-align: center;
+        margin: 0;
+        padding: 25px 0;
+        font-size: 1.1em;
+      }
+      .modal__container {
+        padding: 45px 30px 30px;
+        .content {
+          .content_cont {
+            .cont-title {
+              margin: 0 0 20px 0 !important;
+              font-size: 1.6em;
+            }
+            .phone-login {
+              .phone-form {
+                form {
+                  border: 1px solid #ccc;
+                  border-radius: 10px;
+                  display: flex;
+                  flex-direction: column;
+                  label {
+                    display: grid;
+                    padding: 10px 15px;
+                    color: #555;
+                    position: relative;
+                    &:first-child {
+                      border-bottom: 1px solid #ccc;
+                      grid-template-columns: 1fr;
+                      padding-bottom: 2rem;
+                    }
+                    &:last-child {
+                      grid-template-columns: auto 1fr;
+                      span {
+                        grid-column: span 2;
+                        margin-bottom: 3px;
+                      }
+                      b {
+                        font-weight: 300;
+                      }
+                    }
+                    span {
+                    }
+                    select,
+                    input {
+                      border: none;
+                      background: none;
+                    }
+                    select {
+                      outline: none;
+                      position: absolute;
+                      width: 100%;
+                      padding: 0 16px;
+                      bottom: 11px;
+                      appearance: none;
+                      // -moz-appearance: none;
+                      // -webkit-appearance: none;
+                      background: url(../../img/angle-down-solid.svg) no-repeat
+                        97% center;
+
+                      font-size: 1.1em;
+                      option {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+              & > p {
+                margin: 5px 0 20px;
+                color: #555;
+                font-size: 0.85em;
+                line-height: 1.4em;
+                a {
+                  display: inline;
+                  color: #333;
+                  font-weight: bold;
+                  text-decoration: underline;
+                }
+              }
+              .phone-login__btn {
+                width: 100%;
+                padding: 18px 10px;
+                background: $pink;
+                border-radius: 10px;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 10px;
+                font-size: 1.2em;
+              }
+            }
+            .sns-login {
+              & > span {
+                color: #444;
+                text-align: center;
+                margin: 15px 0 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &::before,
+                &::after {
+                  content: "";
+                  width: 45%;
+                  height: 1px;
+                  background: #ebebeb;
+                  display: block;
+                }
+              }
+              .sns-btn {
+                width: 100%;
+                border: 2px solid #b4b4b4;
+                border-radius: 10px;
+                padding: 15px 10px;
+                display: flex;
+                align-items: center;
+                &:not(:last-child) {
+                  margin-bottom: 15px;
+                }
+                &:hover {
+                  border-color: black;
+                }
+                i {
+                  width: 30px;
+                  display: flex;
+                  justify-content: center;
+                  margin-right: 5px;
+                }
+                span {
+                  display: block;
+                  text-align: center;
+                  width: 100%;
+                  font-weight: bold;
+                }
+              }
+            }
+            .help {
+              display: none;
+              padding-top: 50px;
+              text-align: center;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*responsive*/
+@include tablet {
+  #login__main {
+    padding-top: 0;
+    padding-bottom: 60px;
+    .login-content {
+      margin: 0;
+      border: none;
+      max-width: 100%;
+      .help {
+        display: block !important;
+      }
+    }
+  }
+  #login__footer {
+    display: none;
+  }
+}

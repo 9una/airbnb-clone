@@ -21,9 +21,7 @@
   opacity: 0;
   top: 120vh;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   box-sizing: border-box;
   padding: 40px;
   z-index: 999;
@@ -43,9 +41,7 @@
     overflow: hidden;
     .modal__top {
       height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       .btn-close {
         position: absolute;
         left: 14px;

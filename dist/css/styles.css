@@ -18,8 +18,8 @@ header #notice-bar {
   width: 100%;
   height: 58px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.9);
 }
 header #notice-bar a {
@@ -230,8 +230,8 @@ header .mobile-search button i {
   height: 30px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   top: -7px;
 }
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__header button.go-prev {
@@ -281,8 +281,8 @@ header .mobile-search button i {
   margin: auto;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .days .date:hover,
 .global-nav .wrapper .nav-center .nav-center__modal > div.when .calendar-cont .calendar__body > div .dates .date:hover,
@@ -534,8 +534,8 @@ header .mobile-search button i {
   width: 50px;
   height: 50px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 30px;
   background: #ff385c;
   color: white;
@@ -862,44 +862,49 @@ header .mobile-search button i {
     line-height: 1.4;
   }
 }
-.main {
+#container {
   padding-top: 58px;
   margin-bottom: 100px;
   word-break: keep-all !important;
 }
-.main section {
+#container main,
+#container section {
   width: 100%;
   padding: 48px 80px;
 }
-.main section .wrapper {
+#container main .wrapper,
+#container section .wrapper {
   max-width: 1600px;
   width: 100%;
   margin: auto;
   position: relative;
 }
-.main section .wrapper .section-img {
+#container main .wrapper .section-img,
+#container section .wrapper .section-img {
   width: 100%;
   height: 44vw;
   position: relative;
 }
-.main section .wrapper .section-img > img {
+#container main .wrapper .section-img > img,
+#container section .wrapper .section-img > img {
   width: 100%;
   height: 100%;
   border-radius: 12px;
   object-fit: cover;
 }
-.main section .wrapper .section-img .img-inner-text {
+#container main .wrapper .section-img .img-inner-text,
+#container section .wrapper .section-img .img-inner-text {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
 }
-.main .btn-white {
+#container .btn-white {
   background: white;
   color: black;
   padding: 18px 25px 15px;
@@ -907,41 +912,41 @@ header .mobile-search button i {
   border-radius: 8px;
   font-size: 1.15em;
 }
-.main h1 {
+#container h1 {
   font-size: 5.8vw;
   line-height: 1.15em;
   margin: 0;
 }
-.main h2 {
+#container h2 {
   margin-bottom: 16px;
   letter-spacing: -1px;
   font-size: 3.4em;
   line-height: 1.15em;
 }
-.main h2.section-title {
+#container h2.section-title {
   font-size: 3em;
   margin-bottom: 50px;
 }
-.main h3 {
+#container h3 {
   font-size: 2.4em;
   margin: 10px 0 0;
 }
 
 /* main */
-.content__main {
+main {
   background: black;
 }
-.content__main .wrapper {
+main .wrapper {
   padding-top: 128px;
   width: 100%;
   border-radius: 10px;
 }
-.content__main .wrapper .img-inner-text h2 {
+main .wrapper .img-inner-text h2 {
   color: white;
   text-align: center;
   margin-top: auto;
 }
-.content__main .wrapper .img-inner-text a {
+main .wrapper .img-inner-text a {
   margin-top: 16px;
   margin-bottom: 5%;
   padding: 18px 30px;
@@ -953,77 +958,77 @@ header .mobile-search button i {
 }
 
 /* idea */
-.content__idea .idea-card {
+.idea .idea-card {
   height: 28vw;
 }
-.content__idea .idea-card > div {
+.idea .idea-card > div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   height: 100%;
 }
-.content__idea .idea-card > div .card {
+.idea .idea-card > div .card {
   border-radius: 12px;
   overflow: hidden;
 }
-.content__idea .idea-card > div .card .card-img {
+.idea .idea-card > div .card .card-img {
   height: 50%;
 }
-.content__idea .idea-card > div .card .card-img img {
+.idea .idea-card > div .card .card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.content__idea .idea-card > div .card .card-text {
+.idea .idea-card > div .card .card-text {
   height: 50%;
   color: white;
   padding: 20px 15px;
 }
-.content__idea .idea-card > div .card .card-text span {
+.idea .idea-card > div .card .card-text span {
   display: block;
   margin-top: 20px;
 }
-.content__idea .idea-card > div .card:nth-child(1) .card-text {
+.idea .idea-card > div .card:nth-child(1) .card-text {
   background: #bc1a6e;
 }
-.content__idea .idea-card > div .card:nth-child(2) .card-text {
+.idea .idea-card > div .card:nth-child(2) .card-text {
   background: #cc2d4a;
 }
-.content__idea .idea-card > div .card:nth-child(3) .card-text {
+.idea .idea-card > div .card:nth-child(3) .card-text {
   background: #de3151;
 }
-.content__idea .idea-card > div .card:nth-child(4) .card-text {
+.idea .idea-card > div .card:nth-child(4) .card-text {
   background: #d93b30;
 }
 
 /* experience */
-.content__experience .experience-card {
+.experience .experience-card {
   margin-bottom: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   height: 48vw;
 }
-.content__experience .experience-card .card {
+.experience .experience-card .card {
   border-radius: 12px;
   overflow: hidden;
   padding: 4vw;
 }
-.content__experience .experience-card .card h2 {
+.experience .experience-card .card h2 {
   margin-top: 0;
   color: white;
 }
-.content__experience .experience-card .card:first-child {
+.experience .experience-card .card:first-child {
   background: url(https://a0.muscache.com/im/pictures/c2adcb16-6c3f-4041-86a1-afa9c303c500.jpg?im_w=720) no-repeat center;
   background-size: cover;
 }
-.content__experience .experience-card .card:last-child {
+.experience .experience-card .card:last-child {
   background: url(https://a0.muscache.com/im/pictures/c1bdf53f-2a19-4529-aa9b-1b0e6bd8d0ee.jpg?im_w=720) no-repeat center;
   background-size: cover;
 }
 
 /* superhost */
-.content__superhost .img-inner-text {
+.superhost .img-inner-text {
   text-align: left !important;
   justify-content: space-between !important;
   align-items: flex-start !important;
@@ -1035,236 +1040,239 @@ header .mobile-search button i {
 
 /*responsive*/
 @media (max-width: 1200px) {
-  .main {
+  #container {
     margin-bottom: 0;
   }
-  .main section.content__main .wrapper .section-img {
+  #container main .wrapper .section-img {
     height: 43vw;
     min-height: 550px;
   }
-  .main .btn-white {
+  #container .btn-white {
     font-size: 1.14em;
     padding: 15px 23px;
   }
-  .main h2 {
+  #container h2 {
     font-size: 2.9em;
   }
-  .main h2.section-title {
+  #container h2.section-title {
     font-size: 2.35em;
   }
-  .main h3 {
+  #container h3 {
     font-size: 1.9em;
     margin-top: 0;
   }
 
-  .content__main .wrapper .img-inner-text a {
+  main .wrapper .img-inner-text a {
     margin-top: 5px;
     margin-bottom: 6%;
   }
 
-  .content__idea .idea-card {
+  .idea .idea-card {
     gap: 25px;
     height: 27vw;
   }
-  .content__idea .idea-card .card .card-text span {
+  .idea .idea-card .card .card-text span {
     margin-top: 15px;
   }
 
-  .content__experience .experience-card {
+  .experience .experience-card {
     gap: 25px;
     height: 48vw;
   }
-  .content__experience .experience-card .card {
+  .experience .experience-card .card {
     padding: 3.4vw;
   }
-  .content__experience .experience-card .card h2 {
+  .experience .experience-card .card h2 {
     margin-bottom: 22px !important;
   }
 
-  .content__superhost {
+  .superhost {
     padding: 0 !important;
   }
-  .content__superhost .section-img {
+  .superhost .section-img {
     height: 50vw !important;
   }
-  .content__superhost .section-img img {
+  .superhost .section-img img {
     border-radius: 0 !important;
   }
 }
 @media (max-width: 1024px) {
-  .main {
+  #container {
     margin-bottom: 0;
   }
-  .main section {
-    padding: 48px 0 0;
-  }
-  .main section.content__main .wrapper .section-img {
+  #container main .wrapper .section-img {
     height: 57vw;
     min-height: 550px;
   }
-  .main section.content__idea, .main section.content__experience {
-    padding: 20px 40px 30px;
-  }
-  .main section.content__superhost {
-    padding-top: 10px;
-  }
-  .main section .wrapper .section-img img {
+  #container main .wrapper .section-img img {
     border-radius: 0;
   }
-  .main .btn-white {
+  #container section {
+    padding: 48px 0 0;
+  }
+  #container section.idea, #container section.experience {
+    padding: 20px 40px 30px;
+  }
+  #container section.superhost {
+    padding-top: 10px;
+  }
+  #container section .wrapper .section-img img {
+    border-radius: 0;
+  }
+  #container .btn-white {
     font-size: 1em;
   }
-  .main h1 {
+  #container h1 {
     font-size: 3.4em;
   }
-  .main h2 {
+  #container h2 {
     font-size: 2.2em;
   }
-  .main h2.section-title {
+  #container h2.section-title {
     font-size: 1.8em;
     margin-bottom: 20px;
   }
-  .main h3 {
+  #container h3 {
     font-size: 1.7em;
   }
 
-  .content__main .wrapper .img-inner-text a {
+  main .wrapper .img-inner-text a {
     margin-bottom: 8%;
     margin-top: 10px;
   }
 
-  .content__idea {
+  .idea {
     padding: 20px 0 !important;
   }
-  .content__idea .section-title {
+  .idea .section-title {
     padding: 0 40px;
   }
-  .content__idea .idea-card {
+  .idea .idea-card {
     width: 100%;
     overflow-x: auto;
     height: 30vw;
     min-height: 310px;
   }
-  .content__idea .idea-card::-webkit-scrollbar {
+  .idea .idea-card::-webkit-scrollbar {
     height: 0;
   }
-  .content__idea .idea-card > div {
+  .idea .idea-card > div {
     width: 135%;
     margin: 0 40px;
     height: 100%;
   }
 
-  .content__experience .experience-card {
+  .experience .experience-card {
     height: 57vw;
     margin-bottom: 0;
   }
 
-  .content__superhost .wrapper .section-img {
+  .superhost .wrapper .section-img {
     height: 50vw !important;
   }
-  .content__superhost .wrapper .section-img .img-inner-text {
+  .superhost .wrapper .section-img .img-inner-text {
     padding: 40px 0 40px 40px;
   }
 }
 @media (max-width: 900px) {
-  .content__main .wrapper {
+  main .wrapper {
     padding-top: 182px;
   }
 }
 @media (max-width: 768px) {
-  .main section.content__main .wrapper .section-img {
+  #container main .wrapper .section-img {
     height: calc(100vh - 58px);
   }
-  .main section.content__idea, .main section.content__experience {
+  #container section.idea, #container section.experience {
     padding: 20px 40px 30px;
   }
-  .main section.content__superhost {
+  #container section.superhost {
     padding-top: 10px;
   }
-  .main section .wrapper .section-img img {
+  #container section .wrapper .section-img img {
     border-radius: 0;
   }
-  .main .btn-white {
+  #container .btn-white {
     font-size: 1em;
   }
-  .main h1 {
+  #container h1 {
     font-size: 3.4em;
   }
-  .main h2 {
+  #container h2 {
     font-size: 2.2em;
   }
-  .main h2.section-title {
+  #container h2.section-title {
     font-size: 1.8em;
     margin-bottom: 20px;
   }
-  .main h3 {
+  #container h3 {
     font-size: 1.7em;
   }
 
-  .content__main {
+  main {
     padding-top: 0 !important;
   }
-  .content__main .wrapper {
+  main .wrapper {
     padding-top: 0;
   }
-  .content__main .wrapper .section-img .img-inner-text a {
+  main .wrapper .section-img .img-inner-text a {
     margin-bottom: 10vh;
   }
 }
 @media (max-width: 480px) {
-  .main h1 {
+  #container h1 {
     font-size: 3em;
   }
-  .main h2 {
+  #container h2 {
     font-size: 2.4em;
   }
 
-  .content__idea .section-title {
+  .idea .section-title {
     padding: 0 0 0 25px;
     width: 100%;
     max-width: 300px;
   }
-  .content__idea .idea-card {
+  .idea .idea-card {
     height: 70vw;
     min-height: inherit;
   }
-  .content__idea .idea-card > div {
+  .idea .idea-card > div {
     width: 220%;
     margin: 0 25px;
     gap: 15px;
   }
-  .content__experience {
+  .experience {
     padding: 20px 25px 30px !important;
   }
-  .content__experience .experience-card {
+  .experience .experience-card {
     display: flex;
     flex-direction: column;
     gap: 15px;
     height: inherit;
   }
-  .content__experience .experience-card .card {
+  .experience .experience-card .card {
     height: 135vw;
     padding: 30px;
   }
 
-  .content__superhost .wrapper .section-img {
+  .superhost .wrapper .section-img {
     height: 132vw !important;
   }
-  .content__superhost .wrapper .section-img .img-inner-text {
+  .superhost .wrapper .section-img .img-inner-text {
     width: 300px !important;
     padding: 30px 0 35px 25px;
     min-width: inherit;
   }
 }
 @media (max-width: 378px) {
-  .main h1 {
+  #container h1 {
     font-size: 12vw;
   }
-  .main h2 {
+  #container h2 {
     font-size: 1.9em;
   }
 
-  .content__main .wrapper .section-img .img-inner-text a {
+  main .wrapper .section-img .img-inner-text a {
     font-size: 1em;
     padding: 15px 25px;
   }
@@ -1293,8 +1301,8 @@ header .mobile-search button i {
   top: 120vh;
   left: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   padding: 40px;
   z-index: 999;
@@ -1317,8 +1325,8 @@ header .mobile-search button i {
 .modal .modal__wrapper .modal__top {
   height: 60px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .modal .modal__wrapper .modal__top .btn-close {
   position: absolute;
@@ -1627,7 +1635,7 @@ header .mobile-search button i {
 }
 
 /* host__main */
-#host__main {
+#host__container {
   padding-top: 0;
   /* host & end video screen - e */
   /* start-hosting - e */
@@ -1635,7 +1643,7 @@ header .mobile-search button i {
   /* hosting-info - e */
   /* end-screen - e */
 }
-#host__main .host__content-title {
+#host__container .host__content-title {
   letter-spacing: -1px;
   padding-top: 160px;
   margin-top: 0;
@@ -1644,17 +1652,17 @@ header .mobile-search button i {
   font-size: 4.4em;
   line-height: 1.15em;
 }
-#host__main #host__main-screen,
-#host__main #host__end-screen {
+#host__container .host-main,
+#host__container .host-end {
   background-color: black;
   height: 100vh;
   display: flex;
 }
-#host__main #host__main-screen > div,
-#host__main #host__end-screen > div {
+#host__container .host-main > div,
+#host__container .host-end > div {
   width: 50%;
 }
-#host__main .main-screen__left h1 {
+#host__container .main-screen__text h1 {
   color: white;
   margin: 0 0 55px 0;
   letter-spacing: -1px;
@@ -1662,7 +1670,7 @@ header .mobile-search button i {
   font-size: 4.6em;
   line-height: 1.1em;
 }
-#host__main .main-screen__left button {
+#host__container .main-screen__text button {
   background: #ff385c;
   color: white;
   font-weight: bold;
@@ -1670,84 +1678,84 @@ header .mobile-search button i {
   border-radius: 8px;
   font-size: 1.1em;
 }
-#host__main .main-screen__left a {
+#host__container .main-screen__text a {
   color: white;
   position: absolute;
   bottom: 50px;
 }
-#host__main .main-screen__left,
-#host__main .end-screen__right {
+#host__container .main-screen__text,
+#host__container .end-screen__text {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
 }
-#host__main .main-screen__right,
-#host__main .end-screen__left {
+#host__container .main-screen__video,
+#host__container .end-screen__video {
   position: relative;
 }
-#host__main .main-screen__right video,
-#host__main .end-screen__left video {
+#host__container .main-screen__video video,
+#host__container .end-screen__video video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
 }
-#host__main .main-screen__right > div button,
-#host__main .end-screen__left > div button {
+#host__container .main-screen__video > div button,
+#host__container .end-screen__video > div button {
   background: rgba(0, 0, 0, 0.7);
   color: white;
   display: none;
-  justify-content: center;
-  align-items: center;
   width: 36px;
   height: 36px;
   border-radius: 50%;
 }
-#host__main .main-screen__right > div button.active,
-#host__main .end-screen__left > div button.active {
+#host__container .main-screen__video > div button.active,
+#host__container .end-screen__video > div button.active {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#host__main .main-screen__right .main-screen__video-text,
-#host__main .end-screen__left .main-screen__video-text {
+#host__container .main-screen__video .main-screen__video-text,
+#host__container .end-screen__video .main-screen__video-text {
   position: absolute;
   display: flex;
   flex-direction: column;
   bottom: 54px;
   left: 8%;
 }
-#host__main #content__start-hosting {
+#host__container #content__start-hosting {
   position: relative;
 }
-#host__main #content__start-hosting .start-hosting__host {
+#host__container #content__start-hosting .start-hosting__host {
   position: relative;
 }
-#host__main #content__start-hosting .start-hosting__host ::-webkit-scrollbar {
+#host__container #content__start-hosting .start-hosting__host ::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap {
+#host__container #content__start-hosting .start-hosting__host .host-wrap {
   width: calc(100% - 80px);
   overflow: hidden;
   margin-left: 80px;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul {
   position: relative;
   display: flex;
   width: 200%;
   transition: transform 0.3s;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul li {
   width: 33.333%;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-img {
   width: 100%;
   padding-bottom: 100%;
   position: relative;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
   width: 94%;
   height: 94%;
   margin: 3%;
@@ -1756,7 +1764,7 @@ header .mobile-search button i {
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
   width: 90%;
   margin: 20px auto 0;
   opacity: 0;
@@ -1765,26 +1773,26 @@ header .mobile-search button i {
   align-items: flex-start;
   transition: opacity 0.3s;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
   width: 100%;
   font-size: 1.7em;
   line-height: 1.2;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text img {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-text img {
   height: 35px;
   margin: 20px 0;
   object-fit: contain;
 }
-#host__main #content__start-hosting .start-hosting__host .host-wrap ul li.active .item-text {
+#host__container #content__start-hosting .start-hosting__host .host-wrap ul li.active .item-text {
   opacity: 1;
 }
-#host__main #content__start-hosting .start-hosting__host .host-btn {
+#host__container #content__start-hosting .start-hosting__host .host-btn {
   width: 30%;
   bottom: 30px;
   position: absolute;
   left: calc(30% + 80px + 20px);
 }
-#host__main #content__start-hosting .start-hosting__host .host-btn button {
+#host__container #content__start-hosting .start-hosting__host .host-btn button {
   position: absolute;
   bottom: 0;
   width: 30px;
@@ -1793,23 +1801,23 @@ header .mobile-search button i {
   background: #ebebeb;
   color: #444;
 }
-#host__main #content__start-hosting .start-hosting__host .host-btn button:hover {
+#host__container #content__start-hosting .start-hosting__host .host-btn button:hover {
   background: #cfcfcf;
 }
-#host__main #content__start-hosting .start-hosting__host .host-btn button:disabled {
+#host__container #content__start-hosting .start-hosting__host .host-btn button:disabled {
   opacity: 0.5;
   cursor: auto;
 }
-#host__main #content__start-hosting .start-hosting__host .host-btn button:disabled:hover {
+#host__container #content__start-hosting .start-hosting__host .host-btn button:disabled:hover {
   background: #ebebeb;
 }
-#host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
+#host__container #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
   right: 45px;
 }
-#host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__next {
+#host__container #content__start-hosting .start-hosting__host .host-btn button.host-list__next {
   right: 0;
 }
-#host__main #content__start-hosting .start-hosting__form {
+#host__container #content__start-hosting .start-hosting__form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1818,18 +1826,18 @@ header .mobile-search button i {
   padding: 0 48px;
   text-align: center;
 }
-#host__main #content__start-hosting .start-hosting__form form {
+#host__container #content__start-hosting .start-hosting__form form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#host__main #content__start-hosting .start-hosting__form form label {
+#host__container #content__start-hosting .start-hosting__form form label {
   font-weight: bold;
   color: #717171;
   margin-bottom: 10px;
   font-size: 3em;
 }
-#host__main #content__start-hosting .start-hosting__form form select {
+#host__container #content__start-hosting .start-hosting__form form select {
   background: none;
   border: none;
   font-weight: bold;
@@ -1838,103 +1846,103 @@ header .mobile-search button i {
   color: black;
   font-size: 3em;
 }
-#host__main #content__start-hosting .start-hosting__form h1 {
+#host__container #content__start-hosting .start-hosting__form h1 {
   margin: 30px 0 60px 0;
   font-size: 2.8em;
 }
-#host__main #content__start-hosting .start-hosting__form button {
+#host__container #content__start-hosting .start-hosting__form button {
   text-decoration: underline;
   font-weight: bold;
   font-size: 0.9rem;
 }
-#host__main #content__super-host {
+#host__container .super-host {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-top: 100px;
   padding: 0 48px;
   height: 50vw;
   position: relative;
 }
-#host__main #content__super-host img {
+#host__container .super-host img {
   border-radius: 10px;
   width: 100%;
   object-fit: cover;
   height: 100%;
 }
-#host__main #content__super-host .super-host__text {
+#host__container .super-host .super-host__text {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 0 48px;
 }
-#host__main #content__super-host .super-host__text h1 {
+#host__container .super-host .super-host__text h1 {
   padding: 0;
   color: white;
 }
-#host__main #content__super-host .super-host__text button {
+#host__container .super-host .super-host__text button {
   background: white;
   padding: 16px 30px;
   border-radius: 8px;
   font-weight: bold;
   font-size: 1.1em;
 }
-#host__main #content__hosting-info .hosting-info__content {
+#host__container .hosting-info .hosting-info__content {
   padding: 0 48px;
   margin-bottom: 220px;
 }
-#host__main #content__hosting-info .hosting-info__content .hosting-info__content-list {
+#host__container .hosting-info .hosting-info__content .hosting-info__content-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   justify-content: center;
 }
-#host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item {
+#host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item {
   box-sizing: border-box;
 }
-#host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item img {
+#host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item img {
   width: 100%;
   height: 338px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
 }
-#host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
+#host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
   font-weight: bold;
   font-size: 1.5em;
 }
-#host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p i {
+#host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p i {
   margin-left: 15px;
   vertical-align: baseline;
 }
-#host__main #host__end-screen .end-screen__left .end-screen__video-text {
+#host__container .host-end .end-screen__video .end-screen__video-text {
   position: absolute;
   bottom: 50px;
   left: 60px;
 }
-#host__main #host__end-screen .end-screen__left .end-screen__video-text button {
+#host__container .host-end .end-screen__video .end-screen__video-text button {
   margin: 0;
 }
-#host__main #host__end-screen .end-screen__right h1 {
+#host__container .host-end .end-screen__text h1 {
   color: white;
   margin: 0 0 32px 0;
   letter-spacing: -1px;
   font-size: 3.4em;
   line-height: 1.2em;
 }
-#host__main #host__end-screen .end-screen__right p {
+#host__container .host-end .end-screen__text p {
   color: white;
   max-width: 360px;
   margin-bottom: 50px;
   font-size: 1.2em;
   line-height: 1.5em;
 }
-#host__main #host__end-screen .end-screen__right button {
+#host__container .host-end .end-screen__text button {
   margin-bottom: 48px;
   font-size: 1.15em;
 }
@@ -1950,53 +1958,53 @@ header .mobile-search button i {
 
 /*responsive*/
 @media (max-width: 1024px) {
-  #host__main #content__start-hosting .start-hosting__host .host-wrap {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap {
     width: calc(100% - 40px);
     margin-left: 40px;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap ul {
     width: 360%;
     gap: 20px;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-img img {
     width: 100%;
     height: 100%;
     margin: inherit;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
     margin-top: 50px;
     width: 100%;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn {
+  #host__container #content__start-hosting .start-hosting__host .host-btn {
     left: 30%;
     bottom: 20px;
   }
-  #host__main #content__super-host .super-host__text h1 {
+  #host__container .super-host .super-host__text h1 {
     font-size: 5vw;
   }
-  #host__main #content__hosting-info .hosting-info__content {
+  #host__container .hosting-info .hosting-info__content {
     margin-bottom: 100px;
   }
-  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
+  #host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
     font-size: 1.2em !important;
   }
-  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p i {
+  #host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p i {
     margin-left: 5px;
   }
 }
 @media (max-width: 900px) {
-  #host__main .host__content-title {
+  #host__container .host__content-title {
     padding-top: 100px;
   }
-  #host__main #host__main-screen > div,
-#host__main #host__end-screen > div {
+  #host__container .host-main > div,
+#host__container .host-end > div {
     width: 100%;
   }
-  #host__main #host__main-screen {
+  #host__container .host-main {
     flex-direction: column-reverse;
     position: relative;
   }
-  #host__main #host__main-screen .main-screen__left {
+  #host__container .host-main .main-screen__text {
     background: white;
     padding: 40px 40px 0;
     border-radius: 12px 12px 0 0;
@@ -2007,37 +2015,37 @@ header .mobile-search button i {
     justify-content: space-between;
     align-items: flex-start;
   }
-  #host__main #host__main-screen .main-screen__left h1 {
+  #host__container .host-main .main-screen__text h1 {
     color: black;
     text-align: left;
     margin-bottom: 0;
   }
-  #host__main #host__main-screen .main-screen__left button {
+  #host__container .host-main .main-screen__text button {
     display: none;
   }
-  #host__main #host__main-screen .main-screen__left a {
+  #host__container .host-main .main-screen__text a {
     color: #777;
     bottom: inherit;
     left: 50%;
     transform: translateX(-50%);
   }
-  #host__main #host__main-screen .main-screen__right {
+  #host__container .host-main .main-screen__video {
     height: calc(70% + 12px);
     margin-bottom: auto;
   }
-  #host__main #host__end-screen {
+  #host__container .host-end {
     flex-direction: column;
     position: relative;
   }
-  #host__main #host__end-screen .end-screen__left {
+  #host__container .host-end .end-screen__video {
     height: calc(45% + 12px);
     margin-bottom: auto;
   }
-  #host__main #host__end-screen .end-screen__left .end-screen__video-text {
+  #host__container .host-end .end-screen__video .end-screen__video-text {
     bottom: 25px;
     left: 40px;
   }
-  #host__main #host__end-screen .end-screen__right {
+  #host__container .host-end .end-screen__text {
     padding: 40px 40px;
     border-radius: 12px 12px 0 0;
     position: absolute;
@@ -2049,14 +2057,14 @@ header .mobile-search button i {
     justify-content: space-between;
     text-align: left;
   }
-  #host__main #host__end-screen .end-screen__right h1 {
+  #host__container .host-end .end-screen__text h1 {
     font-size: 2.3em;
     margin-bottom: 20px;
   }
-  #host__main #host__end-screen .end-screen__right p {
+  #host__container .host-end .end-screen__text p {
     margin-bottom: auto;
   }
-  #host__main #host__end-screen .end-screen__right button {
+  #host__container .host-end .end-screen__text button {
     margin-bottom: 0;
   }
 }
@@ -2098,60 +2106,60 @@ header .mobile-search button i {
     font-size: 1.1em;
   }
 
-  #host__main .host__content-title {
+  #host__container .host__content-title {
     font-size: 5.7vw;
   }
-  #host__main #host__main-screen {
+  #host__container .host-main {
     height: calc(100vh - 97px);
   }
-  #host__main #host__main-screen .main-screen__left h1 {
+  #host__container .host-main .main-screen__text h1 {
     font-size: 3.2em;
   }
-  #host__main #content__hosting-info .hosting-info__content {
+  #host__container .hosting-info .hosting-info__content {
     padding: 0 25px;
   }
-  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list {
+  #host__container .hosting-info .hosting-info__content .hosting-info__content-list {
     display: flex;
     flex-direction: column;
   }
-  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item {
+  #host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item {
     margin-bottom: 10px;
   }
-  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
+  #host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
     font-size: 1.3em !important;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-text {
     margin-top: 30px;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn {
+  #host__container #content__start-hosting .start-hosting__host .host-btn {
     width: 100%;
     left: 0;
     bottom: auto;
     top: 31vw;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button {
     width: 40px;
     height: 40px;
     background: white;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button i {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button i {
     font-size: 1.3em;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
     right: auto;
     left: 20px;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__next {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button.host-list__next {
     right: 20px;
   }
-  #host__main #content__start-hosting .start-hosting__form {
+  #host__container #content__start-hosting .start-hosting__form {
     font-size: 1.85vw;
     line-height: 1.3;
   }
-  #host__main #content__super-host {
+  #host__container .super-host {
     min-height: 520px !important;
   }
-  #host__main #content__super-host .super-host__text h1 {
+  #host__container .super-host .super-host__text h1 {
     font-size: 2.2em;
   }
 
@@ -2160,121 +2168,121 @@ header .mobile-search button i {
   }
 }
 @media (max-width: 480px) {
-  #host__main .host__content-title {
+  #host__container .host__content-title {
     padding-left: 25px;
     padding-right: 25px;
     margin-bottom: 40px;
     text-align: left;
   }
-  #host__main #host__main-screen .main-screen__left {
+  #host__container .host-main .main-screen__text {
     padding: 25px 25px 0;
   }
-  #host__main #host__main-screen .main-screen__left h1 {
+  #host__container .host-main .main-screen__text h1 {
     font-size: 2.85em;
   }
-  #host__main #host__main-screen .main-screen__left a {
+  #host__container .host-main .main-screen__text a {
     bottom: 3vh;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap {
     width: calc(100% - 25px);
     margin-left: 25px;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap ul {
     width: 480%;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
+  #host__container #content__start-hosting .start-hosting__host .host-wrap ul li .item-text p {
     font-size: 1.3em;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn {
+  #host__container #content__start-hosting .start-hosting__host .host-btn {
     top: 40vw;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button {
     width: 35px;
     height: 35px;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button i {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button i {
     font-size: 1.2em;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button.host-list__prev {
     left: 10px;
   }
-  #host__main #content__start-hosting .start-hosting__host .host-btn button.host-list__next {
+  #host__container #content__start-hosting .start-hosting__host .host-btn button.host-list__next {
     right: 10px;
   }
-  #host__main #content__start-hosting .start-hosting__form {
+  #host__container #content__start-hosting .start-hosting__form {
     padding: 0 25px;
     margin-top: 100px;
     align-items: flex-start;
     font-size: 1.85vw;
     line-height: 0.7;
   }
-  #host__main #content__start-hosting .start-hosting__form form {
+  #host__container #content__start-hosting .start-hosting__form form {
     align-items: flex-start;
   }
-  #host__main #content__start-hosting .start-hosting__form form label {
+  #host__container #content__start-hosting .start-hosting__form form label {
     font-weight: normal;
   }
-  #host__main #content__start-hosting .start-hosting__form form select {
+  #host__container #content__start-hosting .start-hosting__form form select {
     border-bottom: 1px solid black;
     margin-bottom: 40px;
   }
-  #host__main #content__start-hosting .start-hosting__form h1 {
+  #host__container #content__start-hosting .start-hosting__form h1 {
     text-align: left;
     font-size: 3.1em;
     line-height: 1.3;
     margin-bottom: 40px;
     margin-top: 0;
   }
-  #host__main #content__start-hosting .start-hosting__form button {
+  #host__container #content__start-hosting .start-hosting__form button {
     font-size: 2em;
   }
-  #host__main #content__hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
+  #host__container .hosting-info .hosting-info__content .hosting-info__content-list .hosting-info__content-item p {
     line-height: 1.3;
   }
-  #host__main #content__super-host {
+  #host__container .super-host {
     margin-top: 50px;
     padding: 25px;
     height: calc(100vh - 97px);
   }
-  #host__main #content__super-host .super-host__text {
+  #host__container .super-host .super-host__text {
     width: calc(100% - 50px);
     height: calc(100% - 50px);
     margin-top: 25px;
     padding: 50px 25px;
     justify-content: space-between;
   }
-  #host__main #content__super-host .super-host__text h1 {
+  #host__container .super-host .super-host__text h1 {
     font-size: 2.4em;
     margin: auto;
     text-align: center;
   }
-  #host__main #content__super-host .super-host__text button {
+  #host__container .super-host .super-host__text button {
     width: 100%;
   }
-  #host__main #host__end-screen .end-screen__left {
+  #host__container .host-end .end-screen__video {
     height: calc(55% + 12px);
   }
-  #host__main #host__end-screen .end-screen__left .end-screen__video-text {
+  #host__container .host-end .end-screen__video .end-screen__video-text {
     left: 25px;
   }
-  #host__main #host__end-screen .end-screen__right {
+  #host__container .host-end .end-screen__text {
     padding: 25px 25px 0;
     height: 45%;
     top: 55%;
   }
-  #host__main #host__end-screen .end-screen__right button {
+  #host__container .host-end .end-screen__text button {
     display: none;
   }
 }
 @media (max-width: 378px) {
-  #host__main .host__content-title {
+  #host__container .host__content-title {
     padding-top: 70px;
     font-size: 7vw;
   }
-  #host__main #content__start-hosting .start-hosting__form {
+  #host__container #content__start-hosting .start-hosting__form {
     font-size: 2vw;
   }
-  #host__main #content__super-host .super-host__text h1 {
+  #host__container .super-host .super-host__text h1 {
     font-size: 2.2em;
   }
 }
@@ -2447,8 +2455,8 @@ header .mobile-search button i {
   bottom: 10px;
   left: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 #search__header .local-nav .wrapper .local-nav-right .when > .modal .save,
 #search__header .local-nav .wrapper .local-nav-right .guest > .modal .save,
@@ -3731,5 +3739,3 @@ body {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
   font-size: 14px;
 }
-
-/*# sourceMappingURL=styles.css.map */

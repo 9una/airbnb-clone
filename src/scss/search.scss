@@ -157,9 +157,7 @@
               height: 40px;
               bottom: 10px;
               left: 10px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              @include flex-center;
             }
             .save {
               padding: 13px !important;
@@ -420,9 +418,7 @@
         width: 28px;
         height: 28px;
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         background: white;
         border: 1px solid #999;
         color: #555;
@@ -664,9 +660,7 @@
                       width: 33px;
                       height: 33px;
                       border-radius: 50%;
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
+                      @include flex-center;
                       color: #717171;
                       border: 1px solid #ccc;
                       background: white;

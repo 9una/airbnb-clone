@@ -12,9 +12,7 @@
   .logo {
     width: 64px;
     height: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     border-radius: 50%;
     background: url(../../img/logo_white_2.png) no-repeat center;
     background-size: auto 32px;
@@ -85,7 +83,7 @@
 }
 
 /* host__main */
-#host__main {
+#host__container {
   padding-top: 0;
   .host__content-title {
     letter-spacing: -1px;
@@ -96,8 +94,8 @@
     font-size: 4.4em;
     line-height: 1.15em;
   }
-  #host__main-screen,
-  #host__end-screen {
+  .host-main,
+  .host-end {
     background-color: black;
     height: 100vh;
     display: flex;
@@ -105,7 +103,7 @@
       width: 50%;
     }
   }
-  .main-screen__left {
+  .main-screen__text {
     h1 {
       color: white;
       margin: 0 0 55px 0;
@@ -128,17 +126,15 @@
       bottom: 50px;
     }
   }
-  .main-screen__left,
-  .end-screen__right {
+  .main-screen__text,
+  .end-screen__text {
     position: relative;
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
   }
-  .main-screen__right,
-  .end-screen__left {
+  .main-screen__video,
+  .end-screen__video {
     position: relative;
     video {
       width: 100%;
@@ -151,13 +147,11 @@
         background: rgba(0, 0, 0, 0.7);
         color: white;
         display: none;
-        justify-content: center;
-        align-items: center;
         width: 36px;
         height: 36px;
         border-radius: 50%;
         &.active {
-          display: flex;
+          @include flex-center;
         }
       }
     }
@@ -303,10 +297,8 @@
     }
   }
   /* start-hosting - e */
-  #content__super-host {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .super-host {
+    @include flex-center;
     margin-top: 100px;
     padding: 0 48px;
     height: 50vw;
@@ -322,10 +314,8 @@
       top: 0;
       width: 100%;
       height: 100%;
-      display: flex;
+      @include flex-center;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       padding: 0 48px;
       h1 {
         padding: 0;
@@ -341,7 +331,7 @@
     }
   }
   /* super-host - e */
-  #content__hosting-info {
+  .hosting-info {
     .hosting-info__content {
       padding: $hostPadding48;
       margin-bottom: 220px;
@@ -372,8 +362,8 @@
     }
   }
   /* hosting-info - e */
-  #host__end-screen {
-    .end-screen__left {
+  .host-end {
+    .end-screen__video {
       .end-screen__video-text {
         position: absolute;
         bottom: 50px;
@@ -383,7 +373,7 @@
         }
       }
     }
-    .end-screen__right {
+    .end-screen__text {
       h1 {
         color: white;
         margin: 0 0 32px 0;
@@ -418,7 +408,7 @@
 
 /*responsive*/
 @include desktop {
-  #host__main {
+  #host__container {
     #content__start-hosting {
       .start-hosting__host {
         .host-wrap {
@@ -448,14 +438,14 @@
         }
       }
     }
-    #content__super-host {
+    .super-host {
       .super-host__text {
         h1 {
           font-size: 5vw;
         }
       }
     }
-    #content__hosting-info {
+    .hosting-info {
       .hosting-info__content {
         margin-bottom: 100px;
         .hosting-info__content-list {
@@ -474,20 +464,20 @@
 }
 
 @include max900 {
-  #host__main {
+  #host__container {
     .host__content-title {
       padding-top: 100px;
     }
-    #host__main-screen,
-    #host__end-screen {
+    .host-main,
+    .host-end {
       & > div {
         width: 100%;
       }
     }
-    #host__main-screen {
+    .host-main {
       flex-direction: column-reverse;
       position: relative;
-      .main-screen__left {
+      .main-screen__text {
         background: white;
         padding: 40px 40px 0;
         border-radius: 12px 12px 0 0;
@@ -512,15 +502,15 @@
           transform: translateX(-50%);
         }
       }
-      .main-screen__right {
+      .main-screen__video {
         height: calc(70% + 12px);
         margin-bottom: auto;
       }
     }
-    #host__end-screen {
+    .host-end {
       flex-direction: column;
       position: relative;
-      .end-screen__left {
+      .end-screen__video {
         height: calc(45% + 12px);
         margin-bottom: auto;
         .end-screen__video-text {
@@ -528,7 +518,7 @@
           left: 40px;
         }
       }
-      .end-screen__right {
+      .end-screen__text {
         padding: 40px 40px;
         border-radius: 12px 12px 0 0;
         position: absolute;
@@ -591,19 +581,19 @@
       }
     }
   }
-  #host__main {
+  #host__container {
     .host__content-title {
       font-size: 5.7vw;
     }
-    #host__main-screen {
+    .host-main {
       height: calc(100vh - 97px);
-      .main-screen__left {
+      .main-screen__text {
         h1 {
           font-size: 3.2em;
         }
       }
     }
-    #content__hosting-info {
+    .hosting-info {
       .hosting-info__content {
         padding: 0 25px;
         .hosting-info__content-list {
@@ -656,7 +646,7 @@
         line-height: 1.3;
       }
     }
-    #content__super-host {
+    .super-host {
       min-height: 520px !important;
       .super-host__text {
         h1 {
@@ -671,15 +661,15 @@
 }
 
 @include mobile {
-  #host__main {
+  #host__container {
     .host__content-title {
       padding-left: 25px;
       padding-right: 25px;
       margin-bottom: 40px;
       text-align: left;
     }
-    #host__main-screen {
-      .main-screen__left {
+    .host-main {
+      .main-screen__text {
         padding: 25px 25px 0;
         h1 {
           font-size: 2.85em;
@@ -750,7 +740,7 @@
         }
       }
     }
-    #content__hosting-info {
+    .hosting-info {
       .hosting-info__content {
         .hosting-info__content-list {
           .hosting-info__content-item {
@@ -761,7 +751,7 @@
         }
       }
     }
-    #content__super-host {
+    .super-host {
       margin-top: 50px;
       padding: 25px;
       height: calc(100vh - 97px);
@@ -781,14 +771,14 @@
         }
       }
     }
-    #host__end-screen {
-      .end-screen__left {
+    .host-end {
+      .end-screen__video {
         height: calc(55% + 12px);
         .end-screen__video-text {
           left: 25px;
         }
       }
-      .end-screen__right {
+      .end-screen__text {
         padding: 25px 25px 0;
         height: 45%;
         top: 55%;
@@ -801,7 +791,7 @@
 }
 
 @include mobileSmall {
-  #host__main {
+  #host__container {
     .host__content-title {
       padding-top: 70px;
       font-size: 7vw;
@@ -811,7 +801,7 @@
         font-size: 2vw;
       }
     }
-    #content__super-host {
+    .super-host {
       .super-host__text {
         h1 {
           font-size: 2.2em;

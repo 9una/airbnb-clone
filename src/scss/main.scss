@@ -1,7 +1,8 @@
-.main {
+#container {
   padding-top: 58px;
   margin-bottom: 100px;
   word-break: keep-all !important;
+  main,
   section {
     width: 100%;
     padding: 48px 80px;
@@ -25,10 +26,8 @@
           top: 0;
           width: 100%;
           height: 100%;
-          display: flex;
+          @include flex-center;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
           text-align: center;
         }
       }
@@ -64,14 +63,8 @@
 }
 
 /* main */
-.content__main {
-  // background: linear-gradient(
-  //   to bottom,
-  //   #000000 0%,
-  //   #000000 50%,
-  //   #ffffff 50%,
-  //   #ffffff 100%
-  // ); //background-size 100% 50%
+main {
+  // background: linear-gradient(to bottom, #000000 0%, #000000 50%, #ffffff 50%, #ffffff 100%); //background-size 100% 50%
   background: black;
   .wrapper {
     padding-top: 128px;
@@ -97,7 +90,7 @@
   }
 }
 /* idea */
-.content__idea {
+.idea {
   .idea-card {
     height: 28vw;
     & > div {
@@ -150,7 +143,7 @@
   }
 }
 /* experience */
-.content__experience {
+.experience {
   .experience-card {
     margin-bottom: 60px;
     display: grid;
@@ -179,7 +172,7 @@
   }
 }
 /* superhost */
-.content__superhost {
+.superhost {
   .img-inner-text {
     text-align: left !important;
     justify-content: space-between !important;
@@ -193,15 +186,13 @@
 
 /*responsive*/
 @include desktopLarge {
-  .main {
+  #container {
     margin-bottom: 0;
-    section {
-      &.content__main {
-        .wrapper {
-          .section-img {
-            height: 43vw;
-            min-height: 550px;
-          }
+    main {
+      .wrapper {
+        .section-img {
+          height: 43vw;
+          min-height: 550px;
         }
       }
     }
@@ -220,7 +211,7 @@
       margin-top: 0;
     }
   }
-  .content__main {
+  main {
     .wrapper {
       .img-inner-text {
         a {
@@ -230,7 +221,7 @@
       }
     }
   }
-  .content__idea {
+  .idea {
     .idea-card {
       gap: 25px;
       height: 27vw;
@@ -243,7 +234,7 @@
       }
     }
   }
-  .content__experience {
+  .experience {
     .experience-card {
       gap: 25px;
       height: 48vw;
@@ -255,7 +246,7 @@
       }
     }
   }
-  .content__superhost {
+  .superhost {
     padding: 0 !important;
     .section-img {
       height: 50vw !important;
@@ -267,23 +258,26 @@
 }
 
 @include desktop {
-  .main {
+  #container {
     margin-bottom: 0;
-    section {
-      padding: 48px 0 0;
-      &.content__main {
-        .wrapper {
-          .section-img {
-            height: 57vw;
-            min-height: 550px;
+    main {
+      .wrapper {
+        .section-img {
+          height: 57vw;
+          min-height: 550px;
+          img {
+            border-radius: 0;
           }
         }
       }
-      &.content__idea,
-      &.content__experience {
+    }
+    section {
+      padding: 48px 0 0;
+      &.idea,
+      &.experience {
         padding: 20px 40px 30px;
       }
-      &.content__superhost {
+      &.superhost {
         padding-top: 10px;
       }
       .wrapper {
@@ -311,7 +305,7 @@
       font-size: 1.7em;
     }
   }
-  .content__main {
+  main {
     .wrapper {
       .img-inner-text {
         a {
@@ -321,7 +315,7 @@
       }
     }
   }
-  .content__idea {
+  .idea {
     padding: 20px 0 !important;
     .section-title {
       padding: 0 40px;
@@ -341,13 +335,13 @@
       }
     }
   }
-  .content__experience {
+  .experience {
     .experience-card {
       height: 57vw;
       margin-bottom: 0;
     }
   }
-  .content__superhost {
+  .superhost {
     .wrapper {
       .section-img {
         height: 50vw !important;
@@ -360,7 +354,7 @@
   }
 }
 @include max900 {
-  .content__main {
+  main {
     .wrapper {
       padding-top: 182px;
     }
@@ -368,20 +362,20 @@
 }
 
 @include tablet {
-  .main {
-    section {
-      &.content__main {
-        .wrapper {
-          .section-img {
-            height: calc(100vh - 58px);
-          }
+  #container {
+    main {
+      .wrapper {
+        .section-img {
+          height: calc(100vh - 58px);
         }
       }
-      &.content__idea,
-      &.content__experience {
+    }
+    section {
+      &.idea,
+      &.experience {
         padding: 20px 40px 30px;
       }
-      &.content__superhost {
+      &.superhost {
         padding-top: 10px;
       }
       .wrapper {
@@ -409,7 +403,7 @@
       font-size: 1.7em;
     }
   }
-  .content__main {
+  main {
     padding-top: 0 !important;
     .wrapper {
       padding-top: 0;
@@ -425,7 +419,7 @@
 }
 
 @include mobile {
-  .main {
+  #container {
     h1 {
       font-size: 3em;
     }
@@ -433,7 +427,7 @@
       font-size: 2.4em;
     }
   }
-  .content__idea {
+  .idea {
     .section-title {
       padding: 0 0 0 25px;
       width: 100%;
@@ -451,7 +445,7 @@
       }
     }
   }
-  .content__experience {
+  .experience {
     padding: 20px 25px 30px !important;
     .experience-card {
       display: flex;
@@ -464,7 +458,7 @@
       }
     }
   }
-  .content__superhost {
+  .superhost {
     .wrapper {
       .section-img {
         height: 132vw !important;
@@ -479,7 +473,7 @@
 }
 
 @include mobileSmall {
-  .main {
+  #container {
     h1 {
       font-size: 12vw;
     }
@@ -487,7 +481,7 @@
       font-size: 1.9em;
     }
   }
-  .content__main {
+  main {
     .wrapper {
       .section-img {
         .img-inner-text {

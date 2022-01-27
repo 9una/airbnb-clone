@@ -35,3 +35,9 @@
     @content;
   }
 } // ~ 1200
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

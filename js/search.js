@@ -30,6 +30,7 @@ for(let i = 0; i < modalBtn.length; i++){
 
         (window.onresize = function(e){
             if(window.innerWidth < 769){
+                console.log(window.innerWidth);
                 document.querySelector('body').style.overflow ="hidden";
             }else {
                 document.addEventListener('scroll', ()=>{
@@ -49,28 +50,13 @@ function closeModal(event){
 }
 
 // nav - modal
-// modal-date
-function dateCheck(){
-    const dateBtn = document.querySelectorAll('.schedule-cont.date button');
-    for(let i = 0;  i < dateBtn.length; i++){
-        dateBtn[i].addEventListener('click', ()=>{
-            let j = 0;
-            while(j < dateBtn.length){
-                dateBtn[j++].classList.remove('active');
-            }
-            dateBtn[i].classList.add('active');
-        })
-    }
-}
-dateCheck();
-
-// modal-month
+// modal-when
 function check(event){
     const checkBtn = event.currentTarget;
     checkBtn.classList.toggle('active');
 }
 
-function monthCheck(){
+(function monthCheck(){
     const date = new Date();
     const month = date.getMonth();
     const year = date.getFullYear();
@@ -95,8 +81,7 @@ function monthCheck(){
         viewMonth.innerText = `${sumMonth + 1}월`;
         viewYear.innerText = `${sumYear}`;
     }
-};
-monthCheck();
+})();
 
 
 // main- slide - start

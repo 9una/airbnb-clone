@@ -1,17 +1,162 @@
-/* Error: Undefined variable.
- *    ,
- * 96 |                 background: $pink;
- *    |                             ^^^^^
- *    '
- *   src\scss\login.scss 96:29  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 96 \2502                  background: $pink;\d\a    \2502                              ^^^^^\a    \2575 \a   src\\scss\\login.scss 96:29  root stylesheet";
+/* join & login */
+#login__main {
+  padding-top: 80px;
+  border-bottom: 1px solid #dbdbdb;
 }
+#login__main .login-content {
+  max-width: 568px;
+  width: 100%;
+  margin: 90px auto 50px;
+  border: 1px solid #b0b0b0;
+  border-radius: 12px;
+}
+#login__main .login-content .modal__wrapper .modal-title {
+  border-bottom: 1px solid #e9e9e9;
+  text-align: center;
+  margin: 0;
+  padding: 25px 0;
+  font-size: 1.1em;
+}
+#login__main .login-content .modal__wrapper .modal__container {
+  padding: 45px 30px 30px;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .cont-title {
+  margin: 0 0 20px 0 !important;
+  font-size: 1.6em;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label {
+  display: grid;
+  padding: 10px 15px;
+  color: #555;
+  position: relative;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:first-child {
+  border-bottom: 1px solid #ccc;
+  grid-template-columns: 1fr;
+  padding-bottom: 2rem;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child {
+  grid-template-columns: auto 1fr;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child span {
+  grid-column: span 2;
+  margin-bottom: 3px;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child b {
+  font-weight: 300;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select,
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label input {
+  border: none;
+  background: none;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select {
+  outline: none;
+  position: absolute;
+  width: 100%;
+  padding: 0 16px;
+  bottom: 11px;
+  appearance: none;
+  background: url(../../img/angle-down-solid.svg) no-repeat 97% center;
+  font-size: 1.1em;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select option {
+  width: 100%;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login > p {
+  margin: 5px 0 20px;
+  color: #555;
+  font-size: 0.85em;
+  line-height: 1.4em;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login > p a {
+  display: inline;
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .phone-login .phone-login__btn {
+  width: 100%;
+  padding: 18px 10px;
+  background: #ff385c;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login > span {
+  color: #444;
+  text-align: center;
+  margin: 15px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login > span::before, #login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login > span::after {
+  content: "";
+  width: 45%;
+  height: 1px;
+  background: #ebebeb;
+  display: block;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn {
+  width: 100%;
+  border: 2px solid #b4b4b4;
+  border-radius: 10px;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn:hover {
+  border-color: black;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn i {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+#login__main .login-content .modal__wrapper .modal__container .content .content_cont .help {
+  display: none;
+  padding-top: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+  #login__main {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+  #login__main .login-content {
+    margin: 0;
+    border: none;
+    max-width: 100%;
+  }
+  #login__main .login-content .help {
+    display: block !important;
+  }
+
+  #login__footer {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,5 +1,3 @@
-
-
 // 헤더- 스크롤시 헤더 고정
 const localNav = document.querySelector('.local-nav');
 
@@ -8,7 +6,7 @@ function scrollFunc(){
         localNav.classList.add("fixed");
     }else{
         localNav.classList.remove("fixed");
-    }
+    } 
 }
 document.addEventListener('scroll', scrollFunc);
 

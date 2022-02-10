@@ -1,3 +1,10 @@
+//푸터, 모달 html
+$(document).ready(function(){
+    $('#footer').load("footer.html");
+    $('#modal').load("modal.html");
+});
+
+
 //scroll up & donw 시 mobileNav active 추가제거 
 let lastScrollTop = 0;
 

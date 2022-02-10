@@ -4,506 +4,203 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/css/reset.css" />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="dist/css/reset.css">
+    <link rel="stylesheet" href="dist/css/styles.css">
     <title>집을 에어비앤비 숙소로 등록해보세요.</title>
 </head>
 <body>
     <header id="host__header">
       <a class="logo" href="index.html"></a>
       <div class="header__right">
-        <a class="super-btn" href="superhost.html">슈퍼호스트에게 물어보기</a>
+        <a class="super-btn" href="#;">슈퍼호스트에게 물어보기</a>
         <div>
           <button class="start-btn" onclick="modalLogin();"><span>호스팅 시작하기</span></button>
         </div>
       </div>
     </header>
-    <!-- header-end -->
+    <!-- header -->
     <main id="host__main">
-        <section id="host__main-screen">
-            <div class="main-screen__left">
-              <h1>에어비앤비의<br>핵심을 이루는<br>호스팅</h1>
-              <button type="button" onclick="modalLogin();">호스팅 시작하기</button>
-              <a href="#content__start-hosting"><i class="fas fa-chevron-down"></i></a>
-            </div>
-            <div class="main-screen__right">
-              <video class="main-screen__video" autoplay>
-                <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4" type="video/mp4">
-              </video>
-              <div class="main-screen__video-text">
-                <div class="video-btn">
-                  <button class="btn-play active" onclick="playVid(event)"><i class="fas fa-play"></i></button>
-                  <button class="btn-pause" onclick="pauseVid(event)"><i class="fas fa-pause"></i></button>
-                </div>
-              </div>
-            </div>
-        </section>
-        <section id="content__start-hosting" class="host__content">
-            <h1 class="host__content-title">언제 어디서든<br>호스팅하실 수 있습니다</h1>
-            <div class="start-hosting__host">
-              <div class="host-wrap">
-                <ul class="host-list">
-                  <li>
-                    <div class="item-img">
-                      <img src="https://a0.muscache.com/im/pictures/e7fd2596-a03c-43a0-acc9-c8f19ade63b9.jpg?im_w=480" alt="호스트 Reka의 사진"/>
-                    </div>
-                    <div class="item-text">
-                      <p>스튜디오 호스팅 덕에 새로운 삶을 사는 느낌이에요. 좋은 인연과 잊을 수 없는 추억은 덤이죠.</p>
-                      <img src="https://a0.muscache.com/im/pictures/f2b0e082-6872-47a3-a9f6-d01a9c44a088.jpg?im_w=240" alt="Reka" />
-                      <span>밀라노의 호스트</span>
-                    </div>
-                  </li>
-                  <li class="active">
-                    <div class="item-img">
-                      <img src="https://a0.muscache.com/im/pictures/86dfe10f-cc9e-46bf-b69f-b60a71523f81.jpg?im_w=480" alt="호스트 Darrel의 사진"/>
-                    </div>
-                    <div class="item-text">
-                      <p>집을 숙소로 호스팅하면서 자영업자가 되어 경제적 자유에 한 걸음 더 가까워질 수 있었어요.</p>
-                      <img src="https://a0.muscache.com/im/pictures/b0123613-6e48-4108-af8b-bb2d347b4de8.jpg?im_w=240" alt="Darrel"/>
-                      <span>애틀랜타의 호스트</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-img">
-                      <img src="https://a0.muscache.com/im/pictures/b21ec45b-8bac-4f8a-89b1-e967a69018b2.jpg?im_w=480" alt="호스트 Nerina의 사진"/>
-                    </div>
-                    <div class="item-text">
-                      <p>파스타 만들기 체험을 호스팅함으로써 문화 보존에 기여할 수 있습니다.</p>
-                      <img src="https://a0.muscache.com/im/pictures/4314911d-559f-4fc7-a493-2edce264d839.jpg?im_w=240" alt="Nerina"/>
-                      <span>팔롬바라사비나의 호스트</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-img">
-                      <img src="https://a0.muscache.com/im/pictures/20a9b238-f685-4041-9538-e3c5e5430d46.jpg?im_w=480" alt="호스트 Clair의 사진"/>
-                    </div>
-                    <div class="item-text">
-                      <p>에어비앤비 덕분에 제가 제일 좋아하는 일을 업으로 삼을 수 있게 되었어요. 바로 집에서 게스트를 맞이하고 돌보는 일이죠.</p>
-                      <img src="https://a0.muscache.com/im/pictures/80b16be2-f6bf-4a68-846f-b35d4b85c455.jpg?im_w=240" alt="Clair"/>
-                      <span>치앙마이의 호스트</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-img">
-                      <img src="https://a0.muscache.com/im/pictures/b56f3d7c-5006-4ed2-967a-c421e3275b1f.jpg?im_w=480" alt="호스트 Mohammed의 사진"/>
-                    </div>
-                    <div class="item-text">
-                      <p>베두인 텐트 호스팅을 통해 세계 각지에서 온 분들을 만날 수 있었습니다.</p>
-                      <img src="https://a0.muscache.com/im/pictures/82a3e33e-a83e-49e8-b642-0de04018075b.jpg?im_w=240" alt="Mohammed"/>
-                      <span>와디럼의 호스트</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-img">
-                      <img src="https://a0.muscache.com/im/pictures/334530d8-2ad6-40e8-8fd2-4ac0835e693a.jpg?im_w=480" alt="호스트 Marko의 사진"/>
-                    </div>
-                    <div class="item-text">
-                      <p>게스트가 소중한 사람들과 자연속에서 교감할 수 있도록 친환경 숙소를 호스팅하는게 참 보람있어요.</p>
-                      <img src="https://a0.muscache.com/im/pictures/62dccc5f-5fa6-4e24-8406-8ced33d1c403.jpg?im_w=240" alt="Marko"/>
-                      <span>파라치의 호스트</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="host-btn">
-                <button class="host-list__prev" onclick="prev()"><i class="fas fa-chevron-left"></i></button>
-                <button class="host-list__next" onclick="next()"><i class="fas fa-chevron-right"></i></button>
-              </div>
-            </div>
-            <div class="start-hosting__form">
-              <form>
-                  <label for="">어떤 종류의 숙소인가요?</label>
-                  <select id="" name="">
-                    <option value="">공간 전체</option>
-                    <option value="">개인실</option>
-                    <option value="">다인실</option>
-                  </select>
-                  <label for="">숙박 인원은 몇 명인가요?</label>
-                  <select id="" name="">
-                    <option value="">게스트 1명</option>
-                    <option value="">게스트 2명</option>
-                    <option value="">게스트 3명</option>
-                    <option value="">게스트 4명</option>
-                    <option value="">게스트 5명</option>
-                    <option value="">게스트 6명</option>
-                    <option value="">게스트 7명</option>
-                    <option value="">게스트 8명</option>
-                    <option value="">게스트 9명</option>
-                  </select>
-                  <label for="">숙소 위치는 어디인가요?</label>
-                  <select id="" name="">
-                    <option value="">Goyang-si</option>
-                    <option value="">Ilsan-dong</option>
-                  </select>
-              </form>
-              <h1>월 최대 ￦1,564,175의 수입을 올리세요.*</h1>
-              <button>에어비앤비가 예상 수입을 산정하는 방법</button>
-            </div>
-        </section>
-        <section id="content__super-host" class="host__content">
-          <img class="super-host__img" src="https://a0.muscache.com/im/pictures/905f44db-ec4f-4497-9e45-b510a8958f7b.jpg?im_w=1680" />
-          <div class="super-host__text">
-            <h1 class="host__content-title">호스팅에 관해 궁금하신 점이 있나요? <br>슈퍼호스트에게 물어보세요.</h1>
-            <button>자세히 알아보기</button>
+      <section id="host__main-screen">
+          <div class="main-screen__left">
+            <h1>에어비앤비의<br>핵심을 이루는<br>호스팅</h1>
+            <button type="button" onclick="modalLogin();">호스팅 시작하기</button>
+            <a href="#content__start-hosting"><i class="fas fa-chevron-down"></i></a>
           </div>
-        </section>
-        <section id="content__hosting-info" class="host__content">
-            <h1 class="host__content-title">성공적인 호스팅에<br>유용한 자료</h1>
-            <div class="hosting-info__content">
-              <ul class="hosting-info__content-list">
-                <li class="hosting-info__content-item">
-                  <a href="#;">
-                    <img src="https://a0.muscache.com/im/pictures/4e53901b-370f-4bdd-ae31-6d70b724915b.jpg?im_w=720" />
-                    <p>
-                      에어비앤비의 호스트 지원 방법 알아보기
-                      <i class="fas fa-chevron-right"></i>
-                    </p>
-                  </a>
-                </li>
-                <li class="hosting-info__content-item">
-                  <a href="#;">
-                    <img src="https://a0.muscache.com/im/pictures/6ec073e4-1389-4212-aa5a-199fa6a26046.jpg?im_w=720" />
-                    <p>
-                      체험 호스팅하기
-                      <i class="fas fa-chevron-right"></i>
-                    </p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-        </section>
-        <section id="host__end-screen">
-          <div class="end-screen__left">
-            <video class="end-screen__video" autoplay>
-              <source src="https://a0.muscache.com/v/9a/7a/9a7ad4a1-cfab-5f7d-96e6-fda8abceabe7/9a7ad4a1cfab5f7d96e6fda8abceabe7_4000k_1.mp4" type="video/mp4">
+          <div class="main-screen__right">
+            <video class="main-screen__video" autoplay>
+              <source src="https://a0.muscache.com/v/a9/a7/a9a7873c-95de-5e37-8995-a5abb5b6b02f/a9a7873c95de5e378995a5abb5b6b02f_4000k_1.mp4" type="video/mp4">
             </video>
-            <div class="end-screen__video-text">
+            <div class="main-screen__video-text">
               <div class="video-btn">
                 <button class="btn-play active" onclick="playVid(event)"><i class="fas fa-play"></i></button>
                 <button class="btn-pause" onclick="pauseVid(event)"><i class="fas fa-pause"></i></button>
               </div>
             </div>
           </div>
-          <div class="end-screen__right">
-            <h1>에어비앤비에서<br>호스팅을 시작해보세요</h1>
-            <p>에어비앤비 호스트가 되어보세요. 에어비앤비가 모든 단계에서 도와드립니다.</p>
-            <button type="button" class="start-btn" onclick="modalLogin();">시작하기</button>
-          </div>
-        </section>
-    </main>
-    <!-- main-end -->
-    <footer id="host__footer">
-      <div class="fnb__top">
-        <ul class="fnb__top-list">
-          <li class="fnb__top-item">
-            <ul>
-              <span>에어비앤비 지원</span>
-              <li><a href="#;">도움말 센터</a></li>
-              <li><a href="#;">안전 정보</a></li>
-              <li><a href="#;">예약 취소 옵션</a></li>
-              <li><a href="#;">에어비앤비의 코로나19 대응 방안</a></li>
-              <li><a href="#;">장애인 지원</a></li>
-              <li><a href="#;">이웃 민원 신고</a></li>
-            </ul>
-          </li>
-          <li class="fnb__top-item">
-            <ul>
-              <span>커뮤니티</span>
-              <li><a href="#;">Airbnb.org: 재난 구호 숙소</a></li>
-              <li><a href="#;">아프간 난민 지원</a></li>
-              <li><a href="#;">다양성과 소속감 증진</a></li>
-              <li><a href="#;">차별 철폐를 위한 노력</a></li>
-            </ul>
-          </li>
-          <li class="fnb__top-item">
-            <ul>
-              <span>호스팅</span>
-              <li><a href="host.html">호스팅 시작하기</a></li>
-              <li><a href="#;">에어커버: 호스트를 위한 보호 프로그램</a></li>
-              <li><a href="#;">호스팅 자료 둘러보기</a></li>
-              <li><a href="#;">커뮤니티 포럼 방문하기</a></li>
-              <li><a href="#;">책임감 있는 호스팅</a></li>
-              <li><a href="#;"></a></li>
-            </ul>
-          </li>
-          <li class="fnb__top-item">
-            <ul>
-              <span>소개</span>
-              <li><a href="#;">뉴스룸</a></li>
-              <li><a href="#;">새로운 기능에 대해 알아보기</a></li>
-              <li><a href="#;">에어비앤비 공동창업자의 메시지</a></li>
-              <li><a href="#;">채용정보</a></li>
-              <li><a href="#;">투자자 정보</a></li>
-              <li><a href="#;">에어비앤비 Luxe</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="fnb__bottom">
-        <div class="fnb__bottom-left">
-          <ul>
-            <span>© 2021 Airbnb, Inc.</span>
-            <li><a href="#;">개인정보 처리방침</a></li>
-            <li><a href="#;">이용약관</a></li>
-            <li><a href="#;">사이트맵</a></li>
-            <li><a href="#;">한국의 변경된 환불 정책</a></li>
-            <li><a href="#;">회사 세부정보</a></li>
-          </ul>
-        </div>
-        <div class="fnb__bottom-right">
-          <div class="fnb__bottom-global">
-            <button type="button" class="fnb__bottom-language" onclick="modalLng();">
-              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="height: 16px; width: 16px; fill: currentcolor;">
-                <path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path>
-              </svg>
-              <span>한국어 (KR)</span>
-            </button>
-            <button type="button" class="fnb__bottom-currency" onclick="modalLng();">
-              <i class="fas fa-won-sign"></i>
-              <span>KRW</span>
-            </button>
-          </div>
-          <div class="fnb__bottom-sns">
-            <a href="#;"><i class="fab fa-facebook-f"></i></a>
-            <a href="#;"><i class="fab fa-twitter"></i></a>
-            <a href="#;"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer-end -->
-    <div id="modal_lng_cur" class="modal">
-      <div class="modal__wrapper">
-        <div class="modal__top">
-          <button class="btn-close" type="button" onclick="modalLngClose();"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="modal__container">
-          <div class="tab">
-            <button class="type-btn active" onclick="tabLngCur();" type="button">언어와 지역</button>
-            <button class="type-btn" onclick="tabLngCur();" type="button">통화</button>
-          </div>
-          <div class="content">
-            <div class="content_cont">
-              <h2 class="cont-title">추천 언어 및 지역</h2>
-              <div class="cont">
-                <ul class="lng-cur__contents-list">
-                  <li><a href="#;">English<span>Untied States</span></a></li>
-                  <li><a href="#;">English<span>Untied Kingdom</span></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="content_cont">
-              <h2 class="cont-title">언어와 지역을 선택하세요</h2>
-              <div class="cont">
-                <ul class="lng-cur__contents-list">
-                  <li class="active"><a href="#;">한국어<span>대한민국</span></a></li>
-                  <li><a href="#;">Azərbaycan dili<span>Azərbaycan</span></a></li>
-                  <li><a href="#;">Bahasa Indonesia<span>Indonesia</span></a></li>
-                  <li><a href="#;">Bosanski<span>Bosna i Hercegovina</span></a></li>
-                  <li><a href="#;">Català<span>Espanya</span></a></li>
-                  <li><a href="#;">Čeština<span>Česká republika</span></a></li>
-                  <li><a href="#;">Crnogorski<span>Crna Gora</span></a></li>
-                  <li><a href="#;">Dansk<span>Danmark</span></a></li>
-                  <li><a href="#;">Deutsch<span>Deutschland</span></a></li>
-                  <li><a href="#;">Deutsch<span>Österreich</span></a></li>
-                  <li><a href="#;">Deutsch<span>Schweiz</span></a></li>
-                  <li><a href="#;">Eesti<span>Eesti</span></a></li>
-                  <li><a href="#;">English<span>Australia</span></a></li>
-                  <li><a href="#;">English<span>Canada</span></a></li>
-                  <li><a href="#;">English<span>Guyana</span></a></li>
-                  <li><a href="#;">English<span>India</span></a></li>
-                  <li><a href="#;">English<span>Ireland</span></a></li>
-                  <li><a href="#;">English<span>New Zealand</span></a></li>
-                  <li><a href="#;">English<span>Singapore</span></a></li>
-                  <li><a href="#;">English<span>United Arab Emirates</span></a></li>
-                  <li><a href="#;">Español<span>Argentina</span></a></li>
-                  <li><a href="#;">Español<span>Belice</span></a></li>
-                  <li><a href="#;">Español<span>Bolivia</span></a></li>
-                  <li><a href="#;">Español<span>Chile</span></a></li>
-                  <li><a href="#;">Español<span>Colombia</span></a></li>
-                  <li><a href="#;">Español<span>Costa Rica</span></a></li>
-                  <li><a href="#;">Español<span>Ecuador</span></a></li>
-                  <li><a href="#;">Español<span>El Salvador</span></a></li>
-                  <li><a href="#;">Español<span>España</span></a></li>
-                  <li><a href="#;">Español<span>Estados Unidos</span></a></li>
-                  <li><a href="#;">Español<span>Guatemala</span></a></li>
-                  <li><a href="#;">Español<span>Honduras</span></a></li>
-                  <li><a href="#;">Español<span>Latinoamérica</span></a></li>
-                  <li><a href="#;">Español<span>México</span></a></li>
-                  <li><a href="#;">Español<span>Nicaragua</span></a></li>
-                  <li><a href="#;">Español<span>Panamá</span></a></li>
-                  <li><a href="#;">Español<span>Paraguay</span></a></li>
-                  <li><a href="#;">Español<span>Perú</span></a></li>
-                  <li><a href="#;">Español<span>Venezuela</span></a></li>
-                  <li><a href="#;">Français<span>Belgique</span></a></li>
-                  <li><a href="#;">Français<span>Canada</span></a></li>
-                  <li><a href="#;">Français<span>France</span></a></li>
-                  <li><a href="#;">Français<span>Suisse</span></a></li>
-                  <li><a href="#;">Gaeilge<span>Éire</span></a></li>
-                  <li><a href="#;">Hrvatski<span>Hrvatska</span></a></li>
-                  <li><a href="#;">isiXhosa<span>eMzantsi Afrika</span></a></li>
-                  <li><a href="#;">isiZulu<span>iNingizimu Afrika</span></a></li>
-                  <li><a href="#;">Íslenska<span>Ísland</span></a></li>
-                  <li><a href="#;">Italiano<span>Italia</span></a></li>
-                  <li><a href="#;">Italiano<span>Svizzera</span></a></li>
-                  <li><a href="#;">Kisahili<span>Āfrika</span></a></li>
-                  <li><a href="#;">Latviešu<span>Latvija</span></a></li>
-                  <li><a href="#;">Lietuvių<span>Lietuva</span></a></li>
-                  <li><a href="#;">Magyar<span>Magyarország</span></a></li>
-                  <li><a href="#;">Malti<span>Malta</span></a></li>
-                  <li><a href="#;">Melayu<span>Malaysia</span></a></li>
-                  <li><a href="#;">Nederlands<span>België</span></a></li>
-                  <li><a href="#;">Nederlands<span>Nederland</span></a></li>
-                  <li><a href="#;">Norsk<span>Norge</span></a></li>
-                  <li><a href="#;">Polski<span>Polska</span></a></li>
-                  <li><a href="#;">Português<span>Brasil</span></a></li>
-                  <li><a href="#;">Português<span>Portugal</span></a></li>
-                  <li><a href="#;">Română<span>România</span></a></li>
-                  <li><a href="#;">Shqip<span>Shqipëri</span></a></li>
-                  <li><a href="#;">Slovenčina<span>Slovensko</span></a></li>
-                  <li><a href="#;">Slovenščina<span>Slovenjia</span></a></li>
-                  <li><a href="#;">Srpski<span>Srbija</span></a></li>
-                  <li><a href="#;">Suomi<span>Suomi</span></a></li>
-                  <li><a href="#;">Svenska<span>Sverige</span></a></li>
-                  <li><a href="#;">Tagalog<span>Pilipinas</span></a></li>
-                  <li><a href="#;">Tiếng Việt<span>Việt Nam</span></a></li>
-                  <li><a href="#;">Türkçe<span>Türkiye</span></a></li>
-                  <li><a href="#;">Ελληνικά<span>Ελλάδα</span></a></li>
-                  <li><a href="#;">Български<span>България</span></a></li>
-                  <li><a href="#;">Македонски<span>Северна Македонија</span></a></li>
-                  <li><a href="#;">Русский<span>Россия</span></a></li>
-                  <li><a href="#;">Українська<span>Україна</span></a></li>
-                  <li><a href="#;">ქართული<span>საქართველო</span></a></li>
-                  <li><a href="#;">Հայերեն<span>Հայաստան</span></a></li>
-                  <li><a href="#;">עברית<span>ישראל</span></a></li>
-                  <li><a href="#;">العربية<span>العالم</span></a></li>
-                  <li><a href="#;">हिन्दी<span>भारत</span></a></li>
-                  <li><a href="#;">ไทย<span>ประเทศไทย</span></a></li>
-                  <li><a href="#;">日本語<span>日本</span></a></li>
-                  <li><a href="#;">简体中文<span>美国</span></a></li>
-                  <li><a href="#;">繁體中文<span>美國</span></a></li>
-                  <li><a href="#;">简体中文<span>中国</span></a></li>
-                  <li><a href="#;">繁體中文<span>香港</span></a></li>
-                  <li><a href="#;">繁體中文<span>台灣</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content invisible">
-            <div class="content_cont">
-              <h2 class="cont-title">통화를 선택하세요.</h2>
-              <div class="cont">
-                <ul class="lng-cur__contents-list">
-                  <li class="active"><a href="#;">한국 원<span>KRW - ₩</span></a></li>
-                  <li><a href="#;">남아프리카공화국 란드<span>ZAR - R</span></a></li>
-                  <li><a href="#;">노르웨이 크로네<span>NOK - kr</span></a></li>
-                  <li><a href="#;">뉴질랜드 달러<span>NZD - $</span></a></li>
-                  <li><a href="#;">덴마크 크로네<span>DKK - kr</span></a></li>
-                  <li><a href="#;">러시아 루블<span>RUB - ₽</span></a></li>
-                  <li><a href="#;">루마니아 레우<span>RON - lei</span></a></li>
-                  <li><a href="#;">말레이시아 링깃<span>MYR - RM</span></a></li>
-                  <li><a href="#;">멕시코 페소<span>MXN - $</span></a></li>
-                  <li><a href="#;">모로코 디르함<span>MAD</span></a></li>
-                  <li><a href="#;">미국 달러<span>USD - $</span></a></li>
-                  <li><a href="#;">불가리아 레프<span>BGN - лв.</span></a></li>
-                  <li><a href="#;">브라질 레알<span>BRL - R$</span></a></li>
-                  <li><a href="#;">사우스아라비아 리얄<span>SAR - SR</span></a></li>
-                  <li><a href="#;">스웨덴 크로나<span>SEK - kr</span></a></li>
-                  <li><a href="#;">스위스 프랑<span>CHF</span></a></li>
-                  <li><a href="#;">신 타이완 달러<span>TWD - $</span></a></li>
-                  <li><a href="#;">싱가포르 달러<span>SGD - $</span></a></li>
-                  <li><a href="#;">아랍에미리트 디르함<span>AED - ﺩ.ﺇ</span></a></li>
-                  <li><a href="#;">영국 파운드<span>GBP - £</span></a></li>
-                  <li><a href="#;">우루과이 페소<span>UYU - $U</span></a></li>
-                  <li><a href="#;">유로<span>EUR - €</span></a></li>
-                  <li><a href="#;">이스라엘 신 셰켈<span>ILS - ₪</span></a></li>
-                  <li><a href="#;">인도 루피<span>INR - ₹</span></a></li>
-                  <li><a href="#;">일본 엔<span>JPY - ¥</span></a></li>
-                  <li><a href="#;">중국 위안<span>CNY - ￥</span></a></li>
-                  <li><a href="#;">체코 코루나<span>CZK - Kč</span></a></li>
-                  <li><a href="#;">칠레 페소<span>CLP - $</span></a></li>
-                  <li><a href="#;">캐나다 달러<span>CAD - $</span></a></li>
-                  <li><a href="#;">코스타리카 콜론<span>CRC - ₡</span></a></li>
-                  <li><a href="#;">콜롬비아 페소<span>COP - $</span></a></li>
-                  <li><a href="#;">크로아티아 쿠나<span>HRK - kn</span></a></li>
-                  <li><a href="#;">태국 바트<span>THB - ฿</span></a></li>
-                  <li><a href="#;">터키 리라<span>TRY - ₺</span></a></li>
-                  <li><a href="#;">페루 솔<span>PEN - S/</span></a></li>
-                  <li><a href="#;">폴란드 즐로티<span>PLN - zł</span></a></li>
-                  <li><a href="#;">필리핀 페소<span>PHP - ₱</span></a></li>
-                  <li><a href="#;">헝가리 포린트<span>HUF - Ft</span></a></li>
-                  <li><a href="#;">호주 달러<span>AUD - $</span></a></li>
-                  <li><a href="#;">홍콩 달러<span>HKD - $</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="modal_login" class="modal">
-      <div class="modal__wrapper">
-        <div class="modal__top">
-          <button class="btn-close" type="button" onclick="modalLoginClose();"><i class="fas fa-times"></i></button>
-          <h4 class="modal-title">로그인 또는 회원가입</h4>
-        </div>
-        <div class="modal__container">
-          <div class="content">
-            <div class="content_cont">
-              <h2 class="cont-title">에어비앤비에 오신 것을 환영합니다.</h2>
-              <div class="cont">
-                <div class="phone-login">
-                  <div class="phone-form">
-                    <form>
-                      <label for="national">
-                        <span>국가/지역</span>
-                        <select id="national">
-                          <option>한국 (+82)</option>
-                          <option>미국 (+1)</option>
-                          <option>프랑스 (+33)</option>
-                          <option>영국 (+44)</option>
-                          <option>덴마크 (+45)</option>
-                        </select>
-                      </label>
-                      <label for="phoneNum">
-                        <span>전화번호</span>
-                        <b>+82</b>
-                        <input id="phoneNum" type="text" required placeholder="핸드폰번호" />
-                      </label>
-                    </form>
+      </section>
+      <section id="content__start-hosting" class="host__content">
+          <h1 class="host__content-title">언제 어디서든<br>호스팅하실 수 있습니다</h1>
+          <div class="start-hosting__host">
+            <div class="host-wrap">
+              <ul class="host-list">
+                <li>
+                  <div class="item-img">
+                    <img src="https://a0.muscache.com/im/pictures/e7fd2596-a03c-43a0-acc9-c8f19ade63b9.jpg?im_w=480" alt="호스트 Reka의 사진"/>
                   </div>
-                  <p>전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다.<a href="#;">개인정보 처리방침</a></p>
-                  <button class="phone-login__btn" type="submit">계속</button>
-                </div>
-                <div class="sns-login">
-                  <span>또는</span>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                    <span>페이스북으로 로그인하기</span>
-                  </a>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="fab fa-google"></i>
-                    <span>구글로 로그인하기</span>
-                  </a>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="fab fa-apple"></i>
-                    <span>Apple 계정으로 계속하기</span>
-                  </a>
-                  <a class="sns-btn" href="#;" target="_blank">
-                    <i class="far fa-envelope"></i>
-                    <span>이메일로 로그인하기</span>
-                  </a>
-                </div>
-              </div>
+                  <div class="item-text">
+                    <p>스튜디오 호스팅 덕에 새로운 삶을 사는 느낌이에요. 좋은 인연과 잊을 수 없는 추억은 덤이죠.</p>
+                    <img src="https://a0.muscache.com/im/pictures/f2b0e082-6872-47a3-a9f6-d01a9c44a088.jpg?im_w=240" alt="Reka" />
+                    <span>밀라노의 호스트</span>
+                  </div>
+                </li>
+                <li class="active">
+                  <div class="item-img">
+                    <img src="https://a0.muscache.com/im/pictures/86dfe10f-cc9e-46bf-b69f-b60a71523f81.jpg?im_w=480" alt="호스트 Darrel의 사진"/>
+                  </div>
+                  <div class="item-text">
+                    <p>집을 숙소로 호스팅하면서 자영업자가 되어 경제적 자유에 한 걸음 더 가까워질 수 있었어요.</p>
+                    <img src="https://a0.muscache.com/im/pictures/b0123613-6e48-4108-af8b-bb2d347b4de8.jpg?im_w=240" alt="Darrel"/>
+                    <span>애틀랜타의 호스트</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-img">
+                    <img src="https://a0.muscache.com/im/pictures/b21ec45b-8bac-4f8a-89b1-e967a69018b2.jpg?im_w=480" alt="호스트 Nerina의 사진"/>
+                  </div>
+                  <div class="item-text">
+                    <p>파스타 만들기 체험을 호스팅함으로써 문화 보존에 기여할 수 있습니다.</p>
+                    <img src="https://a0.muscache.com/im/pictures/4314911d-559f-4fc7-a493-2edce264d839.jpg?im_w=240" alt="Nerina"/>
+                    <span>팔롬바라사비나의 호스트</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-img">
+                    <img src="https://a0.muscache.com/im/pictures/20a9b238-f685-4041-9538-e3c5e5430d46.jpg?im_w=480" alt="호스트 Clair의 사진"/>
+                  </div>
+                  <div class="item-text">
+                    <p>에어비앤비 덕분에 제가 제일 좋아하는 일을 업으로 삼을 수 있게 되었어요. 바로 집에서 게스트를 맞이하고 돌보는 일이죠.</p>
+                    <img src="https://a0.muscache.com/im/pictures/80b16be2-f6bf-4a68-846f-b35d4b85c455.jpg?im_w=240" alt="Clair"/>
+                    <span>치앙마이의 호스트</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-img">
+                    <img src="https://a0.muscache.com/im/pictures/b56f3d7c-5006-4ed2-967a-c421e3275b1f.jpg?im_w=480" alt="호스트 Mohammed의 사진"/>
+                  </div>
+                  <div class="item-text">
+                    <p>베두인 텐트 호스팅을 통해 세계 각지에서 온 분들을 만날 수 있었습니다.</p>
+                    <img src="https://a0.muscache.com/im/pictures/82a3e33e-a83e-49e8-b642-0de04018075b.jpg?im_w=240" alt="Mohammed"/>
+                    <span>와디럼의 호스트</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-img">
+                    <img src="https://a0.muscache.com/im/pictures/334530d8-2ad6-40e8-8fd2-4ac0835e693a.jpg?im_w=480" alt="호스트 Marko의 사진"/>
+                  </div>
+                  <div class="item-text">
+                    <p>게스트가 소중한 사람들과 자연속에서 교감할 수 있도록 친환경 숙소를 호스팅하는게 참 보람있어요.</p>
+                    <img src="https://a0.muscache.com/im/pictures/62dccc5f-5fa6-4e24-8406-8ced33d1c403.jpg?im_w=240" alt="Marko"/>
+                    <span>파라치의 호스트</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="host-btn">
+              <button class="host-list__prev" onclick="prev()"><i class="fas fa-chevron-left"></i></button>
+              <button class="host-list__next" onclick="next()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="start-hosting__form">
+            <form>
+                <label for="">어떤 종류의 숙소인가요?</label>
+                <select id="" name="">
+                  <option value="">공간 전체</option>
+                  <option value="">개인실</option>
+                  <option value="">다인실</option>
+                </select>
+                <label for="">숙박 인원은 몇 명인가요?</label>
+                <select id="" name="">
+                  <option value="">게스트 1명</option>
+                  <option value="">게스트 2명</option>
+                  <option value="">게스트 3명</option>
+                  <option value="">게스트 4명</option>
+                  <option value="">게스트 5명</option>
+                  <option value="">게스트 6명</option>
+                  <option value="">게스트 7명</option>
+                  <option value="">게스트 8명</option>
+                  <option value="">게스트 9명</option>
+                </select>
+                <label for="">숙소 위치는 어디인가요?</label>
+                <select id="" name="">
+                  <option value="">Goyang-si</option>
+                  <option value="">Ilsan-dong</option>
+                </select>
+            </form>
+            <h1>월 최대 ￦1,564,175의 수입을 올리세요.*</h1>
+            <button>에어비앤비가 예상 수입을 산정하는 방법</button>
+          </div>
+      </section>
+      <section id="content__super-host" class="host__content">
+        <img class="super-host__img" src="https://a0.muscache.com/im/pictures/905f44db-ec4f-4497-9e45-b510a8958f7b.jpg?im_w=1680" />
+        <div class="super-host__text">
+          <h1 class="host__content-title">호스팅에 관해 궁금하신 점이 있나요? <br>슈퍼호스트에게 물어보세요.</h1>
+          <button>자세히 알아보기</button>
+        </div>
+      </section>
+      <section id="content__hosting-info" class="host__content">
+          <h1 class="host__content-title">성공적인 호스팅에<br>유용한 자료</h1>
+          <div class="hosting-info__content">
+            <ul class="hosting-info__content-list">
+              <li class="hosting-info__content-item">
+                <a href="#;">
+                  <img src="https://a0.muscache.com/im/pictures/4e53901b-370f-4bdd-ae31-6d70b724915b.jpg?im_w=720" />
+                  <p>
+                    에어비앤비의 호스트 지원 방법 알아보기
+                    <i class="fas fa-chevron-right"></i>
+                  </p>
+                </a>
+              </li>
+              <li class="hosting-info__content-item">
+                <a href="#;">
+                  <img src="https://a0.muscache.com/im/pictures/6ec073e4-1389-4212-aa5a-199fa6a26046.jpg?im_w=720" />
+                  <p>
+                    체험 호스팅하기
+                    <i class="fas fa-chevron-right"></i>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+      </section>
+      <section id="host__end-screen">
+        <div class="end-screen__left">
+          <video class="end-screen__video" autoplay>
+            <source src="https://a0.muscache.com/v/9a/7a/9a7ad4a1-cfab-5f7d-96e6-fda8abceabe7/9a7ad4a1cfab5f7d96e6fda8abceabe7_4000k_1.mp4" type="video/mp4">
+          </video>
+          <div class="end-screen__video-text">
+            <div class="video-btn">
+              <button class="btn-play active" onclick="playVid(event)"><i class="fas fa-play"></i></button>
+              <button class="btn-pause" onclick="pauseVid(event)"><i class="fas fa-pause"></i></button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div id="modalBg"></div>
-
-
+        <div class="end-screen__right">
+          <h1>에어비앤비에서<br>호스팅을 시작해보세요</h1>
+          <p>에어비앤비 호스트가 되어보세요. 에어비앤비가 모든 단계에서 도와드립니다.</p>
+          <button type="button" class="start-btn" onclick="modalLogin();">시작하기</button>
+        </div>
+      </section>
+    </main>
+    <!-- container -->
+    <footer id="footer"></footer>
+    <!-- footer -->
+    <div id="modal"></div>
+    <!-- modal -->
+    
     <script src="https://kit.fontawesome.com/3701dcbbf4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/index.js"></script>
     <script src="js/host.js"></script>
     <script src="js/modal.js"></script>
 </body>

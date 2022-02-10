@@ -1,4 +1,8 @@
+@import "_variables";
+@import "_mixins";
+
 #wishlist__main {
+  margin-top: 40px;
   padding: 80px 80px 0;
   .wrapper {
     max-width: 1600px;
@@ -92,6 +96,7 @@
 }
 @include tablet {
   #wishlist__main {
+    margin-top: 20px;
     padding: 10px 25px 40px;
     .wrapper {
       h4 {

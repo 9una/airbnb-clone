@@ -1,28 +1,154 @@
-/* Error: Undefined mixin.
- *    ,
- * 80 | / @include desktop {
- * 81 | |   #wishlist__main {
- * 82 | |     padding-left: 40px;
- * 83 | |     padding-right: 40px;
- * 84 | |     .wrapper {
- * 85 | |       .content {
- * 86 | |         ul {
- * 87 | |           grid-template-columns: repeat(2, 1fr);
- * 88 | |         }
- * 89 | |       }
- * 90 | |     }
- * 91 | |   }
- * 92 | \ }
- *    '
- *   src\scss\wishlist.scss 80:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 80 \2502  \250c  @include desktop {\a 81 \2502  \2502    #wishlist__main {\a 82 \2502  \2502      padding-left: 40px;\a 83 \2502  \2502      padding-right: 40px;\a 84 \2502  \2502      .wrapper {\a 85 \2502  \2502        .content {\a 86 \2502  \2502          ul {\a 87 \2502  \2502            grid-template-columns: repeat(2, 1fr);\a 88 \2502  \2502          }\a 89 \2502  \2502        }\a 90 \2502  \2502      }\a 91 \2502  \2502    }\a 92 \2502  \2514  }\a    \2575 \a   src\\scss\\wishlist.scss 80:1  root stylesheet";
+#wishlist__main {
+  margin-top: 40px;
+  padding: 80px 80px 0;
 }
+#wishlist__main .wrapper {
+  max-width: 1600px;
+  width: 100%;
+}
+#wishlist__main .wrapper h4 {
+  font-size: 2.4em;
+}
+#wishlist__main .wrapper .login-btn {
+  background: #222;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 15px 25px;
+  border-radius: 8px;
+}
+#wishlist__main .wrapper .content {
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #e9e9e9;
+}
+#wishlist__main .wrapper .content .best-wish-title {
+  font-size: 1.4em;
+}
+#wishlist__main .wrapper .content ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+#wishlist__main .wrapper .content ul li a .images {
+  border-radius: 12px;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  margin: 20px 0 10px;
+}
+#wishlist__main .wrapper .content ul li a .images > div {
+  width: 100%;
+  position: relative;
+}
+#wishlist__main .wrapper .content ul li a .images > div:first-child {
+  grid-row: span 2;
+}
+#wishlist__main .wrapper .content ul li a .images > div:nth-child(2), #wishlist__main .wrapper .content ul li a .images > div:nth-child(3) {
+  padding-bottom: 80%;
+}
+#wishlist__main .wrapper .content ul li a .images > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+#wishlist__main .wrapper .content ul li a strong {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+#wishlist__main .wrapper .content .more-btn {
+  border: 1px solid #222;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+#wishlist__main .wrapper .content .more-btn:hover {
+  background: #efefef;
+}
+
+/*responsive*/
+@media (max-width: 1024px) {
+  #wishlist__main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #wishlist__main .wrapper .content ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  #wishlist__main {
+    margin-top: 20px;
+    padding: 10px 25px 40px;
+  }
+  #wishlist__main .wrapper h4 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  #wishlist__main .wrapper .login-btn {
+    width: 100%;
+    text-align: center;
+    padding: 18px 25px;
+  }
+  #wishlist__main .wrapper .content {
+    margin-top: 20px;
+  }
+  #wishlist__main .wrapper .content ul {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #wishlist__main .wrapper .content ul li a {
+    display: flex;
+    align-items: center;
+  }
+  #wishlist__main .wrapper .content ul li a .images {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 8px;
+    margin: 0 10px 0 0;
+  }
+  #wishlist__main .wrapper .content ul li a .images div {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+  #wishlist__main .wrapper .content ul li a .images div:nth-child(n+2) {
+    display: none;
+  }
+  #wishlist__main .wrapper .content ul li a strong {
+    width: calc(100% - 80px);
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  #wishlist__footer {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  #wishlist__main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #wishlist__main .wrapper .content .best-wish-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  #wishlist__main .wrapper .content ul li a .images {
+    margin-right: 15px;
+  }
+  #wishlist__main .wrapper .content ul li a strong {
+    font-size: 1em;
+  }
+}
+
+/*# sourceMappingURL=wishlist.css.map */

@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/* modal Bg */
+#modal_bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 10;
+}
+#modal_bg.active {
+  display: block;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  top: 120vh;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 40px;
+  z-index: 999;
+  transition: all 0.5s;
+}
+.modal.active {
+  top: 0;
+  opacity: 1;
+}
+.modal .modal__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.modal .modal__wrapper .modal__top {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .modal__wrapper .modal__top .btn-close {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.1s;
+}
+.modal .modal__wrapper .modal__top .btn-close:hover {
+  background: #f7f7f7;
+}
+.modal .modal__wrapper .modal__top .modal-title {
+  margin: 0;
+}
+.modal .modal__wrapper .modal__container {
+  padding: 0 25px;
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+.modal .modal__wrapper .modal__container .tab {
+  padding-top: 10px;
+  border-bottom: 1px solid #e9e9e9;
+}
+.modal .modal__wrapper .modal__container .tab button {
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 5px;
+  margin-bottom: 9px;
+  letter-spacing: -0.5px;
+  font-weight: bold;
+  color: #777;
+  position: relative;
+}
+.modal .modal__wrapper .modal__container .tab button:hover {
+  background: #e9e9e9;
+}
+.modal .modal__wrapper .modal__container .tab button.active {
+  color: black;
+}
+.modal .modal__wrapper .modal__container .tab button.active::after {
+  content: "";
+  width: calc(100% - 20px);
+  bottom: -10px;
+  left: 10px;
+  height: 2px;
+  display: block;
+  background: black;
+  position: absolute;
+}
+.modal .modal__wrapper .modal__container .content {
+  padding-top: 10px;
+}
+.modal .modal__wrapper .modal__container .content.invisible {
+  display: none;
+}
+.modal .modal__wrapper .modal__container .content .content_cont {
+  padding-bottom: 30px;
+}
+.modal .modal__wrapper .modal__container .content .content_cont .cont-title {
+  color: #484848;
+  margin-bottom: 24px;
+  margin-left: 5px;
+}
+
+/* modal - language & currency */
+#modal_lng_cur .modal__wrapper,
+#modal_lng .modal__wrapper,
+#modal_cur .modal__wrapper {
+  max-width: 1032px;
+}
+#modal_lng_cur .modal__wrapper .cont ul,
+#modal_lng .modal__wrapper .cont ul,
+#modal_cur .modal__wrapper .cont ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+#modal_lng_cur .modal__wrapper .cont ul li a,
+#modal_lng .modal__wrapper .cont ul li a,
+#modal_cur .modal__wrapper .cont ul li a {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+#modal_lng_cur .modal__wrapper .cont ul li a span,
+#modal_lng .modal__wrapper .cont ul li a span,
+#modal_cur .modal__wrapper .cont ul li a span {
+  display: block;
+  color: #777;
+}
+#modal_lng_cur .modal__wrapper .cont ul li a:hover,
+#modal_lng .modal__wrapper .cont ul li a:hover,
+#modal_cur .modal__wrapper .cont ul li a:hover {
+  background: #f7f7f7;
+}
+#modal_lng_cur .modal__wrapper .cont ul li a:active,
+#modal_lng .modal__wrapper .cont ul li a:active,
+#modal_cur .modal__wrapper .cont ul li a:active {
+  border: 1px solid #999;
+}
+#modal_lng_cur .modal__wrapper .cont ul li.active a,
+#modal_lng .modal__wrapper .cont ul li.active a,
+#modal_cur .modal__wrapper .cont ul li.active a {
+  border: 1px solid black;
+}
+
+/* modal - join & login */
+#modal_login .modal__wrapper {
+  max-width: 568px;
+  max-height: 675px;
+}
+#modal_login .modal__wrapper .modal__top {
+  border-bottom: 1px solid #e9e9e9;
+}
+#modal_login .modal__wrapper .modal__container .content {
+  padding-top: 20px;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label {
+  display: grid;
+  padding: 10px 15px;
+  color: #555;
+  position: relative;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:first-child {
+  border-bottom: 1px solid #ccc;
+  grid-template-columns: 1fr;
+  padding-bottom: 2rem;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child {
+  grid-template-columns: auto 1fr;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child span {
+  grid-column: span 2;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label:last-child b {
+  font-weight: 300;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select,
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label input {
+  border: none;
+  background: none;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select {
+  outline: none;
+  position: absolute;
+  width: 100%;
+  padding: 0 12px;
+  bottom: 15px;
+  appearance: 30px;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-form form label select option {
+  width: 100%;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login > p {
+  margin: 20px 0;
+  line-height: 1.3;
+  font-size: 0.9em;
+  color: #555;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login > p a {
+  display: inline;
+  margin: 0 5px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .phone-login .phone-login__btn {
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .sns-login > span {
+  color: #444;
+  text-align: center;
+  margin: 15px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .sns-login > span::before, #modal_login .modal__wrapper .modal__container .content .content_cont .sns-login > span::after {
+  content: "";
+  width: 45%;
+  height: 1px;
+  background: #ebebeb;
+  display: block;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn {
+  width: 100%;
+  border: 2px solid #b4b4b4;
+  border-radius: 10px;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn:hover {
+  border-color: black;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn i {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+#modal_login .modal__wrapper .modal__container .content .content_cont .sns-login .sns-btn span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* modal - 공동 */
+/*responsive*/
+@media (max-width: 1024px) {
+  #modal_lng_cur .modal__wrapper .cont ul,
+#modal_lng .modal__wrapper .cont ul,
+#modal_cur .modal__wrapper .cont ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  #modal_lng_cur .modal__wrapper .cont ul,
+#modal_lng .modal__wrapper .cont ul,
+#modal_cur .modal__wrapper .cont ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=modal.css.map */

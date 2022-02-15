@@ -18,12 +18,13 @@ footer {
   display: flex;
   flex-direction: column;
 }
-.fnb__top .fnb__top-list .fnb__top-item ul span {
-  font-weight: 600;
-  margin-bottom: 5px;
-}
 .fnb__top .fnb__top-list .fnb__top-item ul li {
   margin-top: 15px;
+}
+.fnb__top .fnb__top-list .fnb__top-item ul li span {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 .fnb__top .fnb__top-list .fnb__top-item ul li a:hover {
   text-decoration: underline;
@@ -119,7 +120,7 @@ footer {
     flex-wrap: wrap;
     line-height: 1.3;
   }
-  .fnb__bottom .fnb__bottom-left ul span {
+  .fnb__bottom .fnb__bottom-left ul li:nth-child(1) span {
     width: 100%;
     text-align: center;
   }

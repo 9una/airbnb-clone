@@ -451,7 +451,8 @@ header {
     background: white;
     border-radius: 32px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-    button {
+    .tab {
+      cursor: pointer;
       width: 100%;
       height: 64px;
       border-radius: 32px;
@@ -694,11 +695,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding-top: 15px;
   padding-bottom: 30px;
-  & > span {
-    font-size: 0.85em;
-    font-weight: bold;
-  }
   li {
     a {
       display: flex;

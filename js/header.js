@@ -1,5 +1,5 @@
 // header - nav-center__form 모달
-const formBtn = document.querySelectorAll('.form-tab button');
+const formBtn = document.querySelectorAll('.form-tab .tab');
 const formSearchBtn = document.querySelector('.nav-center__form .search-btn');
 const formModal = document.querySelectorAll('.nav-center__modal div');
 for(let i = 0; i < formBtn.length; i++){

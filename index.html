@@ -26,30 +26,30 @@
             </div>
             <div class="nav-center__form">
               <div class="form-tab">
-                <button type="button">
+                <div class="tab">
                   <form>
                     <label for="placeText">위치</label>
                     <input type="text" id="placeText" required placeholder="어디로 여행가세요?">
                   </form>
-                </button>
-                <button type="button">
+                </div>
+                <div class="tab">
                   <p>
                     <span>체크인</span>
                     날짜 입력
                   </p>
-                </button>
-                <button type="button">
+                </div>
+                <div class="tab">
                   <p>
                     <span>체크아웃</span>
                     날짜 입력
                   </p>
-                </button>
-                <button type="button">
+                </div>
+                <div class="tab">
                   <p>
                     <span>인원</span>
                     게스트 추가
                   </p>
-                </button>
+                </div>
               </div>
               <button type="button" class="search-btn"><i class="fas fa-search"></i></button>
             </div>
@@ -152,7 +152,7 @@
             <div class="user-btn-modal">
               <ul>
                 <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
-                <li><button type="button" onclick="modalLogin();">로그인</a></button>
+                <li><button type="button" onclick="modalLogin();">로그인</button></li>
               </ul>
               <ul>
                 <li><a href="#;">숙소 호스트 되기</a></li>
@@ -172,7 +172,7 @@
       <section class="content__main">
         <div class="wrapper">
           <div class="section-img" >
-            <img src="https://a0.muscache.com/im/pictures/73b52a62-f4e8-411c-b2a8-125a6e3e59e2.jpg?im_w=1200">
+            <img src="https://a0.muscache.com/im/pictures/73b52a62-f4e8-411c-b2a8-125a6e3e59e2.jpg?im_w=1200" alt="유연한 검색">
             <div class="img-inner-text">
               <h2>에어비앤비가 <br>여행지를 찾아드릴게요!</h2>
               <a href="search.html">유연한 검색</a>
@@ -187,7 +187,7 @@
             <div>
               <a href="#;" class="card">
                 <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320">
+                  <img src="https://a0.muscache.com/im/pictures/19d4c139-3615-4440-b5e3-55ee3f87e240.jpg?im_w=320" alt="서울">
                 </div>
                 <div class="card-text">
                   <h3>서울</h3>
@@ -196,7 +196,7 @@
               </a>
               <a href="#;" class="card">
                 <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320">
+                  <img src="https://a0.muscache.com/im/pictures/56ea1c5b-dcde-45b3-af40-9de6bbe984b5.jpg?im_w=320" alt="인천">
                 </div>
                 <div class="card-text">
                   <h3>인천</h3>
@@ -205,7 +205,7 @@
               </a>
               <a href="#;" class="card">
                 <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320">
+                  <img src="https://a0.muscache.com/im/pictures/1e5fc501-e1ed-4de4-be9f-811e9de0a0d2.jpg?im_w=320" alt="대구">
                 </div>
                 <div class="card-text">
                   <h3>대구</h3>
@@ -214,7 +214,7 @@
               </a>
               <a href="#;" class="card">
                 <div class="card-img">
-                  <img src="https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320">
+                  <img src="https://a0.muscache.com/im/pictures/ee86b8d6-b214-43f5-912c-3db2637a5724.jpg?im_w=320" alt="대전">
                 </div>
                 <div class="card-text">
                   <h3>대전</h3>
@@ -232,12 +232,12 @@
             <a href="#;" class="card">
               <h2>여행 중 만나는 <br>
                 이색적인 즐길 거리</h2>
-              <button type="button" class="btn-white">체험</button>
+              <span class="btn-white">체험</span>
             </a>
             <a href="#;" class="card">
               <h2>집에서 만나는 <br>
                 다양한 즐길 거리</h2>
-              <button type="button" class="btn-white">온라인 체험</button>
+              <span class="btn-white">온라인 체험</span>
             </a>
           </div>
         </div>
@@ -245,10 +245,10 @@
       <section class="content__superhost">
         <div class="wrapper">
           <div class="section-img" >
-            <img src="https://a0.muscache.com/im/pictures/0528b0f7-4c0c-47bc-9786-d91454f531ba.jpg?im_w=1200">
+            <img src="https://a0.muscache.com/im/pictures/0528b0f7-4c0c-47bc-9786-d91454f531ba.jpg?im_w=1200" alt="호스팅에 관해 슈퍼호스트에게 물어보기">
             <div class="img-inner-text">
               <h1>호스팅에 관해 궁금하신 점이 있나요?</h1>
-              <z type="button" class="btn-white">슈퍼호스트에게 물어보세요</button>
+              <button type="button" class="btn-white">슈퍼호스트에게 물어보세요</button>
             </div>
           </div>
         </div>
@@ -275,85 +275,59 @@
       <div class="wrap">
         <div class="search-header">
           <button type="button" class="close-search" onclick="closeSearch()"><i class="fas fa-chevron-left"></i></button>
-          <form>
-            <input type="text" placeholder="어디로 여행가세요?" />
-          </form>
+          <form><input type="text" placeholder="어디로 여행가세요?" /></form>
         </div>
         <div class="search-content">
           <span>언제 어디로든 떠나는 여행</span>
           <a href="search.html" class="search-more">유연한 검색 <i class="fas fa-chevron-right"></i></a>
+          <span>근처의 인기 여행지</span>
           <ul class="best-travel">
-            <span>근처의 인기 여행지</span>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/f7ac6e57-65cb-446b-8631-331072463af4.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>경주시</span>
-                  차로 4시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/f7ac6e57-65cb-446b-8631-331072463af4.jpg?im_w=240&im_q=lowq" alt="경주시" />
+                <p><span>경주시</span>차로 4시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>강릉시</span>
-                  차로 3시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_w=240&im_q=lowq" alt="강릉시" />
+                <p><span>강릉시</span>차로 3시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>속초시</span>
-                  차로 3시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_w=240&im_q=lowq" alt="속초" />
+                <p><span>속초시</span>차로 3시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/585d1e53-e2e1-4baf-a34e-36301dd1e2da.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>전주시</span>
-                  차로 2.5시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/585d1e53-e2e1-4baf-a34e-36301dd1e2da.jpg?im_w=240&im_q=lowq" alt="전주시" />
+                <p><span>전주시</span>차로 2.5시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/562f9bb5-c8b1-412b-b290-2d970498ee07.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>제주시</span>
-                  차로 6.5시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/562f9bb5-c8b1-412b-b290-2d970498ee07.jpg?im_w=240&im_q=lowq" alt="제주시" />
+                <p><span>제주시</span>차로 6.5시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/e639b7ab-aee3-48ee-9743-216684a51319.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>양양군</span>
-                  차로 2시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/e639b7ab-aee3-48ee-9743-216684a51319.jpg?im_w=240&im_q=lowq" alt="양양군" />
+                <p><span>양양군</span>차로 2시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/560c06e1-a396-4414-9e38-4fbe8e9f04c4.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>여수시</span>
-                  차로 4시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/560c06e1-a396-4414-9e38-4fbe8e9f04c4.jpg?im_w=240&im_q=lowq" alt="여수" />
+                <p><span>여수시</span>차로 4시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_w=240&im_q=lowq" alt="" />
-                <p>
-                  <span>부산광역시</span>
-                  차로 5시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_w=240&im_q=lowq" alt="부산광역시" />
+                <p><span>부산광역시</span>차로 5시간 거리</p>
               </a>
             </li>
           </ul>

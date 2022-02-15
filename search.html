@@ -27,7 +27,7 @@
             <div class="user-btn-modal">
               <ul>
                 <li><button type="button" onclick="modalLogin();"><b>회원가입</b></button></li>
-                <li><button type="button" onclick="modalLogin();">로그인</a></button>
+                <li><button type="button" onclick="modalLogin();">로그인</button></li>
               </ul>
               <ul>
                 <li><a href="#;">숙소 호스트 되기</a></li>
@@ -193,6 +193,7 @@
     <!-- header -->
     <main id="search__main" class="main">
       <section>
+        <h3 class="skip" style="font-size:0; display:none;">유연한 검색</h3>
         <div class="wrapper">
           <div class="content">
             <ul class="cont-list">
@@ -536,7 +537,7 @@
     <footer id="footer"></footer>
     <!-- footer -->
     <div id="mobileNav">
-      <a href="index.html">
+      <a href="index.html" class="active">
         <i class="fas fa-search"></i>
         <span>둘러보기</span>
       </a>
@@ -553,85 +554,59 @@
       <div class="wrap">
         <div class="search-header">
           <button type="button" class="close-search" onclick="closeSearch()"><i class="fas fa-chevron-left"></i></button>
-          <form>
-            <input type="text" placeholder="어디로 여행가세요?" />
-          </form>
+          <form><input type="text" placeholder="어디로 여행가세요?" /></form>
         </div>
         <div class="search-content">
           <span>언제 어디로든 떠나는 여행</span>
-          <button type="button" class="search-more">유연한 검색 <i class="fas fa-chevron-right"></i></button>
-          <ul>
-            <span>근처의 인기 여행지</span>
+          <a href="search.html" class="search-more">유연한 검색 <i class="fas fa-chevron-right"></i></a>
+          <span>근처의 인기 여행지</span>
+          <ul class="best-travel">
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/f7ac6e57-65cb-446b-8631-331072463af4.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>경주시</span>
-                  차로 4시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/f7ac6e57-65cb-446b-8631-331072463af4.jpg?im_w=240&im_q=lowq" alt="경주시" />
+                <p><span>경주시</span>차로 4시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>강릉시</span>
-                  차로 3시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/be4d3ba5-08d7-4afe-95a7-f2da6453886a.jpg?im_w=240&im_q=lowq" alt="강릉시" />
+                <p><span>강릉시</span>차로 3시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>속초시</span>
-                  차로 3시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/847cfb7f-788d-42dc-9148-f375348dde76.jpg?im_w=240&im_q=lowq" alt="속초" />
+                <p><span>속초시</span>차로 3시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/585d1e53-e2e1-4baf-a34e-36301dd1e2da.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>전주시</span>
-                  차로 2.5시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/585d1e53-e2e1-4baf-a34e-36301dd1e2da.jpg?im_w=240&im_q=lowq" alt="전주시" />
+                <p><span>전주시</span>차로 2.5시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/562f9bb5-c8b1-412b-b290-2d970498ee07.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>제주시</span>
-                  차로 6.5시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/562f9bb5-c8b1-412b-b290-2d970498ee07.jpg?im_w=240&im_q=lowq" alt="제주시" />
+                <p><span>제주시</span>차로 6.5시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/e639b7ab-aee3-48ee-9743-216684a51319.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>양양군</span>
-                  차로 2시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/e639b7ab-aee3-48ee-9743-216684a51319.jpg?im_w=240&im_q=lowq" alt="양양군" />
+                <p><span>양양군</span>차로 2시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/560c06e1-a396-4414-9e38-4fbe8e9f04c4.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>여수시</span>
-                  차로 4시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/560c06e1-a396-4414-9e38-4fbe8e9f04c4.jpg?im_w=240&im_q=lowq" alt="여수" />
+                <p><span>여수시</span>차로 4시간 거리</p>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_w=240&im_q=lowq" alt />
-                <p>
-                  <span>부산광역시</span>
-                  차로 5시간 거리
-                </p>
+                <img src="https://a0.muscache.com/im/pictures/76e5f1c6-a788-418c-a28b-f0ee29cffd41.jpg?im_w=240&im_q=lowq" alt="부산광역시" />
+                <p><span>부산광역시</span>차로 5시간 거리</p>
               </a>
             </li>
           </ul>

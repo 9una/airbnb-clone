@@ -854,6 +854,7 @@
           .filter-wrap {
             display: flex;
             width: max-content;
+            margin-bottom: 0;
             .filter-list {
               width: auto;
               overflow: inherit;

@@ -2808,6 +2808,7 @@ header .mobile-search button i {
   #search__header .local-nav .wrapper .local-nav-left .filter-wrap {
     display: flex;
     width: max-content;
+    margin-bottom: 0;
   }
   #search__header .local-nav .wrapper .local-nav-left .filter-wrap .filter-list {
     width: auto;

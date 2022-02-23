@@ -325,7 +325,7 @@
     }
   }
   .content__idea {
-    padding: 20px 0 !important;
+    padding: 40px 0 20px !important;
     .section-title {
       padding: 0 40px;
     }
@@ -377,6 +377,9 @@
         .wrapper {
           .section-img {
             height: calc(100vh - 58px);
+            .img-inner-text a {
+              margin-bottom: 14vh;
+            }
           }
         }
       }
